@@ -43,3 +43,12 @@ ul.links li { padding: 8px 0; border-top: 1px solid var(--line); }
 ul.links li:first-child { border-top: 0; }
 .muted { color: var(--muted); }
 footer { margin-top: 48px; font-size: 0.9em; color: var(--muted); }
+img.hero { width: 100%; height: auto; border-radius: 12px; display: block; margin: 8px 0 20px; }
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+.shots img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 0.95em; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+td.price { white-space: nowrap; }
+nav.legal { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.9em; }
+nav.legal a { margin-right: 14px; display: inline-block; padding: 4px 0; }
