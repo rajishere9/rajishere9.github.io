@@ -1,54 +1,65 @@
+/* CandleDeep pages: same palette and type as the rkj dev home page, kept simple for reading policies. */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@400;500&display=swap");
+
 :root {
-  --bg: #fbf8f3;
-  --surface: #ffffff;
-  --text: #221d18;
-  --muted: #6b6258;
-  --line: #e6dfd4;
-  --accent: #b45309;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14110e;
-    --surface: #1d1915;
-    --text: #ece5da;
-    --muted: #a39887;
-    --line: #342d25;
-    --accent: #f59e0b;
-  }
+  --bg: #16101a;
+  --surface: #1f1824;
+  --text: #efe7dc;
+  --muted: #a69daa;
+  --line: #372c3d;
+  --underline: #5b4b61;
+  --accent: #f4b860;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--text);
-  font: 17px/1.65 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  background: #16101a;
+  background-image:
+    radial-gradient(60vmax 40vmax at 10% -10%, rgba(244, 184, 96, .10), transparent 70%),
+    radial-gradient(50vmax 40vmax at 100% 30%, rgba(110, 74, 158, .12), transparent 70%);
+  background-attachment: fixed;
+  font: 400 17px/1.65 "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
-main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+main { max-width: 720px; margin: 0 auto; padding: 0 16px 64px; }
+a { color: var(--text); text-decoration-color: var(--underline); text-underline-offset: 4px; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+strong { font-weight: 600; }
+
+a.home {
+  display: inline-flex; align-items: center; gap: 10px; margin: 28px 0 40px;
+  font: 500 15px/1 "Unbounded", ui-sans-serif, sans-serif; text-decoration: none;
+}
+a.home::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 14px 3px rgba(244, 184, 96, .45);
+}
+
 header.site { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
 header.site img { width: 72px; height: 72px; border-radius: 16px; image-rendering: pixelated; }
 header.site p { margin: 0; color: var(--muted); }
-h1 { font-size: 1.7em; line-height: 1.25; margin: 0 0 4px; }
-h2 { font-size: 1.15em; margin: 2em 0 0.4em; }
-a { color: var(--accent); }
+h1 { font: 400 clamp(28px, 5vw, 38px)/1.15 "Unbounded", ui-sans-serif, sans-serif; letter-spacing: -0.02em; margin: 0 0 8px; }
+h2 { font: 400 20px/1.3 "Unbounded", ui-sans-serif, sans-serif; letter-spacing: -0.01em; margin: 2.2em 0 0.6em; }
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 16px 20px;
-  margin: 16px 0;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 24px 0;
 }
 .card h2 { margin-top: 0.2em; }
-ul.links { list-style: none; padding: 0; margin: 0; }
-ul.links li { padding: 8px 0; border-top: 1px solid var(--line); }
-ul.links li:first-child { border-top: 0; }
 .muted { color: var(--muted); }
-footer { margin-top: 48px; font-size: 0.9em; color: var(--muted); }
-img.hero { width: 100%; height: auto; border-radius: 12px; display: block; margin: 8px 0 20px; }
-.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
-.shots img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+code { font-size: .92em; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+img.hero { width: 100%; height: auto; border-radius: 14px; display: block; margin: 8px 0 20px; background: var(--surface); }
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
 table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 0.95em; }
-th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th, td { text-align: left; padding: 10px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { color: var(--muted); font-weight: 600; }
-td.price { white-space: nowrap; }
-nav.legal { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.9em; }
-nav.legal a { margin-right: 14px; display: inline-block; padding: 4px 0; }
+td.price { white-space: nowrap; font-weight: 600; }
+nav.legal { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.9em; }
+nav.legal a { margin-right: 16px; display: inline-block; padding: 4px 0; color: var(--muted); }
+nav.legal a:hover { color: var(--text); }

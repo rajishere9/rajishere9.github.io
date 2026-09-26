@@ -25,7 +25,7 @@
   }
   function update() {
     queued = false;
-    header.classList.toggle("scrolled", window.scrollY > 24);
+    header.classList.toggle("scrolled", window.scrollY > 4);
     if (!tl) return;
     const box = tl.getBoundingClientRect();
     const top = narrow.matches ? 10 : 14;
@@ -67,8 +67,9 @@
     };
     if (reduce) return;
     if (finePointer) {
-      fig.addEventListener("mouseenter", () => pan(true));
-      fig.addEventListener("mouseleave", () => pan(false));
+      // pointermove, not mouseenter: scrolling the page under a resting mouse shouldn't start it.
+      fig.addEventListener("pointermove", () => pan(true));
+      fig.addEventListener("pointerleave", () => pan(false));
     } else if ("IntersectionObserver" in window) {
       new IntersectionObserver(([e]) => pan(e.isIntersecting), { threshold: 0.7 }).observe(fig);
     }
