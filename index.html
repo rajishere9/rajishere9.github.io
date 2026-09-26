@@ -34,21 +34,26 @@
 </head>
 <body>
 <a class="skip" href="#work">Skip to work</a>
+<div class="backdrop" aria-hidden="true"></div>
 <div class="light" aria-hidden="true"></div>
+<div class="lantern" aria-hidden="true"></div>
 
-<div class="wrap">
-  <header class="top">
+<header class="top">
+  <div class="wrap">
     <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
     <nav aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
+<div class="wrap">
   <main>
     <section class="hero" aria-labelledby="name">
-      <h1 id="name"><span>Rajan</span><span>Krishnan</span></h1>
+      <div class="hero-text">
+      <h1 id="name"><span class="line"><span>Rajan</span></span><span class="line"><span>Krishnan</span></span></h1>
       <p class="lede">I build games, mobile apps and web products, and I like working with technology while it is still new.</p>
       <p class="where">Full-stack developer in Kanpur, India. I publish my own apps and games as rkj dev.</p>
       <div class="actions">
@@ -57,13 +62,20 @@
         <a class="textlink" href="#work">See my work</a>
       </div>
       <p class="now">Now: <a href="candledeep/">CandleDeep</a>, my first game for Android, is in testing on Google Play.</p>
+      </div>
+      <figure class="portrait">
+        <div class="frame"><img src="me.jpg" width="500" height="625" alt="Rajan Krishnan"></div>
+        <figcaption>Kanpur, India</figcaption>
+      </figure>
     </section>
 
     <section class="section" id="work" aria-labelledby="work-title">
       <h2 id="work-title">Work<small>Newest first.</small></h2>
 
+      <div class="tl">
+      <div class="burn" aria-hidden="true"></div>
       <ol class="timeline">
-        <li class="entry lit">
+        <li class="entry reached">
           <div class="when"><time datetime="2026-09">Sep 2026</time><span>Android game</span></div>
           <article class="body">
             <h3>CandleDeep</h3>
@@ -89,14 +101,28 @@
         <li class="entry">
           <div class="when"><time datetime="2026-08">Aug 2026</time><span>Web platform</span></div>
           <article class="body">
-            <h3>AvsarIQ</h3>
+            <h3>AvsarIQ <span class="status">No longer maintained</span></h3>
             <p class="role">Designed and built end to end.</p>
             <p class="what">A calmer way to follow Indian government job openings. It brings official notifications, eligibility, deadlines and application links into one place, lets people compare their profile with each post's requirements, and keeps the official source beside every detail.</p>
             <p class="stack">Next.js, React, TypeScript, Supabase and PostgreSQL on Vercel. Accounts and onboarding, saved and applied tracking, SEO and performance work.</p>
-            <div class="links"><a class="textlink" href="https://www.avsariq.com/">Visit avsariq.com</a></div>
             <figure class="media browser">
-              <figcaption>avsariq.com</figcaption>
-              <img src="work/avsariq.jpg" width="1200" height="750" alt="AvsarIQ home page: A calmer way to decide what to apply for next." loading="lazy">
+              <figcaption>avsariq.com<span>Scrolling through the home page</span></figcaption>
+              <div class="viewport"><img src="work/avsariq.jpg" width="1200" height="2167" alt="AvsarIQ home page: A calmer way to decide what to apply for next." loading="lazy"></div>
+            </figure>
+          </article>
+        </li>
+
+        <li class="entry">
+          <div class="when"><time datetime="2026-07">Jul 2026</time><span>Android app</span></div>
+          <article class="body">
+            <h3>PranArog</h3>
+            <p class="role">Designed and built. Coming soon to Google Play.</p>
+            <p class="what">A calm medication tracker. Precise reminders built on Android's exact alarms that don't drain the battery, Gemini-powered summaries of your schedule, dietary notes and possible interaction flags, and one tap to wipe your data and leave.</p>
+            <p class="stack">Android, Firebase and Cloud Firestore, Gemini API.</p>
+            <div class="links"><a class="textlink" href="https://pranarog.web.app/">Visit pranarog.web.app</a></div>
+            <figure class="media browser">
+              <figcaption>pranarog.web.app<span>Scrolling through the home page</span></figcaption>
+              <div class="viewport"><img src="work/pranarog.jpg" width="1200" height="1936" alt="PranArog home page: A serene space for medication tracking, beside the app's Today screen." loading="lazy"></div>
             </figure>
           </article>
         </li>
@@ -122,8 +148,8 @@
             <p class="stack">Next.js, React, Firebase, MongoDB and AWS, with search engine optimisation at the centre.</p>
             <div class="links"><a class="textlink" href="https://www.shrutim.com/">Visit shrutim.com</a></div>
             <figure class="media browser">
-              <figcaption>shrutim.com</figcaption>
-              <img src="work/shrutim.jpg" width="1200" height="750" alt="Shrutim home page: Discover the wisdom of Vedic mantras and stotrams." loading="lazy">
+              <figcaption>shrutim.com<span>Scrolling through the home page</span></figcaption>
+              <div class="viewport"><img src="work/shrutim.jpg" width="1200" height="2167" alt="Shrutim home page: Discover the wisdom of Vedic mantras and stotrams." loading="lazy"></div>
             </figure>
           </article>
         </li>
@@ -138,13 +164,14 @@
           </article>
         </li>
       </ol>
+      </div>
     </section>
 
     <section class="section" id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div class="about-grid">
         <div>
-          <p>I'm a full-stack developer with a deep interest in emerging technology. I've co-founded a startup, shipped Android apps used by hundreds of thousands of people, built web platforms that rank on search, and now make games of my own.</p>
+          <p>I'm a full-stack developer with a deep interest in emerging technology. I've co-founded a startup, shipped Android apps used by hundreds of thousands of people, built web platforms that rank on search, and now make apps and games of my own.</p>
           <p>I like owning the whole path of a product: the idea, the interface, the code, the store listing, and what happens after launch.</p>
           <ul class="background" aria-label="Background">
             <li><time datetime="2025">2025</time><span>B.Tech in Computer Science (Internet of Things), PSIT Kanpur</span></li>
@@ -180,5 +207,6 @@
     </nav>
   </footer>
 </div>
+<script src="home.js" defer></script>
 </body>
 </html>
