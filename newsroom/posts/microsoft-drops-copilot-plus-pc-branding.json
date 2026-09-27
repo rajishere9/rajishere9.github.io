@@ -1,0 +1,134 @@
+{
+ "slug": "microsoft-drops-copilot-plus-pc-branding",
+ "title": "Microsoft Drops Copilot+ PC Branding from New Laptops",
+ "seoTitle": "Microsoft Drops Copilot+ PC Branding from Laptops",
+ "description": "Microsoft has quietly abandoned its Copilot+ PC branding on new laptops, Surface VP Brett Ostrum confirmed, following backlash and low user engagement.",
+ "dek": "Microsoft and hardware partners are abandoning the Copilot+ PC moniker on new devices while keeping local AI hardware specifications intact.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Microsoft",
+  "Surface",
+  "Windows 11",
+  "Copilot",
+  "Qualcomm",
+  "AI Hardware"
+ ],
+ "keyTakeaways": [
+  "Microsoft Surface CVP Brett Ostrum confirmed that new Surface laptops will not carry the Copilot+ PC label despite meeting all NPU performance criteria.",
+  "Hardware partners including Qualcomm and Nvidia are also moving away from the moniker, with Qualcomm leadership indicating the badge is unlikely to return.",
+  "The change follows two years of consumer pushback, security controversies around features like Recall, and low user engagement.",
+  "A widespread memory shortage prompted Microsoft to remove its 32GB RAM recommendation and optimize Windows 11 for 8GB devices.",
+  "Microsoft is decoupling the hardware brand from its software roadmap, continuing to develop Copilot apps such as Home, Code, and Autopilot."
+ ],
+ "body": "Microsoft has begun quietly retiring its Copilot+ PC branding across its newest laptop lineup, stepping back from the marketing initiative introduced two years ago to promote personal computers designed for local artificial intelligence. Brett Ostrum, Corporate Vice President of Microsoft Surface, confirmed the strategic change during Qualcomm's Snapdragon Summit 2026, stating that new flagship computers meet the internal performance thresholds but will no longer feature the moniker. The move follows two years of customer pushback, delayed core features, and a broader reassessment of how Windows 11 handles automated tools.\n\n[[FIG1]]\n\n## Official Confirmation of Dropping Copilot+ PC Branding\n\nReported by [Windows Central](https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding), Ostrum addressed the omission directly when discussing newly unveiled Surface devices powered by Qualcomm's Snapdragon X2 Plus processor, including the 12-inch Surface Pro and the 13-inch Surface Laptop.\n\n\"These are not called Copilot+ PCs,\" Ostrum told Windows Central. \"They do meet all the requirements of our previous bar for what Copilot+ devices are. We still lean into the narrative around AI on the edge and being able to have a hybrid out there.\"\n\nThe sentiment was echoed by Qualcomm's leadership. Kedar Kondap, Senior Vice President of Compute at Qualcomm, explained during an event roundtable that the technical baseline mattered more than the label. According to Kondap in [Windows Central](https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding) and [XDA](https://www.xda-developers.com/after-two-years-of-backlash-microsoft-seems-to-be-dropping-copilot-branding-from-new-laptops/), the program was designed to define a hardware metric—such as 45 TOPS neural processing units (NPUs)—to deliver specialized experiences, but manufacturers are now offering those capabilities without the specific naming. Kondap indicated that the badge is unlikely to return on future partner designs.\n\n## How Hardware Requirements and Software Stumbles Collided\n\nMicrosoft originally created the badge in 2024 to distinguish PCs with dedicated NPUs capable of executing local AI tasks, as reported by [Tom's Hardware](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding) and [PCWorld](https://www.pcworld.com/article/3244476/microsoft-is-quietly-killing-its-copilot-pc-brand.html). To earn the certification, a system had to feature an NPU delivering at least 40 TOPS, a minimum of 16GB of RAM, at least 256GB of SSD storage, and run Windows 11 version 24H2 or later.\n\nHowever, the hardware launch faced immediate trouble. As detailed by [Windows Central](https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding), the brand's centerpiece software feature, Recall, sparked swift criticism from cybersecurity researchers after discovering that Recall was woefully insecure. Microsoft was forced to delay Recall's rollout, shipping its first wave of branded PCs without their headline capability.\n\nSubsequent features failed to gain traction with mainstream consumers. [PCWorld](https://www.pcworld.com/article/3244476/microsoft-is-quietly-killing-its-copilot-pc-brand.html) reported that early Copilot+ utilities were criticized as unfinished demonstrations, leading to low user engagement across the board.\n\n[[FIG2]]\n\n## Industry-Wide Shift and Memory Shortages\n\nThe requirement for hardware-specific marketing also weakened as chipmakers normalized high-performance NPUs across their lineups. Mainstream and high-end laptop processors increasingly ship with NPUs exceeding 40 TOPS as standard silicon, making an exclusive badge redundant according to [Tom's Hardware](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding).\n\nOther hardware initiatives are steering clear of the terminology as well. Upcoming notebooks running Nvidia's RTX Spark N1X platform and Microsoft's own Project Zenith satisfy the original technical criteria but do not carry the badge, [Tom's Hardware](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding) reported. [Windows Central](https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding) suspected Nvidia's decision to bypass the Copilot+ brand for its RTX Spark platform was deliberate.\n\nAt the same time, an ongoing memory shortage made the rigid 16GB RAM threshold problematic. As reported by [Tom's Hardware](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding) and [XDA](https://www.xda-developers.com/after-two-years-of-backlash-microsoft-seems-to-be-dropping-copilot-branding-from-new-laptops/), Microsoft responded to market pressure by stripping its 32GB RAM recommendation from its website and releasing new Surface for Business models configured with 8GB of RAM. The company also pledged to optimize Windows 11 to run efficiently on 8GB systems.\n\n## Scaling Back OS Intrusions While Repositioning Software\n\nWhile Microsoft is shedding the hardware badge, it is not abandoning its broader AI roadmap. The company has instead scaled back Copilot's presence inside Windows 11, refocusing development on core operating system reliability, speed, and update stability, according to [XDA](https://www.xda-developers.com/after-two-years-of-backlash-microsoft-seems-to-be-dropping-copilot-branding-from-new-laptops/).\n\nOn the application front, Microsoft recently updated Copilot with distinct operational hubs designated as Home, Code, and Autopilot. Microsoft CEO Satya Nadella characterized this reorganized experience as \"a new OS for work,\" as reported by [XDA](https://www.xda-developers.com/after-two-years-of-backlash-microsoft-seems-to-be-dropping-copilot-branding-from-new-laptops/). Furthermore, software engineers have tested local features on discrete GPUs, opening a route to deliver these tools to systems without dedicated integrated NPUs, according to [Tom's Hardware](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding).\n\nWhether all Windows 11 computers will eventually receive the software features once restricted to Copilot+ systems remains unconfirmed by Microsoft. However, the software identity remains expansive: an analysis by an independent AI consultant cited by [Tom's Hardware](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding) found more than 80 unique Microsoft Copilot products active across commercial and enterprise environments.",
+ "faq": [
+  {
+   "q": "Why is Microsoft dropping the Copilot+ PC branding?",
+   "a": "While Microsoft has not issued an official rationale, industry reporting points to consumer backlash, security controversies surrounding features like Recall, low engagement, and the fact that 40+ TOPS NPUs have become common in mainstream processors, eliminating the need for separate hardware marketing."
+  },
+  {
+   "q": "Do the new Surface laptops still include NPU hardware?",
+   "a": "Yes. Microsoft Surface CVP Brett Ostrum confirmed that new machines, including the Snapdragon X2 Plus-powered Surface Pro 12-inch and Surface Laptop 13-inch, meet all previous technical hardware requirements despite omitting the badge."
+  },
+  {
+   "q": "Is Microsoft abandoning its Copilot software platform?",
+   "a": "No. Microsoft is continuing software development for Copilot, recently launching features named Home, Code, and Autopilot, while scaling back Copilot's integration into core Windows 11 system components."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, minimalist silver laptop sitting open on a clean wooden desk in an airy studio, with subtle soft ambient light illuminating the slim aluminum chassis and keyboard without any stickers or badges.",
+  "alt": "A slim modern laptop resting open on a wooden desk without manufacturer or branding badges",
+  "caption": "New Windows laptops meeting AI hardware benchmarks are arriving on shelves without the Copilot+ branding badge.",
+  "src": "img/microsoft-drops-copilot-plus-pc-branding/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 32636,
+  "small": "img/microsoft-drops-copilot-plus-pc-branding/hero-640.webp",
+  "og": "img/microsoft-drops-copilot-plus-pc-branding/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/microsoft-drops-copilot-plus-pc-branding/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A sleek silver processor chip mounted on a dark circuit board, with intricate micro-circuitry tracing visible beneath soft blue laboratory lighting.",
+   "alt": "A close-up view of a modern computer processor chip on a motherboard",
+   "caption": "Hardware requirements originally defined for Copilot+ PCs included an NPU capable of delivering at least 40 TOPS.",
+   "slot": "FIG1",
+   "src": "img/microsoft-drops-copilot-plus-pc-branding/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 51290,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A contemporary tech hardware testing workshop with multiple sleek laptops arranged along an illuminated workbench during system benchmarking.",
+   "alt": "Multiple laptops aligned on a tech evaluation workbench under ambient lighting",
+   "caption": "Upcoming systems from multiple hardware partners will run local AI software without marketing the Copilot+ moniker.",
+   "slot": "FIG2",
+   "src": "img/microsoft-drops-copilot-plus-pc-branding/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 37416,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding",
+   "title": "Microsoft quietly drops Copilot+ branding from its new laptops after two years — Surface CVP confirms new devices meet hardware requirements but lack controversial branding",
+   "site": "tomshardware.com",
+   "published": 1790431200000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.xda-developers.com/after-two-years-of-backlash-microsoft-seems-to-be-dropping-copilot-branding-from-new-laptops/",
+   "title": "After two years of backlash, Microsoft seems to be dropping Copilot+ branding from its new laptops",
+   "site": "XDA",
+   "published": 1790446691000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.pcworld.com/article/3244476/microsoft-is-quietly-killing-its-copilot-pc-brand.html",
+   "title": "Microsoft is quietly killing its Copilot+ PC brand",
+   "site": "PCWorld",
+   "published": 1790294400000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding",
+   "title": "The Copilot+ PC brand is dead: Microsoft and PC makers quietly pull back on tarnished Windows 11 AI PC branding",
+   "site": "Windows Central",
+   "published": 1790263267000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790496734193,
+ "updatedAt": 1790496734193,
+ "foundVia": "Hacker News and tomshardware.com",
+ "check": {
+  "claims": 25,
+  "score": 10
+ },
+ "story": {
+  "id": "P4a37683c",
+  "score": 78,
+  "items": [
+   "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding",
+   "https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.8-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
