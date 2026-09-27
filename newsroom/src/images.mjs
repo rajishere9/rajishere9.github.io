@@ -15,7 +15,7 @@ export async function vetRealImages(sources, story) {
   const cands = [];
   for (const s of [...sources].filter((x) => x.primary).sort((a, b) => b.official - a.official)) {
     for (const img of s.images) {
-      if (!cands.some((c) => c.url === img.url)) cands.push({ ...img, sourceN: s.n, site: s.site, pageUrl: s.url, official: s.official });
+      if (!cands.some((c) => c.url === img.url)) cands.push({ ...img, sourceN: s.n, site: s.site, pageUrl: s.url, official: s.official, primary: s.primary });
     }
   }
   const downloaded = (await pool(cands.slice(0, 10), 5, async (c) => {
@@ -100,7 +100,8 @@ export async function buildFigures(plan, realImages, { outDir, slug }) {
   const results = await pool(plan, 3, async (p, i) => {
     const name = p.slot === "hero" ? "hero" : `figure-${i}`;
     const hero = p.slot === "hero";
-    const real = p.type === "real" && byId.get(p.realId) && !used.has(p.realId) ? byId.get(p.realId) : null;
+    const cand = byId.get(p.realId);
+    const real = p.type === "real" && cand?.primary && !used.has(p.realId) ? cand : null;
     if (real) {
       used.add(p.realId);
       const saved = await saveImage(real.buf, { outDir, slug, name, hero });
@@ -112,7 +113,7 @@ export async function buildFigures(plan, realImages, { outDir, slug }) {
       return { ...p, ...saved, type: "ai", credit: "AI-generated illustration" };
     } catch (e) {
       log(`images: generation failed for ${name}: ${e.message}`);
-      const spare = realImages.find((r) => !used.has(r.id));
+      const spare = realImages.find((r) => r.primary && !used.has(r.id));
       if (!spare) return null;
       used.add(spare.id);
       const saved = await saveImage(spare.buf, { outDir, slug, name, hero });
