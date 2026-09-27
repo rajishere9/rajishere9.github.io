@@ -1,0 +1,243 @@
+{
+ "reason": "fact-check failed: Public notices of the partnership made no mention that the library materials would be fed directly into commercial model training. | Anthropic sliced off book bindings for high-speed scanning. | Automated book-disassembly workflows have been documented at third-party facilities.",
+ "story": {
+  "id": "P1a3f92ab",
+  "headline": "Oxford University Grants OpenAI Training Access to the Bodleian Library",
+  "firstSeen": 1790492352955,
+  "items": [
+   "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZDBLbUhWbUtyVUg2bWZsNFF4NDdyRWVydjNwX3ctQldEbkN2cW4ybi1hU0tMdy1jMzlVSGtXQVVHcnEwVmxVVFh2bHk0UXBtMWxqRE5Bc3doanJTcWY5TDBCTXdpZzFJWDk1QUc0UjBTTU5ZWDU2c3NFZW9BRkZhWEd1U0pFUDNFRXpOT3ZOazQ4dHNZcTY5UTVOM3ByWUtHUnBBdg?oc=5",
+   "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNXpfcG1ObEhHaER1TzBFTzl4d3lzYlJPRml3b0JoZ0tpUm1mRXhlZUV1WndsWDBpZnBreG9aUWk4ZEJoV0FFb01xOHVBMkpZdVJGSURMX3RMb3hQUW9YV3ZCenJFUnZTZGhiS09RNWpLRXN2akxnSWo4RjN0aUZLb0F2QXh4cWM2TzRvVXRDSktudEpGT01maklfcUpGajZUcFJGdVN3d9IBowFBVV95cUxNaHNJeEFBUnpwWG0tWFFZYTdKMndpVnF3aFVJS1FaMGRZZWVxWWdfTEZMTWJrSldzeHUxWmRHSThKZmpVeHI4bmpvY1pTckJGeTA1NW1Ha3JGTXhfREtDMWlpNUY0OHhySVllcEUtOVYzS0pyYWtmUXo3aDJVYjNLSGRObzdBa1ktSlZsdkd3R3pVbUV1dnpwUmhkc3J2d1FDM0VJ?oc=5"
+  ],
+  "attempts": 1,
+  "importance": 78,
+  "summary": "Oxford University has reached an agreement allowing OpenAI to train its artificial intelligence models on the historic collections of the Bodleian Library. The partnership provides the AI lab with vast archival text corpora to improve its reasoning and knowledge capabilities.",
+  "category": "Industry",
+  "lastSeen": 1790492352955,
+  "update": false,
+  "updateOf": "",
+  "score": 78
+ },
+ "draft": {
+  "newsworthy": true,
+  "title": "Oxford Lets OpenAI Train AI on Bodleian Library Collections",
+  "seoTitle": "Oxford Grants OpenAI Bodleian Library Training Access",
+  "slug": "oxford-openai-bodleian-library-training",
+  "description": "Internal documents reveal Oxford University granted OpenAI access to Bodleian Library historical texts to train artificial intelligence models.",
+  "dek": "Freedom of information disclosures reveal that digitized public-domain archives from Oxford's world-famous library are feeding OpenAI's training pipeline.",
+  "category": "Industry",
+  "tags": [
+   "OpenAI",
+   "University of Oxford",
+   "Bodleian Library",
+   "AI Training",
+   "Copyright"
+  ],
+  "keyTakeaways": [
+   "Internal Oxford documents confirm scanned Bodleian Library texts were used to populate OpenAI training sets.",
+   "OpenAI received scans of 125,000 dissertation pages under an agreement dating to March 2025, while 10,000 16th-century broadside ballads were also scanned.",
+   "Oxford University staff raised internal concerns regarding reputational fallout and environmental impacts.",
+   "Oxford clarified that the scanned works are out of copyright, non-exclusive, and will be released openly online."
+  ],
+  "body": "The University of Oxford has permitted ChatGPT developer OpenAI to train its artificial intelligence models on historical texts scanned from its Bodleian Library collections, according to internal university records obtained through freedom of information requests. The disclosure, first reported by [The Guardian](https://www.theguardian.com/technology/2026/sep/26/oxford-university-bodleian-library-open-ai-chat-gpt), confirms that scans digitized under an academic partnership have been directly fed into OpenAI's machine learning pipelines.\n\nOxford previously announced a five-year collaboration with OpenAI in March 2025, framed primarily as an initiative to digitize rare public domain works, roll out ChatGPT Edu across campus, and provide research funding, as outlined in the university's [official partnership announcement](https://www.bodleian.ox.ac.uk/about/media/oxford-and-openai-launch). However, public notices made no mention that the library materials would be fed directly into commercial model training.\n\n[[FIG1]]\n\n## The Scope of the Bodleian Library AI Training Data\n\nInternal meeting minutes reveal that materials digitized by OpenAI have served to \"populate the OpenAI training set,\" as reported by [The News International](https://www.thenews.com.pk/latest/1417727-oxford-gives-openai-access-to-bodleian-library-for-ai-training). By June 2025, approximately 125,000 page images from historical dissertations had been shared with OpenAI. The dissertations comprise 19th- and 20th-century PhD theses from European and American universities, while other texts scanned include a collection of 10,000 16th-century \"broadside ballads\" containing early modern song lyrics and musical notation.\n\nUniversity staff also evaluated other rare archival holdings for potential processing. These candidates included 18th-century Irish state papers, the private letters of novelist Marie Edgeworth, and Dorothy Hodgkin’s penicillin laboratory notebooks. Meeting notes also detailed discussions regarding a potential \"Ask the Bod\" conversational tool.\n\nAccording to documentation on the [Bodleian Digitisation Research project](https://www.bodleian.ox.ac.uk/services/research-partnerships/digitisation-project), the library established five specific workstreams to test scaling digitisation throughput across its Weston Library imaging studio and its Collections Storage Facility in Swindon, which houses over 10 million items. The project is trialing optical character recognition and handwriting text recognition technologies, comparing traditional extraction against generative AI tools funded by OpenAI.\n\n[[FIG2]]\n\n## Internal Pushback and Oxford's Stance\n\nInternal meeting minutes from the Bodleian governance committee record pushback from faculty and library staff. Members expressed worry regarding the reputational hazards of partnering with OpenAI, alongside the tension between AI's substantial computational power demands and Oxford's institutional sustainability goals.\n\nA spokesperson for Oxford University defended the initiative, stating that the project focuses on out-of-copyright material and is \"modest in scale.\" The university asserted that it had not hidden the machine-learning aspects of the project, with an Oxford spokesperson stating that while digitisation was the university's primary interest, staff had been open that the project would also contribute training data.\n\nOxford emphasized that the agreement is non-exclusive and that the Bodleian retains all ownership rights over the digital files. Scanned works are scheduled to be published openly online in the coming months, allowing researchers worldwide to read and study them without restriction.\n\n## Academic Archives and the Race for Untapped Text\n\nThe Bodleian partnership reflects an industry-wide scramble for human-written, out-of-copyright text. Because the public internet has become crowded with synthetic and auto-generated copy, developers have turned to physical, often historical, book collections and obscure secondhand titles.\n\nOther AI laboratories have pursued aggressive acquisition tactics. Anthropic spent tens of millions of dollars acquiring physical books, slicing off bindings for high-speed scanning before sending the paper to be pulped, though Anthropic stated it does not destroy antiquarian titles. Similar automated book-disassembly workflows have been documented at third-party facilities.\n\nBy contrast, Oxford confirmed that all Bodleian holdings remain fully intact. The collaboration functions under OpenAI's NextGenAI initiative, a $50 million academic program that includes US partners such as MIT, Caltech, the University of Michigan, and the Boston Public Library. Oxford remains the sole UK university participating in the consortium.",
+  "faq": [
+   {
+    "q": "Did Oxford University sell exclusive access to its library archives?",
+    "a": "No. Oxford confirmed that its agreement with OpenAI is non-exclusive, that the Bodleian retains full ownership of the digital scans, and that the digitized texts will be published freely online for the public."
+   },
+   {
+    "q": "What specific collections have been scanned for OpenAI training?",
+    "a": "Transfers to OpenAI included 125,000 scanned images from 19th- and 20th-century dissertations, while 10,000 16th-century ballads were among the other texts scanned, with additional collections reviewed for future processing."
+   },
+   {
+    "q": "Were any Bodleian Library books destroyed during scanning?",
+    "a": "No. Bodleian collections remain intact, unlike secondhand book acquisitions elsewhere that are pulped after scanning."
+   }
+  ],
+  "hero": {
+   "marker": "HERO",
+   "type": "real",
+   "realId": "R2",
+   "alt": "Split screen depicting the Radcliffe Camera at Oxford alongside an illuminated OpenAI keyboard logo",
+   "caption": "A five-year collaboration between Oxford University and OpenAI granted the AI lab access to digitized Bodleian archives."
+  },
+  "figures": [
+   {
+    "marker": "FIG1",
+    "type": "real",
+    "realId": "R1",
+    "alt": "A technician carefully handling an old bound book on a specialized book-scanning cradle",
+    "caption": "Digitisation equipment at the Imaging Studio in the Weston Library, Oxford."
+   },
+   {
+    "marker": "FIG2",
+    "type": "ai",
+    "prompt": "An expansive, softly lit historical library reading room filled with tall mahogany bookshelves, where streams of warm natural light illuminate ancient leather-bound manuscripts resting on wooden study tables.",
+    "alt": "Interior view of an academic research library filled with wooden bookshelves and historical manuscripts",
+    "caption": "AI companies are turning to physical library collections as public web text becomes increasingly saturated with synthetic material."
+   }
+  ],
+  "sourcesUsed": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "check": {
+  "claims": [
+   {
+    "claim": "The University of Oxford has allowed OpenAI to train its AI models on historical texts from its Bodleian Library collections, revealed via freedom of information disclosures.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Internal Oxford documents confirm that scanned Bodleian Library materials have been used to 'populate the OpenAI training set.'",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "The disclosure of the training data arrangement was first reported by The Guardian.",
+    "status": "supported",
+    "source": 4
+   },
+   {
+    "claim": "Oxford announced a five-year collaboration with OpenAI in March 2025 to digitize public domain materials, roll out ChatGPT Edu, and provide research grant funding.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Public notices of the partnership made no mention that the library materials would be fed directly into commercial model training.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "Change 'commercial model training' to 'training OpenAI's models', as Source 1 does not state the models or training were commercial."
+   },
+   {
+    "claim": "By June 2025, approximately 125,000 scanned page images from 19th- and 20th-century European and American dissertations had been shared with OpenAI.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Other scanned materials included a rare collection of 10,000 16th-century broadside ballads containing song lyrics and musical notation.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "University staff discussed digitizing 18th-century Irish state papers, the private letters of Marie Edgeworth, and Dorothy Hodgkin’s penicillin notebooks.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Internal meeting minutes discussed the creation of an 'Ask the Bod' chatbot.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "The Bodleian Digitisation Research project established five workstreams testing scaled digitisation across the Weston Library imaging studio and its Collections Storage Facility in Swindon, which stores over 10 million items.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "The research project is trialing optical character recognition and handwriting text recognition technologies, comparing traditional OCR with generative AI models funded by OpenAI.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "Bodleian governance committee members and staff expressed internal concerns regarding reputational risks and the impact of an energy-intensive technology on Oxford's environmental commitments.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "An Oxford spokesperson defended the project as modest in scale, limited to out-of-copyright material, non-exclusive, and denied that the machine-learning aspect was hidden.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "The Bodleian retains the rights to the scans and plans to publish them openly online within the coming months.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "AI developers are turning to physical book collections because web-scraped data is increasingly saturated with synthetic, AI-generated material.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Anthropic spent tens of millions of dollars acquiring physical books and slicing off their spines so contents could be scanned before being pulped.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Anthropic sliced off book bindings for high-speed scanning.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "Remove 'high-speed', as Source 1 only states the spines were sliced off so contents could be scanned before pulping."
+   },
+   {
+    "claim": "Anthropic stated it does not buy and destroy rare and antiquarian books.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Automated book-disassembly workflows have been documented at third-party facilities.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "Remove 'automated' and specify that books tracked by 404 Media were dismantled and scanned at an Amazon facility."
+   },
+   {
+    "claim": "Bodleian Library collections remain fully intact under the deal, rather than being pulped.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "The collaboration is part of OpenAI's $50 million NextGenAI consortium, which includes US partners such as Caltech, MIT, the University of Michigan, and the Boston Public Library.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Oxford is the only UK member of the NextGenAI consortium.",
+    "status": "supported",
+    "source": 1
+   }
+  ],
+  "recent": true,
+  "score": 9
+ },
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.theguardian.com/technology/2026/sep/26/oxford-university-bodleian-library-open-ai-chat-gpt",
+   "title": "Oxford lets OpenAI train its AI models on Bodleian Library",
+   "site": "The Guardian",
+   "official": false,
+   "published": 1790420436000,
+   "text": "The University of Oxford has allowed the company behind ChatGPT to train its AI models on historical texts from its Bodleian Library, as tech companies scour academic institutions for fresh data.The Bodleian material digitised by OpenAI has been used to “populate the OpenAI training set”, according to internal documents.Oxford announced a partnership with the company in March 2025, using OpenAI so"
+  },
+  {
+   "n": 2,
+   "url": "https://www.bodleian.ox.ac.uk/about/media/oxford-and-openai-launch",
+   "title": "Oxford and OpenAI launch collaboration to advance research and education",
+   "site": "bodleian.ox.ac.uk",
+   "official": false,
+   "published": null,
+   "text": "The University of Oxford has announced plans to expand its artificial intelligence (AI) offering and capabilities with OpenAI.\nThrough the five-year collaboration, students and faculty staff are now able to gain access to research grant funding, enterprise-level security and cutting-edge AI tools to enhance teaching, learning and research. The initiative builds on Oxford’s investment in strengthen"
+  },
+  {
+   "n": 3,
+   "url": "https://www.bodleian.ox.ac.uk/services/research-partnerships/digitisation-project",
+   "title": "Bodleian Digitisation Research project",
+   "site": "bodleian.ox.ac.uk",
+   "official": false,
+   "published": null,
+   "text": "Bodleian Digitisation Research project: testing ways to digitise our collections at scale\nAbout this project\n\n \nThe Bodleian Libraries began a pilot research project in February 2025 to investigate how to digitise parts of our collection at scale. OpenAI has funded the project as part of their 5-year partnership with the University of Oxford and as part of their NextGenAI consortium of Higher Educ"
+  },
+  {
+   "n": 4,
+   "url": "https://www.thenews.com.pk/latest/1417727-oxford-gives-openai-access-to-bodleian-library-for-ai-training",
+   "title": "Oxford gives OpenAI access to Bodleian Library for AI training",
+   "site": "The News International",
+   "official": false,
+   "published": 1790425260000,
+   "text": "Oxford gives OpenAI access to Bodleian Library for AI trainingThe University of Oxford has given OpenAI access to its Bodleian Library’s historical texts that the ChatGPT maker can use to train its AI models. According to internal documents as reported by The Guardian, “The Bodleian material digitised by OpenAI has been used to populate the OpenAI training set,” so the AI could learn language patt"
+  }
+ ]
+}
