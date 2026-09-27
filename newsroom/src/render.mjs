@@ -328,7 +328,7 @@ ${p.hero ? `<media:content url="${abs(`${B}/${p.og || p.hero.src}`)}" medium="im
 <link>${abs(`${B}/`)}</link>
 <description>${esc(SITE.description)}</description>
 <language>en</language>
-<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+<lastBuildDate>${new Date(Math.max(0, ...posts.map((p) => p.updatedAt || p.publishedAt))).toUTCString()}</lastBuildDate>
 <atom:link href="${abs(`${B}/feed.xml`)}" rel="self" type="application/rss+xml"/>
 ${items}
 </channel>
