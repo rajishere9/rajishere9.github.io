@@ -1,150 +1,149 @@
 {
- "slug": "google-cloud-api-gateway-model-context-protocol-support",
- "title": "Google Cloud API Gateway Adds Native Model Context Protocol Support",
- "seoTitle": "Google Cloud API Gateway Adds Native MCP Support",
- "description": "Google Cloud API Gateway now runs as a native remote MCP server in Public Preview, exposing REST APIs directly to AI agents without custom middleware.",
- "dek": "A Public Preview release allows development teams to convert existing REST services into AI agent tools using OpenAPI annotations.",
- "category": "Agents & Tools",
- "tags": [
-  "Google Cloud",
-  "API Gateway",
-  "Model Context Protocol",
-  "AI Agents",
-  "OpenAPI",
-  "Cloud Run"
- ],
- "keyTakeaways": [
-  "Google Cloud API Gateway can now function as a remote Model Context Protocol (MCP) server in Public Preview.",
-  "Developers can expose REST APIs as MCP tools by annotating existing OpenAPI 3.x specifications without writing separate proxy servers.",
-  "Discovery endpoints via tools/list are unauthenticated by default, requiring teams to manually configure JWT authentication for production security.",
-  "The preview currently excludes stdio transport, OpenAPI 2.0, HTTP 204 empty responses, and concurrent Model Routing configurations."
- ],
- "body": "On September 24, 2026, Google introduced a Public Preview feature enabling [Google Cloud API Gateway](https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/) to operate natively as a remote Model Context Protocol (MCP) server. The update allows software teams to expose existing REST backends to artificial intelligence agents without developing, hosting, or maintaining separate middleware servers to bridge the protocols. By converting JSON-RPC requests directly into standard REST calls, the gateway bridges enterprise infrastructure with agentic frameworks such as the Agent Development Kit (ADK) and Gemini Enterprise.\n\nPreviously, exposing private application programming interfaces to AI models required running dedicated MCP servers that duplicated routing, authentication, logging, and rate-limiting logic. Under the new implementation, the gateway handles protocol transcoding directly on an HTTP endpoint, ensuring that AI-driven agent traffic and normal HTTP clients share a single policy path.\n\n## How Google Cloud API Gateway Serves MCP Tools\n\nTo turn existing endpoints into agent tools, developers annotate an OpenAPI 3.0.x or 3.1.x document using Google-specific vendor extensions. Enabling the feature requires setting `x-google-api-management.mcp: true` at the document root, according to the [Google Cloud documentation](https://docs.cloud.google.com/api-gateway/docs/mcp-overview). Individual endpoints can then be customized, renamed, or excluded using the `x-google-mcp-tool` directive.\n\nOnce the configuration is deployed, the gateway begins serving MCP communications on the `/mcp` base path. When an AI client invokes an operation, the gateway accepts the incoming MCP JSON-RPC payload, validates any supplied credentials, and inspects the payload. It translates the `tools/call` message into an equivalent HTTP REST request targeting the backend service—such as an application running on Cloud Run. When the backend responds, the gateway packages the result back into standard MCP JSON-RPC format for the client.\n\n[[FIG1]]\n\nBecause the backend only sees standard REST calls, internal microservices do not require code changes or new software libraries. Furthermore, invoking a tool against an operation consumes the exact same quota allocation configured for direct REST traffic.\n\n## Catalog Integration and the Security Discovery Boundary\n\nFor enterprise tool governance, gateways configured with MCP automatically publish metadata to Google Cloud API hub and register within Agent Registry, according to [Google's announcement](https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/). This registration allows autonomous agents and developer tooling to discover operational schemas across cloud projects once the `agentregistry.googleapis.com` service is enabled.\n\nHowever, the rollout introduces an important architectural consideration regarding default discovery permissions. While the `tools/call` execution method strictly enforces whatever authentication (such as API keys or JSON Web Tokens) the underlying REST operation requires, the `tools/list` discovery endpoint is unauthenticated by default. If published without additional rules, anyone who queries the gateway endpoint can inspect available tool names, descriptions, and input parameters, as analyzed by [Learnetto](https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813).\n\n[[FIG2]]\n\nTo safeguard sensitive system architecture before moving workloads into production, Google advises teams to enforce JSON Web Token (JWT) authentication explicitly under the `x-google-api-management.mcp.tools-list.security` property. The company notes that standard API keys cannot be used to secure the `tools/list` discovery method.\n\n## Public Preview Limitations and Architecture Scope\n\nThe feature is currently scoped to remote HTTP servers and OpenAPI 3 specifications, leaving several protocol capabilities unsupported during the Public Preview. As detailed by [daily.dev](https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw) and Google Cloud documentation, the gateway enforces the following boundaries:\n\n* **Transport and specs:** Only remote HTTP POST communication is supported; local stdio transport is omitted. Legacy OpenAPI 2.0 definitions cannot be parsed.\n* **Protocol primitives:** The gateway only handles lifecycle handshakes (`initialize`, `notifications/initialized`) alongside tool operations (`tools/list`, `tools/call`). Protocol prompts (`prompts/*`) and resources (`resources/*`) are not supported.\n* **Operational limits:** A single gateway configuration supports a maximum of 1,000 tools. Backends returning empty bodies (such as HTTP 204 No Content status codes) are not exposed, and deeply nested schemas may not fully resolve in discovery responses.\n* **Feature mutual exclusion:** Organizations cannot enable both native MCP and Model Routing within the same API configuration document.\n* **Streaming:** Response streaming and long-running tool executions are not supported in the initial preview.\n\nGoogle indicated that response streaming, Model Armor payload inspection, and MCP prompts and resources are planned on the product roadmap. For advanced enterprise monetization, complex lifecycle policies, or custom traffic governance, Google recommends Apigee, while outbound agent requests can be governed using Agent Gateway.",
- "faq": [
-  {
-   "q": "What versions of OpenAPI are required to use MCP on Google Cloud API Gateway?",
-   "a": "The feature requires OpenAPI 3.0.x or OpenAPI 3.1.x specifications. OpenAPI 2.0 is not supported, meaning older definitions must be upgraded first."
+  "slug": "google-cloud-api-gateway-model-context-protocol-support",
+  "title": "Google Cloud API Gateway Adds Native Model Context Protocol Support",
+  "seoTitle": "Google Cloud API Gateway Adds Native MCP Support",
+  "description": "Google Cloud API Gateway now runs as a native remote MCP server in Public Preview, exposing REST APIs directly to AI agents without custom middleware.",
+  "dek": "A Public Preview release allows development teams to convert existing REST services into AI agent tools using OpenAPI annotations.",
+  "category": "Agents & Tools",
+  "tags": [
+    "Google Cloud",
+    "API Gateway",
+    "Model Context Protocol",
+    "AI Agents",
+    "OpenAPI",
+    "Cloud Run"
+  ],
+  "keyTakeaways": [
+    "Google Cloud API Gateway can now function as a remote Model Context Protocol (MCP) server in Public Preview.",
+    "Developers can expose REST APIs as MCP tools by annotating existing OpenAPI 3.x specifications without writing separate proxy servers.",
+    "Discovery endpoints via tools/list are unauthenticated by default, requiring teams to manually configure JWT authentication for production security.",
+    "The preview currently excludes stdio transport, OpenAPI 2.0, HTTP 204 empty responses, and concurrent Model Routing configurations."
+  ],
+  "body": "On September 24, 2026, Google introduced a Public Preview feature enabling [Google Cloud API Gateway](https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/) to operate natively as a remote Model Context Protocol (MCP) server. The update allows software teams to expose existing REST backends to artificial intelligence agents without developing, hosting, or maintaining separate middleware servers to bridge the protocols. By converting JSON-RPC requests directly into standard REST calls, the gateway bridges enterprise infrastructure with agentic frameworks such as the Agent Development Kit (ADK) and Gemini Enterprise.\n\nPreviously, exposing private application programming interfaces to AI models required running dedicated MCP servers that duplicated routing, authentication, logging, and rate-limiting logic. Under the new implementation, the gateway handles protocol transcoding directly on an HTTP endpoint, ensuring that AI-driven agent traffic and normal HTTP clients share a single policy path.\n\n## How Google Cloud API Gateway Serves MCP Tools\n\nTo turn existing endpoints into agent tools, developers annotate an OpenAPI 3.0.x or 3.1.x document using Google-specific vendor extensions. Enabling the feature requires setting `x-google-api-management.mcp: true` at the document root, according to the [Google Cloud documentation](https://docs.cloud.google.com/api-gateway/docs/mcp-overview). Individual endpoints can then be customized, renamed, or excluded using the `x-google-mcp-tool` directive.\n\nOnce the configuration is deployed, the gateway begins serving MCP communications on the `/mcp` base path. When an AI client invokes an operation, the gateway accepts the incoming MCP JSON-RPC payload, validates any supplied credentials, and inspects the payload. It translates the `tools/call` message into an equivalent HTTP REST request targeting the backend service—such as an application running on Cloud Run. When the backend responds, the gateway packages the result back into standard MCP JSON-RPC format for the client.\n\n[[FIG1]]\n\nBecause the backend only sees standard REST calls, internal microservices do not require code changes or new software libraries. Furthermore, invoking a tool against an operation consumes the exact same quota allocation configured for direct REST traffic.\n\n## Catalog Integration and the Security Discovery Boundary\n\nFor enterprise tool governance, gateways configured with MCP automatically publish metadata to Google Cloud API hub and register within Agent Registry, according to [Google's announcement](https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/). This registration allows autonomous agents and developer tooling to discover operational schemas across cloud projects once the `agentregistry.googleapis.com` service is enabled.\n\nHowever, the rollout introduces an important architectural consideration regarding default discovery permissions. While the `tools/call` execution method strictly enforces whatever authentication (such as API keys or JSON Web Tokens) the underlying REST operation requires, the `tools/list` discovery endpoint is unauthenticated by default. If published without additional rules, anyone who queries the gateway endpoint can inspect available tool names, descriptions, and input parameters, as analyzed by [Learnetto](https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813).\n\n[[FIG2]]\n\nTo safeguard sensitive system architecture before moving workloads into production, Google advises teams to enforce JSON Web Token (JWT) authentication explicitly under the `x-google-api-management.mcp.tools-list.security` property. The company notes that standard API keys cannot be used to secure the `tools/list` discovery method.\n\n## Public Preview Limitations and Architecture Scope\n\nThe feature is currently scoped to remote HTTP servers and OpenAPI 3 specifications, leaving several protocol capabilities unsupported during the Public Preview. As detailed by [daily.dev](https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw) and Google Cloud documentation, the gateway enforces the following boundaries:\n\n* **Transport and specs:** Only remote HTTP POST communication is supported; local stdio transport is omitted. Legacy OpenAPI 2.0 definitions cannot be parsed.\n* **Protocol primitives:** The gateway only handles lifecycle handshakes (`initialize`, `notifications/initialized`) alongside tool operations (`tools/list`, `tools/call`). Protocol prompts (`prompts/*`) and resources (`resources/*`) are not supported.\n* **Operational limits:** A single gateway configuration supports a maximum of 1,000 tools. Backends returning empty bodies (such as HTTP 204 No Content status codes) are not exposed, and deeply nested schemas may not fully resolve in discovery responses.\n* **Feature mutual exclusion:** Organizations cannot enable both native MCP and Model Routing within the same API configuration document.\n* **Streaming:** Response streaming and long-running tool executions are not supported in the initial preview.\n\nGoogle indicated that response streaming, Model Armor payload inspection, and MCP prompts and resources are planned on the product roadmap. For advanced enterprise monetization, complex lifecycle policies, or custom traffic governance, Google recommends Apigee, while outbound agent requests can be governed using Agent Gateway.",
+  "faq": [
+    {
+      "q": "What versions of OpenAPI are required to use MCP on Google Cloud API Gateway?",
+      "a": "The feature requires OpenAPI 3.0.x or OpenAPI 3.1.x specifications. OpenAPI 2.0 is not supported, meaning older definitions must be upgraded first."
+    },
+    {
+      "q": "How is tool discovery secured on the gateway?",
+      "a": "By default, tool discovery via tools/list is unauthenticated. To secure tool discovery in production, developers must configure JWT authentication in the specification, as API keys cannot secure the tools/list endpoint."
+    },
+    {
+      "q": "Can I use Model Routing and MCP in the same API Gateway configuration?",
+      "a": "No. Google Cloud enforces mutual exclusion between MCP and Model Routing within the same API configuration document. Enabling x-google-api-management.mcp prevents the use of x-google-model-router."
+    }
+  ],
+  "hero": {
+    "marker": "HERO",
+    "type": "real",
+    "realId": "R1",
+    "alt": "Diagram showing Google Cloud API Gateway routing connections and integration tools",
+    "caption": "Google Cloud API Gateway now converts JSON-RPC requests into standard REST backend calls.",
+    "src": "img/google-cloud-api-gateway-model-context-protocol-support/hero.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 36690,
+    "small": "img/google-cloud-api-gateway-model-context-protocol-support/hero-640.webp",
+    "og": "img/google-cloud-api-gateway-model-context-protocol-support/og.jpg",
+    "credit": "developers.googleblog.com",
+    "creditUrl": "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/"
   },
-  {
-   "q": "How is tool discovery secured on the gateway?",
-   "a": "By default, tool discovery via tools/list is unauthenticated. To secure tool discovery in production, developers must configure JWT authentication in the specification, as API keys cannot secure the tools/list endpoint."
-  },
-  {
-   "q": "Can I use Model Routing and MCP in the same API Gateway configuration?",
-   "a": "No. Google Cloud enforces mutual exclusion between MCP and Model Routing within the same API configuration document. Enabling x-google-api-management.mcp prevents the use of x-google-model-router."
-  }
- ],
- "hero": {
-  "marker": "HERO",
-  "type": "real",
-  "realId": "R1",
-  "alt": "Diagram showing Google Cloud API Gateway routing connections and integration tools",
-  "caption": "Google Cloud API Gateway now converts JSON-RPC requests into standard REST backend calls.",
-  "src": "img/google-cloud-api-gateway-model-context-protocol-support/hero.webp",
-  "width": 1200,
-  "height": 675,
-  "bytes": 36690,
-  "small": "img/google-cloud-api-gateway-model-context-protocol-support/hero-640.webp",
   "og": "img/google-cloud-api-gateway-model-context-protocol-support/og.jpg",
-  "credit": "developers.googleblog.com",
-  "creditUrl": "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/"
- },
- "og": "img/google-cloud-api-gateway-model-context-protocol-support/og.jpg",
- "figures": [
-  {
-   "marker": "FIG1",
-   "type": "ai",
-   "prompt": "An isometric digital visualization of an infrastructure control plane translating geometric network packets into organized optical fiber channels inside a secure data center, clean studio lighting, high tech aesthetic",
-   "alt": "Conceptual rendering of network protocol translation in cloud infrastructure",
-   "caption": "The gateway handles JSON-RPC translation directly, avoiding dedicated adapter instances.",
-   "slot": "FIG1",
-   "src": "img/google-cloud-api-gateway-model-context-protocol-support/figure-1.webp",
-   "width": 1200,
-   "height": 670,
-   "bytes": 33048,
-   "credit": "AI-generated illustration"
+  "figures": [
+    {
+      "marker": "FIG1",
+      "type": "ai",
+      "prompt": "An isometric digital visualization of an infrastructure control plane translating geometric network packets into organized optical fiber channels inside a secure data center, clean studio lighting, high tech aesthetic",
+      "alt": "Conceptual rendering of network protocol translation in cloud infrastructure",
+      "caption": "The gateway handles JSON-RPC translation directly, avoiding dedicated adapter instances.",
+      "slot": "FIG1",
+      "src": "img/google-cloud-api-gateway-model-context-protocol-support/figure-1.webp",
+      "width": 1200,
+      "height": 670,
+      "bytes": 33048,
+      "credit": "AI-generated illustration"
+    },
+    {
+      "marker": "FIG2",
+      "type": "ai",
+      "alt": "Conceptual illustration of a glowing digital conduit bridging a traditional stone structure to a futuristic crystalline hub.",
+      "caption": "A conceptual illustration representing the integration of traditional REST services with advanced AI frameworks through native protocol support.",
+      "slot": "FIG2",
+      "src": "img/google-cloud-api-gateway-model-context-protocol-support/figure-2.webp",
+      "width": 1200,
+      "height": 670,
+      "bytes": 54836,
+      "credit": "AI-generated illustration",
+      "prompt": "A glowing digital conduit made of interwoven fiber optic threads connecting a traditional stone bridge to a futuristic crystalline structure, representing the transformation of legacy APIs into modern AI agent tools, cinematic lighting, highly detailed, vivid colors"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/",
+      "title": "Turn your REST APIs into MCP tools with Google Cloud API Gateway",
+      "site": "developers.googleblog.com",
+      "published": 1790208000000,
+      "official": true
+    },
+    {
+      "n": 2,
+      "url": "https://docs.cloud.google.com/api-gateway/docs/mcp-overview",
+      "title": "Model Context Protocol overview",
+      "site": "Google Cloud Documentation",
+      "published": null,
+      "official": false
+    },
+    {
+      "n": 3,
+      "url": "https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813",
+      "title": "Google Cloud API Gateway can now turn existing REST operations into MCP tools",
+      "site": "Learnetto",
+      "published": 1790208000000,
+      "official": false
+    },
+    {
+      "n": 4,
+      "url": "https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw",
+      "title": "Turn your REST APIs into MCP tools with Google Cloud API Gateway",
+      "site": "daily.dev",
+      "published": 1790266668020,
+      "official": false
+    },
+    {
+      "n": 5,
+      "url": "https://ia.university/ia-news/mcp-api-gateway-google-rest-guia-2026/",
+      "title": "API Gateway MCP de Google: qué es y cómo usarlo hoy",
+      "site": "Cursos inteligencia artificial IA University",
+      "published": 1790280001000,
+      "official": false
+    },
+    {
+      "n": 6,
+      "url": "https://note.com/marusho_1266/n/nc8296aa40342?hl=en",
+      "title": "\"IT News\" | Just add a few lines to your existing API to turn it into an AI agent tool—Google Cloud API Gateway now supports MCP",
+      "site": "note（ノート）",
+      "published": 1790344132000,
+      "official": false
+    }
+  ],
+  "publishedAt": 1790494827201,
+  "updatedAt": 1790494827201,
+  "foundVia": "developers.googleblog.com",
+  "check": {
+    "claims": 23,
+    "score": 10
   },
-  {
-   "marker": "FIG2",
-   "type": "real",
-   "realId": "R2",
-   "alt": "Screenshot of technical analysis covering Google Cloud API Gateway MCP integration",
-   "caption": "Technical guides highlight the importance of securing discovery endpoints before production deployment.",
-   "slot": "FIG2",
-   "src": "img/google-cloud-api-gateway-model-context-protocol-support/figure-2.webp",
-   "width": 1200,
-   "height": 630,
-   "bytes": 21374,
-   "credit": "daily.dev",
-   "creditUrl": "https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw"
+  "story": {
+    "id": "P12431f12",
+    "score": 79,
+    "items": [
+      "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/"
+    ]
+  },
+  "models": {
+    "writer": "gemini-3.8-flash",
+    "checker": "gemini-3.8-flash"
   }
- ],
- "sources": [
-  {
-   "n": 1,
-   "url": "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/",
-   "title": "Turn your REST APIs into MCP tools with Google Cloud API Gateway",
-   "site": "developers.googleblog.com",
-   "published": 1790208000000,
-   "official": true
-  },
-  {
-   "n": 2,
-   "url": "https://docs.cloud.google.com/api-gateway/docs/mcp-overview",
-   "title": "Model Context Protocol overview",
-   "site": "Google Cloud Documentation",
-   "published": null,
-   "official": false
-  },
-  {
-   "n": 3,
-   "url": "https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813",
-   "title": "Google Cloud API Gateway can now turn existing REST operations into MCP tools",
-   "site": "Learnetto",
-   "published": 1790208000000,
-   "official": false
-  },
-  {
-   "n": 4,
-   "url": "https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw",
-   "title": "Turn your REST APIs into MCP tools with Google Cloud API Gateway",
-   "site": "daily.dev",
-   "published": 1790266668020,
-   "official": false
-  },
-  {
-   "n": 5,
-   "url": "https://ia.university/ia-news/mcp-api-gateway-google-rest-guia-2026/",
-   "title": "API Gateway MCP de Google: qué es y cómo usarlo hoy",
-   "site": "Cursos inteligencia artificial IA University",
-   "published": 1790280001000,
-   "official": false
-  },
-  {
-   "n": 6,
-   "url": "https://note.com/marusho_1266/n/nc8296aa40342?hl=en",
-   "title": "\"IT News\" | Just add a few lines to your existing API to turn it into an AI agent tool—Google Cloud API Gateway now supports MCP",
-   "site": "note（ノート）",
-   "published": 1790344132000,
-   "official": false
-  }
- ],
- "publishedAt": 1790494827201,
- "updatedAt": 1790494827201,
- "foundVia": "developers.googleblog.com",
- "check": {
-  "claims": 23,
-  "score": 10
- },
- "story": {
-  "id": "P12431f12",
-  "score": 79,
-  "items": [
-   "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/"
-  ]
- },
- "models": {
-  "writer": "gemini-3.8-flash",
-  "checker": "gemini-3.8-flash"
- }
 }

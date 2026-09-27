@@ -42,7 +42,7 @@ export const CATEGORIES = [
 
 // Domains whose images and words count as official, first-party sources.
 export const OFFICIAL_DOMAINS = [
-  "openai.com", "anthropic.com", "deepmind.google", "blog.google", "research.google", "developers.googleblog.com", "ai.google.dev",
+  "openai.com", "anthropic.com", "deepmind.google", "blog.google", "research.google", "developers.googleblog.com", "ai.google.dev", "cloud.google.com",
   "ai.meta.com", "about.fb.com", "mistral.ai", "x.ai", "deepseek.com", "api-docs.deepseek.com", "qwenlm.github.io", "qwen.ai",
   "alibabacloud.com", "moonshot.ai", "kimi.ai", "z.ai", "zhipuai.cn", "minimax.io", "minimaxi.com", "cohere.com", "stability.ai",
   "runwayml.com", "elevenlabs.io", "midjourney.com", "bfl.ai", "suno.com", "machinelearning.apple.com", "apple.com",

@@ -9,6 +9,7 @@ import { isOfficialUrl } from "./collect.mjs";
 const MAX_SOURCES = 7;
 const matches = (d, list) => list.some((x) => d === x || d.endsWith("." + x));
 const MAX_CHARS = 14000;
+const INSTITUTIONAL = /\.(edu|gov|mil|int)(\.[a-z]{2})?$|\.ac\.[a-z]{2}$|\.gov\.[a-z]{2}$/;
 const NOT_SOURCES = /(^|\.)(news\.google\.com|reddit\.com|redd\.it|news\.ycombinator\.com|bsky\.app|x\.com|twitter\.com|t\.co|lobste\.rs|techmeme\.com|producthunt\.com|youtube\.com|youtu\.be|facebook\.com|instagram\.com|linkedin\.com)$/;
 
 function metaContent(doc, ...names) {
@@ -131,7 +132,7 @@ async function findSources(story) {
     prompt: `Current time: ${new Date().toISOString()}.
 News event: ${story.headline}
 Context: ${story.summary}
-Search for this exact event. Return the URL of the official announcement or primary source (company blog, model card, paper, press release, repository) if one exists, plus up to 4 reputable independent news reports about it. Only return URLs that appear in your search results, and prefer the most recent reporting. Note each page's publish date if shown.`,
+Search for this exact event. Return the URL of the official announcement or primary source (the organisation's own blog, model card, paper, press release, repository or institutional news page; never a news outlet) if one exists, plus up to 4 reputable independent news reports about it. Only return URLs that appear in your search results, and prefer the most recent reporting. Note each page's publish date if shown.`,
     schema: {
       type: "object",
       properties: {
@@ -142,9 +143,10 @@ Search for this exact event. Return the URL of the official announcement or prim
       required: ["official", "coverage"],
     },
   });
-  const listed = [...(value.official || []), ...(value.coverage || [])].map((x) => x.url).filter((u) => /^https?:\/\//.test(u || ""));
-  const urls = await Promise.all([...listed, ...chunks.slice(0, 8).map((c) => c.uri)].map(resolveRedirect));
-  return { urls: urls.filter(Boolean), eventDate: parseDate(value.eventDate) };
+  const web = (list) => (list || []).map((x) => x.url).filter((u) => /^https?:\/\//.test(u || ""));
+  const official = (await Promise.all(web(value.official).map(resolveRedirect))).filter(Boolean);
+  const urls = await Promise.all([...web(value.coverage), ...chunks.slice(0, 8).map((c) => c.uri)].map(resolveRedirect));
+  return { urls: [...official, ...urls.filter(Boolean)], official, eventDate: parseDate(value.eventDate) };
 }
 
 export async function research(story) {
@@ -155,9 +157,11 @@ export async function research(story) {
   };
   story.items.filter((i) => i.official).forEach((i) => add(i.url));
   let eventDate = null;
+  const primaryDomains = new Set();
   try {
     const found = await findSources(story);
     found.urls.forEach(add);
+    found.official.map(domainOf).filter((d) => !matches(d, REPUTABLE_DOMAINS)).forEach((d) => primaryDomains.add(d));
     eventDate = found.eventDate;
   } catch (e) {
     log(`research: search failed: ${e.message}`);
@@ -181,13 +185,16 @@ export async function research(story) {
     return page;
   });
 
+  // Primary = the organisation behind the story (lab, company, university, agency), never a news outlet.
+  // Only primary pages may supply "real" images, so we never republish another publisher's photos or thumbnails.
+  const isPrimary = (u) => isOfficialUrl(u) || primaryDomains.has(domainOf(u)) || INSTITUTIONAL.test(domainOf(u));
   const seenText = new Set();
   const sources = pages
     .filter((p) => p && !p.error && (p.text || "").length >= 400)
     .filter((p) => { const k = p.text.slice(0, 300); if (seenText.has(k)) return false; seenText.add(k); return true; })
     .sort((a, b) => rank(b.url) - rank(a.url))
     .slice(0, MAX_SOURCES)
-    .map((p, i) => ({ n: i + 1, url: p.url, title: clip(p.title, 200), site: p.site, official: isOfficialUrl(p.url), published: p.published || null, text: p.text, images: p.images || [] }));
+    .map((p, i) => ({ n: i + 1, url: p.url, title: clip(p.title, 200), site: p.site, official: isOfficialUrl(p.url), primary: isPrimary(p.url), published: p.published || null, text: p.text, images: p.images || [] }));
 
   const totalChars = sources.reduce((n, s) => n + s.text.length, 0);
   const dated = sources.filter((s) => s.published).map((s) => s.published);

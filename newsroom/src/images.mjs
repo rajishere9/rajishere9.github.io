@@ -9,10 +9,11 @@ import { http, pool, log, domainOf } from "./util.mjs";
 const STYLE = `Editorial illustration for a premium technology news site. Cinematic and atmospheric, with a refined palette of deep aubergine and violet shadows lit by warm amber light, soft volumetric glow, fine detail, tasteful depth of field. Conceptual and symbolic rather than literal.
 Strict rules: no text, letters, numbers, captions or watermarks anywhere; no company logos or brand marks; no recognisable real people or celebrity likenesses; no fake user interfaces or screenshots; no fake charts with data. Wide 16:9 composition with a clear focal point.`;
 
-// Download source images, drop tiny or odd-shaped ones, and ask Gemini which ones actually show this story.
+// Download images from primary sources only, drop tiny or odd-shaped ones, and ask Gemini which ones actually show this story.
+// News outlets' photos and thumbnails are never used: they belong to that publisher and often carry its branding.
 export async function vetRealImages(sources, story) {
   const cands = [];
-  for (const s of [...sources].sort((a, b) => b.official - a.official)) {
+  for (const s of [...sources].filter((x) => x.primary).sort((a, b) => b.official - a.official)) {
     for (const img of s.images) {
       if (!cands.some((c) => c.url === img.url)) cands.push({ ...img, sourceN: s.n, site: s.site, pageUrl: s.url, official: s.official });
     }
@@ -27,27 +28,29 @@ export async function vetRealImages(sources, story) {
     if (meta.width < 600 || meta.height < 300 || ratio < 0.6 || ratio > 2.8) return null;
     return { ...c, buf, width: meta.width, height: meta.height };
   })).filter((x) => x && !x.error);
-  if (!downloaded.length) return [];
+  if (!downloaded.length) { if (!cands.length) log("images: no primary-source images, using AI illustrations"); return []; }
 
   const thumbs = await Promise.all(downloaded.map((d) => sharp(d.buf).resize(448, 448, { fit: "inside" }).jpeg({ quality: 70 }).toBuffer()));
   const { value } = await gemini.json({
     model: MODELS.triage,
     temperature: 0,
-    prompt: `These ${downloaded.length} images were found on pages reporting this story: "${story.headline}". For each image in order, decide whether it genuinely illustrates this specific story (for example the product, model, device, research figure, people or place involved), rather than being a logo, generic stock photo, advertisement, author photo, unrelated article thumbnail, or mostly text.`,
+    prompt: `These ${downloaded.length} images were found on pages reporting this story: "${story.headline}". For each image in order, decide whether it genuinely illustrates this specific story (for example the product, model, device, research figure, people or place involved), rather than being a logo, generic stock photo, advertisement, author photo, unrelated article thumbnail, or mostly text.
+Also flag any image that carries branding from a news outlet, broadcaster, podcast, newsletter or other publisher (logo, watermark, programme or bulletin title, date banner, headline overlay), or has overlaid text of any kind other than text naturally present in a product photo, diagram or chart.`,
     parts: thumbs.map((t) => ({ inlineData: { mimeType: "image/jpeg", data: t.toString("base64") } })),
     schema: {
       type: "object",
       properties: { images: { type: "array", items: { type: "object", properties: {
         index: { type: "integer" }, relevant: { type: "boolean" }, kind: { type: "string", enum: ["photo", "product", "diagram", "chart", "screenshot", "illustration", "logo", "text", "stock", "ad", "other"], description: "illustration = drawn, rendered or AI-generated artwork rather than a photo, screenshot, diagram or chart" },
+        overlay: { type: "boolean", description: "True if the image has publisher branding, a watermark, or overlaid headline/banner text" },
         description: { type: "string", description: "One factual sentence describing what the image shows" },
-      }, required: ["index", "relevant", "kind", "description"] } } },
+      }, required: ["index", "relevant", "kind", "overlay", "description"] } } },
       required: ["images"],
     },
   });
   const verdicts = new Map((value.images || []).map((v) => [v.index, v]));
   const good = downloaded.map((d, i) => ({ ...d, verdict: verdicts.get(i) || verdicts.get(i + 1) }))
     // Third-party artwork isn't a "real" image of the story: only official sources' illustrations count.
-    .filter((d) => d.verdict?.relevant && !["logo", "text", "stock", "ad"].includes(d.verdict.kind) && (d.verdict.kind !== "illustration" || d.official))
+    .filter((d) => d.verdict?.relevant && !d.verdict.overlay && !["logo", "text", "stock", "ad"].includes(d.verdict.kind) && (d.verdict.kind !== "illustration" || d.official))
     .map((d, i) => ({ id: `R${i + 1}`, ...d, description: d.verdict.description }));
   log(`images: ${good.length} of ${downloaded.length} source images are usable`);
   return good;

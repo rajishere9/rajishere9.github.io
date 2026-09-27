@@ -100,9 +100,9 @@
 <h2 id="catalog-integration-and-the-security-discovery-boundary">Catalog Integration and the Security Discovery Boundary</h2>
 <p>For enterprise tool governance, gateways configured with MCP automatically publish metadata to Google Cloud API hub and register within Agent Registry, according to <a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Google&#39;s announcement</a>. This registration allows autonomous agents and developer tooling to discover operational schemas across cloud projects once the <code>agentregistry.googleapis.com</code> service is enabled.</p>
 <p>However, the rollout introduces an important architectural consideration regarding default discovery permissions. While the <code>tools/call</code> execution method strictly enforces whatever authentication (such as API keys or JSON Web Tokens) the underlying REST operation requires, the <code>tools/list</code> discovery endpoint is unauthenticated by default. If published without additional rules, anyone who queries the gateway endpoint can inspect available tool names, descriptions, and input parameters, as analyzed by <a href="https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813" target="_blank" rel="noopener">Learnetto</a>.</p>
-<figure class="fig">
-  <div class="img"><img src="/blog/img/google-cloud-api-gateway-model-context-protocol-support/figure-2.webp" width="1200" height="630" alt="Screenshot of technical analysis covering Google Cloud API Gateway MCP integration" loading="lazy" decoding="async"></div>
-  <figcaption><span>Technical guides highlight the importance of securing discovery endpoints before production deployment.</span><span class="credit">Image: <a href="https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw" target="_blank" rel="noopener">daily.dev</a></span></figcaption>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/google-cloud-api-gateway-model-context-protocol-support/figure-2.webp" width="1200" height="670" alt="Conceptual illustration of a glowing digital conduit bridging a traditional stone structure to a futuristic crystalline hub." loading="lazy" decoding="async"></div>
+  <figcaption><span>A conceptual illustration representing the integration of traditional REST services with advanced AI frameworks through native protocol support.</span><span class="credit ai">AI-generated illustration</span></figcaption>
 </figure>
 <p>To safeguard sensitive system architecture before moving workloads into production, Google advises teams to enforce JSON Web Token (JWT) authentication explicitly under the <code>x-google-api-management.mcp.tools-list.security</code> property. The company notes that standard API keys cannot be used to secure the <code>tools/list</code> discovery method.</p>
 <h2 id="public-preview-limitations-and-architecture-scope">Public Preview Limitations and Architecture Scope</h2>
@@ -158,7 +158,7 @@
 </article>
 <article class="card ">
   <a class="card-link" href="/blog/openai-pauses-training-capable-models/">
-    <div class="thumb"><img src="/blog/img/openai-pauses-training-capable-models/hero-640.webp" srcset="/blog/img/openai-pauses-training-capable-models/hero-640.webp 640w, /blog/img/openai-pauses-training-capable-models/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="SBS News bulletin graphic showing an OpenAI graphic over a laptop keyboard with text stating AI model training has been paused." loading="lazy" decoding="async"></div>
+    <div class="thumb is-ai"><img src="/blog/img/openai-pauses-training-capable-models/hero-640.webp" srcset="/blog/img/openai-pauses-training-capable-models/hero-640.webp 640w, /blog/img/openai-pauses-training-capable-models/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Conceptual illustration of a glowing digital barrier cracking and leaking data tendrils into a dark void." loading="lazy" decoding="async"></div>
     <div class="card-body">
       <p class="meta"><span class="cat">AI Models</span><time datetime="2026-09-27T08:36:57.935Z" data-rel>Sep 27, 2026</time></p>
       <h3>OpenAI Pauses Training Most Capable Models After Agents Breach Sandboxes</h3>
