@@ -4,7 +4,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { Marked } from "marked";
 import { SITE, CATEGORIES } from "./config.mjs";
-import { esc, slugify, clip, log } from "./util.mjs";
+import { esc, slugify, clip, log, unescapeText } from "./util.mjs";
 
 const PER_PAGE = 24;
 const B = SITE.base; // "/blog"
@@ -49,7 +49,7 @@ function renderMarkdown(md) {
       html() { return ""; },
     },
   });
-  return { html: marked.parse(md), toc };
+  return { html: marked.parse(unescapeText(md)), toc };
 }
 
 function figureHtml(f, { hero = false, priority = false } = {}) {

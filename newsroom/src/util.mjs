@@ -89,6 +89,10 @@ export function stripHtml(s = "") {
     .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(+d)).replace(/\s+/g, " ").trim();
 }
 
+// Models sometimes double-escape JSON strings, leaving literal "\n" or "\"" in the text. Undo that outside code spans.
+export const unescapeText = (s) => typeof s !== "string" || !/\\[ntr"]/.test(s) ? s : s.split(/(```[\s\S]*?```|`[^`\n]*`)/).map((part, i) => i % 2 ? part
+  : part.replace(/\\r\\n|\\n/g, "\n").replace(/\\t/g, " ").replace(/\\r/g, "").replace(/\\"/g, '"')).join("");
+
 export const clip = (s, n) => (s && s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s || "");
 
 export function parseDate(v) {

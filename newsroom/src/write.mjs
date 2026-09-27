@@ -1,7 +1,7 @@
 // Writing: draft strictly from the sources, fact-check every claim against them, revise, and only then accept.
 import * as gemini from "./gemini.mjs";
 import { MODELS, CATEGORIES, SITE, LIMITS } from "./config.mjs";
-import { normUrl, slugify, log, clip } from "./util.mjs";
+import { normUrl, slugify, log, clip, unescapeText } from "./util.mjs";
 
 const SYSTEM = `You are a senior technology journalist writing for ${SITE.name}, a premium news site about AI and emerging technology.
 ACCURACY RULES — these override everything else:
@@ -12,6 +12,8 @@ ACCURACY RULES — these override everything else:
 5. Use absolute dates. Do not call anything the first, the best, the largest or the latest unless a source says so, attributed.
 6. No speculation, no invented quotes, no invented reactions.
 STYLE: clear, specific, confident, human. No hype and no clichés (never use: game-changer, revolutionize, landscape, delve, unleash, cutting-edge, in today's fast-paced world, it's worth noting, buckle up). American English. Short paragraphs. Explain why it matters for developers, businesses or users, grounded in the sources.
+FORMAT: the body is plain Markdown. Separate paragraphs, headings and figure markers with real blank lines. Never write escape sequences such as \\n, \\t or \\" as visible characters, and never wrap the body in quotes or code fences.
+IMAGES: real images come only from the organisation behind the story. AI illustrations are conceptual: their captions describe the idea they illustrate and never imply they are photos of real events, people or products.
 SEO: the title leads with the key entity and what happened; the primary keyword appears in the title, the first paragraph and at least one H2. Descriptive H2 and H3 headings that match what readers search for. The meta description is a compelling 140-158 character summary.`;
 
 const figureSchema = {
@@ -40,7 +42,7 @@ const draftSchema = {
     category: { type: "string", enum: CATEGORIES },
     tags: { type: "array", items: { type: "string" }, minItems: 3, maxItems: 6 },
     keyTakeaways: { type: "array", items: { type: "string" }, minItems: 3, maxItems: 5 },
-    body: { type: "string", description: "Markdown article body. Starts with the lede paragraph (no H1). Uses ## and ### headings. Contains figure markers [[FIG1]], [[FIG2]] and optionally [[FIG3]] on their own lines between sections. Cites sources with inline markdown links to their exact URLs." },
+    body: { type: "string", description: "Markdown article body. Starts with the lede paragraph (no H1). Uses ## and ### headings, with blank lines between paragraphs (real line breaks, never the characters backslash-n). Contains figure markers [[FIG1]], [[FIG2]] and optionally [[FIG3]] on their own lines between sections. Cites sources with inline markdown links to their exact URLs." },
     faq: { type: "array", items: { type: "object", properties: { q: { type: "string" }, a: { type: "string" } }, required: ["q", "a"] }, minItems: 2, maxItems: 4 },
     hero: figureSchema,
     figures: { type: "array", items: figureSchema, minItems: 2, maxItems: 3 },
@@ -92,6 +94,17 @@ IMAGE CAPTIONS:
 ${[d.hero, ...d.figures].map((f) => `- ${f.caption}`).join("\n")}`;
 }
 
+// Normalize every text field the model wrote (escaped newlines, stray whitespace).
+function tidy(d) {
+  const t = (s) => unescapeText(s || "").trim();
+  for (const k of ["title", "seoTitle", "slug", "description", "dek", "body"]) d[k] = t(d[k]);
+  d.body = d.body.replace(/\n{3,}/g, "\n\n").replace(/[ \t]+\n/g, "\n");
+  d.keyTakeaways = (d.keyTakeaways || []).map(t).filter(Boolean);
+  d.faq = (d.faq || []).map((f) => ({ q: t(f.q), a: t(f.a) })).filter((f) => f.q && f.a);
+  for (const f of [d.hero, ...(d.figures || [])].filter(Boolean)) for (const k of ["alt", "caption", "prompt"]) if (f[k]) f[k] = t(f[k]);
+  return d;
+}
+
 const problems = (check) => check.claims.filter((c) => c.status !== "supported");
 
 const patchSchema = {
@@ -123,17 +136,19 @@ ${sourcesBlock(sources)}`,
   const swap = (text) => {
     let out = text;
     for (const e of value.edits || []) {
-      if (e.find && out.includes(e.find)) { out = out.replace(e.find, e.replace); applied++; }
+      const find = unescapeText(e.find || ""), repl = unescapeText(e.replace || "");
+      if (find && out.includes(find)) { out = out.replace(find, repl); applied++; }
     }
     return out;
   };
   draft.title = swap(draft.title);
   draft.dek = swap(draft.dek);
   draft.description = swap(draft.description);
-  draft.body = swap(draft.body).replace(/\n{3,}/g, "\n\n").replace(/ {2,}/g, " ");
+  draft.body = swap(draft.body).replace(/ {2,}/g, " ");
   draft.keyTakeaways = draft.keyTakeaways.map(swap).filter((t) => t.trim());
   draft.faq = draft.faq.map((f) => ({ q: swap(f.q), a: swap(f.a) })).filter((f) => f.a.trim());
   for (const f of [draft.hero, ...draft.figures]) f.caption = swap(f.caption);
+  tidy(draft);
   return applied;
 }
 
@@ -215,6 +230,7 @@ function balanceImages(draft, real) {
 export async function writeStory(story, sources, real) {
   const t0 = Date.now();
   let { value: draft } = await gemini.json({ model: MODELS.writer, system: SYSTEM, temperature: 0.5, thinking: "medium", schema: draftSchema, prompt: draftPrompt(story, sources, real) });
+  tidy(draft);
   if (!draft.newsworthy) return { rejected: draft.rejectReason || "writer judged it not newsworthy" };
 
   let check;
@@ -240,10 +256,12 @@ PREVIOUS DRAFT:
 ${draftText(draft)}
 `),
       }));
+      tidy(draft);
     }
   }
 
   draft.body = sanitizeLinks(draft.body, sources);
+  if (/\\n/.test(draft.body.replace(/```[\s\S]*?```|`[^`\n]*`/g, ""))) return { rejected: "body still contains escaped newlines", draft };
   draft.slug = slugify(draft.slug || draft.title);
   draft.title = clip(draft.title, 90);
   balanceImages(draft, real);

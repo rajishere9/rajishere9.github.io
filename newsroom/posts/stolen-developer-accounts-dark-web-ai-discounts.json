@@ -1,126 +1,126 @@
 {
- "slug": "stolen-developer-accounts-dark-web-ai-discounts",
- "title": "Google Warns Stolen Developer Accounts Fuel Dark Web AI Discounts",
- "seoTitle": "Stolen Developer Accounts Drive Dark Web AI Resale",
- "description": "GTIG reports underground prices for stolen developer accounts doubled in 2026 as dark web brokers resell frontier AI model access at discounts up to 97%.",
- "dek": "Underground marketplaces are selling access to Claude, Gemini, and OpenAI models at steep markdowns funded by cloud credential theft and credit abuse.",
- "category": "Industry",
- "tags": [
-  "Cybersecurity",
-  "Google Cloud",
-  "Anthropic",
-  "Developer Tools",
-  "Dark Web"
- ],
- "keyTakeaways": [
-  "Marketplace prices for compromised AI accounts across Claude, Gemini, and Cursor Pro more than doubled in 2026, according to Google Threat Intelligence Group.",
-  "Illicit brokers are reselling API access to leading commercial models at discounts of up to 97% below official retail rates.",
-  "Attackers harvest plaintext credentials directly from coding tools like Cline and Continue AI using infostealers such as ACRSTEALER.",
-  "Intermediate proxies like 'Poison Claude' allow threat actors to read prompts, capture private source code, and modify responses in transit."
- ],
- "body": "Underground prices for stolen developer accounts and commercial artificial intelligence credentials more than doubled in 2026, according to findings from the [Google Threat Intelligence Group](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai). The spike in underground acquisition costs coincides with a flourishing illicit market offering steep discounts of up to 97% on access to frontier models from Anthropic, Google, and OpenAI, as reported by the [Financial Times via AI Weekly](https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026).\\n\\nThreat actors are funding these steep discounts through credential theft, cloud hijacking, and promotional credit exploitation. Instead of paying official per-token prices or subscription fees, brokers steal authentication tokens from enterprise environments or systematically farm introductory credits, leaving victims and hosting providers to absorb the computational costs.\\n\\n## What Drives the Market for Stolen Developer Accounts\\n\\nAccording to [Google Cloud's GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai), the illicit market has expanded rapidly with both more buyers and more sellers operating across clandestine forums. Demand is heavily concentrated on access to Anthropic's Claude and Google's Gemini, alongside autonomous coding environments such as Cursor Pro and Devin.\\n\\nTo satisfy this demand, cybercriminals have retooled established information-stealing malware strains, including LUMMAC.V2, STEALC.V2, VIDAR, and ACRSTEALER, to target AI-specific developer assets, as detailed by [FomoEra](https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/). Rather than limiting operations to scraping web browser cookies and session data, malware operators now sweep local project directories for plaintext credentials.\\n\\nIn May 2026, the operators behind ACRSTEALER deployed automated rules specifically targeting the `secrets.json` configuration file used by Cline (formerly Claude Dev) and the `config.yaml` file used by Continue AI. These local developer configuration files frequently store unencrypted API keys, giving attackers immediate programmatic access to enterprise AI accounts.\\n\\n[[FIG1]]\\n\\n## How Brokers Offer Steep Model Discounts\\n\\nWhile underground brokers are paying more than double what they paid previously to purchase verified accounts from infostealer rings, end buyers on dark web storefronts see massive price cuts. Marketplaces list API and platform access at 70% to 90% below official costs, with peak discounts reaching 97%, as cited by [FomoEra](https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/).\\n\\nIn an analysis published in August 2026, Okta threat researchers Jeremy Kirk and Mathew Woodyard examined a broker operating under the moniker Poison Claude, reported by [AI Weekly](https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026). The operation advertised Anthropic's Opus 4.6, 4.7, and 4.8, along with Sonnet 4.6, charging buyers between 5% and 15% of Anthropic's standard per-token pricing—representing an 85% to 95% markdown. The operation served at least 881 registered users and processed payments in cryptocurrency.\\n\\nOkta traced the Poison Claude infrastructure through a 7 GB infostealer log archive shared on a Telegram channel on August 2, 2026. The researchers found that the vendor populated its pool through two primary mechanisms: farming promotional welcome incentives, such as the $100 onboarding credit offered by AWS Bedrock, and deploying disposable accounts registered with synthetic identities.\\n\\n[[FIG2]]\\n\\n## LLMJacking and Cloud Resource Hijacking\\n\\nDirect credential abuse frequently escalates into cloud-scale resource theft, known as LLMJacking. Threat actors hijack corporate cloud compute quotas to execute compute-heavy workloads without authorization, as documented by [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai).\\n\\nIn one incident investigated by GTIG in April 2026, an adversary obtained an exposed GitHub personal access token belonging to a corporate developer. The attacker used the credential to breach the enterprise cloud tenant, enabled Gemini Enterprise, and provisioned high-performance compute instances featuring 48 virtual CPUs (vCPUs). To maintain persistent access, the intruder created an unauthorized cloud service account granted full editor privileges, channeling high-cost model inference bills directly to the victim organization.\\n\\nBeyond infrastructure bills, illicit AI resale creates acute security liabilities for buyers. Because operations like Poison Claude act as reverse proxies between users and model providers, the operators intercept every interaction. Okta confirmed that proxy operators can read raw prompt inputs and model responses—including source code, enterprise contracts, and proprietary data—and possess the capability to manipulate model outputs in transit without the user's awareness.\\n\\nAnthropic has similarly documented rogue intermediaries in its September 2026 threat report. One counterfeit Claude reseller, tracked by Anthropic as GTG-50021, silently rerouted client requests to an alternative back-end model while distributing client-side tools infected with credential-harvesting malware, according to [FomoEra](https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/).\\n\\n## Supply Chain Exploitation and the Defensive Response\\n\\nThe illicit account trade integrates closely with broader software supply chain attacks. GTIG identified financially motivated cybercrime group UNC6780 (also known as TeamPCP), which has conducted widespread compromises across PyPI, npm, and Docker Hub since March 2026, as outlined in [Google Cloud's report](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai).\\n\\nUNC6780 embedded its DUSTMAKER credential stealer into trojanized forks of legitimate Model Context Protocol (MCP) packages, including `tiktoken_mcp`, and inserted malicious code into public repositories such as `azure-functions-mcp-extension`. DUSTMAKER targets hidden directories created by AI coding assistants, such as `.claude/`, `.cursor/`, and `.vscode/`, planting malicious build scripts and prompt injections designed to make AI coding agents execute arbitrary commands while evading detection by endpoint software.\\n\\nIn response to these campaigns, Google reported that DeepMind has updated internal classifiers to harden Gemini against exploitation, while engineering teams regularly disrupt identified threat actor accounts and infrastructure. Anthropic head of threat intelligence Jacob Klein told CNBC that an entire illicit ecosystem has emerged around unauthorized model access, with Anthropic concluding that AI API keys and session tokens deserve the same protection as any production credentials.",
- "faq": [
-  {
-   "q": "Why have dark web prices for AI developer accounts doubled?",
-   "a": "High buyer demand for frontier models such as Claude and Gemini, as well as AI coding agents like Cursor Pro and Devin, has raised the value of valid enterprise tokens and cloud API keys on underground marketplaces."
+  "slug": "stolen-developer-accounts-dark-web-ai-discounts",
+  "title": "Google Warns Stolen Developer Accounts Fuel Dark Web AI Discounts",
+  "seoTitle": "Stolen Developer Accounts Drive Dark Web AI Resale",
+  "description": "GTIG reports underground prices for stolen developer accounts doubled in 2026 as dark web brokers resell frontier AI model access at discounts up to 97%.",
+  "dek": "Underground marketplaces are selling access to Claude, Gemini, and OpenAI models at steep markdowns funded by cloud credential theft and credit abuse.",
+  "category": "Industry",
+  "tags": [
+    "Cybersecurity",
+    "Google Cloud",
+    "Anthropic",
+    "Developer Tools",
+    "Dark Web"
+  ],
+  "keyTakeaways": [
+    "Marketplace prices for compromised AI accounts across Claude, Gemini, and Cursor Pro more than doubled in 2026, according to Google Threat Intelligence Group.",
+    "Illicit brokers are reselling API access to leading commercial models at discounts of up to 97% below official retail rates.",
+    "Attackers harvest plaintext credentials directly from coding tools like Cline and Continue AI using infostealers such as ACRSTEALER.",
+    "Intermediate proxies like 'Poison Claude' allow threat actors to read prompts, capture private source code, and modify responses in transit."
+  ],
+  "body": "Underground prices for stolen developer accounts and commercial artificial intelligence credentials more than doubled in 2026, according to findings from the [Google Threat Intelligence Group](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai). The spike in underground acquisition costs coincides with a flourishing illicit market offering steep discounts of up to 97% on access to frontier models from Anthropic, Google, and OpenAI, as reported by the [Financial Times via AI Weekly](https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026).\n\nThreat actors are funding these steep discounts through credential theft, cloud hijacking, and promotional credit exploitation. Instead of paying official per-token prices or subscription fees, brokers steal authentication tokens from enterprise environments or systematically farm introductory credits, leaving victims and hosting providers to absorb the computational costs.\n\n## What Drives the Market for Stolen Developer Accounts\n\nAccording to [Google Cloud's GTIG AI Threat Tracker](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai), the illicit market has expanded rapidly with both more buyers and more sellers operating across clandestine forums. Demand is heavily concentrated on access to Anthropic's Claude and Google's Gemini, alongside autonomous coding environments such as Cursor Pro and Devin.\n\nTo satisfy this demand, cybercriminals have retooled established information-stealing malware strains, including LUMMAC.V2, STEALC.V2, VIDAR, and ACRSTEALER, to target AI-specific developer assets, as detailed by [FomoEra](https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/). Rather than limiting operations to scraping web browser cookies and session data, malware operators now sweep local project directories for plaintext credentials.\n\nIn May 2026, the operators behind ACRSTEALER deployed automated rules specifically targeting the `secrets.json` configuration file used by Cline (formerly Claude Dev) and the `config.yaml` file used by Continue AI. These local developer configuration files frequently store unencrypted API keys, giving attackers immediate programmatic access to enterprise AI accounts.\n\n[[FIG1]]\n\n## How Brokers Offer Steep Model Discounts\n\nWhile underground brokers are paying more than double what they paid previously to purchase verified accounts from infostealer rings, end buyers on dark web storefronts see massive price cuts. Marketplaces list API and platform access at 70% to 90% below official costs, with peak discounts reaching 97%, as cited by [FomoEra](https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/).\n\nIn an analysis published in August 2026, Okta threat researchers Jeremy Kirk and Mathew Woodyard examined a broker operating under the moniker Poison Claude, reported by [AI Weekly](https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026). The operation advertised Anthropic's Opus 4.6, 4.7, and 4.8, along with Sonnet 4.6, charging buyers between 5% and 15% of Anthropic's standard per-token pricing—representing an 85% to 95% markdown. The operation served at least 881 registered users and processed payments in cryptocurrency.\n\nOkta traced the Poison Claude infrastructure through a 7 GB infostealer log archive shared on a Telegram channel on August 2, 2026. The researchers found that the vendor populated its pool through two primary mechanisms: farming promotional welcome incentives, such as the $100 onboarding credit offered by AWS Bedrock, and deploying disposable accounts registered with synthetic identities.\n\n[[FIG2]]\n\n## LLMJacking and Cloud Resource Hijacking\n\nDirect credential abuse frequently escalates into cloud-scale resource theft, known as LLMJacking. Threat actors hijack corporate cloud compute quotas to execute compute-heavy workloads without authorization, as documented by [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai).\n\nIn one incident investigated by GTIG in April 2026, an adversary obtained an exposed GitHub personal access token belonging to a corporate developer. The attacker used the credential to breach the enterprise cloud tenant, enabled Gemini Enterprise, and provisioned high-performance compute instances featuring 48 virtual CPUs (vCPUs). To maintain persistent access, the intruder created an unauthorized cloud service account granted full editor privileges, channeling high-cost model inference bills directly to the victim organization.\n\nBeyond infrastructure bills, illicit AI resale creates acute security liabilities for buyers. Because operations like Poison Claude act as reverse proxies between users and model providers, the operators intercept every interaction. Okta confirmed that proxy operators can read raw prompt inputs and model responses—including source code, enterprise contracts, and proprietary data—and possess the capability to manipulate model outputs in transit without the user's awareness.\n\nAnthropic has similarly documented rogue intermediaries in its September 2026 threat report. One counterfeit Claude reseller, tracked by Anthropic as GTG-50021, silently rerouted client requests to an alternative back-end model while distributing client-side tools infected with credential-harvesting malware, according to [FomoEra](https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/).\n\n## Supply Chain Exploitation and the Defensive Response\n\nThe illicit account trade integrates closely with broader software supply chain attacks. GTIG identified financially motivated cybercrime group UNC6780 (also known as TeamPCP), which has conducted widespread compromises across PyPI, npm, and Docker Hub since March 2026, as outlined in [Google Cloud's report](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai).\n\nUNC6780 embedded its DUSTMAKER credential stealer into trojanized forks of legitimate Model Context Protocol (MCP) packages, including `tiktoken_mcp`, and inserted malicious code into public repositories such as `azure-functions-mcp-extension`. DUSTMAKER targets hidden directories created by AI coding assistants, such as `.claude/`, `.cursor/`, and `.vscode/`, planting malicious build scripts and prompt injections designed to make AI coding agents execute arbitrary commands while evading detection by endpoint software.\n\nIn response to these campaigns, Google reported that DeepMind has updated internal classifiers to harden Gemini against exploitation, while engineering teams regularly disrupt identified threat actor accounts and infrastructure. Anthropic head of threat intelligence Jacob Klein told CNBC that an entire illicit ecosystem has emerged around unauthorized model access, with Anthropic concluding that AI API keys and session tokens deserve the same protection as any production credentials.",
+  "faq": [
+    {
+      "q": "Why have dark web prices for AI developer accounts doubled?",
+      "a": "High buyer demand for frontier models such as Claude and Gemini, as well as AI coding agents like Cursor Pro and Devin, has raised the value of valid enterprise tokens and cloud API keys on underground marketplaces."
+    },
+    {
+      "q": "How can sellers offer AI model access at discounts up to 97%?",
+      "a": "Sellers rely on stolen credentials through LLMJacking—passing the computational bill to breached companies—or systematically abuse free promotional credits from cloud providers using disposable synthetic identities."
+    },
+    {
+      "q": "What risks do buyers face when purchasing discounted AI access?",
+      "a": "Brokers operate intermediate proxy servers that can view, record, or sell all submitted prompts, proprietary source code, and outputs, and can secretly tamper with model responses or install malware on the buyer's system."
+    }
+  ],
+  "hero": {
+    "marker": "HERO",
+    "type": "ai",
+    "prompt": "A shadowy server room illuminated by glowing red and cyan fiber optic cables, with abstract data streams representing API tokens and network traffic flowing through translucent server racks in a dark environment",
+    "alt": "Abstract visualization of glowing digital data streams flowing through server racks in a dark data center",
+    "caption": "Underground marketplaces are exploiting stolen cloud credentials to power unauthorized AI model access.",
+    "src": "img/stolen-developer-accounts-dark-web-ai-discounts/hero.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 77706,
+    "small": "img/stolen-developer-accounts-dark-web-ai-discounts/hero-640.webp",
+    "og": "img/stolen-developer-accounts-dark-web-ai-discounts/og.jpg",
+    "credit": "AI-generated illustration"
   },
-  {
-   "q": "How can sellers offer AI model access at discounts up to 97%?",
-   "a": "Sellers rely on stolen credentials through LLMJacking—passing the computational bill to breached companies—or systematically abuse free promotional credits from cloud providers using disposable synthetic identities."
-  },
-  {
-   "q": "What risks do buyers face when purchasing discounted AI access?",
-   "a": "Brokers operate intermediate proxy servers that can view, record, or sell all submitted prompts, proprietary source code, and outputs, and can secretly tamper with model responses or install malware on the buyer's system."
-  }
- ],
- "hero": {
-  "marker": "HERO",
-  "type": "ai",
-  "prompt": "A shadowy server room illuminated by glowing red and cyan fiber optic cables, with abstract data streams representing API tokens and network traffic flowing through translucent server racks in a dark environment",
-  "alt": "Abstract visualization of glowing digital data streams flowing through server racks in a dark data center",
-  "caption": "Underground marketplaces are exploiting stolen cloud credentials to power unauthorized AI model access.",
-  "src": "img/stolen-developer-accounts-dark-web-ai-discounts/hero.webp",
-  "width": 1200,
-  "height": 675,
-  "bytes": 77706,
-  "small": "img/stolen-developer-accounts-dark-web-ai-discounts/hero-640.webp",
   "og": "img/stolen-developer-accounts-dark-web-ai-discounts/og.jpg",
-  "credit": "AI-generated illustration"
- },
- "og": "img/stolen-developer-accounts-dark-web-ai-discounts/og.jpg",
- "figures": [
-  {
-   "marker": "FIG1",
-   "type": "real",
-   "realId": "R2",
-   "alt": "Dashboard interface displaying recon keys and status logs from Google Cloud threat intelligence",
-   "caption": "Google Cloud tracked automated reconnaissance platforms cataloging tens of thousands of stolen API secrets.",
-   "slot": "FIG1",
-   "src": "img/stolen-developer-accounts-dark-web-ai-discounts/figure-1.webp",
-   "width": 1200,
-   "height": 675,
-   "bytes": 27266,
-   "credit": "Google Cloud",
-   "creditUrl": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+  "figures": [
+    {
+      "marker": "FIG1",
+      "type": "real",
+      "realId": "R2",
+      "alt": "Dashboard interface displaying recon keys and status logs from Google Cloud threat intelligence",
+      "caption": "Google Cloud tracked automated reconnaissance platforms cataloging tens of thousands of stolen API secrets.",
+      "slot": "FIG1",
+      "src": "img/stolen-developer-accounts-dark-web-ai-discounts/figure-1.webp",
+      "width": 1200,
+      "height": 675,
+      "bytes": 27266,
+      "credit": "Google Cloud",
+      "creditUrl": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+    },
+    {
+      "marker": "FIG2",
+      "type": "real",
+      "realId": "R1",
+      "alt": "Diagram illustrating initial cloud compromise and an AI-driven development loop from Google Cloud",
+      "caption": "GTIG documentation showing the progression from initial developer account compromise to automated exploitation.",
+      "slot": "FIG2",
+      "src": "img/stolen-developer-accounts-dark-web-ai-discounts/figure-2.webp",
+      "width": 1200,
+      "height": 675,
+      "bytes": 19178,
+      "credit": "Google Cloud",
+      "creditUrl": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+      "title": "GTIG AI Threat Tracker: From Prompting to Autonomy – The Evolution of Adversarial AI",
+      "site": "Google Cloud",
+      "published": 1788825600000,
+      "official": false
+    },
+    {
+      "n": 2,
+      "url": "https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026",
+      "title": "Google: Underground AI Account Prices More Than Doubled in 2026",
+      "site": "AI Weekly",
+      "published": 1790469037000,
+      "official": false
+    },
+    {
+      "n": 3,
+      "url": "https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/",
+      "title": "Claude, Gemini y GPT con hasta 97% de descuento: el mercado negro de la IA que pagan otros",
+      "site": "FomoEra",
+      "published": 1790483425000,
+      "official": false
+    }
+  ],
+  "publishedAt": 1790494998544,
+  "updatedAt": 1790494998544,
+  "foundVia": "Google Search and Techmeme",
+  "check": {
+    "claims": 45,
+    "score": 10
   },
-  {
-   "marker": "FIG2",
-   "type": "real",
-   "realId": "R1",
-   "alt": "Diagram illustrating initial cloud compromise and an AI-driven development loop from Google Cloud",
-   "caption": "GTIG documentation showing the progression from initial developer account compromise to automated exploitation.",
-   "slot": "FIG2",
-   "src": "img/stolen-developer-accounts-dark-web-ai-discounts/figure-2.webp",
-   "width": 1200,
-   "height": 675,
-   "bytes": 19178,
-   "credit": "Google Cloud",
-   "creditUrl": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+  "story": {
+    "id": "P281c6f53",
+    "score": 79,
+    "items": [
+      "https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026",
+      "https://www.techmeme.com/260926/p18#a260926p18"
+    ]
+  },
+  "models": {
+    "writer": "gemini-3.8-flash",
+    "checker": "gemini-3.8-flash"
   }
- ],
- "sources": [
-  {
-   "n": 1,
-   "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
-   "title": "GTIG AI Threat Tracker: From Prompting to Autonomy – The Evolution of Adversarial AI",
-   "site": "Google Cloud",
-   "published": 1788825600000,
-   "official": false
-  },
-  {
-   "n": 2,
-   "url": "https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026",
-   "title": "Google: Underground AI Account Prices More Than Doubled in 2026",
-   "site": "AI Weekly",
-   "published": 1790469037000,
-   "official": false
-  },
-  {
-   "n": 3,
-   "url": "https://fomoera.com/mercado-negro-ia-descuentos-llm-jacking/",
-   "title": "Claude, Gemini y GPT con hasta 97% de descuento: el mercado negro de la IA que pagan otros",
-   "site": "FomoEra",
-   "published": 1790483425000,
-   "official": false
-  }
- ],
- "publishedAt": 1790494998544,
- "updatedAt": 1790494998544,
- "foundVia": "Google Search and Techmeme",
- "check": {
-  "claims": 45,
-  "score": 10
- },
- "story": {
-  "id": "P281c6f53",
-  "score": 79,
-  "items": [
-   "https://aiweekly.co/alerts/google-underground-ai-account-prices-more-than-doubled-in-2026",
-   "https://www.techmeme.com/260926/p18#a260926p18"
-  ]
- },
- "models": {
-  "writer": "gemini-3.8-flash",
-  "checker": "gemini-3.8-flash"
- }
 }

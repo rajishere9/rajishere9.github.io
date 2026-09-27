@@ -12,8 +12,8 @@ export const SITE = {
 export const MODELS = {
   // Cheap and fast: clustering and scoring hundreds of headlines, checking images.
   triage: process.env.MODEL_TRIAGE || "gemini-3.5-flash-lite",
-  // Research with Google Search grounding, writing and fact-checking.
-  writer: process.env.MODEL_WRITER || "gemini-3.8-flash",
+  // Research with Google Search grounding and writing; a different model fact-checks so it doesn't share the writer's blind spots.
+  writer: process.env.MODEL_WRITER || "gemini-3.7-flash",
   checker: process.env.MODEL_CHECKER || "gemini-3.8-flash",
   // Nano Banana 2 Lite first, Nano Banana 2 if Lite is unavailable.
   image: (process.env.MODEL_IMAGE || "gemini-3.1-flash-lite-image,gemini-3.1-flash-image").split(","),
