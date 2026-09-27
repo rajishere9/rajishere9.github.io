@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Scale of AI: from 1 calculation to the largest AI models</title>
+<meta name="description" content="Scroll from a single calculation to the largest AI training runs ever, past every notable AI model since 1950. Real data from Epoch AI, with human-scale comparisons.">
+<link rel="canonical" href="https://www.rkjdev.com/play/scale-of-ai/">
+<meta name="theme-color" content="#16101a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Scale of AI">
+<meta property="og:description" content="Fall through 25 orders of magnitude, from a 1950 robot mouse to today's frontier models.">
+<meta property="og:url" content="https://www.rkjdev.com/play/scale-of-ai/">
+<meta property="og:image" content="https://www.rkjdev.com/play/scale-of-ai/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='10' cy='9' r='2.5' fill='%23b494e8'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23f4b860'/%3E%3Ccircle cx='23' cy='24' r='4' fill='%23ffd9a0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Unbounded:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="../play.css?v=b5e9b4c0">
+<link rel="stylesheet" href="scale.css?v=e0eec9c1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"The Scale of AI","url":"https://www.rkjdev.com/play/scale-of-ai/","description":"An interactive scroll through the training compute of every notable AI model since 1950.","isBasedOn":{"@type":"Dataset","name":"Data on Notable AI Models","creator":{"@type":"Organization","name":"Epoch AI"},"url":"https://epoch.ai/data/notable-ai-models","license":"https://creativecommons.org/licenses/by/4.0/"},"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#stage">Skip to the chart</a>
+<div class="backdrop" aria-hidden="true"></div>
+<div class="abyss" aria-hidden="true"></div>
+<canvas class="motes" id="motes" aria-hidden="true"></canvas>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/">Blog</a>
+      <a href="/play/" aria-current="page">Play</a>
+      <a class="opt" href="/#work">Work</a>
+      <a class="opt" href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro wrap">
+    <p class="kicker">rkj dev · Play</p>
+    <h1 class="title"><span>The Scale</span> <span>of AI</span></h1>
+    <p class="lede" id="lede">In 1950, a maze-solving mechanical mouse learned with about 40 calculations. Today's largest AI models are trained with around 10²⁷. Scroll down and fall through every order of magnitude in between.</p>
+    <div class="intro-actions">
+      <button class="btn" type="button" id="dive">Start the descent
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </button>
+      <span class="intro-meta" id="intro-meta">Real data from Epoch AI</span>
+    </div>
+    <div class="cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <div class="tools" id="tools">
+    <div class="wrap tools-in">
+      <div class="find">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+        <input id="find" type="search" placeholder="Find a model, e.g. GPT-3" aria-label="Find a model" autocomplete="off" spellcheck="false">
+        <ul id="find-list" class="find-list" role="listbox" hidden></ul>
+      </div>
+      <div class="legend" id="legend" role="group" aria-label="Filter by field"></div>
+    </div>
+  </div>
+
+  <section class="stage" id="stage" aria-label="Chart of AI models by training compute and year">
+    <div class="axis" id="axis" aria-hidden="true"><div class="axis-in" id="axis-in"></div></div>
+    <div class="notes" id="notes"></div>
+    <div class="plot" id="plot"></div>
+  </section>
+
+  <section class="finale wrap" id="finale">
+    <p class="kicker">The frontier, for now</p>
+    <h2 id="finale-title">You've reached the bottom.</h2>
+    <div class="facts" id="facts"></div>
+    <p class="finale-line" id="finale-line"></p>
+    <div class="finale-actions">
+      <button class="btn" type="button" id="ascend">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        Back to the surface
+      </button>
+      <button class="btn ghost" type="button" id="share">Share</button>
+      <a class="btn ghost" href="../ai-dle/">Play today's AI-dle</a>
+    </div>
+    <details class="method">
+      <summary>About the data</summary>
+      <p id="method-text"></p>
+    </details>
+    <details class="method">
+      <summary>All models as a table</summary>
+      <div class="table-wrap"><table id="table"><thead><tr><th>Model</th><th>Organization</th><th>Date</th><th>Training compute (FLOP)</th><th>Confidence</th></tr></thead><tbody></tbody></table></div>
+    </details>
+  </section>
+</main>
+
+<div class="scan" id="scan" aria-hidden="true"><span id="scan-label"></span></div>
+<div class="hud" id="hud" aria-live="off">
+  <div class="depth"><b id="hud-exp">10⁰</b><span id="hud-words">1 calculation</span></div>
+  <div class="equiv" id="equiv">
+    <div data-k="you"><small>You, one sum a second</small><span id="eq-you"></span></div>
+    <div data-k="earth"><small>All 8.2B people on Earth</small><span id="eq-earth"></span></div>
+    <div data-k="gpu"><small>One NVIDIA H100 GPU</small><span id="eq-gpu"></span></div>
+  </div>
+  <div class="passed"><b id="hud-passed">0</b><small id="hud-of">models passed</small></div>
+  <div class="gauge" aria-hidden="true"><i id="gauge"></i></div>
+</div>
+
+<div class="card" id="card" role="dialog" aria-modal="false" aria-labelledby="card-name" hidden></div>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="scale.js?v=dc428455" defer></script>
+</body>
+</html>

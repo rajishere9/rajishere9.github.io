@@ -76,7 +76,7 @@ jobs:
         run: |
           git config user.name "rkj dev newsroom"
           git config user.email "newsroom@rkjdev.com"
-          git add blog newsroom/posts index.html
+          git add blog newsroom/posts index.html play
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -q -m "Newsroom: $(git diff --cached --name-only newsroom/posts | sed -n 's#newsroom/posts/\(.*\)\.json#\1#p' | head -3 | paste -sd ', ' -)"
           for i in 1 2 3; do

@@ -8,6 +8,7 @@ import { collectAll } from "./collect.mjs";
 import { triage, mergeAndSelect } from "./triage.mjs";
 import { research } from "./research.mjs";
 import { vetRealImages, buildFigures } from "./images.mjs";
+import { updatePlay } from "./play.mjs";
 import { writeStory } from "./write.mjs";
 import { renderSite } from "./render.mjs";
 import { usage } from "./gemini.mjs";
@@ -183,7 +184,10 @@ async function main() {
   }
 
   if (!flag("--dry")) {
-    await renderSite({ root: ROOT, posts: await loadPosts() });
+    const posts = await loadPosts();
+    await renderSite({ root: ROOT, posts });
+    // Games data is cheap to skip: leave it for the next run if this one is already long.
+    if ((!flag("--render-only") || flag("--play")) && (Date.now() - started) / 60e3 < 18) await updatePlay({ root: ROOT, posts, state });
     await indexNow(summary.published.map((s) => `${SITE.origin}${SITE.base}/${s}/`).concat(summary.published.length ? [`${SITE.origin}${SITE.base}/`] : []));
   }
 

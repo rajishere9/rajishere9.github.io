@@ -104,6 +104,7 @@ function header(current = "blog") {
     <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
     <nav aria-label="Site">
       <a href="${B}/"${current === "blog" ? ' aria-current="page"' : ""}>Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
       <a href="/#contact">Contact</a>

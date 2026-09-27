@@ -293,3 +293,4 @@ figcaption .credit.ai::before { content: "✦ "; color: var(--flame); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+@media (max-width: 520px) { .top nav a[href="/#work"] { display: none; } }
