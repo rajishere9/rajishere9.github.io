@@ -16,7 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="home.css?v=64395e82">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="stylesheet" href="home.css?v=e2c4d3c9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,6 +44,7 @@
     <nav aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#about">About</a>
+      <a href="/blog/">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -165,6 +167,20 @@
       </div>
     </section>
 
+    <section class="section" id="blog" aria-labelledby="blog-title">
+      <h2 id="blog-title">From the blog<small>AI and emerging tech news, researched from the sources and fact-checked as it happens.</small></h2>
+      <div class="posts">
+          <!-- blog:latest -->
+          <a class="post-card" href="/blog/openai-self-replicating-prompt-injection-risk-agents/">
+            <img src="/blog/img/openai-self-replicating-prompt-injection-risk-agents/hero-640.webp" width="640" height="360" alt="Illustration of a malicious instruction copying itself across connected applications" loading="lazy" decoding="async">
+            <span class="post-meta">Research · <time datetime="2026-09-27T07:06:01.421Z">Sep 27, 2026</time></span>
+            <span class="post-title">OpenAI Uncovers Self-Replicating Prompt Injection Risk in AI Agents</span>
+          </a>
+          <!-- /blog:latest -->
+      </div>
+      <a class="textlink" href="/blog/">All stories</a>
+    </section>
+
     <section class="section" id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div class="about-grid">
@@ -205,6 +221,6 @@
     </nav>
   </footer>
 </div>
-<script src="home.js?v=8a7ff78f" defer></script>
+<script src="home.js?v=5035e7b2" defer></script>
 </body>
 </html>

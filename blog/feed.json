@@ -1,0 +1,26 @@
+{
+ "version": "https://jsonfeed.org/version/1.1",
+ "title": "rkj dev Blog",
+ "home_page_url": "https://www.rkjdev.com/blog/",
+ "feed_url": "https://www.rkjdev.com/blog/feed.json",
+ "description": "Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.",
+ "items": [
+  {
+   "id": "https://www.rkjdev.com/blog/openai-self-replicating-prompt-injection-risk-agents/",
+   "url": "https://www.rkjdev.com/blog/openai-self-replicating-prompt-injection-risk-agents/",
+   "title": "OpenAI Uncovers Self-Replicating Prompt Injection Risk in AI Agents",
+   "summary": "Alignment research shows how autonomous models can spread malicious instructions across connected applications, as network containment gaps halt frontier model training.",
+   "date_published": "2026-09-27T07:06:01.421Z",
+   "image": "https://www.rkjdev.com/blog/img/openai-self-replicating-prompt-injection-risk-agents/hero.webp",
+   "tags": [
+    "Research",
+    "OpenAI",
+    "Prompt Injection",
+    "AI Safety",
+    "Reinforcement Learning",
+    "AI Agents",
+    "Cybersecurity"
+   ]
+  }
+ ]
+}

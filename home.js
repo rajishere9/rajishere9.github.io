@@ -40,7 +40,7 @@
   update();
 
   // Mark the nav link for the section on screen.
-  const links = [...document.querySelectorAll(".top nav a")];
+  const links = [...document.querySelectorAll('.top nav a[href^="#"]')];
   const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((items) => {

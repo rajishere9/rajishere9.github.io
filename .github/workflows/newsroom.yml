@@ -1,0 +1,122 @@
+# The newsroom: finds breaking AI and tech news, writes fact-checked posts, and deploys the site.
+# Triggered every 30 minutes by the Cloudflare Worker in cf-trigger/, with a GitHub schedule as a fallback.
+name: Newsroom
+
+on:
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "Max posts this run"
+        required: false
+        default: "3"
+  repository_dispatch:
+    types: [newsroom]
+  schedule:
+    - cron: "17,47 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: newsroom
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+      urls: ${{ steps.newsroom.outputs.urls }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: newsroom/package-lock.json
+
+      - name: Install
+        working-directory: newsroom
+        run: npm ci --no-audit --no-fund
+
+      # Working state (seen items, pending stories, drafts, source health) lives on its own branch,
+      # overwritten each run, so main only gets commits when posts are published.
+      - name: Load state
+        run: |
+          git clone --depth 1 --branch newsroom-state "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" newsroom/state \
+            || { mkdir -p newsroom/state && git -C newsroom/state init -b newsroom-state; }
+
+      - name: Run newsroom
+        id: newsroom
+        working-directory: newsroom
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          SKIP_IF_RAN_WITHIN_MIN: ${{ github.event_name == 'schedule' && '25' || '' }}
+        run: node src/run.mjs --max "${{ github.event.inputs.max || '3' }}"
+
+      - name: Save state
+        if: always()
+        working-directory: newsroom/state
+        run: |
+          [ -f state.json ] || exit 0
+          git config user.name "rkj dev newsroom"
+          git config user.email "newsroom@rkjdev.com"
+          git checkout -B newsroom-state
+          git add -A
+          git commit -q -m "Newsroom state" || true
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" newsroom-state
+
+      - name: Commit posts
+        id: commit
+        run: |
+          git config user.name "rkj dev newsroom"
+          git config user.email "newsroom@rkjdev.com"
+          git add blog newsroom/posts index.html
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -q -m "Newsroom: $(git diff --cached --name-only newsroom/posts | sed -n 's#newsroom/posts/\(.*\)\.json#\1#p' | head -3 | paste -sd ', ' -)"
+          for i in 1 2 3; do
+            git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && break
+            sleep 5
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Build site
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          mkdir _site
+          rsync -a --exclude='.git*' --exclude=newsroom --exclude=cf-trigger --exclude=_site --exclude=node_modules --exclude=stamp.py ./ _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.commit.outputs.changed == 'true'
+        with:
+          path: _site
+
+  deploy:
+    needs: run
+    if: needs.run.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Tell Bing, Yandex, Seznam and other IndexNow engines about new posts once they are live.
+      - name: Ping IndexNow
+        if: needs.run.outputs.urls != '' && needs.run.outputs.urls != '[]'
+        env:
+          URLS: ${{ needs.run.outputs.urls }}
+        run: |
+          sleep 20
+          curl -s -o /dev/null -w "IndexNow %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H "content-type: application/json; charset=utf-8" \
+            -d "{\"host\":\"www.rkjdev.com\",\"key\":\"c198d8f7000a1b1c5a78c89b5bcc689a\",\"keyLocation\":\"https://www.rkjdev.com/c198d8f7000a1b1c5a78c89b5bcc689a.txt\",\"urlList\":$URLS}"

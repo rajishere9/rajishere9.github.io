@@ -1,0 +1,9 @@
+{
+  "name": "rkjdev-newsroom-trigger",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "triggers": { "crons": ["*/30 * * * *"] },
+  "observability": { "enabled": true }
+  // Secret (set once): GH_TOKEN, a fine-grained GitHub token with Contents: read and write on rajishere9/rkjdev.
+}

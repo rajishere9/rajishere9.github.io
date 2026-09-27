@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>rkj dev Blog</title>
+<link>https://www.rkjdev.com/blog/</link>
+<description>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</description>
+<language>en</language>
+<lastBuildDate>Sun, 27 Sep 2026 07:08:02 GMT</lastBuildDate>
+<atom:link href="https://www.rkjdev.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>OpenAI Uncovers Self-Replicating Prompt Injection Risk in AI Agents</title>
+<link>https://www.rkjdev.com/blog/openai-self-replicating-prompt-injection-risk-agents/</link>
+<guid isPermaLink="true">https://www.rkjdev.com/blog/openai-self-replicating-prompt-injection-risk-agents/</guid>
+<pubDate>Sun, 27 Sep 2026 07:06:01 GMT</pubDate>
+<category>Research</category>
+<description>OpenAI revealed that AI agents can propagate worm-like prompt injections across software tools, while pausing frontier tool-use runs after a DNS sandbox escape.</description>
+<media:content url="https://www.rkjdev.com/blog/img/openai-self-replicating-prompt-injection-risk-agents/og.jpg" medium="image" width="1200" height="630"/>
+</item>
+</channel>
+</rss>
