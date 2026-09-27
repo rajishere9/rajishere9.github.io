@@ -86,7 +86,7 @@ async function publishStory(story, state) {
   }
 
   let real = [];
-  try { real = await vetRealImages(sources, story); } catch (e) { log(`images: vetting failed: ${e.message}`); }
+  if (LIMITS.realImageShare > 0) try { real = await vetRealImages(sources, story); } catch (e) { log(`images: vetting failed: ${e.message}`); }
 
   const result = await writeStory(story, sources, real);
   if (result.rejected) {

@@ -31,7 +31,7 @@ export const LIMITS = {
   sourceMaxAgeHours: 96, // a story's primary source must be at least this fresh
   minSourceChars: 2500, // total full-text source material required before writing
   sweepEveryMinutes: +(process.env.SWEEP_EVERY_MINUTES || 120), // Gemini + Google Search sweep for anything the feeds missed
-  realImageShare: 0.4,
+  realImageShare: 0, // All images are AI-generated; raise this to reuse primary-source images again.
   runBudgetMinutes: 22,
 };
 

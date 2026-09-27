@@ -6,8 +6,9 @@ import * as gemini from "./gemini.mjs";
 import { MODELS } from "./config.mjs";
 import { http, pool, log, domainOf } from "./util.mjs";
 
-const STYLE = `Editorial illustration for a premium technology news site. Cinematic and atmospheric, with a refined palette of deep aubergine and violet shadows lit by warm amber light, soft volumetric glow, fine detail, tasteful depth of field. Conceptual and symbolic rather than literal.
-Strict rules: no text, letters, numbers, captions or watermarks anywhere; no company logos or brand marks; no recognisable real people or celebrity likenesses; no fake user interfaces or screenshots; no fake charts with data. Wide 16:9 composition with a clear focal point.`;
+const STYLE = `Editorial illustration for a premium technology news site. Cinematic and atmospheric, with a refined palette of deep aubergine and violet shadows lit by warm amber light, soft volumetric glow, fine detail, tasteful depth of field.
+People are welcome when the story is about them: show them by role (a tech CEO, a researcher, a lawmaker) as realistic, dignified, fictional figures, never demeaning or compromising.
+Strict rules: no text, letters, numbers, captions or watermarks anywhere; no company logos or brand marks; no fake user interfaces or screenshots; no fake charts with data. Wide 16:9 composition with a clear focal point.`;
 
 // Download images from primary sources only, drop tiny or odd-shaped ones, and ask Gemini which ones actually show this story.
 // News outlets' photos and thumbnails are never used: they belong to that publisher and often carry its branding.
@@ -90,7 +91,14 @@ export async function saveImage(buf, { outDir, slug, name, hero }) {
 }
 
 export async function generateImage(prompt) {
-  return gemini.image(`${STYLE}\n\nScene: ${prompt}`, { aspectRatio: "16:9" });
+  try {
+    return await gemini.image(`${STYLE}\n\nScene: ${prompt}`, { aspectRatio: "16:9" });
+  } catch (e) {
+    // The image models refuse named real people (and sometimes brands). Rewrite the scene by role and try once more.
+    const { text: safe } = await gemini.text({ model: MODELS.triage, temperature: 0.3, prompt: `Rewrite this image prompt so it names no real people, companies, products or brands: describe people by role and appearance-neutral terms (for example "a tech CEO", "a senator"), and keep the same scene, mood and composition. Reply with the prompt only.\n\n${prompt}` });
+    log(`images: retrying with a role-based prompt (${e.message.slice(0, 60)})`);
+    return gemini.image(`${STYLE}\n\nScene: ${safe.trim()}`, { aspectRatio: "16:9" });
+  }
 }
 
 // Resolve the writer's image plan into saved files. Falls back to AI when a real image fails, and vice versa.

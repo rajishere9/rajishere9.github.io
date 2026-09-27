@@ -13,7 +13,7 @@ ACCURACY RULES — these override everything else:
 6. No speculation, no invented quotes, no invented reactions.
 STYLE: clear, specific, confident, human. No hype and no clichés (never use: game-changer, revolutionize, landscape, delve, unleash, cutting-edge, in today's fast-paced world, it's worth noting, buckle up). American English. Short paragraphs. Explain why it matters for developers, businesses or users, grounded in the sources.
 FORMAT: the body is plain Markdown. Separate paragraphs, headings and figure markers with real blank lines. Never write escape sequences such as \\n, \\t or \\" as visible characters, and never wrap the body in quotes or code fences.
-IMAGES: real images come only from the organisation behind the story. AI illustrations are conceptual: their captions describe the idea they illustrate and never imply they are photos of real events, people or products.
+IMAGES: illustrations are AI-generated and labeled as such. Captions describe what the illustration conveys and never present it as a photo of a real event.
 SEO: the title leads with the key entity and what happened; the primary keyword appears in the title, the first paragraph and at least one H2. Descriptive H2 and H3 headings that match what readers search for. The meta description is a compelling 140-158 character summary.`;
 
 const figureSchema = {
@@ -22,7 +22,7 @@ const figureSchema = {
     marker: { type: "string", description: "FIG1, FIG2 or FIG3; for the hero use HERO" },
     type: { type: "string", enum: ["real", "ai"] },
     realId: { type: "string", description: "R-id of the real image when type is real" },
-    prompt: { type: "string", description: "For AI images: a vivid visual scene description (no text, logos or real people)" },
+    prompt: { type: "string", description: "For AI images: a vivid visual scene description (no text, logos or UI screenshots); shows people by role (e.g. \"a tech CEO\"), never by name" },
     alt: { type: "string", description: "Factual alt text describing what the image shows" },
     caption: { type: "string", description: "Short caption; for real images describe what it shows, for AI images describe the concept" },
   },
@@ -186,11 +186,13 @@ Length: 800-1400 words if the sources are rich; shorter (600+) if they are thin.
 Structure: a strong lede paragraph (what happened, who, when, why it matters), then sections such as what's new, key details and specs, how it compares (only if the sources compare), availability and pricing (only if stated), and why it matters. End with a short, grounded outlook only if the sources support it.
 Cite sources with inline markdown links to their exact URLs, at least one link per section, preferring the official source.
 
-IMAGES: one hero plus 2 or 3 inline figures. About 40% of all images should be real images from the list below when available (use ${wantReal} or more real images if there are enough relevant ones; never reuse one), and the rest AI-generated illustrations.
-Put the most striking image as the hero. Place [[FIG1]], [[FIG2]] (and [[FIG3]] if used) on their own lines where they support the text.
-AI image prompts must describe a concrete, visually rich scene that conveys the story's concept, with no text, logos, UI screenshots or real people.
+${real.length ? `IMAGES: one hero plus 2 or 3 inline figures. About ${Math.round(LIMITS.realImageShare * 100)}% of all images should be real images from the list below (use ${wantReal} or more if there are enough relevant ones; never reuse one), and the rest AI-generated illustrations.
 Available real images:
-${imagesBlock(real)}
+${imagesBlock(real)}` : "IMAGES: one hero plus 2 or 3 inline figures, all AI-generated illustrations (type \"ai\")."}
+Put the most striking image as the hero. Place [[FIG1]], [[FIG2]] (and [[FIG3]] if used) on their own lines where they support the text.
+AI image prompts describe a concrete, visually rich scene that conveys the story. Vary them: the hero sets the scene, figures illustrate specific sections (the product or technology, the people involved, the place, the consequence).
+People make illustrations more compelling: when the story is about people (executives, researchers, officials), show them by role, never by name, because the image model refuses real names (write "a tech CEO testifying before a Senate committee", not a person's name). Only show situations the sources report, never demeaning or compromising ones. Captions and alt text may say what the scene represents (for example "Illustration: an AI executive testifying before lawmakers").
+No real names, company names, brand names, text, logos or UI screenshots in any prompt.
 
 If the sources show this is old news, a rumor, or not a real event, set newsworthy to false and explain why.
 ${extra}
