@@ -1,0 +1,136 @@
+{
+ "slug": "openai-focuses-research-gpt-7-and-beyond",
+ "title": "OpenAI Says 80 to 90 Percent of Research Targets GPT-7 and Beyond",
+ "seoTitle": "OpenAI Focuses 80-90% of Research on GPT-7 and Beyond",
+ "description": "OpenAI Head of Applied Research Boris Power reveals that 80 to 90 percent of company research targets GPT-7, GPT-8, and future frontier generations.",
+ "dek": "Boris Power says intra-generation updates are short-term bets, while the company focuses on long-range frontier jumps and distillation.",
+ "category": "AI Models",
+ "tags": [
+  "OpenAI",
+  "Boris Power",
+  "GPT-7",
+  "GPT-6",
+  "Frontier Models",
+  "Model Distillation"
+ ],
+ "keyTakeaways": [
+  "According to Boris Power, OpenAI allocates 80% to 90% of its research effort toward GPT-7, GPT-8, and future generations.",
+  "Intra-generation updates, such as moving from GPT 5.1 to 5.2, are treated internally as short-term bets rather than a sustainable long-term strategy.",
+  "OpenAI's operational strategy involves building large frontier teacher models and distilling them into smaller, cost-effective models like Luna.",
+  "Boris Power highlighted onboarding and user understanding as today's biggest bottleneck rather than raw model performance."
+ ],
+ "body": "OpenAI is dedicating 80 to 90 percent of its research efforts toward GPT-7, GPT-8, and subsequent frontier architectures, according to Boris Power, the company's Head of Applied Research. In comments reported by [The Decoder](https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/) and [AIToday](https://hellomarvisaitoday.com/articles/a404296a-7a41-433c-bc34-ae1ac33a5fd1), Power explained that the organization prioritizes long-range generational leaps because that is where the primary long-term value emerges.\n\nThe emphasis on future generations highlights how OpenAI structures its technical roadmap. Leadership views sub-generational tuning as a temporary mechanism to accelerate internal learning rather than an enduring approach to AI development.\n\n[[FIG1]]\n\n## The Split Between Generational Leaps and Quick Wins\n\nPower characterized minor version iterations—such as stepping from GPT 5.1 to GPT 5.2—as short-term bets relying on specialized training datasets. While these incremental updates enable the team to iterate rapidly, Power noted that they are seen internally as \"extremely shortsighted\" when compared against architectural breakthroughs.\n\nAccording to [The Decoder](https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/), the primary performance jumps occur when a full new generation arrives, a threshold where \"everything else just works a lot better.\" However, these generational shifts reset internal assumptions, requiring researchers to relearn where to invest for immediate, quick wins after every major release.\n\n## Distillation and the Role of Frontier Teacher Models\n\nAccording to Power, the workflow involves training large frontier models and distilling them into smaller models. As reported by [Binance News](https://www.binance.com/en/square/post/371356917433540) and [KuCoin News](https://www.kucoin.com/news/flash/openai-app-research-head-80-90-of-research-focused-on-gpt-7-and-beyond), Power outlined a development path centered on building cutting-edge frontier systems to serve as teacher models.\n\n[[FIG2]]\n\nUnder this paradigm, smaller, cost-effective models are derived through distillation from larger flagships. Power added that GPT-6 Astra could be distilled into models such as Luna, suggesting that a better way to produce specialized, lightweight models is to first train a more capable general-purpose model.\n\n### The Shift in User Interaction Across Model Generations\n\nPower also detailed the evolution of user interaction across model generations:\n\n* **GPT-4:** Required rigorous, careful prompt engineering from users to achieve desired outputs.\n* **GPT-5:** Proved easier to operate but remained heavily reliant on continuous user feedback.\n* **GPT-6:** Operates more like a capable colleague whom users can simply assign a high-level goal.\n\n## Onboarding as the Core Assistant Challenge\n\nDespite advances in underlying model capabilities, Power argued that the central challenge confronting AI assistants is not model performance, but onboarding. As detailed by [AIToday](https://hellomarvisaitoday.com/articles/a404296a-7a41-433c-bc34-ae1ac33a5fd1), the majority of ChatGPT users still do not fully understand the scope of what current systems can already execute.\n\nTo bridge this gap, Power stated that upcoming models must improve at surfacing existing capabilities and anticipating user intent proactively, reducing the friction between raw capability and practical everyday application.",
+ "faq": [
+  {
+   "q": "Why is OpenAI focusing 80% to 90% of research on GPT-7 and beyond?",
+   "a": "Boris Power stated that full generational leaps provide most of the long-term value, as major architecture jumps make overall systems work significantly better than incremental version tweaks."
+  },
+  {
+   "q": "How does OpenAI view incremental updates like GPT 5.1 to 5.2?",
+   "a": "They are viewed internally as short-term, specialized investments that aid fast iteration, but are considered shortsighted as a long-term development strategy."
+  },
+  {
+   "q": "What is OpenAI's approach to creating smaller AI models?",
+   "a": "OpenAI builds large general-purpose frontier models to act as teacher systems, which are then distilled into smaller, more efficient models such as Luna."
+  },
+  {
+   "q": "What does Boris Power identify as the biggest hurdle for AI assistants today?",
+   "a": "Power identified onboarding and user awareness as the primary bottleneck, noting that most users do not yet realize what current AI models are capable of doing."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An AI researcher standing inside a futuristic server room with glowing blue holographic architecture diagrams projecting forward into deep space, depicting multi-generational compute clusters.",
+  "alt": "An AI research scientist examining futuristic holographic model roadmaps in a data center",
+  "caption": "Illustration: OpenAI is targeting the bulk of its research on frontier models starting with GPT-7.",
+  "src": "img/openai-focuses-research-gpt-7-and-beyond/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 65830,
+  "small": "img/openai-focuses-research-gpt-7-and-beyond/hero-640.webp",
+  "og": "img/openai-focuses-research-gpt-7-and-beyond/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-focuses-research-gpt-7-and-beyond/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern tech laboratory where software engineers review diverging data visualization charts showing short-term minor updates versus massive upward generational leaps.",
+   "alt": "Engineers analyzing visual charts comparing incremental model iterations with generational leaps",
+   "caption": "Illustration: Internal research prioritizes broad generational leaps over short-term intra-version tuning.",
+   "slot": "FIG1",
+   "src": "img/openai-focuses-research-gpt-7-and-beyond/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 28846,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A visual representation of model distillation showing a massive glowing crystalline neural network transferring condensed light streams into a smaller, compact crystal core.",
+   "alt": "Conceptual visualization of a large neural network distilling capabilities into a smaller model",
+   "caption": "Illustration: Large frontier teacher models provide the training foundation for smaller, cost-effective specialized models.",
+   "slot": "FIG2",
+   "src": "img/openai-focuses-research-gpt-7-and-beyond/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 63944,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/",
+   "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
+   "site": "The Decoder",
+   "published": 1790505389000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.binance.com/en/square/post/371356917433540",
+   "title": "OpenAI Research Head Says 80% to 90% of Research Focuses on GPT-7, GPT-8 and Beyond",
+   "site": "binance.com",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.kucoin.com/news/flash/openai-app-research-head-80-90-of-research-focused-on-gpt-7-and-beyond",
+   "title": "OpenAI App Research Head: 80–90% of Research Focused on GPT-7 and Beyond",
+   "site": "kucoin.com",
+   "published": 1790554439000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://hellomarvisaitoday.com/articles/a404296a-7a41-433c-bc34-ae1ac33a5fd1",
+   "title": "OpenAI's Boris Power: 80 to 90 percent of research targets GPT 7 and beyond",
+   "site": "AIToday",
+   "published": 1790505389000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790559453768,
+ "updatedAt": 1790559453768,
+ "foundVia": "the-decoder.com",
+ "check": {
+  "claims": 20,
+  "score": 10
+ },
+ "story": {
+  "id": "Pcf2146b1",
+  "score": 78,
+  "items": [
+   "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
