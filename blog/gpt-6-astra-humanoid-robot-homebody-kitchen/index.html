@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPT-6 Astra Directly Controls Humanoid Robot in Kitchen | rkj dev</title>
+<meta name="description" content="Stanford and Caltech built HomeBody, connecting OpenAI's GPT-6 Astra directly to a Unitree G1 humanoid to tidy up unfamiliar kitchens without a VLA layer.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/gpt-6-astra-humanoid-robot-homebody-kitchen/">
+<meta name="theme-color" content="#16101a">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GPT-6 Astra Directly Controls Humanoid Robot in Kitchen | rkj dev">
+<meta property="og:description" content="Stanford and Caltech built HomeBody, connecting OpenAI's GPT-6 Astra directly to a Unitree G1 humanoid to tidy up unfamiliar kitchens without a VLA layer.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/gpt-6-astra-humanoid-robot-homebody-kitchen/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GPT-6 Astra Directly Controls Humanoid Robot in Kitchen | rkj dev">
+<meta name="twitter:description" content="Stanford and Caltech built HomeBody, connecting OpenAI's GPT-6 Astra directly to a Unitree G1 humanoid to tidy up unfamiliar kitchens without a VLA layer.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<meta property="article:published_time" content="2026-09-28T01:06:47.818Z">
+<meta property="article:modified_time" content="2026-09-28T01:06:47.818Z">
+<meta property="article:section" content="Robotics">
+<meta property="article:tag" content="GPT-6 Astra">
+<meta property="article:tag" content="Robotics">
+<meta property="article:tag" content="Stanford University">
+<meta property="article:tag" content="Humanoid Robots">
+<meta property="article:tag" content="Embodied AI">
+<meta property="article:tag" content="Nvidia Isaac Sim">
+<link rel="preload" as="image" href="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero.webp" imagesrcset="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero-640.webp 640w, /blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Stanford and Caltech Connect GPT-6 Astra Directly to Humanoid Robot","description":"Stanford and Caltech built HomeBody, connecting OpenAI's GPT-6 Astra directly to a Unitree G1 humanoid to tidy up unfamiliar kitchens without a VLA layer.","url":"https://www.rkjdev.com/blog/gpt-6-astra-humanoid-robot-homebody-kitchen/","mainEntityOfPage":"https://www.rkjdev.com/blog/gpt-6-astra-humanoid-robot-homebody-kitchen/","image":["https://www.rkjdev.com/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/og.jpg","https://www.rkjdev.com/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero.webp"],"datePublished":"2026-09-28T01:06:47.818Z","dateModified":"2026-09-28T01:06:47.818Z","articleSection":"Robotics","keywords":"GPT-6 Astra, Robotics, Stanford University, Humanoid Robots, Embodied AI, Nvidia Isaac Sim","wordCount":742,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/","https://tml.stanford.edu/homebody/","https://aiweekly.co/alerts/stanfords-homebody-wires-gpt-6-astra-directly-to-a-unitree-g1-skips-the-vla","https://areeblog.com/researchers-put-gpt-6-astra-in-humanoid-robot-for-household-tasks/","https://hellomarvisaitoday.com/articles/7557fce3-0b2b-483d-ab83-8cd4a2b32faf","https://www.aiandtech.news/article/researchers-test-gpt-6-astra-direct-integration-with-autonomous-robot-kitchen-cleanup"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Robotics","item":"https://www.rkjdev.com/blog/category/robotics/"},{"@type":"ListItem","position":3,"name":"Stanford and Caltech Connect GPT-6 Astra Directly to Humanoid Robot","item":"https://www.rkjdev.com/blog/gpt-6-astra-humanoid-robot-homebody-kitchen/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What hardware does the HomeBody system use?","acceptedAnswer":{"@type":"Answer","text":"HomeBody runs on a Unitree G1 humanoid robot equipped with a D435i camera and LiDAR. Local perception, tracking, and motion planning run on a Razer Blade laptop with an RTX 4090 GPU, while GPT-6 Astra runs remotely."}},{"@type":"Question","name":"How does GPT-6 Astra control the robot without a VLA layer?","acceptedAnswer":{"@type":"Answer","text":"Instead of predicting low-level motor torques, GPT-6 Astra outputs structured tool calls selecting from five composable skills (navigate, pick, place, open drawer, pick from drawer) with spatial targets, delegating inverse kinematics and trajectory execution to local controllers."}},{"@type":"Question","name":"What are the main technical limitations of HomeBody?","acceptedAnswer":{"@type":"Answer","text":"Primary constraints include reasoning latency from GPT-6 Astra causing pauses between steps, hardware endurance issues such as overheating finger servos, Real2Sim setup costs, and heavy local compute requirements."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/robotics/">Robotics</a></nav>
+      <h1>Stanford and Caltech Connect GPT-6 Astra Directly to Humanoid Robot</h1>
+      <p class="standfirst">Researchers bypass traditional vision-language-action policy layers, letting OpenAI's frontier model orchestrate physical manipulation through modular skill tools.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-09-28T01:06:47.818Z" class="abs" data-rel>Sep 28, 2026</time></span>
+        <span>3 min read</span>
+        <a href="#sources">6 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero.webp" srcset="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero-640.webp 640w, /blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="An AI illustration of a humanoid robot organizing items in a modern kitchen setting." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: A humanoid robot executing tidying tasks in an unfamiliar kitchen environment.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>On this page</p><ol><li><a href="#how-gpt-6-astra-controls-the-unitree">How GPT-6 Astra Controls the Unitree G1</a></li><li><a href="#real2sim-spatial-memory-and-autonomous-cleanup">Real2Sim Spatial Memory and Autonomous Cleanup</a></li><li><a href="#practical-constraints-and-system-limitations">Practical Constraints and System Limitations</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgpt-6-astra-humanoid-robot-homebody-kitchen%2F&text=Stanford%20and%20Caltech%20Connect%20GPT-6%20Astra%20Directly%20to%20Humanoid%20Robot" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgpt-6-astra-humanoid-robot-homebody-kitchen%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Stanford%20and%20Caltech%20Connect%20GPT-6%20Astra%20Directly%20to%20Humanoid%20Robot%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgpt-6-astra-humanoid-robot-homebody-kitchen%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/gpt-6-astra-humanoid-robot-homebody-kitchen/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="takeaways" aria-labelledby="tk">
+          <h2 id="tk">Key takeaways</h2>
+          <ul><li>Stanford and Caltech introduced HomeBody, an architecture that uses GPT-6 Astra as a high-level task planner for a Unitree G1 humanoid robot.</li><li>The system bypasses task-specific Vision-Language-Action (VLA) control layers, instead utilizing structured tool calls into a five-skill library.</li><li>The robot builds a digital twin in Nvidia Isaac Sim using exploration data, enabling long-horizon loco-manipulation from spatial memory.</li><li>Practical limitations include reasoning latency, finger-servo overheating, and local compute requirements on an RTX 4090 GPU.</li></ul>
+        </section>
+        <p>Researchers from Stanford University and the California Institute of Technology have unveiled HomeBody, a system that connects OpenAI&#39;s GPT-6 Astra directly to a humanoid robot to complete complex multi-step household chores. The project demonstrates that a general-purpose vision-language model can autonomously navigate an unfamiliar kitchen, tidy up, and retrieve items from drawers without relying on task-trained intermediate control layers, according to <a href="https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/" target="_blank" rel="noopener">The Decoder</a>.</p>
+<p>Developed at Stanford&#39;s Movement Lab by Gio Huh, Cayden Gu, Takara E. Truong, C. Karen Liu, and Guy Tevet, HomeBody replaces the conventional vision-language-action (VLA) policy pipeline. Instead, GPT-6 Astra runs remotely as a high-level planner, issuing structured tool calls to trigger modular robot skills while controllers and modular skills execute physical motions, as detailed on <a href="https://tml.stanford.edu/homebody/" target="_blank" rel="noopener">Stanford&#39;s project page</a>.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/figure-1.webp" width="1200" height="670" alt="An AI illustration of a robotic gripper performing a delicate grasp on a kitchen countertop." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: The humanoid uses composable manipulation skills to pick and sort household items.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="how-gpt-6-astra-controls-the-unitree">How GPT-6 Astra Controls the Unitree G1</h2>
+<p>Traditional approaches to embodied AI typically rely on a trained control or vision-language-action (VLA) layer. As reported by <a href="https://aiweekly.co/alerts/stanfords-homebody-wires-gpt-6-astra-directly-to-a-unitree-g1-skips-the-vla" target="_blank" rel="noopener">AI Weekly</a>, HomeBody bypasses this layer by presenting the robot&#39;s capabilities to GPT-6 Astra as an extensible skill library with five core actions:</p>
+<ul>
+<li><strong>Navigate:</strong> Follows a planned route to a 2D goal and facing point in map coordinates.</li>
+<li><strong>Pick:</strong> Identifies an image coordinate normalized from 0 to 1000, predicts analytical grasps using stereo depth, and lifts an object with a chosen arm.</li>
+<li><strong>Place:</strong> Moves a held item to a specified 3D release target relative to the torso frame.</li>
+<li><strong>Open drawer:</strong> Aligns visually with a drawer handle, hooks it, and walks backward.</li>
+<li><strong>Pick from drawer:</strong> Reaches into an open drawer and lifts the selected object clear of the rim.</li>
+</ul>
+<p>To translate Astra&#39;s high-level tool selections into physical execution, the local system employs Fast-FoundationStereo for real-time depth estimation from a D435i camera, paired with SAM 2.1 and SAMURAI memory tracking for visual servoing during approaches. Whole-body balance during loco-manipulation is maintained by a pretrained Adaptive Motion Optimization (AMO) controller. Arm commands operate at 250 Hz, while AMO updates lower-body gait and posture at 50 Hz, according to <a href="https://tml.stanford.edu/homebody/" target="_blank" rel="noopener">Stanford&#39;s project documentation</a>.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/figure-2.webp" width="1200" height="670" alt="An AI illustration of a two-legged humanoid robot opening a drawer and reaching inside." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: HomeBody coordinates whole-body posture while opening drawers and retrieving items.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="real2sim-spatial-memory-and-autonomous-cleanup">Real2Sim Spatial Memory and Autonomous Cleanup</h2>
+<p>Before executing tasks, the Unitree G1 explores the room autonomously under Astra&#39;s direction, capturing iPhone video, stereo frames, LiDAR data, joint states, and exploration waypoints. As described by Aree Blog, HomeBody feeds this data into a Real2Sim pipeline to build a 3D digital twin inside Nvidia Isaac Sim. The system registers the live Super Odometry SLAM map with the simulated environment using iterative closest point (ICP) alignment.</p>
+<p>This reconstructed spatial memory allows GPT-6 Astra to track items even when they leave the humanoid&#39;s immediate field of view. During demonstrations, researchers gave the system underspecified prompts such as: <em>&quot;Clean up all of the coffee bags and put them in the middle, and throw away all of the milk and orange juice cartons that have gone bad.&quot;</em> The system coordinated successive navigation trips, gathered the coffee bags on the kitchen island, and threw away spoiled cartons.</p>
+<p>In a second scenario, a user requested out-of-sight medicine: <em>&quot;I forgot my medicine, can you get it for me? Also throw out the bad carton while you are at it.&quot;</em> Using spatial keyframes, the robot navigated to the drawer, opened it with its right hand, retrieved the medicine bottle, handed it to the person, and discarded the carton with its left hand, according to <a href="https://tml.stanford.edu/homebody/" target="_blank" rel="noopener">Stanford&#39;s research team</a>.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/gpt-6-astra-humanoid-robot-homebody-kitchen/figure-3.webp" width="1200" height="670" alt="An AI illustration of researchers monitoring a humanoid robot in a laboratory environment." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Stanford and Caltech researchers testing vision-language model integration on humanoid hardware.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="practical-constraints-and-system-limitations">Practical Constraints and System Limitations</h2>
+<p>While HomeBody shows that general-purpose frontier models can handle long-horizon physical planning, the researchers highlight several operational bottlenecks, noted by <a href="https://hellomarvisaitoday.com/articles/7557fce3-0b2b-483d-ab83-8cd4a2b32faf" target="_blank" rel="noopener">AIToday</a> and <a href="https://www.aiandtech.news/article/researchers-test-gpt-6-astra-direct-integration-with-autonomous-robot-kitchen-cleanup" target="_blank" rel="noopener">AI and Tech News</a>:</p>
+<ul>
+<li><strong>Reasoning Latency:</strong> Astra&#39;s cloud inference introduces noticeable pauses between skill executions while the model interprets previous results and formulates its next step.</li>
+<li><strong>Hardware Endurance:</strong> Extended operation leads to finger-servo overheating on the Unitree G1.</li>
+<li><strong>Compute Requirements:</strong> Local motion planning, stereo depth, and segmentation require an RTX 4090 laptop GPU running alongside remote API calls.</li>
+<li><strong>Setup Overhead:</strong> Real2Sim environment reconstruction adds upfront time and API costs before chores can begin.</li>
+</ul>
+<p>The researchers note that published previews do not represent a large-scale statistical benchmark; success rates and trial counts were not detailed on the project page, and most skill previews were sped up to about 7–10 seconds, with some grasping failures requiring local automated retries. OpenAI, which released GPT-6 Astra with vision, reasoning, and tool-calling capabilities in September 2026, has previously stated its intent to re-enter robotics for personal applications. The HomeBody project repository is hosted on GitHub, with full implementation code marked as coming soon.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <details open><summary>What hardware does the HomeBody system use?</summary><p>HomeBody runs on a Unitree G1 humanoid robot equipped with a D435i camera and LiDAR. Local perception, tracking, and motion planning run on a Razer Blade laptop with an RTX 4090 GPU, while GPT-6 Astra runs remotely.</p></details>
+<details><summary>How does GPT-6 Astra control the robot without a VLA layer?</summary><p>Instead of predicting low-level motor torques, GPT-6 Astra outputs structured tool calls selecting from five composable skills (navigate, pick, place, open drawer, pick from drawer) with spatial targets, delegating inverse kinematics and trajectory execution to local controllers.</p></details>
+<details><summary>What are the main technical limitations of HomeBody?</summary><p>Primary constraints include reasoning latency from GPT-6 Astra causing pauses between steps, hardware endurance issues such as overheating finger servos, Real2Sim setup costs, and heavy local compute requirements.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/" target="_blank" rel="noopener">Researchers plug GPT-6 Astra directly into a robot and let it clean up an unfamiliar kitchen</a><span>The Decoder · Sep 27, 2026</span></li><li><a href="https://tml.stanford.edu/homebody/" target="_blank" rel="noopener">HomeBody: A Humanoid That Explores, Remembers, and Acts on Its Own</a><span>tml.stanford.edu · Sep 1, 2026</span></li><li><a href="https://aiweekly.co/alerts/stanfords-homebody-wires-gpt-6-astra-directly-to-a-unitree-g1-skips-the-vla" target="_blank" rel="noopener">Stanford's HomeBody Wires GPT-6 Astra Directly to a Unitree G1, Skips the VLA Layer</a><span>AI Weekly · Sep 27, 2026</span></li><li><a href="https://areeblog.com/researchers-put-gpt-6-astra-in-humanoid-robot-for-household-tasks/" target="_blank" rel="noopener">Researchers Put GPT-6 Astra in Humanoid Robot for Household Tasks</a><span>Aree Blog · Sep 27, 2026</span></li><li><a href="https://hellomarvisaitoday.com/articles/7557fce3-0b2b-483d-ab83-8cd4a2b32faf" target="_blank" rel="noopener">HomeBody: GPT-6 Astra runs a Unitree G1 kitchen tidy-up</a><span>AIToday · Sep 27, 2026</span></li><li><a href="https://www.aiandtech.news/article/researchers-test-gpt-6-astra-direct-integration-with-autonomous-robot-kitchen-cleanup" target="_blank" rel="noopener">Researchers Test GPT-6 Astra Direct Integration With Autonomous Robot Kitchen Cleanup</a><span>AI and Tech News · Sep 27, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from the-decoder.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (36 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Stanford%20and%20Caltech%20Connect%20GPT-6%20Astra%20Directly%20to%20Humanoid%20Robot">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#GPT-6 Astra</span> <span>#Robotics</span> <span>#Stanford University</span> <span>#Humanoid Robots</span> <span>#Embodied AI</span> <span>#Nvidia Isaac Sim</span></p>
+        <p class="stamp">Published September 28, 2026 at 01:06 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="grid"><article class="card ">
+  <a class="card-link" href="/blog/fedorov-launches-army-of-robots-defense-tech/">
+    <div class="thumb is-ai"><img src="/blog/img/fedorov-launches-army-of-robots-defense-tech/hero-640.webp" srcset="/blog/img/fedorov-launches-army-of-robots-defense-tech/hero-640.webp 640w, /blog/img/fedorov-launches-army-of-robots-defense-tech/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="AI illustration of autonomous robotic frameworks and logistics units symbolizing defense technology." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Robotics</span><time datetime="2026-09-27T07:39:26.523Z" data-rel>Sep 27, 2026</time></p>
+      <h3>Fedorov Launches 'Army of Robots' Defense Tech Initiative</h3>
+      <p class="dek">Former Ukrainian Defense Minister Mykhailo Fedorov has introduced the private 'Army of Robots' initiative to advance humanoid robotics, logistics, and autonomous combat.</p>
+      <p class="foot-meta">4 min read · 5 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/goldman-sachs-big-tech-ai-infrastructure-spending-2027/">
+    <div class="thumb is-ai"><img src="/blog/img/goldman-sachs-big-tech-ai-infrastructure-spending-2027/hero-640.webp" srcset="/blog/img/goldman-sachs-big-tech-ai-infrastructure-spending-2027/hero-640.webp 640w, /blog/img/goldman-sachs-big-tech-ai-infrastructure-spending-2027/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of a massive modern data center campus under construction with high-voltage power infrastructure at twilight." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Industry</span><time datetime="2026-09-28T01:08:15.281Z" data-rel>Sep 28, 2026</time></p>
+      <h3>Goldman Sachs Forecasts $1.2 Trillion Big Tech AI Spend by 2027</h3>
+      <p class="dek">Big Tech is projected to invest $1.2 trillion in AI infrastructure by 2027 as debt issuance rises and revenue hurdles mount.</p>
+      <p class="foot-meta">3 min read · 4 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/us-china-bilateral-ai-super-intelligence-dialogue/">
+    <div class="thumb is-ai"><img src="/blog/img/us-china-bilateral-ai-super-intelligence-dialogue/hero-640.webp" srcset="/blog/img/us-china-bilateral-ai-super-intelligence-dialogue/hero-640.webp 640w, /blog/img/us-china-bilateral-ai-super-intelligence-dialogue/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Diplomats and government officials seated at an international summit conference table discussing technology policy" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Policy</span><time datetime="2026-09-28T00:36:39.190Z" data-rel>Sep 28, 2026</time></p>
+      <h3>US and China Establish Super Intelligence Dialogue and Incident Channel</h3>
+      <p class="dek">Following a summit in Washington, the two nations agreed to create a bilateral AI incident hotline and hold regular talks on super intelligence risks.</p>
+      <p class="foot-meta">2 min read · 6 sources</p>
+    </div>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <a href="/blog/goldman-sachs-big-tech-ai-infrastructure-spending-2027/"><span>Newer</span>Goldman Sachs Forecasts $1.2 Trillion Big Tech AI Spend by 2027</a>
+    <a class="next" href="/blog/us-china-bilateral-ai-super-intelligence-dialogue/"><span>Older</span>US and China Establish Super Intelligence Dialogue and Incident Channel</a>
+  </nav>
+</main>
+<footer class="foot wrap">
+  <div>
+    <p class="foot-mark">rkj dev <span>Blog</span></p>
+    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+  </div>
+  <nav aria-label="Blog">
+    <a href="/blog/">Latest</a>
+    <a href="/blog/category/ai-models/">AI Models</a>
+    <a href="/blog/category/open-source/">Open Source</a>
+    <a href="/blog/category/research/">Research</a>
+    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
+    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
+    <a href="/blog/category/industry/">Industry</a>
+    <a href="/blog/feed.xml">RSS</a>
+    <a href="/">About rkj dev</a>
+  </nav>
+  <p class="fine">© 2026 Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+</footer>
+<script src="/blog/blog.js?v=210b69de" defer></script>
+</body>
+</html>

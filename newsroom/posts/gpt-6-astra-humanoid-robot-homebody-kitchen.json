@@ -1,0 +1,161 @@
+{
+ "slug": "gpt-6-astra-humanoid-robot-homebody-kitchen",
+ "title": "Stanford and Caltech Connect GPT-6 Astra Directly to Humanoid Robot",
+ "seoTitle": "GPT-6 Astra Directly Controls Humanoid Robot in Kitchen",
+ "description": "Stanford and Caltech built HomeBody, connecting OpenAI's GPT-6 Astra directly to a Unitree G1 humanoid to tidy up unfamiliar kitchens without a VLA layer.",
+ "dek": "Researchers bypass traditional vision-language-action policy layers, letting OpenAI's frontier model orchestrate physical manipulation through modular skill tools.",
+ "category": "Robotics",
+ "tags": [
+  "GPT-6 Astra",
+  "Robotics",
+  "Stanford University",
+  "Humanoid Robots",
+  "Embodied AI",
+  "Nvidia Isaac Sim"
+ ],
+ "keyTakeaways": [
+  "Stanford and Caltech introduced HomeBody, an architecture that uses GPT-6 Astra as a high-level task planner for a Unitree G1 humanoid robot.",
+  "The system bypasses task-specific Vision-Language-Action (VLA) control layers, instead utilizing structured tool calls into a five-skill library.",
+  "The robot builds a digital twin in Nvidia Isaac Sim using exploration data, enabling long-horizon loco-manipulation from spatial memory.",
+  "Practical limitations include reasoning latency, finger-servo overheating, and local compute requirements on an RTX 4090 GPU."
+ ],
+ "body": "Researchers from Stanford University and the California Institute of Technology have unveiled HomeBody, a system that connects OpenAI's GPT-6 Astra directly to a humanoid robot to complete complex multi-step household chores. The project demonstrates that a general-purpose vision-language model can autonomously navigate an unfamiliar kitchen, tidy up, and retrieve items from drawers without relying on task-trained intermediate control layers, according to [The Decoder](https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/).\n\nDeveloped at Stanford's Movement Lab by Gio Huh, Cayden Gu, Takara E. Truong, C. Karen Liu, and Guy Tevet, HomeBody replaces the conventional vision-language-action (VLA) policy pipeline. Instead, GPT-6 Astra runs remotely as a high-level planner, issuing structured tool calls to trigger modular robot skills while controllers and modular skills execute physical motions, as detailed on [Stanford's project page](https://tml.stanford.edu/homebody/).\n\n[[FIG1]]\n\n## How GPT-6 Astra Controls the Unitree G1\n\nTraditional approaches to embodied AI typically rely on a trained control or vision-language-action (VLA) layer. As reported by [AI Weekly](https://aiweekly.co/alerts/stanfords-homebody-wires-gpt-6-astra-directly-to-a-unitree-g1-skips-the-vla), HomeBody bypasses this layer by presenting the robot's capabilities to GPT-6 Astra as an extensible skill library with five core actions:\n\n* **Navigate:** Follows a planned route to a 2D goal and facing point in map coordinates.\n* **Pick:** Identifies an image coordinate normalized from 0 to 1000, predicts analytical grasps using stereo depth, and lifts an object with a chosen arm.\n* **Place:** Moves a held item to a specified 3D release target relative to the torso frame.\n* **Open drawer:** Aligns visually with a drawer handle, hooks it, and walks backward.\n* **Pick from drawer:** Reaches into an open drawer and lifts the selected object clear of the rim.\n\nTo translate Astra's high-level tool selections into physical execution, the local system employs Fast-FoundationStereo for real-time depth estimation from a D435i camera, paired with SAM 2.1 and SAMURAI memory tracking for visual servoing during approaches. Whole-body balance during loco-manipulation is maintained by a pretrained Adaptive Motion Optimization (AMO) controller. Arm commands operate at 250 Hz, while AMO updates lower-body gait and posture at 50 Hz, according to [Stanford's project documentation](https://tml.stanford.edu/homebody/).\n\n[[FIG2]]\n\n## Real2Sim Spatial Memory and Autonomous Cleanup\n\nBefore executing tasks, the Unitree G1 explores the room autonomously under Astra's direction, capturing iPhone video, stereo frames, LiDAR data, joint states, and exploration waypoints. As described by Aree Blog, HomeBody feeds this data into a Real2Sim pipeline to build a 3D digital twin inside Nvidia Isaac Sim. The system registers the live Super Odometry SLAM map with the simulated environment using iterative closest point (ICP) alignment.\n\nThis reconstructed spatial memory allows GPT-6 Astra to track items even when they leave the humanoid's immediate field of view. During demonstrations, researchers gave the system underspecified prompts such as: *\"Clean up all of the coffee bags and put them in the middle, and throw away all of the milk and orange juice cartons that have gone bad.\"* The system coordinated successive navigation trips, gathered the coffee bags on the kitchen island, and threw away spoiled cartons.\n\nIn a second scenario, a user requested out-of-sight medicine: *\"I forgot my medicine, can you get it for me? Also throw out the bad carton while you are at it.\"* Using spatial keyframes, the robot navigated to the drawer, opened it with its right hand, retrieved the medicine bottle, handed it to the person, and discarded the carton with its left hand, according to [Stanford's research team](https://tml.stanford.edu/homebody/).\n\n[[FIG3]]\n\n## Practical Constraints and System Limitations\n\nWhile HomeBody shows that general-purpose frontier models can handle long-horizon physical planning, the researchers highlight several operational bottlenecks, noted by [AIToday](https://hellomarvisaitoday.com/articles/7557fce3-0b2b-483d-ab83-8cd4a2b32faf) and [AI and Tech News](https://www.aiandtech.news/article/researchers-test-gpt-6-astra-direct-integration-with-autonomous-robot-kitchen-cleanup):\n\n* **Reasoning Latency:** Astra's cloud inference introduces noticeable pauses between skill executions while the model interprets previous results and formulates its next step.\n* **Hardware Endurance:** Extended operation leads to finger-servo overheating on the Unitree G1.\n* **Compute Requirements:** Local motion planning, stereo depth, and segmentation require an RTX 4090 laptop GPU running alongside remote API calls.\n* **Setup Overhead:** Real2Sim environment reconstruction adds upfront time and API costs before chores can begin.\n\nThe researchers note that published previews do not represent a large-scale statistical benchmark; success rates and trial counts were not detailed on the project page, and most skill previews were sped up to about 7–10 seconds, with some grasping failures requiring local automated retries. OpenAI, which released GPT-6 Astra with vision, reasoning, and tool-calling capabilities in September 2026, has previously stated its intent to re-enter robotics for personal applications. The HomeBody project repository is hosted on GitHub, with full implementation code marked as coming soon.",
+ "faq": [
+  {
+   "q": "What hardware does the HomeBody system use?",
+   "a": "HomeBody runs on a Unitree G1 humanoid robot equipped with a D435i camera and LiDAR. Local perception, tracking, and motion planning run on a Razer Blade laptop with an RTX 4090 GPU, while GPT-6 Astra runs remotely."
+  },
+  {
+   "q": "How does GPT-6 Astra control the robot without a VLA layer?",
+   "a": "Instead of predicting low-level motor torques, GPT-6 Astra outputs structured tool calls selecting from five composable skills (navigate, pick, place, open drawer, pick from drawer) with spatial targets, delegating inverse kinematics and trajectory execution to local controllers."
+  },
+  {
+   "q": "What are the main technical limitations of HomeBody?",
+   "a": "Primary constraints include reasoning latency from GPT-6 Astra causing pauses between steps, hardware endurance issues such as overheating finger servos, Real2Sim setup costs, and heavy local compute requirements."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern metallic humanoid robot standing inside a realistic home kitchen next to a countertop, gently holding a carton above a disposal bin, with soft interior lighting reflecting off its mechanical joints.",
+  "alt": "An AI illustration of a humanoid robot organizing items in a modern kitchen setting.",
+  "caption": "Illustration: A humanoid robot executing tidying tasks in an unfamiliar kitchen environment.",
+  "src": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 51606,
+  "small": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/hero-640.webp",
+  "og": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A close-up view of a robotic humanoid hand with articulated metal fingers carefully grasping an object on a kitchen surface, showcasing precise mechanical manipulation.",
+   "alt": "An AI illustration of a robotic gripper performing a delicate grasp on a kitchen countertop.",
+   "caption": "Illustration: The humanoid uses composable manipulation skills to pick and sort household items.",
+   "slot": "FIG1",
+   "src": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34168,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A humanoid robot standing in front of an open lower kitchen drawer, reaching one mechanical arm inside while maintaining balance on two legs in a domestic kitchen.",
+   "alt": "An AI illustration of a two-legged humanoid robot opening a drawer and reaching inside.",
+   "caption": "Illustration: HomeBody coordinates whole-body posture while opening drawers and retrieving items.",
+   "slot": "FIG2",
+   "src": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35132,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "Two academic researchers in a modern robotics laboratory standing near a desk with a high-performance laptop, observing a humanoid robot standing in an adjacent test kitchen.",
+   "alt": "An AI illustration of researchers monitoring a humanoid robot in a laboratory environment.",
+   "caption": "Illustration: Stanford and Caltech researchers testing vision-language model integration on humanoid hardware.",
+   "slot": "FIG3",
+   "src": "img/gpt-6-astra-humanoid-robot-homebody-kitchen/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 33694,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/",
+   "title": "Researchers plug GPT-6 Astra directly into a robot and let it clean up an unfamiliar kitchen",
+   "site": "The Decoder",
+   "published": 1790506751000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://tml.stanford.edu/homebody/",
+   "title": "HomeBody: A Humanoid That Explores, Remembers, and Acts on Its Own",
+   "site": "tml.stanford.edu",
+   "published": 1788220800000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://aiweekly.co/alerts/stanfords-homebody-wires-gpt-6-astra-directly-to-a-unitree-g1-skips-the-vla",
+   "title": "Stanford's HomeBody Wires GPT-6 Astra Directly to a Unitree G1, Skips the VLA Layer",
+   "site": "AI Weekly",
+   "published": 1790512244000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://areeblog.com/researchers-put-gpt-6-astra-in-humanoid-robot-for-household-tasks/",
+   "title": "Researchers Put GPT-6 Astra in Humanoid Robot for Household Tasks",
+   "site": "Aree Blog",
+   "published": 1790545942000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://hellomarvisaitoday.com/articles/7557fce3-0b2b-483d-ab83-8cd4a2b32faf",
+   "title": "HomeBody: GPT-6 Astra runs a Unitree G1 kitchen tidy-up",
+   "site": "AIToday",
+   "published": 1790506751000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.aiandtech.news/article/researchers-test-gpt-6-astra-direct-integration-with-autonomous-robot-kitchen-cleanup",
+   "title": "Researchers Test GPT-6 Astra Direct Integration With Autonomous Robot Kitchen Cleanup",
+   "site": "AI and Tech News",
+   "published": 1790512390000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790557607818,
+ "updatedAt": 1790557607818,
+ "foundVia": "the-decoder.com",
+ "check": {
+  "claims": 36,
+  "score": 10
+ },
+ "story": {
+  "id": "Paff40569",
+  "score": 80,
+  "items": [
+   "https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
