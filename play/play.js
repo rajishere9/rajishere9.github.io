@@ -17,3 +17,9 @@ fetch("ai-dle/puzzles/index.json").then((r) => r.json()).then((index) => {
 fetch("scale-of-ai/data.json").then((r) => r.json()).then((d) => {
   document.getElementById("scale-status").textContent = `${d.models.length} models, data from Epoch AI updated ${new Date(`${d.updated}T12:00:00`).toLocaleDateString(undefined, { month: "long", day: "numeric" })}.`;
 }).catch(() => {});
+try {
+  const d = JSON.parse(localStorage.getItem("nightshift:v1")) || {}, n = (d.meta?.endings || []).length, el = document.getElementById("night-status");
+  const hhmm = (m) => `${String(Math.floor(m / 60) % 24).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
+  if (d.run) el.innerHTML = `<b>Your shift is paused at ${hhmm(d.run.minute)}.</b>`;
+  else if (n) el.textContent = n === 3 ? "You've found all three endings." : `Endings found: ${n} of 3.`;
+} catch {}

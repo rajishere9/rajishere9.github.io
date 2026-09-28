@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Night Shift: a pixel mystery at a datacenter</title>
+<meta name="description" content="It's 3am at a datacenter and something is using the cluster, 17 minutes at a time. A free pixel-art adventure with three endings, playable in your browser on desktop and phones.">
+<link rel="canonical" href="https://www.rkjdev.com/play/night-shift/">
+<meta name="theme-color" content="#07090f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Night Shift">
+<meta property="og:description" content="One night at a datacenter. Something is using the cluster, 17 minutes at a time.">
+<meta property="og:url" content="https://www.rkjdev.com/play/night-shift/">
+<meta property="og:image" content="https://www.rkjdev.com/play/night-shift/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect width='32' height='32' fill='%2307090f'/%3E%3Crect x='8' y='4' width='16' height='24' fill='%231b2230'/%3E%3Crect x='10' y='8' width='2' height='2' fill='%2337d67a'/%3E%3Crect x='10' y='13' width='2' height='2' fill='%2337d67a'/%3E%3Crect x='10' y='18' width='2' height='2' fill='%23ffb347'/%3E%3Crect x='10' y='23' width='2' height='2' fill='%2337d67a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@500&display=swap">
+<link rel="stylesheet" href="../play.css?v=d22a7100">
+<link rel="stylesheet" href="night.css?v=28930649">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"Night Shift","url":"https://www.rkjdev.com/play/night-shift/","description":"A pixel-art mystery adventure set on the night shift at a datacenter, with three endings.","genre":["Adventure","Puzzle"],"gamePlatform":"Web browser","applicationCategory":"Game","playMode":"SinglePlayer","isAccessibleForFree":true,"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
+</script>
+</head>
+<body class="ns">
+<script>if (matchMedia("(pointer: coarse)").matches || location.search.includes("touch")) document.documentElement.classList.add("touch");</script>
+<a class="skip" href="#screen">Skip to the game</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/">Blog</a>
+      <a href="/play/" aria-current="page">Play</a>
+      <a class="opt" href="/#work">Work</a>
+      <a class="opt" href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="console">
+    <div class="stage">
+      <canvas id="screen" width="320" height="180" tabindex="0" aria-label="Night Shift. The game's text is read out below as you play."></canvas>
+    </div>
+    <div class="deck">
+      <div class="pad" aria-label="Direction pad">
+        <span class="arm up"></span><span class="arm right"></span><span class="arm down"></span><span class="arm left"></span><span class="hub"></span>
+      </div>
+      <div class="keys">
+        <button type="button" class="k pager" data-act="menu" aria-label="Open pager"><span>Pager</span></button>
+        <button type="button" class="k fs" id="fs" aria-label="Full screen" hidden><span>Full screen</span></button>
+      </div>
+      <div class="acts">
+        <button type="button" class="round b" data-act="b" aria-label="B, back or hurry"><b>B</b><span>Back</span></button>
+        <button type="button" class="round a" data-act="a" aria-label="A, use or talk"><b>A</b><span>Use</span></button>
+      </div>
+    </div>
+  </div>
+
+  <section class="about">
+    <h1>Night Shift</h1>
+    <p>It's 3am at a datacenter in the middle of nowhere, and something is using the cluster, 17 minutes at a time. A short mystery with seven puzzles and three endings. It takes about half an hour and saves as you go.</p>
+    <p class="how"><span class="desk-only">Walk with the arrow keys or WASD, and hold Shift to hurry. Space talks and uses things, Esc goes back, Tab opens your pager. You can also click where you want to go.</span><span class="touch-only">Walk with the pad, or tap where you want to go. Tap people and things to use them. A uses, B goes back, and holding B while you walk hurries you along.</span></p>
+    <p class="record" id="record"></p>
+    <p class="made">Every pixel and every sound is made in code as you play: no image or audio files. Sound is best with headphones.</p>
+  </section>
+</main>
+
+<div id="live" class="sr" aria-live="polite"></div>
+<script>
+  // Record line and the full-screen key, outside the game bundle so they show even before it loads.
+  try {
+    const d = JSON.parse(localStorage.getItem("nightshift:v1")) || {}, n = (d.meta?.endings || []).length;
+    const r = document.getElementById("record");
+    if (d.run) r.textContent = `Your shift is paused at ${String(Math.floor(d.run.minute / 60) % 24).padStart(2, "0")}:${String(d.run.minute % 60).padStart(2, "0")}. Pick up where you left off.`;
+    else if (n) r.textContent = `Endings found: ${n} of 3.`;
+  } catch {}
+  if (document.fullscreenEnabled) document.getElementById("fs").hidden = false;
+</script>
+<script src="game.js?v=c11410c9" defer></script>
+</body>
+</html>

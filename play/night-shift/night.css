@@ -1,0 +1,120 @@
+/* Night Shift: the page is a dark room with the screen as its only light. On phones it becomes a handheld. */
+.ns {
+  --room: #090c12;
+  --ink: #07090f;
+  --slate: #1f2838;
+  --steel: #46566e;
+  --pale: #a9b8c9;
+  --white: #e8eef2;
+  --amber: #ffb347;
+  --led: #37d67a;
+  --shell: #151922;
+  --shell-hi: #1f2430;
+  --key: #262c38;
+  --key-hi: #343c4b;
+  background: var(--room);
+  color: var(--pale);
+}
+.ns .top.scrolled, .ns .top { background: var(--room); border-bottom-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.ns :focus-visible { outline-color: var(--amber); }
+
+.console { max-width: 1320px; margin: 0 auto; padding: clamp(4px, 1.5vw, 20px) var(--gutter) 0; }
+.stage {
+  position: relative; display: grid; place-items: center;
+  height: min(78vh, calc((100vw - 2 * var(--gutter)) * 9 / 16));
+  min-height: 180px;
+}
+#screen {
+  display: block; background: var(--ink);
+  image-rendering: pixelated; image-rendering: crisp-edges;
+  touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+  box-shadow: 0 0 0 1px rgba(233, 238, 242, .05), 0 40px 90px -40px rgba(79, 179, 255, .18);
+  outline: none; cursor: pointer;
+}
+#screen:focus-visible { box-shadow: 0 0 0 2px var(--amber); }
+
+.about { max-width: 64ch; margin: clamp(22px, 4vh, 40px) auto 72px; padding: 0 var(--gutter); }
+.about h1 { margin: 0 0 10px; font: 500 20px/1.3 var(--display); color: var(--white); letter-spacing: 0; }
+.about p { margin: 0 0 12px; font-size: 16px; line-height: 1.6; }
+.about .how { color: #c3cdd9; }
+.about .record:empty { display: none; }
+.about .record { color: var(--amber); }
+.about .made { font-size: 14px; color: #6c7a8c; }
+.touch-only { display: none; }
+
+/* ---- the deck: only on touch screens ---- */
+.deck { display: none; }
+.touch .desk-only { display: none; }
+.touch .touch-only { display: inline; }
+.touch .deck {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px;
+  touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.touch .deck button { -webkit-tap-highlight-color: transparent; touch-action: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
+
+.touch .pad { position: relative; width: 138px; height: 138px; justify-self: start; }
+.touch .pad .arm, .touch .pad .hub { position: absolute; background: var(--key); }
+.touch .pad .up, .touch .pad .down { left: 46px; width: 46px; height: 50px; }
+.touch .pad .left, .touch .pad .right { top: 46px; width: 50px; height: 46px; }
+.touch .pad .up { top: 0; border-radius: 8px 8px 0 0; box-shadow: inset 0 1px 0 var(--key-hi); }
+.touch .pad .down { bottom: 0; border-radius: 0 0 8px 8px; box-shadow: inset 0 -2px 0 #1a1f28; }
+.touch .pad .left { left: 0; border-radius: 8px 0 0 8px; box-shadow: inset 1px 1px 0 var(--key-hi); }
+.touch .pad .right { right: 0; border-radius: 0 8px 8px 0; box-shadow: inset 0 1px 0 var(--key-hi); }
+.touch .pad .hub { left: 46px; top: 46px; width: 46px; height: 46px; }
+.touch .pad .hub::after { content: ""; position: absolute; inset: 15px; border-radius: 50%; background: #1c212b; box-shadow: inset 0 1px 2px rgba(0, 0, 0, .5); }
+.touch .pad .arm::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; height: 0; border: 6px solid transparent; transform: translate(-50%, -50%); }
+.touch .pad .up::after { border-bottom-color: #59647a; margin-top: -4px; }
+.touch .pad .down::after { border-top-color: #59647a; margin-top: 4px; }
+.touch .pad .left::after { border-right-color: #59647a; margin-left: -4px; }
+.touch .pad .right::after { border-left-color: #59647a; margin-left: 4px; }
+.touch .pad[data-dir~="up"] .up, .touch .pad[data-dir~="down"] .down, .touch .pad[data-dir~="left"] .left, .touch .pad[data-dir~="right"] .right { background: #3a4252; }
+.touch .pad[data-dir~="up"] .up::after { border-bottom-color: var(--amber); }
+.touch .pad[data-dir~="down"] .down::after { border-top-color: var(--amber); }
+.touch .pad[data-dir~="left"] .left::after { border-right-color: var(--amber); }
+.touch .pad[data-dir~="right"] .right::after { border-left-color: var(--amber); }
+
+.touch .keys { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.touch .k { min-width: 76px; height: 28px; border-radius: 6px; background: var(--key); color: var(--pale); font-size: 13px; font-weight: 600; box-shadow: inset 0 1px 0 var(--key-hi), 0 2px 0 #0c0f15; }
+.touch .k.on, .touch .k:active { transform: translateY(2px); box-shadow: inset 0 1px 0 var(--key-hi); }
+
+.touch .acts { position: relative; width: 150px; height: 128px; justify-self: end; }
+.touch .round { position: absolute; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; color: var(--white); }
+.touch .round b { font: 600 20px/1 var(--text); }
+.touch .round span { position: absolute; top: 100%; margin-top: 6px; font-size: 12px; color: #7d8a9c; font-weight: 500; }
+.touch .round.a { right: 0; top: 4px; background: #33291f; box-shadow: inset 0 1px 0 #4a3b2b, 0 3px 0 #120e0a; }
+.touch .round.a b { color: var(--amber); }
+.touch .round.b { left: 4px; top: 36px; background: var(--key); box-shadow: inset 0 1px 0 var(--key-hi), 0 3px 0 #0c0f15; }
+.touch .round.on { transform: translateY(3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05); }
+
+/* Phone, upright: a handheld. Screen on top, controls below. */
+@media (orientation: portrait) {
+  .touch .console {
+    max-width: 520px; margin: 4px auto 0; padding: 12px 12px 20px;
+    background: linear-gradient(180deg, var(--shell-hi), var(--shell) 30%);
+    border-radius: 18px 18px 34px 34px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 20px 50px -20px rgba(0, 0, 0, .8);
+    width: calc(100% - 16px);
+  }
+  .touch .stage { height: auto; aspect-ratio: 16 / 9; background: var(--ink); border-radius: 6px; overflow: hidden; }
+  .touch #screen { box-shadow: none; }
+  .touch .deck { margin-top: 22px; padding: 0 4px; }
+}
+
+/* Phone, sideways: the screen fills the height, controls sit in the margins. */
+@media (orientation: landscape) and (max-height: 560px) {
+  .touch .top, .touch .about, .touch .skip { display: none; }
+  .touch .ns { overflow: hidden; }
+  .touch .console { position: fixed; inset: 0; max-width: none; margin: 0; padding: 0; background: var(--ink); }
+  .touch .stage { position: absolute; inset: 0; height: 100%; min-height: 0; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+  .touch #screen { box-shadow: none; }
+  .touch .deck { position: absolute; inset: 0; display: block; pointer-events: none; }
+  .touch .deck > * { pointer-events: auto; position: absolute; opacity: .72; }
+  .touch .pad { left: calc(12px + env(safe-area-inset-left)); bottom: 18px; transform: scale(.9); transform-origin: left bottom; }
+  .touch .acts { right: calc(10px + env(safe-area-inset-right)); bottom: 26px; transform: scale(.9); transform-origin: right bottom; }
+  .touch .keys { right: calc(8px + env(safe-area-inset-right)); top: 10px; flex-direction: column; gap: 8px; }
+  .touch .k { min-width: 64px; height: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .round.on, .k.on { transform: none; }
+}

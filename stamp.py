@@ -2,7 +2,7 @@
 import hashlib, re, pathlib
 root = pathlib.Path(__file__).parent
 pattern = re.compile(r'(src|href)="((?!https?:|mailto:|#|data:|/)[^"?#]+\.(?:css|js|jpg|jpeg|png|webp))(?:\?v=[0-9a-f]+)?"')
-for page in [root / "index.html", *sorted((root / "candledeep").glob("*.html")), root / "play/index.html", root / "play/ai-dle/index.html", root / "play/scale-of-ai/index.html"]:
+for page in [root / "index.html", *sorted((root / "candledeep").glob("*.html")), root / "play/index.html", root / "play/ai-dle/index.html", root / "play/scale-of-ai/index.html", root / "play/night-shift/index.html"]:
     html = page.read_text()
     def stamp(m):
         f = (page.parent / m.group(2)).resolve()
