@@ -1,0 +1,179 @@
+{
+ "slug": "anthropic-releases-claude-sonnet-5",
+ "title": "Anthropic Launches Claude Sonnet 5.5 With Faster Output and Coding Gains",
+ "seoTitle": "Anthropic Releases Claude Sonnet 5.5 AI Model",
+ "description": "Anthropic has released Claude Sonnet 5.5, which Anthropic says delivers 30 percent faster output, lower per-task costs, and major performance gains on agentic coding.",
+ "dek": "Anthropic says the updated mid-tier model runs 30 percent faster, costs up to 30 percent less per task, and rivals Opus 5.5 on agentic coding benchmarks.",
+ "category": "AI Models",
+ "tags": [
+  "Anthropic",
+  "Claude Sonnet 5.5",
+  "Artificial Intelligence",
+  "Large Language Models",
+  "AI Coding"
+ ],
+ "keyTakeaways": [
+  "Anthropic says Claude Sonnet 5.5 generates outputs more than 30 percent faster than Sonnet 5 and cuts per-task costs by up to 30 percent due to improved token efficiency.",
+  "The model scored 70.6 percent on Terminal-Bench 4.0, jumping from 10.3 percent on Sonnet 5 and surpassing Opus 5.5.",
+  "Token pricing remains unchanged at $2 per million input tokens and $10 per million output tokens.",
+  "Anthropic deployed advanced cybersecurity safeguards and anti-distillation classifiers to Sonnet 5.5 for the first time in the Sonnet tier.",
+  "Available immediately across AWS Bedrock, Google Cloud, Microsoft Azure, and the Claude Platform, with Claude Haiku 5.5 arriving in the coming weeks."
+ ],
+ "body": "Anthropic has released [Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5), introducing the second entry in its Claude 5.5 generation following the debut of Opus 5.5 on September 22, 2026. The upgraded mid-tier model is designed as a faster, more cost-effective counterpart to the flagship Opus 5.5, targeting everyday enterprise workflows, bug resolution, and structured office document generation.\n\nAccording to Anthropic, Claude Sonnet 5.5 produces output more than 30 percent faster than its predecessor, Sonnet 5, while reducing per-task costs by up to 30 percent. While baseline token rates remain identical to Sonnet 5, the model requires fewer total tokens and fewer tool-calling steps to resolve user requests.\n\n## Significant Gains in Agentic Coding and Knowledge Work\n\nAnthropic reported substantial benchmark improvements for Claude Sonnet 5.5, particularly in agent-based software engineering and multimodal tasks. On Terminal-Bench 4.0, an evaluation measuring command-line agent capabilities, Sonnet 5.5 achieved a score of 70.6 percent, compared to 10.3 percent for Sonnet 5 and 66.4 percent for Opus 5.5.\n\nOn CursorBench 4.0, which reflects real development sessions inside the Cursor editor, Sonnet 5.5 reached 55.5 percent, compared to 34.1 percent for Sonnet 5 and 57.8 percent for Opus 5.5. The model also recorded 52.1 percent on FrontierCode 1.1 at the \"Xhigh\" reasoning setting and 46.2 percent at the \"Max\" setting, where Anthropic noted that automated multi-agent code reviews occasionally triggered scope penalties.\n\n[[FIG1]]\n\nBeyond programming, Sonnet 5.5 posted 1,844 points on GDPval-AA v2.1—a knowledge work evaluation spanning 44 occupations—falling just two points short of Opus 5.5 (1,846) and outpacing OpenAI's GPT-6 Sol (1,487), according to The Decoder. In visual understanding, its score on the Chartography benchmark rose from 15.6 percent to 61.6 percent without tool use. Anthropic also stated that Sonnet 5.5 is its first Sonnet-tier model capable of navigating the game Pokémon Red using only screen captures.\n\nEarly enterprise testers reported notable performance gains. Daniel Vogel, Chief Operating Officer at Epic Games, stated in the official announcement that Sonnet 5.5 maintained high quality during system design audits and data flow reviews, managing tens of thousands of lines of gameplay code with less prescriptive prompting. Slack Principal Engineer Curtis Allen noted the model resolved offline Slackbot evaluations in fewer steps using approximately 14 percent fewer output tokens. Zendesk Director of AI Abhinay Kathuria reported ticket processing speeds increased by 20 percent with fewer erroneous decisions, as covered by [SiliconANGLE](https://siliconangle.com/2026/09/28/anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-the-previous-generation-ai-model/).\n\n## Cybersecurity Defenses and Alignment Evaluations\n\nBecause Claude Sonnet 5.5 demonstrates cybersecurity proficiencies comparable to Opus 5, Anthropic has equipped the model with specialized cyber safeguards for the first time in the Sonnet line, according to the [Claude Sonnet 5.5 System Card](https://www.anthropic.com/claude-sonnet-5-5-system-card). When higher-risk cyber tasks are detected, the system visibly falls back to Sonnet 5. Defensive practitioners can request higher access tiers through Anthropic's Cyber Verification Program.\n\n[[FIG2]]\n\nThe model card notes that on ExploitBench, Sonnet 5.5 captured an average of 11.53 flags in the AutoNudge condition and completed arbitrary code execution across 43.4 percent of combined test runs. Anthropic also implemented safety classifiers to defend against industrial-scale model distillation attacks and expanded preserved thinking capabilities to keep internal chain-of-thought traces tied to the originating account.\n\nAnthropic evaluated the system across 1,850 automated behavioral scenarios, concluding that Sonnet 5.5 maintained a low risk of catastrophic harm or covert misalignment. The model does not cross new thresholds under the company's Responsible Scaling Policy (RSP), registering an Anthropic ECI score of 167.93 compared to Opus 5.5's 169.12. Biology safeguards remain unchanged from Sonnet 5.\n\n## Pricing, Cloud Availability, and Platform Rollout\n\nClaude Sonnet 5.5 keeps the exact pricing structure of Sonnet 5 at $2.00 per million input tokens, $10.00 per million output tokens, $0.20 per million cache read tokens, and $2.50 per million cache write tokens. In contrast, Opus 5.5 is priced at $4.00 per million input tokens and $20.00 per million output tokens.\n\nAs reported by The Decoder, the model is available immediately on the Claude Platform under the identifier `claude-sonnet-5-5` and across major infrastructure providers, including [Amazon Web Services Bedrock](https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-5-on-aws/), Google Cloud, and Microsoft Azure. Enterprise deployments retain zero data retention policies. Anthropic confirmed that the Claude 5.5 family will expand further in the coming weeks with the release of Claude Haiku 5.5 for high-throughput, cost-sensitive use cases.",
+ "faq": [
+  {
+   "q": "How much does Claude Sonnet 5.5 cost to use?",
+   "a": "Claude Sonnet 5.5 matches Sonnet 5 token pricing: $2 per million input tokens, $10 per million output tokens, $0.20 per million cache read tokens, and $2.50 per million cache write tokens. Anthropic estimates effective task costs are up to 30 percent lower due to improved token efficiency."
+  },
+  {
+   "q": "Where is Claude Sonnet 5.5 available?",
+   "a": "The model is available through the Claude Platform using the model ID 'claude-sonnet-5-5', as well as on Amazon Web Services Bedrock, Google Cloud, and Microsoft Azure."
+  },
+  {
+   "q": "What new safety measures are included in Claude Sonnet 5.5?",
+   "a": "Sonnet 5.5 introduces specialized cybersecurity safeguards with automated fallbacks to Sonnet 5 for high-risk requests, anti-distillation classifiers to prevent reasoning extraction, and preserved thinking controls."
+  },
+  {
+   "q": "When will Claude Haiku 5.5 be released?",
+   "a": "Anthropic announced that Claude Haiku 5.5, built for high-volume and cost-sensitive applications, will be released in the coming weeks."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern technological research facility with engineers collaborating over large screens displaying abstract data pathways and software algorithms, glowing cyan and amber lighting",
+  "alt": "Illustration of a tech workspace with developers collaborating on advanced software systems",
+  "caption": "Illustration: Modern AI model architectures are designed to streamline software workflows and everyday office tasks.",
+  "src": "img/anthropic-releases-claude-sonnet-5/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 63802,
+  "small": "img/anthropic-releases-claude-sonnet-5/hero-640.webp",
+  "og": "img/anthropic-releases-claude-sonnet-5/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/anthropic-releases-claude-sonnet-5/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An abstract developer environment showing lines of programming logic, automated test suites, and terminal execution flows interacting across a multi-monitor setup",
+   "alt": "Illustration of an automated coding evaluation environment with terminal command flows",
+   "caption": "Illustration: Automated coding benchmarks evaluate multi-step execution in developer terminal environments.",
+   "slot": "FIG1",
+   "src": "img/anthropic-releases-claude-sonnet-5/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34528,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A conceptual digital security landscape showing glowing protective barriers, encrypted data packets, and firewall nodes defending against external anomalies",
+   "alt": "Illustration of digital defense barriers and cybersecurity monitoring nodes",
+   "caption": "Illustration: Advanced safety classifiers and cyber safeguards monitor requests to mitigate automated vulnerability exploitation.",
+   "slot": "FIG2",
+   "src": "img/anthropic-releases-claude-sonnet-5/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 74246,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.anthropic.com/claude-sonnet-5-5",
+   "title": "Introducing Claude Sonnet 5.5",
+   "site": "anthropic.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-5-on-aws/",
+   "title": "Introducing Claude Sonnet 5.5 on AWS | Amazon Web Services",
+   "site": "Amazon Web Services",
+   "published": 1790621833000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+   "title": "Claude Sonnet 5.5 System Card",
+   "site": "anthropic.com",
+   "published": 1790553600000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
+   "title": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
+   "site": "TechCrunch",
+   "published": 1790618400000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/",
+   "title": "Anthropic's Claude Sonnet 5.5 nearly matches Opus 5.5 on benchmarks while costing up to 30 percent less per task",
+   "site": "The Decoder",
+   "published": 1790618530000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://siliconangle.com/2026/09/28/anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-the-previous-generation-ai-model/",
+   "title": "Anthropic debuts Claude Sonnet 5.5 running 30% faster than the previous-generation AI model",
+   "site": "SiliconANGLE",
+   "published": 1790618439000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/",
+   "title": "Anthropic upgrades Claude with new Sonnet 5.5 model, details here",
+   "site": "9to5Mac",
+   "published": 1790618875000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790640754666,
+ "updatedAt": 1790640754666,
+ "foundVia": "Google News, techcrunch.com and Hacker News",
+ "check": {
+  "claims": 30,
+  "score": 10
+ },
+ "story": {
+  "id": "P437f8e52",
+  "score": 98,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5NV3BRMEgtbmxNQml2WmRKSWl2WTN6ZjFfTXo4bDVwdFNjSFRvTlVfMUYzUnhlQTFDUTFjcWgwQ1dOMk9waVQ2S3VVcw?oc=5",
+   "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
+   "https://www.anthropic.com/claude-sonnet-5-5",
+   "https://news.google.com/rss/articles/CBMickFVX3lxTE9qRGtiMER0c2RNRG5wOWl1ZWd4aEszaTJqWW5hWnI3cXpVaHBtTzlGYnQ2bTBsMnhXSkxONXdLVVpXQ0IxSG9RR2tXTnNiM2J0Qk5sbXJqVTVQRUFERXBSNEVPa2NmWHpYMDNOaktSNUNlUdIBd0FVX3lxTE9VUlRzOG8tVjJtWXpKb0hFNlduRU1QU1dlS2xPaHpBSzlxcWxzbFRBT19oMEJMdjgyd0c2elZXcV9vT1lGNU9VR0VqZGZxTThIRW5kLTlMTEUxdEhhUEs2NjJabER2UUdpaTVFdzZxWTVkX0JTeGU4?oc=5",
+   "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOT2l6M0lzLXZOampyMGFyal9PSk9WSm9TMU1ZSFVDVUgxNjFGV2tnYThqTm05RjRqOGRZaF9IeXBTRlZjNVNZd19fclVvNy1wVGE1bzM1NDl5RnZjWHpTTDBadllvejB2UDcyRWZ1bFdJem5TbnVwbkdJeldwOW5RbzhoUkZwZ2JULXE5Q25xUm9qX0RIakZESWJySThneFVzZTIwOGVUaWhzVS1HbWNjVjBGakhGazJ0a0RvczlZTmw?oc=5",
+   "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMF8tR0VEUTV6ZGpBNEJQVmQzYWpoOGlEYmRKYmZoaXNWUEdoRmotOWN2TmZ5ZkYwY2M4aFBTNThTaGZhM09NR2tMY0hMbXdfRWlUZks2Zk5OUVFqSEhMNFBsa2R4Z045X3JqVTBkOHBxU1E1bmczSGt6cGd3SzBZMTgtTjdOa3A4RmZXeU1ZYmFROGRlRVRJc1dlQ09tRnlQLVZJ?oc=5",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxOLS11eTd2WmVrc2NTRUhXRnRjNEdLeDZDMWxjd2M0MU9DYjRxT1hZU3UwdGM1YTNQVENMOGJLdXNHdHdPNG5Pempnb2txd0hyN3RERTFuVDZzZUpjRVJrTEVJcHUwdnRBTk9ZaUFsNWxNMW85R2FXT2xrZlBMdVlJNzlueEJPMkR3S3lpTnRHV082aGZhVmo2N3VMWmZ0LVJ5MGxXYkdR0gGrAUFVX3lxTFBRMkVDcjdpTEpreEwxN01MUE5xMXRmY2xDMzhrU0laNVFOR3dzbVFjWmJjZlBZYWcwRkNsWUViRkNOUWV6V1FJd0F0NkRveFl3cnNrV0VkVk45a3RKdmx3ckljeHR0YUtrOWdybjJ2MDllaklFenVYM0xac2NXM2MxZ01wQjNfZ2ZJTnlDYVVqdXBBYkxxOTVzTXBueUhsbHJJMjdSUk9NUFc4cw?oc=5",
+   "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObWtGY0Q3OEZkcHlLU0w0clBFNzJuN0dpakxXQllCVUw0NXZDMklhb2ppUDViQUViNjBzUE1LY2R1anNTaW82TzBxQTQ0RHFyaUJzbVFoUS0zWV9sdVdhWFIzQjRCdXFTanVCVkgyVHhpVDk3eTh3Xy1peTBzWVZjQk5JckxIMW1SRGNLOGI5dkFLX2s5SVA1a0NWalNfVm10R1B4dEhkdkFhN2VBa1FvY0p3cmNFd0tsX2xTcFUxZGRELW5TeVR2Zkl1cFE2RjhrUmlKNXBmUG9kQ0N1N1E?oc=5",
+   "https://www.techmeme.com/260928/p32#a260928p32",
+   "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/",
+   "https://siliconangle.com/2026/09/28/anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-the-previous-generation-ai-model/",
+   "https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/",
+   "https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-5-on-aws/",
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTkp3ZHBWZUpZTUNSVjF0UGZNaTdxUFhISVZ3bm1KUVBHR3ZzWkNkWWtYbkdwQU5WczNMbWhUaGF6bWhobDlaX3UxUWR4akJfRHlpemFxaWNKMF9TM3A5cmN4ZzJGX1B5dE8yVm1PeVhFT0pVTmJOd3NIdi01bEhKMXN0X21LZ3VzcUZVMQ?oc=5",
+   "https://news.google.com/rss/articles/CBMia0FVX3lxTE5qVml1bkUzMGtvN1JoWGloSzRULVJyVXR5TlJsSzNNUVQ2YTNsaC1ObU5jSHRNVDUwNTRZOTZ5Q3JYdVFDam9reXBrUFlXazM5VEZJZ2I1RUdSR0dYSFo2d3FxRzBXQXdwbThB?oc=5",
+   "https://news.google.com/rss/articles/CBMibkFVX3lxTE1BN0RkcWtwLWIxVVlyQUFBVmlHTm1oTmI4MWs0RDNZcmRUQkJkcmZ4ejQzNVV5VEZKcndxaGJNWC1wM3lPemVrWW9sX1VWTEZJUm8tNC1FZDBWQ3FiYUJhZG1OMzlOdTVVeUV4NDJn?oc=5",
+   "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcDIzWlg3MGtSOGkzN08waW9XUHNKWlpYSFNWOGkwVDM4b05IZ3NUc21qcVdTcDJ5MVZ0ZWgtUHpUNjJjZlJZaWFXU2dKOURkVXNnSnhoZWN3RmFnYzQzcDlxWlRFRXlOcF9RTTRvdlBDN25ieHJTb3N3dmZ5MmtMSkJtdXhQV1hMMG1ibHE4bU5fUE05ekZr?oc=5",
+   "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUFRGNGZHSWRtdzNtQTMzTnNRVTl5a0NTN3c5YjFKb0pXREtmMTNhUVFRZmtCMGN0RTZHTGZQeDdpWnNoei11XzN3UXZiOWllYmtHVHlDUjJEM0dZQkhpdS12VGlwWVE1dDJxZ1F3R0RVdXlsRnZiZUoyX2xQWlFBTkxtcUJMREJtb0ZDZ2xKUl9QQ1phbnhmaWlsaVJodTZadWlRaURwRE41azN3dmR5T01zby1tZERadklIV2VuYklkOXZvTURuUC1aRdIB0AFBVV95cUxOakdmU1ZfemppajVqWEhZMVZEcUdUUU1WbnRhU2FESllSNTV0Y2FfV3Z4MHgtUVBDMEdqblpvSExTTlhZa2k3VnhsbWpYRDFaVWNueG9HeHRHMnpBWFRzVmNoeUw4V2QwbXVOX1lGT3Z4aWp2dmp3N3p2c3J2NTBkLS1aRXVNX1NUNHdPVUN3cmlpTmRpakZvVFkwTmdVT1JFMEtncHZ6Z0NCQmVWbUxoU1p5Y05LOHgwUS1uNDV3UjU2RW1meGplYWxWYTJsSF9q?oc=5",
+   "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAxeUwtRFZTYW13YnFmblBNWnYySWdGQzNTMF9QRUUtYUdYVUxoM1ppUWVwS216bkFZNENmR1BrOVoxYWI5QndsNy15cGNpYV9JRzk1ZFJnU2RHQjA?oc=5",
+   "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUTJFQ3I3aUxKa3hMMTdNTFBOcTF0ZmNsQzM4a1NJWjVRTkd3c21RY1piY2ZQWWFnMEZDbFlFYkZDTlFleldRSXdBdDZEb3hZd3Jza1dFZFZOOWt0SnZsd3JJY3h0dGFLazlncm4ydjA5ZWpJRXp1WDNMWnNjVzNjMWdNcEIzX2dmSU55Q2FVanVwQWJMcTk1c01wbnlIbGxySTI3UlJPTVBXOHPSAasBQVVfeXFMUFEyRUNyN2lMSmt4TDE3TUxQTnExdGZjbEMzOGtTSVo1UU5Hd3NtUWNaYmNmUFlhZzBGQ2xZRWJGQ05RZXpXUUl3QXQ2RG94WXdyc2tXRWRWTjlrdEp2bHdySWN4dHRhS2s5Z3JuMnYwOWVqSUV6dVgzTFpzY1czYzFnTXBCM19nZklOeUNhVWp1cEFiTHE5NXNNcG55SGxsckkyN1JST01QVzhz?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
