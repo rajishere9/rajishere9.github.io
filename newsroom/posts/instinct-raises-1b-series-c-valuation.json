@@ -1,0 +1,174 @@
+{
+ "slug": "instinct-raises-1b-series-c-valuation",
+ "title": "Instinct Raises $1B Series C at $10B Valuation for AI Personal Agent",
+ "seoTitle": "Instinct Secures $1B Series C at $10B Valuation",
+ "description": "AI personal agent startup Instinct secured $1 billion in Series C funding at a $10B valuation from Sequoia, Benchmark, and Coatue to expand its assistant.",
+ "dek": "The San Francisco-based startup quadrupled its valuation in a single month as venture funding pours into consumer autonomous AI agents.",
+ "category": "Agents & Tools",
+ "tags": [
+  "Instinct",
+  "AI Agents",
+  "Venture Capital",
+  "Sequoia Capital",
+  "Benchmark Capital"
+ ],
+ "keyTakeaways": [
+  "Instinct closed a $1 billion Series C round joined by Sequoia Capital, Benchmark Capital, and Coatue, valuing the startup at $10 billion.",
+  "The valuation quadrupled in approximately one month following an August Series B round of $250 million at a $2.5 billion valuation.",
+  "The startup's early-access assistant operates over SMS and phone calls, using dedicated virtual computers and phone lines to complete real-world tasks autonomously.",
+  "Recent additions include Instinct Concierge for voice calls, peer-to-peer agent coordination, and safety guardrails to intercept hallucinations before execution."
+ ],
+ "body": "San Francisco startup Instinct announced on September 28, 2026, that it has raised $1 billion in Series C funding at a $10 billion valuation, according to a [Business Wire press release](https://www.businesswire.com/news/home/20260928153437/en/Instinct-Raises-%241-Billion-in-Series-C-Funding-from-Sequoia-Benchmark-and-Coatue-at-%2410-Billion-Valuation). The financing round included investments from Sequoia Capital, Benchmark Capital, and Coatue.\n\nThe massive round marks a rapid escalation in capital for the personal assistant developer, officially registered as Spear Street Technology Inc. The startup's valuation quadrupled in roughly one month, rising from the $2.5 billion valuation set during a $250 million Series B round co-led by Index Ventures and Benchmark in August 2026, as reported by [SiliconANGLE](https://siliconangle.com/2026/09/28/everyday-personal-ai-assistant-startup-instinct-raises-1b-at-10b-valuation/).\n\n\"We're building Instinct to be the best personal agent that can handle the deeply personal nuances of everyday life,\" said Instinct founder Noah Shinn in a statement accompanying the announcement. \"This funding helps us bring Instinct to more people and continue building the future of personal AI.\"\n\n[[FIG1]]\n\n## How Instinct Executes Autonomous Tasks\n\nInstinct is designed to function as an autonomous agent that takes user requests from initiation to completion rather than merely providing text answers, according to [TechCrunch](https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/). The system interacts with users directly via phone calls and SMS messaging without requiring a dedicated mobile application.\n\nTo fulfill instructions, the agent operates its own dedicated virtual phone number and computer environment. By directly loading websites, navigating applications, and executing digital workflows like a human user, Instinct can handle tasks such as planning road trips, placing weekly grocery orders, booking airport rides, and canceling recurring subscriptions, according to [Unite.AI](https://unite.ai/instinct-raises-1b-series-c-at-10b-valuation-to-bring-useful-ai-to-everyone/).\n\nIn recent months, the company introduced several core product capabilities to expand its utility:\n\n* **Instinct Concierge:** A white-glove voice service capable of placing phone calls on a user's behalf to handle situations that lack online booking mechanisms, such as dentist cancellation lists, off-line dining reservations, or resolving utility bills.\n* **Trusted Person Network:** An Instinct-to-Instinct communication protocol allowing separate users' agents to interact directly. The system coordinates shared schedules and exchanges files such as PDFs, spreadsheets, and images.\n* **Location Sharing:** Integration via iMessage that identifies when a user reaches a physical location to offer context-aware suggestions and answers.\n\n## Safety Architecture, Privacy, and Legal Terms\n\nOperating an agent with authority to browse the web, make phone calls, and conduct digital transactions introduces significant operational risks. As reported by [PYMNTS.com](https://www.pymnts.com/news/artificial-intelligence/2026/personal-ai-agent-instinct-quadruples-valuation-to-10-billion-in-1-month/), users grant the agent broad authority to enter agreements, accept commitments, and execute purchases in the user's name.\n\n[[FIG2]]\n\nTo manage technical and execution risks, Instinct implemented isolated sandboxes, short-lived local credentials, and identity-signed tool execution, according to [Unite.AI](https://unite.ai/instinct-raises-1b-series-c-at-10b-valuation-to-bring-useful-ai-to-everyone/). The platform also deploys an active detective system built to catch subtle hallucinations before an action or response is generated or executed. Instinct's terms clarify that any purchases completed through an action are made by the user, and its security documentation cautions that autonomous agents may occasionally produce unintended payments or encounter adversarial external instructions.\n\nUnder Instinct's privacy policy updated on August 26, 2026, the service may access connected communications, audio records, account credentials, and health-related details depending on permissions granted. While data may be used to evaluate and train models, users can opt out of training on a forward-looking basis. The company specifies that materials placed in a dedicated storage area known as the Vault and data from Google Workspace APIs are excluded from model training, and user information is not sold to data brokers.\n\n## The Intensifying Personal AI Agent Market\n\nInstinct's capital influx arrives as competition among consumer-facing autonomous assistants expands across both venture-backed startups and major tech platforms. After launching in a private beta in February 2026 and opening an invite-only service in August, Instinct surpassed 100,000 users in mid-September, according to [PYMNTS.com](https://www.pymnts.com/news/artificial-intelligence/2026/personal-ai-agent-instinct-quadruples-valuation-to-10-billion-in-1-month/).\n\n[[FIG3]]\n\nDespite viral early adoption, Instinct faces direct pressure from Meta's AI assistant, Muse, which provides automated task features alongside deep integrations across Facebook Groups, Marketplace, and Instagram direct messages, according to [TechCrunch](https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/). Muse has generated millions of downloads on mobile app storefronts and is testing its own concierge voice calling tools.\n\nBeyond Meta, the broader sector includes agent-enabled offerings such as Apple Intelligence on Siri, OpenAI's ChatGPT, and SpaceXAI's Grok, alongside startup rivals such as Wajo, Ollie, and Poke, according to [SiliconANGLE](https://siliconangle.com/2026/09/28/everyday-personal-ai-assistant-startup-instinct-raises-1b-at-10b-valuation/). Instinct is currently managing an early-access waitlist at app.instinct.co/login as it prepares to allocate its new capital toward broader consumer availability.",
+ "faq": [
+  {
+   "q": "How much funding did Instinct raise and at what valuation?",
+   "a": "Instinct raised $1 billion in a Series C funding round that valued the startup at $10 billion, with backing from Sequoia Capital, Benchmark Capital, and Coatue."
+  },
+  {
+   "q": "How do users interact with the Instinct personal AI assistant?",
+   "a": "Users interact with Instinct primarily through SMS text messages and phone calls without needing a standalone mobile app. Instinct uses its own dedicated virtual phone and computer to carry out tasks."
+  },
+  {
+   "q": "What is the Instinct Concierge feature?",
+   "a": "Instinct Concierge is a service that enables the AI agent to make outbound phone calls on behalf of the user to complete high-touch tasks, such as negotiating cable bills, reserving tables at venues without online booking, or securing spots on medical waitlists."
+  },
+  {
+   "q": "Does Instinct use personal user data to train AI models?",
+   "a": "Instinct allows users to opt out of AI model training through account settings. In addition, data stored in the Instinct Vault and information gathered through Google Workspace APIs are excluded from model training."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A high-rise executive meeting room overlooking San Francisco with venture capital investors and a founder seated at a conference table discussing autonomous artificial intelligence growth.",
+  "alt": "Venture capitalists and an entrepreneur meeting in a modern San Francisco conference room.",
+  "caption": "Illustration: Venture capital firms backed AI personal assistant startup Instinct with $1 billion in Series C funding.",
+  "src": "img/instinct-raises-1b-series-c-valuation/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 48042,
+  "small": "img/instinct-raises-1b-series-c-valuation/hero-640.webp",
+  "og": "img/instinct-raises-1b-series-c-valuation/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/instinct-raises-1b-series-c-valuation/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A conceptual representation of an artificial intelligence agent interacting with virtual mobile screens, placing orders, and scheduling appointments seamlessly.",
+   "alt": "Conceptual digital illustration of an autonomous assistant managing daily tasks.",
+   "caption": "Illustration: Instinct operates over SMS and phone lines, using virtual devices to complete consumer tasks from start to finish.",
+   "slot": "FIG1",
+   "src": "img/instinct-raises-1b-series-c-valuation/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32690,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A digital security visualization showing sandboxed computer systems, cryptographic identity keys, and protective data barriers.",
+   "alt": "Digital visualization of sandboxed security architecture and tool execution controls.",
+   "caption": "Illustration: The platform employs isolated environments, identity-signed tool execution, and hallucination interceptors to control agent actions.",
+   "slot": "FIG2",
+   "src": "img/instinct-raises-1b-series-c-valuation/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 43866,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "Multiple glowing digital network nodes connecting together, exchanging document icons and schedule markers between digital agents.",
+   "alt": "Network diagram showing connected autonomous AI agents communicating directly.",
+   "caption": "Illustration: Instinct's Trusted Person Network allows separate assistants to coordinate plans and share documents directly.",
+   "slot": "FIG3",
+   "src": "img/instinct-raises-1b-series-c-valuation/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 49964,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+   "title": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+   "site": "TechCrunch",
+   "published": 1790602728000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://siliconangle.com/2026/09/28/everyday-personal-ai-assistant-startup-instinct-raises-1b-at-10b-valuation/",
+   "title": "Everyday personal AI assistant startup Instinct raises $1B at $10B valuation",
+   "site": "SiliconANGLE",
+   "published": 1790609131000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-agent-firm-instinct-raises-1-billion-in-latest-funding-round/articleshow/134542852.cms?from=mdr",
+   "title": "AI agent firm Instinct raises $1 billion in latest funding round",
+   "site": "Economic Times",
+   "published": 1790598865000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.businesswire.com/news/home/20260928153437/en/Instinct-Raises-%241-Billion-in-Series-C-Funding-from-Sequoia-Benchmark-and-Coatue-at-%2410-Billion-Valuation",
+   "title": "Instinct Raises $1 Billion in Series C Funding from Sequoia, Benchmark and Coatue at $10 Billion Valuation",
+   "site": "businesswire.com",
+   "published": 1790553600000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/personal-ai-agent-instinct-quadruples-valuation-to-10-billion-in-1-month/",
+   "title": "Personal AI Agent Instinct Quadruples Valuation to $10 Billion in 1 Month",
+   "site": "PYMNTS.com",
+   "published": 1790607222000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.investing.com/news/stock-market-news/ai-agent-startup-instinct-hits-10-billion-valuation-following-1-billion-round-4920955",
+   "title": "AI agent startup Instinct hits $10 billion valuation following $1 billion round",
+   "site": "investing.com",
+   "published": 1790602560000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.unite.ai/instinct-raises-1b-series-c-at-10b-valuation-to-bring-useful-ai-to-everyone/",
+   "title": "Instinct Raises $1B Series C at $10B Valuation to Bring Useful AI to Everyone",
+   "site": "Unite.AI",
+   "published": 1790602742000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790644064865,
+ "updatedAt": 1790644064865,
+ "foundVia": "Techmeme, techcrunch.com and siliconangle.com",
+ "check": {
+  "claims": 26,
+  "score": 10
+ },
+ "story": {
+  "id": "Pa2c2b835",
+  "score": 91,
+  "items": [
+   "https://www.techmeme.com/260928/p19#a260928p19",
+   "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+   "https://siliconangle.com/2026/09/28/everyday-personal-ai-assistant-startup-instinct-raises-1b-at-10b-valuation/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
