@@ -1,0 +1,191 @@
+{
+ "slug": "openai-announces-gpt-6-1-sol-dots-agents",
+ "title": "OpenAI Launches GPT-6.1 Sol and Always-On 'Dots' Agents",
+ "seoTitle": "OpenAI Unveils GPT-6.1 Sol Model and Dots Agents",
+ "description": "OpenAI debuts GPT-6.1 Sol at one-fifth the cost of Astra, rolls out always-on 'Dots' agents on cloud computers, and updates ChatGPT Pro pricing tiers.",
+ "dek": "OpenAI introduced the GPT-6.1 Sol model, always-on 'Dots' agents with dedicated cloud environments, and updated developer tooling.",
+ "category": "AI Models",
+ "tags": [
+  "OpenAI",
+  "GPT-6.1 Sol",
+  "AI Agents",
+  "ChatGPT",
+  "Amazon Bedrock",
+  "Software Development"
+ ],
+ "keyTakeaways": [
+  "According to OpenAI, GPT-6.1 Sol delivers near-Astra performance on agentic coding, computer use, and professional workflows at one-fifth the token cost.",
+  "OpenAI introduced 'Dots,' always-on autonomous agents powered by GPT-6 Astra that execute workflows 24/7 on dedicated cloud computers.",
+  "Developers can deploy GPT-6.1 Sol via the OpenAI API and Amazon Bedrock, alongside new MCP Extensions and a Sign in with ChatGPT DevKit."
+ ],
+ "body": "OpenAI has officially launched **GPT-6.1 Sol**, an upgraded reasoning model designed to provide near-frontier intelligence at a fraction of existing operating costs, alongside **Dots**, a system of always-on autonomous agents that execute multi-step workflows on dedicated cloud computers. The rollout introduces major price reductions for agentic coding and professional tasks, expanded third-party integrations, and new developer kits.\n\nAccording to [OpenAI's product announcement](https://openai.com/index/introducing-gpt-6-1-sol/), GPT-6.1 Sol provides an alternative to GPT-6 Astra, matching or approaching Astra's performance across coding benchmarks, computer-use evaluations, and document processing while pricing input and output tokens at one-fifth the rate of standard Astra usage.\n\n## High-Performance Reasoning at Reduced Token Costs\n\nStandard API pricing is set at $2.00 per million input tokens and $10.00 per million output tokens, with cached input pricing dropping to $0.10 per million tokens—a 95 percent discount compared to standard input rates and a 50 percent cut from GPT-6 Sol's cached input pricing.\n\nOn software engineering evaluations, OpenAI reports that GPT-6.1 Sol matches GPT-6 Astra on DeepSWE v1.1 at roughly one-fifth the cost per task, exceeding GPT-6 Sol’s benchmark score by 6.4 percentage points at a lower reasoning effort. According to OpenAI, on GDP.pdf, an evaluation testing multi-page document comprehension across legal, financial, and healthcare domains, GPT-6.1 Sol scored higher than Opus 5.5 with fallbacks at less than half the cost per task.\n\nFor enterprise workflows, OpenAI states that GPT-6.1 Sol scored 2.2 percentage points above Opus 5.5 on AutomationBench 1.0.6 at medium reasoning effort, while outperforming GPT-6 Sol by 4.8 percentage points. According to OpenAI, on OSWorld 2.0's offline set for computer use, the model scored within 2.1 percentage points of Astra at maximum reasoning effort while operating at approximately one-seventh the cost per task.\n\n[[FIG1]]\n\n## Always-On 'Dots' Agents with Dedicated Cloud Environments\n\nAlongside the model release, OpenAI announced **Dots**, described in [OpenAI's introduction to dots](https://openai.com/index/introducing-dots/) as always-on agents powered by GPT-6 Astra. Dots operate 24/7 on their own isolated cloud computers and browsers to handle multi-step tasks across connected applications.\n\nDots connect to over 4,000 applications through OpenAI's plugin ecosystem and integrate into communication channels including ChatGPT, Slack, and Microsoft Teams. When users are inactive, Dots run background \"proactive research\" using restricted read-only permissions that prevent unauthorized changes or outbound messaging.\n\nOpenAI is also testing specialist dots for organizations, which receive their own identity for access management, IT-provisioned hardware, and support for deep integrations with corporate systems of record. OpenAI confirmed it is working with Microsoft to integrate specialist dots into Microsoft Agent 365 for enterprise governance.\n\nDots are rolling out to ChatGPT Pro and Business Premium subscribers in eligible markets, with your first primary dot included at no additional cost. Enterprise, Edu, and Healthcare administrators can enable access through an enterprise beta.\n\n[[FIG2]]\n\n## Developer Tooling and Cloud Availability\n\nFor software engineers building agentic systems, OpenAI published the [openai/mcp-extensions repository](https://github.com/openai/mcp-extensions), which adds ChatGPT-native entry points to the Model Context Protocol (MCP). The extension library includes support for sidebar entry points, custom file extension viewers, composer mentions, and image picker forms via TypeScript and Python SDKs under an Apache 2.0 license.\n\nOpenAI also published the [Sign-in with ChatGPT DevKit](https://github.com/openai/sign-in-with-chatgpt-devkit), providing local Node.js SDKs and React components for desktop application developers to authenticate users and power local apps using active ChatGPT subscription plans without requiring manual API keys.\n\nEnterprise developers can deploy GPT-6.1 Sol via the OpenAI API as `gpt-6.1-sol` or through Amazon Web Services. As outlined by [Amazon Web Services](https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/), GPT-6.1 Sol is generally available on Amazon Bedrock with AWS IAM policy governance, CloudTrail auditing, and zero-operator access isolation on hardware-isolated infrastructure.\n\n[[FIG3]]\n\n## Updated ChatGPT Pro Subscription Tiers\n\nTo accommodate varying computational requirements, OpenAI revised its ChatGPT Pro offerings, detailed in the [OpenAI Help Center](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers). The tier structure now features three monthly plans:\n\n* **Pro 100:** $100 per month.\n* **Pro 200:** $200 per month, available again for new sign-ups with updated usage allowances. Existing subscribers active as of the cutoff date maintain legacy allowances through October 29, 2026.\n* **Pro 500:** $500 per month, offering the highest included usage allowance and access to Astra Ultrafast.\n\nGPT-6.1 Sol is available immediately in ChatGPT Work, Codex, and via API endpoints, with an Ultrafast speed tier generating tokens up to 8x faster scheduled for release in Codex in the coming days.",
+ "faq": [
+  {
+   "q": "What is GPT-6.1 Sol?",
+   "a": "According to OpenAI, GPT-6.1 Sol is an upgraded AI reasoning model that delivers performance comparable to GPT-6 Astra on coding, computer-use, and document analysis tasks at one-fifth the token cost."
+  },
+  {
+   "q": "What are OpenAI Dots?",
+   "a": "Dots are always-on AI agents powered by GPT-6 Astra that execute tasks 24/7 on isolated cloud computers, integrating with ChatGPT, Slack, Teams, and over 4,000 third-party apps."
+  },
+  {
+   "q": "How much does GPT-6.1 Sol cost via API?",
+   "a": "GPT-6.1 Sol standard API pricing is $2.00 per million input tokens, $0.10 per million cached input tokens, and $10.00 per million output tokens."
+  },
+  {
+   "q": "Where can developers access GPT-6.1 Sol?",
+   "a": "Developers can access the model via the OpenAI API using the model identifier gpt-6.1-sol, through ChatGPT Work and Codex, and on Amazon Bedrock."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An executive standing on an illuminated stage presenting new artificial intelligence software architectures to an audience in an auditorium",
+  "alt": "Illustration of a tech presenter on stage demonstrating software architecture to an audience",
+  "caption": "Illustration: OpenAI unveiled GPT-6.1 Sol and autonomous Dots agents.",
+  "src": "img/openai-announces-gpt-6-1-sol-dots-agents/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 56446,
+  "small": "img/openai-announces-gpt-6-1-sol-dots-agents/hero-640.webp",
+  "og": "img/openai-announces-gpt-6-1-sol-dots-agents/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-announces-gpt-6-1-sol-dots-agents/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern software development workstation displaying complex codebases, benchmark graphs, and automated script execution windows",
+   "alt": "Illustration of an advanced software development screen showing code and evaluation metrics",
+   "caption": "Illustration: GPT-6.1 Sol is engineered for agentic software engineering and multi-step workflows.",
+   "slot": "FIG1",
+   "src": "img/openai-announces-gpt-6-1-sol-dots-agents/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 30758,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Abstract digital representations of collaborative autonomous worker nodes connected across cloud server infrastructure",
+   "alt": "Illustration of cloud-hosted autonomous agent nodes communicating across server networks",
+   "caption": "Illustration: Dots agents run in isolated cloud environments to manage workflows 24/7.",
+   "slot": "FIG2",
+   "src": "img/openai-announces-gpt-6-1-sol-dots-agents/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 73680,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A clean server room rack illuminated with glowing network cables and modern cloud computing interface terminals",
+   "alt": "Illustration of cloud computing hardware infrastructure running enterprise model workloads",
+   "caption": "Illustration: GPT-6.1 Sol is available through the OpenAI API and Amazon Bedrock.",
+   "slot": "FIG3",
+   "src": "img/openai-announces-gpt-6-1-sol-dots-agents/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 51660,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+   "title": "Introducing GPT-6.1 Sol",
+   "site": "OpenAI",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://openai.com/index/introducing-dots/",
+   "title": "Introducing dots",
+   "site": "OpenAI",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://github.com/openai/mcp-extensions",
+   "title": "openai/mcp-extensions",
+   "site": "GitHub",
+   "published": 1790642742000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://github.com/openai/sign-in-with-chatgpt-devkit",
+   "title": "openai/sign-in-with-chatgpt-devkit",
+   "site": "GitHub",
+   "published": 1790646191000,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+   "title": "About ChatGPT Pro tiers | OpenAI Help Center",
+   "site": "OpenAI Help Center",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 6,
+   "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+   "title": "GPT-6.1 Sol Model | OpenAI API",
+   "site": "OpenAI Developers",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 7,
+   "url": "https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/",
+   "title": "Bring near-Astra intelligence to everyday work with GPT-6.1 Sol on Amazon Bedrock | Amazon Web Services",
+   "site": "Amazon Web Services",
+   "published": 1790710454000,
+   "official": true
+  }
+ ],
+ "publishedAt": 1790727019934,
+ "updatedAt": 1790727019934,
+ "foundVia": "Google News, theverge.com and 9to5mac.com",
+ "check": {
+  "claims": 28,
+  "score": 10
+ },
+ "story": {
+  "id": "P4e19b53e",
+  "score": 103,
+  "items": [
+   "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdERrM2NMckxqcGVGajEyRHdjOFhQNmRrVHlGMU5kOEw0N1NuVFNFNkFrd2RlakFzV1QxZVRDZEJvaVpZdkJhcFlWd3prZzRSSVl1NFBVSTRqOUZaUlRNd0tGbXFPTDhBR2Z1NXdqS09uLTgwX0EzRjloMlMyeTllLWJLQlVaQ3NvT000ampIN0V2c3BkRFlBdw?oc=5",
+   "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements",
+   "https://9to5mac.com/2026/09/29/openai-teases-20-announcements-at-devday-watch-live/",
+   "https://www.techmeme.com/260929/p29#a260929p29",
+   "https://www.techmeme.com/260929/p28#a260929p28",
+   "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/",
+   "https://openai.com/index/introducing-gpt-6-1-sol/",
+   "https://openai.com/index/introducing-dots/",
+   "https://github.com/openai/mcp-extensions",
+   "https://github.com/openai/sign-in-with-chatgpt-devkit",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOekZiSGZ1NGF6RnhoMlYxaEVocWlzMkJGazhjOFB3SnNzaFl1cmNkQTJabkoyME9QWUM0M2RsVXJiVjYzLTIxSC1rb2g3MGVFQlIzX2ZGN2ZTakpOdDNTOWpMMWs5THg3M0pyUU0tdmxTSkdUQUcwbDZDXzdUTHRzS0gxRFJJVTVS?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxNU0N5Mll5RW5nUUlTMjNkSHpzZk5uZTdHLXNydVpfdUFsWmh2RDZCRlN4VVZVcFh4SDJwYTVyMnB4eTVHRmQ1ejhUcU5waHVzSFpnV3d6ZDZkdk11aWVhaE5WT2lvSkFzTXFFb3I4VE1mME5rd3pqb2xFRUZ0bnM0d1lycU1pem1yX2Y1RWJnd3o3a0cyWTQ3T293?oc=5",
+   "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbUVIQko3RlhLOFBKZ2JjTmtVeXlINjI5TUxrZUlmMGNmVzlXSk5pbXRaRmNza05JSGtlMHhzR2tIRE83d3dRZTdlb2xIQW1TTjVLbGJKSUMxRmNjNldfX2R0RW1FVjFoeGdBR2t1Si1Db0JFQmpIX3k3TkxSOVY0d0s4SHlsVlp6ZEdaOTJ1cmJjeU1qWFFOdnpiUy02NzVnVXBMRFU2eXhEaF9jWlNrTERVekJ5QQ?oc=5",
+   "https://news.google.com/rss/articles/CBMifEFVX3lxTFBiM2JxUFlyQlA5czluSW5Ea2VhVVA0bW1NTnZkcEExX2RZM3QtRkpzLTNVM2Y2azNJYUpyRkY0a05mRVdtWEVUcFBrN29XSWNhaElMbzFTNUl3WjNCbWtsTW50dUItV0JFTElNRjdkME91bFF5MUpka3hUZnA?oc=5",
+   "https://www.techmeme.com/260929/p33#a260929p33",
+   "https://www.techmeme.com/260929/p32#a260929p32",
+   "https://www.techmeme.com/260929/p31#a260929p31",
+   "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/",
+   "https://techcrunch.com/2026/09/29/openai-expands-chatgpts-plugins-with-app-like-interfaces-and-automations/",
+   "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
