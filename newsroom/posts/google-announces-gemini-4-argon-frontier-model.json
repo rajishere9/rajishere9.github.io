@@ -1,0 +1,175 @@
+{
+ "slug": "google-announces-gemini-4-argon-frontier-model",
+ "title": "Google Launches Gemini 4 Argon With 1M Output Tokens",
+ "seoTitle": "Google Unveils Gemini 4 Argon Frontier AI Model",
+ "description": "Google has announced Gemini 4 Argon, a frontier AI model featuring a 1M output token limit, advanced cybersecurity defense, and autonomous coding tools.",
+ "dek": "The new frontier architecture expands output capacity to 1 million tokens while targeting enterprise software migration, financial research, and automated vulnerability patching.",
+ "category": "AI Models",
+ "tags": [
+  "Google",
+  "Gemini 4 Argon",
+  "Frontier Models",
+  "Cybersecurity",
+  "Software Engineering"
+ ],
+ "keyTakeaways": [
+  "Google launched Gemini 4 Argon on September 30, 2026, introducing a 1-million-token output limit for complex reasoning trajectories.",
+  "The model is entering phased testing with cybersecurity defenders via Google's Fairwind Program and U.S. government voluntary pre-release reviews.",
+  "Introductory API pricing is set at $2 per million input tokens and $10 per million output tokens, with cached input discounted by 95%.",
+  "According to Google's reported evaluation results, Argon achieved state-of-the-art results on software engineering (77.9% on DeepSWE v1.1) and tied for first on vulnerability remediation (68% on CWE-bench v1)."
+ ],
+ "body": "Google announced [Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/) on September 30, 2026, marking the start of its next-generation frontier model family. Designed specifically for long-horizon software engineering, complex enterprise knowledge work, and defensive cybersecurity, the model significantly expands generation headroom with an industry-leading output limit of 1 million tokens, up from the previous 64,000-token ceiling.\n\nThe release follows internal restructuring at Google DeepMind and comes after the cancellation of the delayed Gemini 3.5 Pro model earlier in 2026, according to reporting by [VentureBeat](https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release) and [Business Insider](https://www.businessinsider.com/googles-gemini-4-argon-frontier-engineering-knowledge-work-cyber-defense-2026-9). Rather than an immediate public rollout, Google is distributing Argon through a phased access pipeline, starting with trusted cybersecurity partners before expanding to paid API customers and Google AI Ultra subscribers.\n\n[[FIG1]]\n\n## Expanded Output Capacity and Core Architecture\n\nThe most prominent technical change in Gemini 4 Argon is its 1-million-token maximum output limit. According to [Google's announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/), having the headroom to think deeply and generate hundreds of thousands of tokens in a single trajectory adds a new level of depth in reasoning to solve tough problems in one go.\n\nA review of Google's launch post and public catalog by [The Rundown AI](https://www.therundown.ai/tools/gemini-4-argon) clarifies that the 1-million-token threshold applies strictly to output generation; Google has not disclosed a separate input context window specification. The architecture focuses on sustained execution for complex enterprise tasks across legal drafting, tax research, financial analysis, and software modernization.\n\nTo safeguard against runaway or unsafe execution during long-horizon tasks, Google stated that it deployed misalignment mitigation monitors. These systems evaluate the model's internal chain-of-thought and actions in real time, stopping execution when behaviors step outside bounds. Google noted that monitoring findings were deliberately isolated from training feedback loops to prevent the model from learning how to evade internal safety tracking.\n\n## Internal Deployments Across Google Infrastructure\n\nPrior to external release, Google deployed Gemini 4 Argon across internal engineering and infrastructure teams. As detailed in the [announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/), thousands of Googlers highlighted the model's strengths in specialized coding tasks, conducting deeper research, and writing quality, while researchers and agent teams used it for quantum algorithmic optimization and analyzing fleet-wide profiling telemetry.\n\nKey internal deployments reported by Google include:\n\n* **Datacenter Memory Optimization:** Argon agents analyzed telemetry across Google's server fleet, identifying memory optimizations that freed more than 300 TiB upon deployment, with projected total savings between 500 TiB and 1 PiB.\n* **Quantum Algorithmic Optimization:** Researchers applied Argon to optimize spacetime resources (qubits × gates) on critical subroutines, exceeding published baselines by 40% in minutes.\n* **C/C++ to Rust Migrations:** Argon is driving autonomous migration of legacy C/C++ codebases to memory-safe Rust. Projects range from utilities like `re2` and `libgav1` to the Fuchsia OS Zircon kernel, which contains over 800,000 lines of code.\n* **SIMD Video Decoding Performance:** In Google's `libgav1` video decoder port, Argon agents replaced 32,000 lines of SIMD code with safe Rust that the compiler automatically vectorized, yielding a memory-safe binary running 2.7 times faster than the initial Rust port.\n\n[[FIG2]]\n\n## Benchmark Performance Across Software and Security\n\nBenchmark comparisons published by Google and analyzed by [VentureBeat](https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release) evaluate Argon across 18 enterprise and reasoning benchmarks against OpenAI's GPT-6 Astra and Anthropic's Claude Opus 5.5. Google claims Argon leads outright on 12 benchmarks and ties on one.\n\nIn real-world software engineering, Argon scored 77.9% on DeepSWE v1.1, ahead of Claude Opus 5.5 (74.2%) and GPT-6 Astra (74.1%). On Zapier's AutomationBench, which assesses end-to-end execution of business workflows, Argon placed first with 51.3%, compared to 42.5% for Claude Opus 5.5 and 41.4% for GPT-6 Astra. On Harvey's Legal Agent Benchmark, Argon achieved 19.6%, leading Astra (5.4%) and Opus 5.5 (3.8%).\n\nArgon also tied GPT-6 Astra for first place on CWE-bench v1, an evaluation of software vulnerability remediation, with both models scoring 68%, narrowly edging Opus 5.5 at 67% as reported by [VentureBeat](https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release). On multimodal tasks, Argon recorded 91.7% on LVBench for long video understanding.\n\nHowever, Argon did not lead across every test. GPT-6 Astra outperformed Argon on FrontierSWE v2 (65.5% versus 55.0%) and Terminal-Bench Science 0.1 (68.1% versus 57.6%). Similarly, Claude Opus 5.5 led Argon on Terminal-bench 4.0 (66.4% versus 57.4%) and PostTrainBench (49.3% versus 45.3%).\n\nOn safety benchmarks, Argon demonstrated strong resilience against indirect prompt injection (IPI). On the Gray Swan IPI benchmark, Argon recorded an attack success rate of 0.7%, compared to 1.0% for Claude Opus 5.5, 8.5% for GPT-6 Astra, and 27.0% for GPT-6 Sol.\n\n## Defensive Cybersecurity and Phased Availability\n\nGoogle is highlighting defensive cybersecurity as a primary capability for Gemini 4 Argon. Google claims the model can autonomously find, validate, and patch critical software vulnerabilities, noting that Argon uncovered exposures across codebases spanning 20 programming languages on an internal benchmark. For vetted external defenders and internal teams, Google is providing versions of Argon without cyber guardrails to facilitate legitimate vulnerability remediation.\n\nSecurity firm Wiz has integrated Argon into its Scan for Good initiative to protect public infrastructure. In early testing reported by [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/), the model detected a critical flaw exposing personal information in hospital healthcare software that prior frontier models failed to identify.\n\n[[FIG3]]\n\nBroad commercial rollout will follow a phased evaluation period. Currently, access is restricted to vetted cyber defenders participating in Google's Fairwind Program and participants in the U.S. government's voluntary pre-release model access framework. Google stated that wider developer and enterprise access will begin soon for Google AI Ultra subscribers and paid API customers.\n\nAccording to pricing schedules published by [VentureBeat](https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release), Argon will launch with an introductory API rate of $2.00 per million input tokens and $10.00 per million output tokens, with cached input priced at a 95% discount ($0.10 per million tokens). Following the introductory window, standard pricing will adjust to $4.00 per million input tokens and $20.00 per million output tokens ($0.20 for cached input).",
+ "faq": [
+  {
+   "q": "What is Gemini 4 Argon?",
+   "a": "Gemini 4 Argon is Google's new frontier AI model announced on September 30, 2026, optimized for long-horizon software engineering, enterprise knowledge work, and defensive cybersecurity."
+  },
+  {
+   "q": "What is the token limit on Gemini 4 Argon?",
+   "a": "Gemini 4 Argon supports an output generation limit of up to 1 million tokens, expanded from the previous 64,000-token limit. Google has not yet specified a separate input context window size."
+  },
+  {
+   "q": "How much does Gemini 4 Argon cost via API?",
+   "a": "Google announced an introductory API price of $2.00 per million input tokens and $10.00 per million output tokens, with a 95% discount for cached input ($0.10/1M). Standard pricing will later rise to $4.00 input and $20.00 output per million tokens."
+  },
+  {
+   "q": "Who can access Gemini 4 Argon right now?",
+   "a": "Access is currently limited to trusted cybersecurity partners through Google's Fairwind Program and U.S. government voluntary pre-release evaluation channels. Wider access for Google AI Ultra subscribers and paid API customers is planned for a later date."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An expansive conceptual illustration of high-performance artificial intelligence computing, featuring intricate streams of data, mathematical matrices, and luminous logic conduits forming an abstract architectural structure in deep blue and glowing amber tones.",
+  "alt": "Conceptual illustration of frontier AI architecture and computational data flows",
+  "caption": "Illustration: Google's Gemini 4 Argon introduces expanded reasoning headroom and a 1-million-token output limit.",
+  "src": "img/google-announces-gemini-4-argon-frontier-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 90766,
+  "small": "img/google-announces-gemini-4-argon-frontier-model/hero-640.webp",
+  "og": "img/google-announces-gemini-4-argon-frontier-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/google-announces-gemini-4-argon-frontier-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Software engineers and researchers in a modern glass-walled tech workspace analyzing complex algorithmic flowcharts, data graphs, and code repositories displayed across wide collaborative workstations.",
+   "alt": "Software engineers collaborating on complex code analysis and system design",
+   "caption": "Illustration: Teams evaluating long-horizon software engineering and enterprise workflow automation.",
+   "slot": "FIG1",
+   "src": "img/google-announces-gemini-4-argon-frontier-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38408,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An artistic representation of server racks and memory units inside a massive modern data center, with subtle visual glowing paths highlighting optimized digital telemetry and memory efficiency.",
+   "alt": "Artistic rendering of data center servers and optimized memory pathways",
+   "caption": "Illustration: Google reported significant memory and performance gains using automated agent optimization.",
+   "slot": "FIG2",
+   "src": "img/google-announces-gemini-4-argon-frontier-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 57096,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "Cybersecurity analysts working in an advanced operations center, reviewing digital security shields, network topology diagrams, and automated software patching telemetry on large control displays.",
+   "alt": "Cybersecurity analysts evaluating network defense and automated vulnerability remediation",
+   "caption": "Illustration: Argon is being deployed to trusted cyber defense partners to identify and remediate security vulnerabilities.",
+   "slot": "FIG3",
+   "src": "img/google-announces-gemini-4-argon-frontier-model/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 45906,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "site": "Google",
+   "published": 1790726400000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release",
+   "title": "Google unveils Gemini 4 Argon, retaking benchmark lead over OpenAI and Anthropic — but in limited release",
+   "site": "venturebeat.com",
+   "published": 1790726400000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.businessinsider.com/googles-gemini-4-argon-frontier-engineering-knowledge-work-cyber-defense-2026-9",
+   "title": "Google launches Gemini 4 Argon to reclaim the AI frontier",
+   "site": "Business Insider",
+   "published": 1790798446494,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://9to5google.com/2026/09/30/gemini-4-argon-announcement/",
+   "title": "Google announces Gemini 4 Argon as its new frontier model",
+   "site": "9to5Google",
+   "published": 1790798400000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.therundown.ai/tools/gemini-4-argon",
+   "title": "Gemini 4 Argon: Features, Pricing, Access & Alternatives",
+   "site": "therundown.ai",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790837249621,
+ "updatedAt": 1790837249621,
+ "foundVia": "Hacker News, deepmind.google and Google News",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "Pb684883a",
+  "score": 104,
+  "items": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+   "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRjB3amppaF9yb1FhSmxoUW5GUEtCREcxbW1ScXJRRWN5ZGtIM0N0d21wVEI3ZTd5ZHY4N09KRWNwX3U2Z3JBeDNWakYxYXlBVE95NEpKWW5vcWFKZlA5Qkdka3hGZG9INUZtMVN2VTJhWG1TTldVSE1JVm5VaVlvcnpWRlhzX0V1NGJXZGhfMEY?oc=5",
+   "https://news.google.com/rss/articles/CBMitwFBVV95cUxPa0kxM3JDazhISnQtVGJ1Q2phRmxPR2Mtb2R4X1dQX0U3TkVZLWV0YUZNSnRfQ25OQnRuWHpNczNHSzhCZFFkdHFCWEVXYUhuazBDLWJ0eV92WU9nMDR6Nnl5ZDRCOG5UdWtwNnpTNkVtS2NLejVrX1Y3eXFvbDRMc0Y2Q2hvN0Q5YTEzTVA3NDFLaHprbnpuNWVBejNPVUlKemJCSHZUcHZSVE9iNmt3TWxXMXFBWkU?oc=5",
+   "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbHBrMzdMR2R5THNvMHItamU5X2Y1NTdUbjNuUHN2SjRRd2pza2RWMUFzTlBhRDJ3WWdsNlRjX3ZNNnBUTC1jeDhWcE5tODFIY1NsRzRyc3RwaC1SdVhXZEVMRU05dWZpZWpXV3lvVUFFejRzcDJUdVdhWldPWm1hNGVISHpZNVRpN0ZtU29YT0xGVndtUVNwOWpCS3hIRDBtdjhONw?oc=5",
+   "https://news.google.com/rss/articles/CBMibkFVX3lxTFA3RWVHRldQeDcwbUo2d1FlaUEza2FnMFJZX0xuRGtGZWFyamU4TTJfM09MWHhVeDB1X0o1Y2d2VzJzeFZiQi0zOThLZkdDX1VvWnNTUkxmLXFWa1U5bHotNEliUm83M1htWWNGcWR30gFzQVVfeXFMUDZ2SVZ0VVhMa01TVnJ4UXN2Yk9VQXBadXlobU5wY0hyUndwNzFBT19kNnVzTzZ6Z3JIa253TmdubVdSYXBoNU9hNHYwNDE4TzRkZXlOdzJ2OXRxc2hNSDB5TzFfRmNIR2tpbXBwb3psTHZ6RQ?oc=5",
+   "https://news.google.com/rss/articles/CBMilwFBVV95cUxPcDZybVkzdzlXSzJCYzJaR0djRWc0YTlpeEdXblZmdDZKZDk0U3kyMkNBcWRIR1M1ZHJpOG9tQ2pxTmNQQXF5R1NyOE5PU2FEZlBrRXZORHRwaXpSakF3VmRIanAtS1hMQkpBVUlOZ1R5bmFNU0FvY3pGOGwwR3hzanlfTFdBZHI4bzJfcGVnaVdObnk1UmdR0gGXAUFVX3lxTFBpelJRUU5jMDNJVktWSHExSjFPLWV5NFM2LWdEbmpTcE1pUklsQjBtNkpCbUU0cFJoZXIzMjVhVVJZQi0wQWg5TnktblMtekhtbHRDaE1mWEJXVzd5NHBJd0VwX1VWaG1LbDR5T2RNQjVDcnZIa1VzUzVVNERHeTFWTWdNNk11My1qOVlqMFNLZnpMY1lUX0E?oc=5",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZjhXNFB6ekptRTRrZW1GY0lVRHhBMWZjSzlWeDZGVDJKdjJQczd6YXdHWS0wWDdHNnB4SWh2WUxVZHkxVEZsNngxSlp5WmxvOFV4eHpyYTQ5LWY2NnN1c0xIbVJlLXQtcjZSWWJEOC1sTHZwN3VhTUg2RXQ1TnNjWGlwdU4zWlZ5Ym96bXNSbU5pMDQ5eW9HX1ZxbFpQV0VrV3JUOVZVWVlEOWM1Ui12eQ?oc=5",
+   "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVkx1QmZBWGY4Vk9WTjZlZTN3RXBWckFKamNWbTQ2Wl9MV1FqeHF0ZHpTRVJyQ3lJeVNtNVdxMENKV3djekhILWdfUXFTeWZ2NHdwNzdTSWJabzlxR09xSVBLdDNJX09ZYU9YSHpkTE9xOXJzS3BBdEtjVkVlSk1QdUZENGwxbWVTVFVyZFF1bHo3UWdaM1pWSkx3d2lqdm05aS1DeTFwOEtSMGVxSEZMRkoyRQ?oc=5",
+   "https://news.google.com/rss/articles/CBMihAFBVV95cUxONHZCTWxBOEZWZTVseDhUeFdNMTZoTTRqa242NDFQRWdrMEdWYlEtWVNwQkRjUXdmX1dzUEhkZlV2bDY2aTVPbnBfNGJhXzk5NWVPRWlqbTJKTkZDU0k2dTJENXo1N2dDRHVGdHYyWVJGNUxiWVczMlBnV0JRWC12d1llUVk?oc=5",
+   "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbFNNRlptWHlSNi1vaXpwUmhmQ3B2T3ZJMlpuUmFaTkFrWjNNM3VYZ3ZwRW02TmFNYmNOOTcweUJ6aXlxc3M0RW9mdkkxRVJ2amg1VjE5SDVUYWdwU3VzcW5xQnZ4cFprUWdjUW9EZnduUjhMNjl2cmsyZ0RCcUtJWXJFMENsZFhpNzMyQWhrMU1WRVRocnp5VmlienRfZVBlYll0QnEtbw?oc=5",
+   "https://news.google.com/rss/articles/CBMicEFVX3lxTE0xUk5GZ2JNbDJtUUlfMUtsMUk4QU1iSGkxcWVmVm5zcFl5WDVoRUhjRWIwQ2psUkIwRmdpWVJTbmJ1UUliWjhieXBsZE9NZHRrUk1BYzkxN0kxVC1GcmMxWkRwSWFIMU1lZ2U2Qlkwa1c?oc=5",
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaThYZG00MENsWUtiaDkwbW44Z3BDNlNkcDRoSldzZGNBcnVEc3FSLVU3UXVRMDhtRmI0MnJXSnRsWC1IbEVtMVRnWlY2b3M2TnN1bkk5VURBNFp0RmtmU2JkZl94RC03c29OOTJuenJ2cS1BUFRlWDVEZExGLXVpRDZqd1B2OU5aMlVTbFVKc0xpMnZJYmgxeHNCMjZ5a2hYblE?oc=5",
+   "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVE1VNnprNUt1NWx3QWlRSjA1cFgwMG1lbHZWNDNtNGJaR3dsaDBVS3czSnlkNkRMdlNzOGJVUldER1pORXRTbjVqT2pnMW5NSVRLVTBtWnNFX0tWRU1Na1FwYm55Q2FUTHZvR2RKOGxuY0dMMVAtWi1GY29hX2V0bXRZS0VjeVRGdks2QlZ0Nml1ZXAzRU9KNllZOU9HeEhvVlpyTEF3YUVEVEVIb1RyT05mam8?oc=5",
+   "https://news.google.com/rss/articles/CBMieEFVX3lxTE0wRWxYUUxFNUNGMXVYQWlwOWVKZ2tlZFBjTVRaZ3pQczFxbnZ0Tkd3SWFPLUZnQlFzS01xQ0Z1T0MtT0V4cUhzNlVpUmJmRlBzZGxqZE9obFVWUEdFTExadjVkbVJBVVBoNFYxd3llSWpGVEVDUmlJNw?oc=5",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYTZqRzNtQ2ppSkpmZGV4bWQ2Mm9VUzU3U2VwNk5XSElpQkhWZFhTMk9ISWtNWHZUQW15Vm5TNlBwbjdMTm9sRm9rQ21udnBpRy1hUEhtZ0tEZ0p6X1NqdG54cC1HUjN2MEFnZWhYS0Zva3k4Nnpkb2QxYTNla3k2dHVyQUZhN21m?oc=5",
+   "https://news.google.com/rss/articles/CBMikwJBVV95cUxOdVJ1eDV5SDJ0VWRDTDRfbFlEZnBWM1NQWGd2ck0xVEhObGlCQVJXRWlPNFAzbktYeS1UQ3NkSm5lUmd4Nl90RFE3Z0J4ZXBpd1h1d29GSXh6NUMzckhuZm5jeU9JN2xWSTFDYXNib2M4TlBLNDhVM3dYaEQ1czhyenlRUFRhWVlybFg1NDRhTjB5TTNzN09nNEJfLTBTcUVYN2hVN0RlYXpFczRtcjRENDBIalRJS1RFOFlqRHdYS2duN0R2ZFhIbWdnbHp6UTF5RkIybGZ4MnQxLUlXdFBIS2w1QjhUN282R1o0Y2F6NExUVmUtNGRnN21UVng2ZGlHZE51UGNHcXhFUXB0c25EeWtPSdIBmAJBVV95cUxOM2tJQllaUkRXekNFZ2tTVWswa3A5TlAyaEI0UFhiSk1IU1Z5M0h1Mkp5MkNyUnhBY094Ym9WZWlFNmtoWllJR0t0MVlBamd5Y0stVmMyTXhnVFlKa1I0ZmE2VFpEVXdfUnpwY192enBxaXVtdVNScjNrWV9ScEo1cWFRblVZazV5Wk15VFIxQ2xURzVld2Iwck5XMGVTUDNvNU5JQnNzNDBUOE1HblZNOXpOSUVQR3Y1THZnVTVlWTk5cmw2aWlVeTV1c05wZFB2dkJoYWUzOTlzSEFRcXRXbEJSSTl1NUtwQVVPWGVKR2ExY19MYVZ4SHI3SnhZT3NvdGd6dEN2bU5nejkyZnhxY0lEYkNjdnJQ?oc=5",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeEpuOHhZelRZMjAwREVYbTZPdTg5d3NjclN1YVlmWGs5cWpDVTgtSXNGY3YwTDQwN0xsZlprVWVBQm50RDRCU0JVV2E2cFZPMHRscmIzM0xITEJXRm5vM3ZmbU5jOS1EZFVDSHhjLVZOX1NwMzJMQU1peGJaX3JxNzJNWXc4RzZPdU5kRWdMaGtzaThHWEhGMG5qb2tTQlgwLXp4X0t30gGrAUFVX3lxTE9WdGdOZGFwblloVjFPTjdzMElxcTdEZE9JZG5GRDNLanh2S1d6ckpoWlhvaTRHX0JpNERIekVlXzRldTBNUlgwNFJBcXROQUxiVjQzQ0YyRVMzdGUzUE0zQUNrOV9jWHhYQnlRbS1WOXN4cjZORHZxQ2I5SEllSjctM0xSVjFqZWdXUjhCLWRseWxhWTVkYXprTEdoSVluUGFYd2ZibF9QMW5jSQ?oc=5",
+   "https://news.google.com/rss/articles/CBMib0FVX3lxTE1DX0dBbm9wUU1OSUpDTWRhekFpejdWbm1IQVBYQ1JJQld1WHFnckczMFl1THZVUGZObDU0TzRXaGFaS2Z2eUhHOFpjNl9BcHNDbTNKT05TRXRIc1FsZTJtQzV3ZmxQYnYxVG5jbzdhWQ?oc=5",
+   "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVGZFa0pMT0lEV0V6bEFVUm40UlVHYmpzQkhtY2FOQjlKUDlpVTI0Zk0zY1JmVS1VNUotNVA1Wk12TVI3VjUyV3RaN2w3NFFLWC13XzZKQ1IzdjNqc3E4a1VEVEUxYloya3RoSGJSYjZuejBOMnBiRTdMVGpiY3E3cE9YZW5NNnBJUTFBbmdSQWRFdExNd2dSLQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
