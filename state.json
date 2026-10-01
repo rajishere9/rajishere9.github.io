@@ -37,16 +37,30 @@
       "engagement": "top of r/technology today",
       "image": null,
       "weight": 1
+     },
+     {
+      "id": "b452cf07c2450234",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMW4wT3pmbjFGaUdaYmJWRl9RX1dLQ2JpWXc1MnB3UHNMY3FyamstX1pCdmxyNlVHdkl2dF9JWDUtV1hLc2dDZ1BlUnpzTUkxSGhTZ1drZUREUDBaNHNxaFV3RXJrZ2RKRUxfZVVkek16RW9PU0NfQTEwUkd5MGRHTF9ZQU1tU0ZFeE9JYXVaVUxMNDYwRjh2QVhsel9OcGJwc1AtN0VQQllWcDNrNS02MTBnOUcxN00?oc=5",
+      "title": "AI Lost Its First Fair Use Appeal. Suno Should Be Worried. - Forbes",
+      "snippet": "AI Lost Its First Fair Use Appeal. Suno Should Be Worried. Forbes",
+      "source": "gnews-4",
+      "kind": "search",
+      "official": false,
+      "seedOnly": true,
+      "publishedAt": 1790809051000,
+      "engagement": "",
+      "image": null,
+      "weight": 1
      }
     ],
     "attempts": 0,
     "importance": 78,
-    "summary": "A US appeals court has ruled that training AI systems on copyrighted material does not constitute fair use in a closely watched legal decision. The ruling impacts ongoing copyright litigation and the data acquisition practices of AI labs.",
+    "summary": "A federal appeals court ruled that training artificial intelligence models on copyrighted material does not constitute fair use. This major legal setback for AI developers has significant implications for the tech industry.",
     "category": "Policy",
-    "lastSeen": 1790836988510,
+    "lastSeen": 1790840045101,
     "update": false,
     "updateOf": "",
-    "score": 81
+    "score": 84
    },
    {
     "id": "P86b98dc9",
@@ -87,263 +101,6 @@
     "summary": "Taiwan-based AI infrastructure provider GMI Cloud secured a $223 million Series B funding round paired with a $440 million credit facility. The funding will be used to expand global on-demand GPU capacity for enterprise workloads.",
     "category": "Industry",
     "lastSeen": 1790780644457,
-    "update": false,
-    "updateOf": "",
-    "score": 78
-   },
-   {
-    "id": "P3fdd46d7",
-    "headline": "Cloudflare Launches Monetization Gateway and Pay Per Use Beta for AI Agents",
-    "firstSeen": 1790773444911,
-    "items": [
-     {
-      "id": "4ea66f66a5e53840",
-      "url": "https://blog.cloudflare.com/monetization-gateway-beta/",
-      "title": "Monetization Gateway beta: charge AI agents for consumption with HTTP 402",
-      "snippet": "Cloudflare’s AI Gateway, Ceramic.ai, Stocktwits, and more are using the Cloudflare Monetization Gateway today to charge agents for access to tokens, APIs, and MCP tools. U.S.-based sellers can now apply for access to the closed beta.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3QKS7979PTKRYVR2CN111JZ.01M3QKS7ZDZ74AXKMWXG7F3C2K.png",
-      "weight": 1
-     },
-     {
-      "id": "587a2204b20d3b09",
-      "url": "https://blog.cloudflare.com/pay-per-use/",
-      "title": "Pay Per Use: when AI uses your work, you should get paid",
-      "snippet": "Pay Per Use is now in beta. AI companies report when they use publishers’ content, and Cloudflare handles billing, payouts, and reporting, so our customers are paid according to use.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3Q8WBK852SB7AAAY4NK4NYB.png",
-      "weight": 1
-     },
-     {
-      "id": "d7f07ccfa723e359",
-      "url": "https://blog.cloudflare.com/ai-model-overuse-user-insights/",
-      "title": "Identify AI model overuse with User Insights",
-      "snippet": "AI Gateway User Insights now adds task, model, turn, and user categories to help teams understand AI adoption and make better model decisions. This is available free to AI Gateway users.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KZ7B4V2YNVJJXE8VE6E5ZK5E.png",
-      "weight": 1
-     },
-     {
-      "id": "c34102ced00c0ae4",
-      "url": "https://blog.cloudflare.com/faster-agent-sandboxes/",
-      "title": "Cloudflare Containers, rebuilt to scale agent sandboxes",
-      "snippet": "Cloudflare Containers now start 6x faster, let your agent choose each sandbox's image and instance type at runtime, and support filesystem snapshots in public beta, all controlled from a Durable Object.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773080000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW46H9N3ZPBVM99CMTJZRPF3.png",
-      "weight": 1
-     },
-     {
-      "id": "d4646695a3c226f5",
-      "url": "https://blog.cloudflare.com/agentic-web/",
-      "title": "The Internet has a second audience",
-      "snippet": "More than half the traffic reaching sites on Cloudflare is now automated, and AI agents are the fastest-growing part of it. We're giving site owners the tools to see who's visiting, decide who gets in, and charge for access.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773080000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3Q3ZZ59Z3P49M2FX7R7F4WQ.png",
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 78,
-    "summary": "Cloudflare has introduced its Monetization Gateway and Pay Per Use beta, allowing site owners to charge AI agents for content and API access using HTTP 402. The platform automates billing and payouts so publishers get paid when AI models consume their work.",
-    "category": "Agents & Tools",
-    "lastSeen": 1790773444911,
-    "update": false,
-    "updateOf": "",
-    "score": 81
-   },
-   {
-    "id": "P2a641341",
-    "headline": "Google Reportedly Pays 100 Digital Publishers in AI Overviews and Gemini Pilot",
-    "firstSeen": 1790773444911,
-    "items": [
-     {
-      "id": "a513aca413ad7b29",
-      "url": "https://www.techmeme.com/260930/p22#a260930p22",
-      "title": "Sources: Google is paying ~100 digital publishers for how much their content contributes to AI Overviews, AI Mode, and Gemini in a pilot; payments vary widely (The Information)",
-      "snippet": "The Information : Sources: Google is paying ~100 digital publishers for how much their content contributes to AI Overviews, AI Mode, and Gemini in a pilot; payments vary widely &mdash; Google has been paying roughly 100 digital publishers for how much their content contributes to AI-powered answers to search and other products &hellip;",
-      "source": "techmeme",
-      "kind": "news",
-      "official": false,
-      "seedOnly": false,
-      "publishedAt": 1790772601000,
-      "engagement": "",
-      "image": null,
-      "weight": 1.3
-     }
-    ],
-    "attempts": 0,
-    "importance": 75,
-    "summary": "Google has launched a pilot program paying approximately 100 digital publishers based on how much their content contributes to AI Overviews, AI Mode, and Gemini. The variable payments mark a step toward compensating media companies for data used in generative AI search experiences.",
-    "category": "Industry",
-    "lastSeen": 1790773444911,
-    "update": false,
-    "updateOf": "",
-    "score": 75
-   },
-   {
-    "id": "P6d17ec59",
-    "headline": "Vast Data Unveils DataEnclave with Nvidia Confidential Computing",
-    "firstSeen": 1790773444911,
-    "items": [
-     {
-      "id": "f698179f9004fb91",
-      "url": "https://www.storagenewsletter.com/2026/09/30/vast-data-introduces-dataenclave-to-bring-leading-ai-models-and-enterprise-data-together-on-trusted-infrastructure/",
-      "title": "Vast Data Unveils DataEnclave with Nvidia Confidential Computing for Enterprise AI",
-      "snippet": "Vast Data launched DataEnclave, an AI operating capability built on Nvidia confidential computing that enables organizations to deploy leading proprietary and open foundation models directly onto private enterprise data environments without risking data exposure.",
-      "source": "gemini-sweep",
-      "kind": "search",
-      "official": false,
-      "seedOnly": false,
-      "publishedAt": 1790769600000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 72,
-    "summary": "Vast Data has launched DataEnclave, an operating capability powered by Nvidia confidential computing that allows organizations to securely deploy proprietary and open foundation models on private enterprise data. The system aims to protect sensitive data while leveraging advanced AI.",
-    "category": "Chips & Hardware",
-    "lastSeen": 1790773444911,
-    "update": false,
-    "updateOf": "",
-    "score": 72
-   },
-   {
-    "id": "P14cd77a2",
-    "headline": "CoreWeave Launches Forge and Integrates NVIDIA Vera CPU for AI Agents",
-    "firstSeen": 1790775244604,
-    "items": [
-     {
-      "id": "fd3a6141eafb511b",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX1lGaFNiOFJpNlJ2SVpUUnl3WDlYVXNxYkdUenR5dTgzXzRnOENtNFZiRVhnWS1rdWZySnRidXFqeTFjTEY4ZGY4MTZnYkoxaWZHcXA0U1JYMWVyRXpjUW9XX2pHVVNLMDhIcXJvOW1TdEhpSWpqQlJuTzZBU01hUURPeWxWUkdiZVU4aVFESnEtazVrcnBEcA?oc=5",
-      "title": "Introducing CoreWeave Forge | CoreWeave Blog - CoreWeave",
-      "snippet": "Introducing CoreWeave Forge | CoreWeave Blog CoreWeave",
-      "source": "gnews-1",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790774131000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     },
-     {
-      "id": "db932348e0bc1f7d",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWC02Tk9IRDhrdkdNSGZJZ3IwRzdGMzkwSm5NV2RKcHpvMHNNUVJWMW5kME5OUmdOelF4MFgzbnk4UXlwUmNCaGFWbUxWeE9yR3NEMlo4ZVdrRzRQOUtwTms2bE1SRmd2QjNWaHREMWs5b3JvMnVXQ1VOdkh1d0tqa3kya0dHeGxBRHowLVY2UjAxdDdsZEpFQjFJZG9iVU45S2R1a1BoTlBhWjAyRjJRVkVfU3ZaWlRIRW5GYjE0OExwNGp1bU1GLVpNdUZkYXJvVVA4UWpGS3hucXY1RnpB?oc=5",
-      "title": "CoreWeave Forge Launches, Turning the AI Loop Production Run Into a Better Model and Agent - Business Wire",
-      "snippet": "CoreWeave Forge Launches, Turning the AI Loop Production Run Into a Better Model and Agent Business Wire",
-      "source": "gnews-1",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     },
-     {
-      "id": "6a8949b0d423e861",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQT2RBZU04cEJxbVd6RjNFUzNpM0hrZnk4TldKWHJUMVZvN29nby1UYWVRWUtmQzlfa2toNURWMjdaZ0xoTkExOWZzRlpWRlBqQ3Fyd25TRFRlQUI2RW9jU3FMdk5SeTdON3hKSEY4WC1JMVhRLWF6eE9TR0wwRUlNbkliNG9SMEk5bFd5Y0pDTTFJYW5kUnJnbHdYdkdmcWpRczUwY3Vn?oc=5",
-      "title": "CoreWeave to Offer NVIDIA Vera, the First CPU Built for AI Agents – Company Announcement - Financial Times",
-      "snippet": "CoreWeave to Offer NVIDIA Vera, the First CPU Built for AI Agents – Company Announcement Financial Times",
-      "source": "gnews-5",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 75,
-    "summary": "CoreWeave has announced CoreWeave Forge to optimize production runs for models and agents, alongside offering the new NVIDIA Vera CPU built for AI workloads. This hardware and software combination aims to scale enterprise AI and agent infrastructure.",
-    "category": "Chips & Hardware",
-    "lastSeen": 1790775244604,
-    "update": false,
-    "updateOf": "",
-    "score": 75
-   },
-   {
-    "id": "Pa0e88914",
-    "headline": "Cloudflare Introduces AI Gateway Auto Router, Agent Error Monitoring, and Domain Tools",
-    "firstSeen": 1790775244604,
-    "items": [
-     {
-      "id": "70949d72fd156a22",
-      "url": "https://blog.cloudflare.com/auto-router/",
-      "title": "Cut your AI spend with AI Gateway's Auto Router",
-      "snippet": "Cloudflare AI Gateway now features a model router that evaluates request complexity using an edge-deployed classifier to select the optimal model. By balancing expected output quality against token costs, organizations can dramatically cut AI spend while maintaining performance.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3QZK4P6A5H0YYAEW0QN6YNC.png",
-      "weight": 1
-     },
-     {
-      "id": "63a829e6e03ea0e8",
-      "url": "https://blog.cloudflare.com/real-time-issue-detection/",
-      "title": "Detect and send production issues straight to your agent",
-      "snippet": "You can now use built-in error monitoring in Cloudflare Workers to group production failures and send stack traces, logs, traces, and application context directly to a coding agent to investigate further and open a pull request.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3QYSQZS2E3XN2KS33WWKWGT.png",
-      "weight": 1
-     },
-     {
-      "id": "94a7808d7ab73a9e",
-      "url": "https://blog.cloudflare.com/simplifying-domains/",
-      "title": "Simplifying domains for people and agents",
-      "snippet": "Cloudflare Registrar’s new search delivers fast, transparent results across 420+ extensions using Workers, Durable Objects, and WebSockets. Its expanded API and cf CLI also let agents search, register, and transfer domains.",
-      "source": "cloudflare-blog",
-      "kind": "official",
-      "official": true,
-      "seedOnly": false,
-      "publishedAt": 1790773200000,
-      "engagement": "",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3QWRFBJBT102QWDWVC9917P.png",
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 75,
-    "summary": "Cloudflare launched a new Auto Router for its AI Gateway that uses an edge classifier to optimize model selection and token costs. Additionally, the company added production error-monitoring that directly sends debugging traces to coding agents and expanded domain registration support for AI agents.",
-    "category": "Agents & Tools",
-    "lastSeen": 1790775244604,
     "update": false,
     "updateOf": "",
     "score": 78
@@ -418,35 +175,6 @@
     "update": false,
     "updateOf": "",
     "score": 81
-   },
-   {
-    "id": "Pf0e26022",
-    "headline": "Florida Attorney General Asks Court to Bar OpenAI From Developing New Models Without Third-Party Approval",
-    "firstSeen": 1790775244604,
-    "items": [
-     {
-      "id": "fedef1766d889939",
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/florida-attorney-general-asks-judge-to-bar-openai-from-developing-new-ai-models-without-third-party-approval-openai-says-it-already-paused-training-its-most-capable-models-last-week",
-      "title": "Florida attorney general asks judge to bar OpenAI from developing new AI models without third-party approval",
-      "snippet": "Florida asked a court to bar OpenAI from developing new AI models without third-party approval and to keep minors off ChatGPT.",
-      "source": "tomshardware",
-      "kind": "news",
-      "official": false,
-      "seedOnly": false,
-      "publishedAt": 1790774400000,
-      "engagement": "",
-      "image": "https://cdn.mos.cms.futurecdn.net/H42sibRfJNFqKNXoKoDFWn-1920-80.png",
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 78,
-    "summary": "The Florida Attorney General has filed for a court order prohibiting OpenAI from developing new models without independent third-party approval. The action also seeks to restrict minors from accessing ChatGPT amid rising regulatory scrutiny.",
-    "category": "Policy",
-    "lastSeen": 1790775244604,
-    "update": false,
-    "updateOf": "",
-    "score": 78
    },
    {
     "id": "P51894b81",
@@ -669,16 +397,30 @@
       "engagement": "",
       "image": null,
       "weight": 1
+     },
+     {
+      "id": "dff056e8cfcb3bc2",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45bVJ0cDhPOWNsbndsN0FHTURoM3VnWGhUY2ZtaEoxbGd2cFh4NlpRelFTVi1CUkRTWjZGeVRBM1YwSDZkdFowQ1dBa3p5UWFZaklSMzZqRkplR1E?oc=5",
+      "title": "AI boom could trigger market shocks, Bank of England boss warns - BBC",
+      "snippet": "AI boom could trigger market shocks, Bank of England boss warns BBC",
+      "source": "gnews-4",
+      "kind": "search",
+      "official": false,
+      "seedOnly": true,
+      "publishedAt": 1790827397000,
+      "engagement": "",
+      "image": null,
+      "weight": 1
      }
     ],
     "attempts": 0,
     "importance": 78,
-    "summary": "Bank of England Governor Andrew Bailey highlighted financial stability risks linked to $450 billion in AI sector debt issued this year. He called for standardized model testing to establish clear points for regulatory intervention.",
+    "summary": "The Bank of England governor warned that the $450 billion surge in AI-related debt could trigger market shocks. Officials are calling for stronger regulatory oversight to manage systemic financial risks.",
     "category": "Policy",
-    "lastSeen": 1790780644457,
+    "lastSeen": 1790840045101,
     "update": false,
     "updateOf": "",
-    "score": 78
+    "score": 81
    },
    {
     "id": "P698f2893",
@@ -926,63 +668,6 @@
     "score": 82
    },
    {
-    "id": "Pd814bbf0",
-    "headline": "OpenAI and Synopsys Announce GPT-Synopsys for AI Chip Design",
-    "firstSeen": 1790836988510,
-    "items": [
-     {
-      "id": "42ee363af06dbc76",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQUnU5cl9MNE4tdm1yaWRjTGtXN0hyZjhNeWhWX1JQN0o1YTBncmY1N3BXS0VkVW52X1RFRHhuQ0N4RUQ2N0tfdTlET29GLUlvdjN5Wmw3RFd6cVdtVGY4MjNsNFFKd1pqeUpxSGVOdWxsSG9RYVEyYS15RzhZUE5OelJYUDRHU0tkemV0QWxNWkRCVFFTTXRWcDl4emFKVVVST1pNWDlQbkJVTHJNRHVhQXc5N0RDbWd3aEc0TWVQa1lmeDd2aE84V1ExWGR5YkIxTTlrb1F4UTc0MjRaSmVfdmFR?oc=5",
-      "title": "OpenAI and Synopsys Announce GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design - PR Newswire",
-      "snippet": "OpenAI and Synopsys Announce GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design PR Newswire",
-      "source": "gnews-2",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790792940000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     },
-     {
-      "id": "954e03bd743b5602",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSUQ2UF9xa0tYb2VKRTFLNVpwb04xbnJCMld6TWx3Wm1IYTA0V2lXRmFEZC1hRm5zUXNOV3djUUo2SmRHbEFNbWRpMzQ0TFAzUzZGenQ1bEV4eGtkWXdWUnF4bGZmZXprb0lvOHdCcWhZU080QzU1aTl1WVBfR0V3NmNpNFVBM1Z6cWNEaDFFYkQ0eU5MLVdmNjJJTkFCSDg4eElUSUZqZ0Ntdw?oc=5",
-      "title": "Synopsys, OpenAI strike deal to develop AI model for chip design work - Reuters",
-      "snippet": "Synopsys, OpenAI strike deal to develop AI model for chip design work Reuters",
-      "source": "gnews-5",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790794929000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     },
-     {
-      "id": "ac65a1bc74815e78",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcXJsdE5EOFo3QW1PZE9DclpnaVZsWk1GTk1sRGpDdmRLZXJxbnMtRXNrYU4zSjZMUGkwa1MwOWFwMXAwOGtoSE5TNVBGRm05TVJqTExvNjV0T3RmN1VnSXJldkQ3Wl9ybk9RYUFEMktzSlFpY0hLSHVUY1FacFplcGtib0xHR1ZKSXRtaTJaSUtFNVNEa2V5dWdB?oc=5",
-      "title": "OpenAI, Synopsys Announce GPT-Synopsys for AI Chip Design - analyticsindiamag.com",
-      "snippet": "OpenAI, Synopsys Announce GPT-Synopsys for AI Chip Design analyticsindiamag.com",
-      "source": "gnews-5",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790832890000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 85,
-    "summary": "OpenAI and Synopsys have partnered to announce GPT-Synopsys, a specialized frontier intelligence model aimed at revolutionizing semiconductor and chip design workflows. The collaboration leverages advanced AI to accelerate hardware engineering tasks.",
-    "category": "AI Models",
-    "lastSeen": 1790836988510,
-    "update": false,
-    "updateOf": "",
-    "score": 85
-   },
-   {
     "id": "P8cb3383f",
     "headline": "Salesforce Agrees to Acquire AI Customer Research Startup Listen Labs for $2 Billion",
     "firstSeen": 1790836988510,
@@ -1010,78 +695,6 @@
     "update": false,
     "updateOf": "",
     "score": 78
-   },
-   {
-    "id": "P912d801e",
-    "headline": "Tencent Signs $7 Billion Deal with Oracle for AI Chip Access in Southeast Asia",
-    "firstSeen": 1790836988510,
-    "items": [
-     {
-      "id": "83ea9807bdaafdf7",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9URGxhLU5JdlA2QmlhZUtzWldib0xkSVBTQ0s1YTRCWmFmd0FJVENHLWxCS21LUUlEQjFhWmtCNHQxeFdfSlNXNjd1dklzQ2hPWVhPOVhmV1duWWtIUmZDalNRX1pNbGZDWkRMa19KeW91NGVHV2c?oc=5",
-      "title": "Tencent Strikes $7 Billion Deal to Lease 100,000 AI Chips From Oracle - finance.biggo.com",
-      "snippet": "Tencent Strikes $7 Billion Deal to Lease 100,000 AI Chips From Oracle finance.biggo.com",
-      "source": "gnews-3",
-      "kind": "search",
-      "official": false,
-      "seedOnly": true,
-      "publishedAt": 1790831100000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     },
-     {
-      "id": "af4bbd43fcd25fd8",
-      "url": "https://www.techmeme.com/261001/p1#a261001p1",
-      "title": "Sources: Tencent signed a ~$7B, five-year deal with Oracle this year for access to ~100K advanced AI chips unavailable in China via Southeast Asian data centers (Zijing Wu/Financial Times)",
-      "snippet": "Zijing Wu / Financial Times : Sources: Tencent signed a ~$7B, five-year deal with Oracle this year for access to ~100K advanced AI chips unavailable in China via Southeast Asian data centers &mdash; WeChat owner strikes deal to access US group's south-east Asia data centres amid race with ByteDance and Alibaba",
-      "source": "techmeme",
-      "kind": "news",
-      "official": false,
-      "seedOnly": false,
-      "publishedAt": 1790830200000,
-      "engagement": "",
-      "image": null,
-      "weight": 1.3
-     }
-    ],
-    "attempts": 0,
-    "importance": 82,
-    "summary": "Tencent has reportedly signed a five-year, $7 billion deal with Oracle to lease roughly 100,000 advanced AI chips via Southeast Asian data centers. The arrangement allows access to hardware otherwise unavailable in China.",
-    "category": "Chips & Hardware",
-    "lastSeen": 1790836988510,
-    "update": false,
-    "updateOf": "",
-    "score": 85
-   },
-   {
-    "id": "P7e431822",
-    "headline": "OpenAI and Synopsys Partner to Build GPT-Synopsys AI Chip Design Model",
-    "firstSeen": 1790836988510,
-    "items": [
-     {
-      "id": "da489cf5dd1d0c38",
-      "url": "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/",
-      "title": "OpenAI and Synopsys team up to build an AI model that designs chips like a seasoned engineer",
-      "snippet": "OpenAI and Synopsys are building GPT-Synopsys, a specialized AI model for chip design. It's meant to operate Synopsys' EDA tools like a seasoned engineer and optimize designs on its own. Early tests with semiconductor customers are already underway. OpenAI is likely using the partnership to advance its own chip development as well. The article OpenAI and Synopsys team up to build an AI model that designs chips like…",
-      "source": "the-decoder",
-      "kind": "news",
-      "official": false,
-      "seedOnly": false,
-      "publishedAt": 1790795550000,
-      "engagement": "",
-      "image": null,
-      "weight": 1
-     }
-    ],
-    "attempts": 0,
-    "importance": 85,
-    "summary": "OpenAI and Synopsys are collaborating to develop GPT-Synopsys, a specialized artificial intelligence model built to operate electronic design automation (EDA) tools and autonomously optimize semiconductor architectures. Early trials with chipmaking customers are currently underway.",
-    "category": "AI Models",
-    "lastSeen": 1790836988510,
-    "update": false,
-    "updateOf": "",
-    "score": 85
    },
    {
     "id": "P354a0247",
@@ -1267,6 +880,180 @@
     "summary": "The United States has approved its first small modular nuclear reactor specifically built to address the soaring energy demands of AI data centers. The project highlights the tech sector's growing reliance on alternative energy sources to sustain massive infrastructure scaling.",
     "category": "Industry",
     "lastSeen": 1790836988510,
+    "update": false,
+    "updateOf": "",
+    "score": 75
+   },
+   {
+    "id": "Pf07b203c",
+    "headline": "Spotify to Introduce AI Label and Spam Filter to Stop AI Music Slop",
+    "firstSeen": 1790840045101,
+    "items": [
+     {
+      "id": "a12cd62aa02246f9",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOd2hfY0dpemh6NjQtV1RZakhzWl9JRmJ0cjRGZElqbFlNSTB0cjRQM3JfeVl5NGpvRld2SmYyWVdjRE1ZenhsVFh0cjUzNXdFREU4WVNsR0NtSm5nbGV1ZGRXdDdCQUtNSWZ6ZGxjQUtyQjlQMnZIVldvMEVWa280Qm1n?oc=5",
+      "title": "Spotify to introduce AI label and spam filter to stop AI music slop - Mashable",
+      "snippet": "Spotify to introduce AI label and spam filter to stop AI music slop Mashable",
+      "source": "gnews-4",
+      "kind": "search",
+      "official": false,
+      "seedOnly": true,
+      "publishedAt": 1790805600000,
+      "engagement": "",
+      "image": null,
+      "weight": 1
+     }
+    ],
+    "attempts": 0,
+    "importance": 75,
+    "summary": "Spotify announced plans to introduce an AI content label and spam filter to crack down on low-quality AI-generated music. The new features aim to protect listeners and genuine artists from flooding.",
+    "category": "Audio & Video",
+    "lastSeen": 1790840045101,
+    "update": false,
+    "updateOf": "",
+    "score": 75
+   },
+   {
+    "id": "P9f0543f1",
+    "headline": "AIsphere Launches PixVerse R2, a Real-Time World Model That Remembers Session State",
+    "firstSeen": 1790840045101,
+    "items": [
+     {
+      "id": "6868a2361c4e6f42",
+      "url": "https://pandaily.com/aisphere-pixverse-r2-real-time-world-model-omni-causal-ar",
+      "title": "AIsphere Launches PixVerse R2, a Real-Time World Model That Remembers What Happens in a Session",
+      "snippet": "AIsphere's PixVerse R2 generates explorable audiovisual worlds in real time, taking text, image, audio and keyboard input mid-stream and keeping state across a session.",
+      "source": "pandaily",
+      "kind": "news",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790839066000,
+      "engagement": "",
+      "image": "https://cms-image.pandaily.com/1/pixverse_r2_ad86498e9d.png",
+      "weight": 1
+     }
+    ],
+    "attempts": 0,
+    "importance": 75,
+    "summary": "AIsphere released PixVerse R2, a real-time world model capable of generating explorable audiovisual environments. The model accepts multi-modal inputs mid-stream and maintains state across the session.",
+    "category": "Audio & Video",
+    "lastSeen": 1790840045101,
+    "update": false,
+    "updateOf": "",
+    "score": 75
+   },
+   {
+    "id": "Pc881c9aa",
+    "headline": "Bilibili Open-Sources Index-Translate, a Qwen3.5-Based Translation Model Family",
+    "firstSeen": 1790840045101,
+    "items": [
+     {
+      "id": "f1a94de531cc295f",
+      "url": "https://pandaily.com/bilibili-index-translate-open-source-qwen3-5-150-languages",
+      "title": "Bilibili Open-Sources Index-Translate, a Qwen3.5-Based Translation Model Family for 150 Languages",
+      "snippet": "Bilibili's Index LLM team released Index-Translate under Apache-2.0: 2B, 9B and 35B-A3B preview text models for 150 languages, plus dubbing, syllable-control and long-document variants.",
+      "source": "pandaily",
+      "kind": "news",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790839050000,
+      "engagement": "",
+      "image": "https://cms-image.pandaily.com/1/bilibili_index_translate_3f9e8bce20.png",
+      "weight": 1
+     }
+    ],
+    "attempts": 0,
+    "importance": 75,
+    "summary": "Bilibili's Index LLM team open-sourced Index-Translate under the Apache-2.0 license, featuring models ranging from 2B to 35B parameters. The family supports text translation across 150 languages alongside dubbing and long-document variants.",
+    "category": "Open Source",
+    "lastSeen": 1790840045101,
+    "update": false,
+    "updateOf": "",
+    "score": 75
+   },
+   {
+    "id": "P7360e970",
+    "headline": "XPeng and Banma Run 30B-Class Cockpit AI Model On-Device on 750-TOPS Turing Chip",
+    "firstSeen": 1790840045101,
+    "items": [
+     {
+      "id": "48702ce6bc761e1e",
+      "url": "https://pandaily.com/xpeng-banma-turing-chip-30b-autoomni-on-device-ai-cockpit",
+      "title": "XPeng and Banma Run a 30B-Class Cockpit AI Model On-Device on XPeng's 750-TOPS Turing Chip",
+      "snippet": "XPeng and Banma Intelligence built a cockpit solution that runs a 30B-class AutoOmni model locally on XPeng's 750-TOPS Turing chip, keeping core AI features working offline.",
+      "source": "pandaily",
+      "kind": "news",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790838956000,
+      "engagement": "",
+      "image": "https://cms-image.pandaily.com/1/xpeng_banma_cockpit_24e46a8c06.png",
+      "weight": 1
+     }
+    ],
+    "attempts": 0,
+    "importance": 75,
+    "summary": "XPeng and Banma Intelligence deployed a 30B-class AutoOmni model locally on XPeng's 750-TOPS Turing chip. This on-device integration ensures core smart cockpit features remain functional offline.",
+    "category": "Chips & Hardware",
+    "lastSeen": 1790840045101,
+    "update": false,
+    "updateOf": "",
+    "score": 75
+   },
+   {
+    "id": "P2093d9f7",
+    "headline": "Horizon Robotics Releases HSD V2.1 With End-to-End Reversing and iCAR V27 Integration",
+    "firstSeen": 1790840045101,
+    "items": [
+     {
+      "id": "ccf3027432adf4b5",
+      "url": "https://pandaily.com/horizon-robotics-hsd-v2-1-end-to-end-reversing-icar-v27-ota",
+      "title": "Horizon Robotics Releases HSD V2.1 With End-to-End Reversing, iCAR V27 First in Line for OTA",
+      "snippet": "Horizon Robotics' HSD V2.1 adds end-to-end reversing in all scenarios, with 43% more miles per intervention and 255% better interactive lane changes. iCAR V27 OTA starts October 8.",
+      "source": "pandaily",
+      "kind": "news",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790838943000,
+      "engagement": "",
+      "image": "https://cms-image.pandaily.com/1/horizon_hsd_v2_1_b613e541a7.png",
+      "weight": 1
+     }
+    ],
+    "attempts": 0,
+    "importance": 75,
+    "summary": "Horizon Robotics launched its HSD V2.1 autonomous driving software update, bringing end-to-end reversing capabilities and significant performance gains. The iCAR V27 will be the first vehicle to receive the OTA update.",
+    "category": "Robotics",
+    "lastSeen": 1790840045101,
+    "update": false,
+    "updateOf": "",
+    "score": 75
+   },
+   {
+    "id": "P47569a11",
+    "headline": "Huawei Launches Grid-Interactive AIDC 1.0 for AI Data Centers",
+    "firstSeen": 1790840045101,
+    "items": [
+     {
+      "id": "439bbf66adebe9f4",
+      "url": "https://pandaily.com/huawei-grid-interactive-aidc-1-0-power-liquid-cooling-ascend-sensetime-lingang",
+      "title": "Huawei Launches Grid-Interactive AIDC 1.0, Linking AI Data-Center Power, Cooling and Ascend Servers",
+      "snippet": "Huawei Digital Power's grid-interactive AIDC 1.0 pairs grid-forming storage, new UPS lines and an Ascend-aware liquid-cooling controller; a SenseTime site got 18 MW of power in 45 days.",
+      "source": "pandaily",
+      "kind": "news",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790838928000,
+      "engagement": "",
+      "image": "https://cms-image.pandaily.com/1/huawei_aidc_1_0_dc23047fdd.png",
+      "weight": 1
+     }
+    ],
+    "attempts": 0,
+    "importance": 75,
+    "summary": "Huawei Digital Power introduced its grid-interactive AIDC 1.0 architecture, combining energy storage, advanced uninterruptible power supplies, and Ascend-aware liquid cooling. The system is designed to accelerate data center deployment and power scaling.",
+    "category": "Chips & Hardware",
+    "lastSeen": 1790840045101,
     "update": false,
     "updateOf": "",
     "score": 75
@@ -1502,1213 +1289,1228 @@
     "slug": "openai-cancels-gpt-6-1-astra-launches-sol",
     "headline": "OpenAI Cancels Release of Newest AI Model",
     "at": 1790839000441
+   },
+   {
+    "slug": "openai-synopsys-gpt-synopsys-ai-chip-design",
+    "headline": "OpenAI and Synopsys Announce GPT-Synopsys for AI Chip Design",
+    "at": 1790840348050
+   },
+   {
+    "slug": "tencent-oracle-7-billion-ai-chip-deal",
+    "headline": "Tencent Signs $7 Billion Deal with Oracle for AI Chip Access in Southeast Asia",
+    "at": 1790840402970
+   },
+   {
+    "slug": "openai-synopsys-partner-gpt-synopsys-chip-design",
+    "headline": "OpenAI and Synopsys Partner to Build GPT-Synopsys AI Chip Design Model",
+    "at": 1790840535727
    }
   ]
  },
  "daily": {
   "date": "2026-10-01",
-  "count": 6
+  "count": 9
  },
  "sources": {
   "openai": {
-   "ok": 1790838078581,
+   "ok": 1790839875529,
    "fails": 0,
    "count": 60,
-   "ms": 333
+   "ms": 712
   },
   "deepseek": {
-   "ok": 1790838078801,
+   "ok": 1790839875558,
    "fails": 0,
    "count": 1,
-   "ms": 511,
+   "ms": 617,
    "baselined": true,
    "err": "fetch failed",
    "errAt": 1790667138014
   },
   "elevenlabs": {
-   "ok": 1790838078929,
+   "ok": 1790839875611,
    "fails": 0,
    "count": 40,
-   "ms": 436,
+   "ms": 216,
    "baselined": true
   },
   "google-research": {
-   "ok": 1790838078700,
+   "ok": 1790839875550,
    "fails": 0,
    "count": 60,
-   "ms": 414
+   "ms": 613
   },
   "anthropic": {
-   "ok": 1790838078860,
+   "ok": 1790839875604,
    "fails": 0,
    "count": 11,
-   "ms": 572,
+   "ms": 665,
    "baselined": true
   },
   "qwen": {
-   "ok": 1790838078652,
+   "ok": 1790839875439,
    "fails": 0,
    "count": 44,
-   "ms": 361
+   "ms": 497
   },
   "suno": {
-   "ok": 1790838079360,
+   "ok": 1790839875671,
    "fails": 0,
    "count": 40,
-   "ms": 673,
+   "ms": 121,
    "baselined": true
   },
   "midjourney": {
-   "ok": 1790838078977,
+   "ok": 1790839875586,
    "fails": 0,
    "count": 15,
-   "ms": 396
+   "ms": 147
   },
   "together": {
-   "ok": 1790838079226,
+   "ok": 1790839875649,
    "fails": 0,
    "count": 60,
-   "ms": 366
+   "ms": 74
   },
   "google-ai": {
-   "ok": 1790838079052,
+   "ok": 1790839875591,
    "fails": 0,
    "count": 20,
-   "ms": 767
+   "ms": 655
   },
   "minimax": {
-   "ok": 1790838078996,
+   "ok": 1790839875575,
    "fails": 0,
    "count": 1,
-   "ms": 704,
+   "ms": 632,
    "baselined": true
   },
   "google-devs": {
-   "ok": 1790838079817,
+   "ok": 1790839875687,
    "fails": 0,
    "count": 20,
-   "ms": 1530
+   "ms": 749
   },
   "bfl": {
-   "ok": 1790838079215,
+   "ok": 1790839875745,
    "fails": 0,
    "count": 10,
-   "ms": 563,
+   "ms": 216,
    "baselined": true
   },
   "microsoft": {
-   "ok": 1790838079442,
+   "ok": 1790839875910,
    "fails": 0,
    "count": 7,
-   "ms": 445
+   "ms": 306
   },
   "mistral": {
-   "ok": 1790838078687,
+   "ok": 1790839875566,
    "fails": 0,
    "count": 60,
-   "ms": 398
+   "ms": 625
   },
   "runway": {
-   "ok": 1790838079340,
+   "ok": 1790839875639,
    "fails": 0,
    "count": 1,
-   "ms": 1046,
+   "ms": 694,
    "baselined": true
   },
   "nvidia": {
-   "ok": 1790838079502,
+   "ok": 1790839875839,
    "fails": 0,
    "count": 18,
-   "ms": 450
+   "ms": 228
   },
   "cloudflare-blog": {
-   "ok": 1790838079743,
+   "ok": 1790839875990,
    "fails": 0,
    "count": 18,
-   "ms": 389
+   "ms": 303
   },
   "cohere": {
-   "ok": 1790838079322,
+   "ok": 1790839875629,
    "fails": 0,
    "count": 24,
-   "ms": 1029,
+   "ms": 685,
    "baselined": true
   },
   "github-blog": {
-   "ok": 1790838079701,
+   "ok": 1790839875905,
    "fails": 0,
    "count": 7,
-   "ms": 361
+   "ms": 234
   },
   "nvidia-dev": {
-   "ok": 1790838079935,
+   "ok": 1790839876025,
    "fails": 0,
    "count": 60,
-   "ms": 720
+   "ms": 396
   },
   "verge-ai": {
-   "ok": 1790838079797,
+   "ok": 1790839875994,
    "fails": 0,
    "count": 10,
-   "ms": 355
+   "ms": 190
   },
   "ars-tech": {
-   "ok": 1790838079860,
+   "ok": 1790839876043,
    "fails": 0,
    "count": 20,
-   "ms": 358
+   "ms": 204
   },
   "huggingface-blog": {
-   "ok": 1790838079596,
+   "ok": 1790839875950,
    "fails": 0,
    "count": 60,
-   "ms": 274
+   "ms": 301
   },
   "techcrunch-ai": {
-   "ok": 1790838079716,
+   "ok": 1790839875921,
    "fails": 0,
    "count": 19,
-   "ms": 337
+   "ms": 176
   },
   "deepmind": {
-   "ok": 1790838078493,
+   "ok": 1790839875395,
    "fails": 0,
    "count": 60,
-   "ms": 210
+   "ms": 461
   },
   "luma": {
-   "ok": 1790838080094,
+   "ok": 1790839876569,
    "fails": 0,
    "count": 40,
-   "ms": 1394,
+   "ms": 1011,
    "baselined": true
   },
   "apple-ml": {
-   "ok": 1790838079379,
+   "ok": 1790839875804,
    "fails": 0,
    "count": 10,
-   "ms": 402
+   "ms": 213
   },
   "wired-ai": {
-   "ok": 1790838079992,
+   "ok": 1790839876106,
    "fails": 0,
    "count": 10,
-   "ms": 276
+   "ms": 185
   },
   "engadget": {
-   "ok": 1790838080307,
+   "ok": 1790839876349,
    "fails": 0,
    "count": 1,
-   "ms": 490
+   "ms": 355
   },
   "mit-tr-ai": {
-   "ok": 1790838079941,
+   "ok": 1790839876065,
    "fails": 0,
    "count": 10,
-   "ms": 240
+   "ms": 155
   },
   "ollama": {
-   "ok": 1790838079354,
+   "ok": 1790839875728,
    "fails": 0,
    "count": 59,
-   "ms": 425
+   "ms": 142
   },
   "9to5google": {
-   "ok": 1790838080231,
+   "ok": 1790839876375,
    "fails": 0,
    "count": 16,
-   "ms": 371
+   "ms": 350
   },
   "9to5mac": {
-   "ok": 1790838080290,
+   "ok": 1790839876449,
    "fails": 0,
    "count": 14,
-   "ms": 387
+   "ms": 406
   },
   "restofworld": {
-   "ok": 1790838080567,
+   "ok": 1790839876701,
    "fails": 0,
    "count": 10,
-   "ms": 575
+   "ms": 546
   },
   "ieee-spectrum": {
-   "ok": 1790838080661,
+   "ok": 1790839876586,
    "fails": 0,
    "count": 30,
-   "ms": 720
+   "ms": 480
   },
   "pandaily": {
-   "ok": 1790838080667,
+   "ok": 1790839876634,
    "fails": 0,
    "count": 20,
-   "ms": 545,
+   "ms": 279,
    "err": "The operation was aborted due to timeout",
    "errAt": 1790668945172
   },
   "aws-ml": {
-   "ok": 1790838079738,
+   "ok": 1790839875984,
    "fails": 0,
    "count": 20,
-   "ms": 512
+   "ms": 345
   },
   "simonwillison": {
-   "ok": 1790838080732,
+   "ok": 1790839876839,
    "fails": 0,
    "count": 30,
-   "ms": 469
+   "ms": 390
   },
   "interconnects": {
-   "ok": 1790838080869,
+   "ok": 1790839876805,
    "fails": 0,
    "count": 20,
-   "ms": 571
+   "ms": 219
   },
   "scmp-tech": {
-   "ok": 1790838081275,
+   "ok": 1790839877309,
    "fails": 0,
    "count": 50,
-   "ms": 1181
+   "ms": 960
   },
   "latent-space": {
-   "ok": 1790838080999,
+   "ok": 1790839876874,
    "fails": 0,
    "count": 20,
-   "ms": 692
+   "ms": 271
   },
   "ai2": {
-   "ok": 1790838080263,
+   "ok": 1790839876751,
    "fails": 0,
    "count": 9,
-   "ms": 1462,
+   "ms": 1185,
    "baselined": true
   },
   "bensbites": {
-   "ok": 1790838081055,
+   "ok": 1790839876863,
    "fails": 0,
    "count": 20,
-   "ms": 488
+   "ms": 228
   },
   "importai": {
    "ok": 1790492188749,
-   "fails": 170,
+   "fails": 171,
    "count": 20,
    "ms": 430,
    "err": "HTTP 403 for https://importai.substack.com/feed",
-   "errAt": 1790838080733
+   "errAt": 1790839876753
   },
   "techmeme": {
-   "ok": 1790838079903,
+   "ok": 1790839876355,
    "fails": 0,
    "count": 15,
-   "ms": 543
+   "ms": 627
   },
   "chinatalk": {
-   "ok": 1790838081140,
+   "ok": 1790839877102,
    "fails": 0,
    "count": 20,
-   "ms": 473
+   "ms": 351
   },
   "nature": {
-   "ok": 1790838081091,
+   "ok": 1790839877078,
    "fails": 0,
    "count": 30,
-   "ms": 256
+   "ms": 273
   },
   "science": {
-   "ok": 1790838081518,
+   "ok": 1790839877161,
    "fails": 0,
    "count": 10,
-   "ms": 649,
+   "ms": 322,
    "err": "HTTP 403 for https://www.science.org/rss/news_current.xml",
    "errAt": 1790656248731
   },
   "quanta": {
-   "ok": 1790838081714,
+   "ok": 1790839877365,
    "fails": 0,
    "count": 5,
-   "ms": 659
+   "ms": 471
   },
   "technode": {
-   "ok": 1790838080991,
+   "ok": 1790839877047,
    "fails": 0,
    "count": 40,
-   "ms": 760
+   "ms": 672
   },
   "producthunt-ai": {
-   "ok": 1790838081114,
+   "ok": 1790839876894,
    "fails": 0,
    "count": 15,
-   "ms": 382
+   "ms": 141
   },
   "the-decoder": {
-   "ok": 1790838081278,
+   "ok": 1790839877202,
    "fails": 0,
    "count": 10,
-   "ms": 1540
+   "ms": 1252
   },
   "register-ai": {
-   "ok": 1790838081186,
+   "ok": 1790839877054,
    "fails": 0,
    "count": 50,
-   "ms": 1389
+   "ms": 1064
   },
   "nasa": {
-   "ok": 1790838081674,
+   "ok": 1790839877362,
    "fails": 0,
    "count": 10,
-   "ms": 583,
+   "ms": 315,
    "err": "HTTP 429",
    "errAt": 1790712088209
   },
   "lobsters-ai": {
-   "ok": 1790838081228,
+   "ok": 1790839877095,
    "fails": 0,
    "count": 25,
-   "ms": 495,
+   "ms": 324,
    "err": "HTTP 500",
    "errAt": 1790600450209
   },
   "tomshardware": {
-   "ok": 1790838080835,
+   "ok": 1790839876770,
    "fails": 0,
    "count": 25,
-   "ms": 900
+   "ms": 706
   },
   "semianalysis": {
-   "ok": 1790838081817,
+   "ok": 1790839877391,
    "fails": 0,
    "count": 10,
-   "ms": 1156,
+   "ms": 690,
    "err": "HTTP 403 for https://www.semianalysis.com/feed",
    "errAt": 1790773294413
   },
   "ars-science": {
-   "ok": 1790838080122,
+   "ok": 1790839876155,
    "fails": 0,
    "count": 20,
-   "ms": 526
+   "ms": 250
   },
   "phys-org": {
-   "ok": 1790838081513,
+   "ok": 1790839877381,
    "fails": 0,
    "count": 30,
-   "ms": 514
+   "ms": 507
   },
   "siliconangle-ai": {
-   "ok": 1790838080298,
+   "ok": 1790839876603,
    "fails": 0,
    "count": 30,
-   "ms": 555
+   "ms": 619
   },
   "gnews-0": {
-   "ok": 1790838082096,
+   "ok": 1790839877711,
    "fails": 0,
    "count": 25,
-   "ms": 982,
+   "ms": 657,
    "err": "HTTP 503",
    "errAt": 1790600469686
   },
   "gnews-1": {
-   "ok": 1790838082045,
+   "ok": 1790839877644,
    "fails": 0,
    "count": 25,
-   "ms": 905,
+   "ms": 566,
    "err": "HTTP 503",
    "errAt": 1790600464834
   },
   "gnews-3": {
-   "ok": 1790838081995,
+   "ok": 1790839877544,
    "fails": 0,
    "count": 2,
-   "ms": 778,
+   "ms": 442,
    "err": "HTTP 503",
    "errAt": 1790600463945
   },
   "gnews-7": {
-   "ok": 1790838081982,
+   "ok": 1790839877591,
    "fails": 0,
    "count": 4,
-   "ms": 469,
+   "ms": 261,
    "err": "HTTP 503",
    "errAt": 1790600465076
   },
   "gnews-5": {
-   "ok": 1790838082009,
+   "ok": 1790839877654,
    "fails": 0,
    "count": 25,
-   "ms": 734,
+   "ms": 452,
    "err": "HTTP 503",
    "errAt": 1790600466620
   },
   "gnews-4": {
-   "ok": 1790838082167,
+   "ok": 1790839877706,
    "fails": 0,
    "count": 25,
-   "ms": 939,
+   "ms": 545,
    "err": "HTTP 503",
    "errAt": 1790600465548
   },
   "gnews-2": {
-   "ok": 1790838082050,
+   "ok": 1790839877762,
    "fails": 0,
    "count": 25,
-   "ms": 864,
+   "ms": 667,
    "err": "HTTP 503",
    "errAt": 1790600466086
   },
   "hackernews": {
-   "ok": 1790838082633,
+   "ok": 1790839877674,
    "fails": 0,
-   "count": 17,
-   "ms": 1115
+   "count": 15,
+   "ms": 312
   },
   "gnews-6": {
-   "ok": 1790838082143,
+   "ok": 1790839877650,
    "fails": 0,
    "count": 25,
-   "ms": 865,
+   "ms": 341,
    "err": "HTTP 503",
    "errAt": 1790600464639
   },
   "sciencedaily-tech": {
-   "ok": 1790838081217,
+   "ok": 1790839877330,
    "fails": 0,
    "count": 30,
-   "ms": 226
+   "ms": 467
   },
   "hf-openai": {
-   "ok": 1790838082106,
+   "ok": 1790839877684,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 30
   },
   "bluesky-0": {
-   "ok": 1790838081882,
+   "ok": 1790839877547,
    "fails": 0,
    "count": 0,
-   "ms": 168,
+   "ms": 166,
    "err": "HTTP 504",
    "errAt": 1790634669504
   },
   "bluesky-1": {
-   "ok": 1790838082019,
+   "ok": 1790839877550,
    "fails": 0,
    "count": 0,
-   "ms": 202,
+   "ms": 159,
    "err": "HTTP 504",
    "errAt": 1790634669585
   },
   "hf-meta-llama": {
-   "ok": 1790838082189,
+   "ok": 1790839877702,
    "fails": 0,
    "count": 5,
-   "ms": 99
+   "ms": 18
   },
   "hf-google": {
-   "ok": 1790838082152,
+   "ok": 1790839877700,
    "fails": 0,
    "count": 6,
-   "ms": 102
+   "ms": 26
   },
   "hf-facebook": {
-   "ok": 1790838082199,
+   "ok": 1790839877719,
    "fails": 0,
    "count": 6,
-   "ms": 103
+   "ms": 19
   },
   "bluesky-2": {
-   "ok": 1790838081957,
+   "ok": 1790839877789,
    "fails": 0,
    "count": 0,
-   "ms": 75,
+   "ms": 245,
    "err": "HTTP 504",
    "errAt": 1790710324992
   },
   "bluesky-3": {
-   "ok": 1790838082030,
+   "ok": 1790839877637,
    "fails": 0,
    "count": 0,
-   "ms": 73,
+   "ms": 90,
    "err": "The operation was aborted due to timeout",
    "errAt": 1790634684631
   },
   "hf-mistralai": {
-   "ok": 1790838082216,
+   "ok": 1790839877736,
    "fails": 0,
    "count": 6,
-   "ms": 64
+   "ms": 25
   },
   "hf-microsoft": {
-   "ok": 1790838082168,
+   "ok": 1790839877719,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 17
   },
   "hf-nvidia": {
-   "ok": 1790838082241,
+   "ok": 1790839877734,
    "fails": 0,
    "count": 3,
-   "ms": 98
+   "ms": 28
   },
   "bluesky-5": {
-   "ok": 1790838082197,
+   "ok": 1790839877781,
    "fails": 0,
    "count": 0,
-   "ms": 202,
+   "ms": 190,
    "err": "HTTP 504",
    "errAt": 1790634669644
   },
   "hf-Qwen": {
-   "ok": 1790838082267,
+   "ok": 1790839877741,
    "fails": 0,
    "count": 5,
-   "ms": 100
+   "ms": 22
   },
   "bluesky-7": {
-   "ok": 1790838082090,
+   "ok": 1790839877791,
    "fails": 0,
    "count": 0,
-   "ms": 71,
+   "ms": 147,
    "err": "HTTP 504",
    "errAt": 1790634669691
   },
   "bluesky-8": {
-   "ok": 1790838082186,
+   "ok": 1790839877794,
    "fails": 0,
    "count": 0,
-   "ms": 156,
+   "ms": 144,
    "err": "HTTP 504",
    "errAt": 1790634669787
   },
   "bluesky-6": {
-   "ok": 1790838082203,
+   "ok": 1790839877739,
    "fails": 0,
    "count": 0,
-   "ms": 194,
+   "ms": 102,
    "err": "HTTP 504",
    "errAt": 1790634669678
   },
   "bluesky-4": {
-   "ok": 1790838082274,
+   "ok": 1790839877738,
    "fails": 0,
    "count": 2,
-   "ms": 292,
+   "ms": 188,
    "err": "HTTP 504",
    "errAt": 1790710325093
   },
   "hf-deepseek-ai": {
-   "ok": 1790838082230,
+   "ok": 1790839877739,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 20
   },
   "hf-zai-org": {
-   "ok": 1790838082252,
+   "ok": 1790839877765,
    "fails": 0,
    "count": 5,
-   "ms": 63
+   "ms": 29
   },
   "hf-MiniMaxAI": {
-   "ok": 1790838082265,
+   "ok": 1790839877763,
    "fails": 0,
    "count": 6,
-   "ms": 66
+   "ms": 24
   },
   "hf-THUDM": {
-   "ok": 1790838082294,
+   "ok": 1790839877752,
    "fails": 0,
    "count": 0,
-   "ms": 97
+   "ms": 14
   },
   "hf-ByteDance-Seed": {
-   "ok": 1790838082275,
+   "ok": 1790839877766,
    "fails": 0,
    "count": 6,
-   "ms": 59
+   "ms": 25
   },
   "hf-tencent": {
-   "ok": 1790838082302,
+   "ok": 1790839877764,
    "fails": 0,
    "count": 5,
-   "ms": 99
+   "ms": 25
   },
   "hf-OpenGVLab": {
-   "ok": 1790838082557,
+   "ok": 1790839877783,
    "fails": 0,
    "count": 6,
-   "ms": 290
+   "ms": 18
   },
   "hf-moonshotai": {
-   "ok": 1790838082286,
+   "ok": 1790839877765,
    "fails": 0,
    "count": 6,
-   "ms": 100
+   "ms": 31
   },
   "hf-baidu": {
-   "ok": 1790838082314,
+   "ok": 1790839877801,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 38
   },
   "hf-stepfun-ai": {
-   "ok": 1790838082306,
+   "ok": 1790839877777,
    "fails": 0,
    "count": 3,
-   "ms": 65
+   "ms": 15
   },
   "hf-allenai": {
-   "ok": 1790838082353,
+   "ok": 1790839877797,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 16
   },
   "hf-apple": {
-   "ok": 1790838082338,
+   "ok": 1790839877796,
    "fails": 0,
    "count": 6,
-   "ms": 63
+   "ms": 30
   },
   "hf-xai-org": {
-   "ok": 1790838082373,
+   "ok": 1790839877784,
    "fails": 0,
    "count": 2,
-   "ms": 99
+   "ms": 19
   },
   "hf-ibm-granite": {
-   "ok": 1790838082559,
+   "ok": 1790839877792,
    "fails": 0,
    "count": 0,
-   "ms": 273
+   "ms": 15
   },
   "hf-CohereLabs": {
-   "ok": 1790838082391,
+   "ok": 1790839877807,
    "fails": 0,
    "count": 4,
-   "ms": 97
+   "ms": 26
   },
   "hf-black-forest-labs": {
-   "ok": 1790838082364,
+   "ok": 1790839877802,
    "fails": 0,
    "count": 5,
-   "ms": 62
+   "ms": 19
   },
   "hf-bytedance-research": {
-   "ok": 1790838082291,
+   "ok": 1790839877781,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 29
   },
   "hf-stabilityai": {
-   "ok": 1790838082368,
+   "ok": 1790839877812,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 28
   },
   "hf-internlm": {
-   "ok": 1790838082327,
+   "ok": 1790839877785,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 21
   },
   "hf-Wan-AI": {
-   "ok": 1790838082391,
+   "ok": 1790839877815,
    "fails": 0,
    "count": 6,
-   "ms": 64
+   "ms": 26
   },
   "hf-Lightricks": {
-   "ok": 1790838082376,
+   "ok": 1790839877802,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 17
   },
   "hf-tencent-hunyuan": {
-   "ok": 1790838082399,
+   "ok": 1790839877810,
    "fails": 0,
    "count": 0,
-   "ms": 61
+   "ms": 19
   },
   "hf-XiaomiMiMo": {
-   "ok": 1790838082426,
+   "ok": 1790839877816,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 22
   },
   "hf-inclusionAI": {
-   "ok": 1790838082415,
+   "ok": 1790839877812,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 20
   },
   "hf-meituan-longcat": {
-   "ok": 1790838082432,
+   "ok": 1790839877821,
    "fails": 0,
    "count": 4,
-   "ms": 64
+   "ms": 25
   },
   "hf-rednote-hilab": {
-   "ok": 1790838082432,
+   "ok": 1790839877809,
    "fails": 0,
    "count": 0,
-   "ms": 59
+   "ms": 12
   },
   "hf-Kwai-Kolors": {
-   "ok": 1790838082452,
+   "ok": 1790839877820,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 18
   },
   "hf-openbmb": {
-   "ok": 1790838082442,
+   "ok": 1790839877820,
    "fails": 0,
    "count": 4,
-   "ms": 66
+   "ms": 19
   },
   "hf-KwaiVGI": {
-   "ok": 1790838082501,
+   "ok": 1790839877817,
    "fails": 0,
    "count": 0,
-   "ms": 110
+   "ms": 15
   },
   "hf-ai21labs": {
-   "ok": 1790838082475,
+   "ok": 1790839877831,
    "fails": 0,
    "count": 3,
-   "ms": 60
+   "ms": 22
   },
   "hf-LiquidAI": {
-   "ok": 1790838082459,
+   "ok": 1790839877826,
    "fails": 0,
    "count": 1,
-   "ms": 60
+   "ms": 19
   },
   "hf-NousResearch": {
-   "ok": 1790838082489,
+   "ok": 1790839877826,
    "fails": 0,
    "count": 5,
-   "ms": 63
+   "ms": 16
   },
   "hf-HuggingFaceTB": {
-   "ok": 1790838082493,
+   "ok": 1790839877829,
    "fails": 0,
    "count": 5,
-   "ms": 61
+   "ms": 17
   },
   "hf-amazon": {
-   "ok": 1790838082503,
+   "ok": 1790839877832,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 17
   },
   "hf-Salesforce": {
-   "ok": 1790838082516,
+   "ok": 1790839877828,
    "fails": 0,
    "count": 6,
-   "ms": 84
+   "ms": 16
   },
   "hf-sesame": {
-   "ok": 1790838082511,
+   "ok": 1790839877830,
    "fails": 0,
    "count": 1,
-   "ms": 59
+   "ms": 14
   },
   "hf-kyutai": {
-   "ok": 1790838082521,
+   "ok": 1790839877833,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 16
   },
   "hf-nari-labs": {
-   "ok": 1790838082537,
+   "ok": 1790839877835,
    "fails": 0,
    "count": 4,
-   "ms": 62
+   "ms": 15
   },
   "hf-ResembleAI": {
-   "ok": 1790838082549,
+   "ok": 1790839877839,
    "fails": 0,
    "count": 6,
-   "ms": 60
+   "ms": 19
   },
   "hf-hexgrad": {
-   "ok": 1790838082556,
+   "ok": 1790839877838,
    "fails": 0,
    "count": 4,
-   "ms": 63
+   "ms": 17
   },
   "hf-fishaudio": {
-   "ok": 1790838082562,
+   "ok": 1790839877844,
    "fails": 0,
    "count": 6,
-   "ms": 59
+   "ms": 18
   },
   "hf-SWivid": {
-   "ok": 1790838082564,
+   "ok": 1790839877841,
    "fails": 0,
    "count": 4,
-   "ms": 63
+   "ms": 15
   },
   "hf-microsoft-research": {
-   "ok": 1790838082594,
+   "ok": 1790839877843,
    "fails": 0,
    "count": 0,
-   "ms": 83
+   "ms": 15
   },
   "hf-ServiceNow-AI": {
-   "ok": 1790838082599,
+   "ok": 1790839877845,
    "fails": 0,
    "count": 5,
-   "ms": 62
+   "ms": 14
   },
   "hf-PrimeIntellect": {
-   "ok": 1790838082578,
+   "ok": 1790839877846,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 17
   },
   "hf-arcee-ai": {
-   "ok": 1790838082583,
+   "ok": 1790839877847,
    "fails": 0,
    "count": 1,
-   "ms": 62
+   "ms": 17
   },
   "gh-openai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/openai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192791,
-   "ok": 1790838083073,
+   "ok": 1790839878164,
    "count": 5,
-   "ms": 463
+   "ms": 317
   },
   "hf-01-ai": {
-   "ok": 1790838082610,
+   "ok": 1790839877851,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 19
   },
   "hf-SakanaAI": {
-   "ok": 1790838082619,
+   "ok": 1790839877868,
    "fails": 0,
    "count": 6,
-   "ms": 60
+   "ms": 30
   },
   "hf-baichuan-inc": {
-   "ok": 1790838082621,
+   "ok": 1790839877852,
    "fails": 0,
    "count": 1,
-   "ms": 64
+   "ms": 17
   },
   "hf-lmms-lab": {
-   "ok": 1790838082640,
+   "ok": 1790839877862,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 19
   },
   "hf-genmo": {
-   "ok": 1790838082622,
+   "ok": 1790839877854,
    "fails": 0,
    "count": 1,
-   "ms": 60
+   "ms": 15
   },
   "hf-rhymes-ai": {
-   "ok": 1790838082625,
+   "ok": 1790839877894,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 53
   },
   "hf-Alibaba-NLP": {
-   "ok": 1790838082645,
+   "ok": 1790839877861,
    "fails": 0,
    "count": 6,
-   "ms": 62
+   "ms": 17
   },
   "gh-google-deepmind": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/google-deepmind/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192860,
-   "ok": 1790838083071,
+   "ok": 1790839878198,
    "count": 5,
-   "ms": 452
+   "ms": 346
   },
   "hf-trending": {
-   "ok": 1790838082655,
+   "ok": 1790839877859,
    "fails": 0,
    "count": 2,
-   "ms": 61
+   "ms": 14
   },
   "gh-QwenLM": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/QwenLM/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192932,
-   "ok": 1790838083094,
+   "ok": 1790839878202,
    "count": 5,
-   "ms": 390
+   "ms": 303
   },
   "gh-anthropics": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/anthropics/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192948,
-   "ok": 1790838083056,
+   "ok": 1790839878165,
    "count": 3,
-   "ms": 439
+   "ms": 314
   },
   "gh-google-gemini": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/google-gemini/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192977,
-   "ok": 1790838083072,
+   "ok": 1790839878228,
    "count": 5,
-   "ms": 451
+   "ms": 374
   },
   "gh-facebookresearch": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/facebookresearch/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192978,
-   "ok": 1790838083095,
+   "ok": 1790839878259,
    "count": 5,
-   "ms": 470
+   "ms": 400
   },
   "gh-microsoft": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/microsoft/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192990,
-   "ok": 1790838083162,
+   "ok": 1790839878274,
    "count": 5,
-   "ms": 522
+   "ms": 412
   },
   "hf-Skywork": {
-   "ok": 1790838082617,
+   "ok": 1790839877855,
    "fails": 0,
    "count": 6,
-   "ms": 61
+   "ms": 22
   },
   "hf-papers": {
-   "ok": 1790838082704,
+   "ok": 1790839877899,
    "fails": 0,
-   "count": 8,
-   "ms": 105
+   "count": 9,
+   "ms": 53
   },
   "gh-zai-org": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/zai-org/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192998,
-   "ok": 1790838083372,
+   "ok": 1790839878492,
    "count": 5,
-   "ms": 316
+   "ms": 327
   },
   "gh-deepseek-ai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/deepseek-ai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193039,
-   "ok": 1790838083076,
+   "ok": 1790839878204,
    "count": 5,
-   "ms": 421
+   "ms": 310
   },
   "gh-THUDM": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/THUDM/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193040,
-   "ok": 1790838083423,
+   "ok": 1790839878479,
    "count": 5,
-   "ms": 358
+   "ms": 285
   },
   "gh-ByteDance-Seed": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/ByteDance-Seed/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193051,
-   "ok": 1790838083404,
+   "ok": 1790839878467,
    "count": 5,
-   "ms": 331
+   "ms": 265
   },
   "gh-Tencent-Hunyuan": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/Tencent-Hunyuan/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193051,
-   "ok": 1790838083432,
+   "ok": 1790839878536,
    "count": 5,
-   "ms": 360
+   "ms": 338
   },
   "gh-bytedance": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/bytedance/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193052,
-   "ok": 1790838083403,
+   "ok": 1790839878492,
    "count": 5,
-   "ms": 327
+   "ms": 288
   },
   "gh-huggingface": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/huggingface/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193099,
-   "ok": 1790838083446,
+   "ok": 1790839878601,
    "count": 5,
-   "ms": 331
+   "ms": 342
   },
   "gh-mistralai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/mistralai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193099,
-   "ok": 1790838083404,
+   "ok": 1790839878567,
    "count": 4,
-   "ms": 309
+   "ms": 313
   },
   "gh-apple": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/apple/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193103,
-   "ok": 1790838083601,
+   "ok": 1790839878611,
    "count": 5,
-   "ms": 439
+   "ms": 337
   },
   "gh-MoonshotAI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/MoonshotAI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193106,
-   "ok": 1790838083345,
+   "ok": 1790839878465,
    "count": 5,
-   "ms": 293
+   "ms": 301
   },
   "gh-stepfun-ai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/stepfun-ai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193181,
-   "ok": 1790838083353,
+   "ok": 1790839878482,
    "count": 4,
-   "ms": 259
+   "ms": 254
   },
   "gh-black-forest-labs": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/black-forest-labs/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790838083707,
+   "ok": 1790839878844,
    "count": 5,
-   "ms": 335
+   "ms": 377
   },
   "gh-MiniMax-AI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/MiniMax-AI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790838083444,
+   "ok": 1790839878448,
    "count": 5,
-   "ms": 373
+   "ms": 253
   },
   "gh-OpenBMB": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/OpenBMB/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790838083732,
+   "ok": 1790839878801,
    "count": 5,
-   "ms": 328
+   "ms": 309
   },
   "gh-Wan-Video": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/Wan-Video/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790838083698,
+   "ok": 1790839878772,
    "count": 4,
-   "ms": 294
+   "ms": 290
   },
   "gh-Stability-AI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/Stability-AI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193186,
-   "ok": 1790838083682,
+   "ok": 1790839878766,
    "count": 4,
-   "ms": 279
+   "ms": 287
   },
   "gh-InternLM": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/InternLM/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193245,
-   "ok": 1790838083723,
+   "ok": 1790839878765,
    "count": 5,
-   "ms": 300
+   "ms": 273
   },
   "gh-allenai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/allenai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193246,
-   "ok": 1790838083765,
+   "ok": 1790839878818,
    "count": 5,
-   "ms": 412
+   "ms": 353
   },
   "gh-meituan-longcat": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/meituan-longcat/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790838083775,
+   "ok": 1790839878868,
    "count": 5,
-   "ms": 329
+   "ms": 267
   },
   "gh-xai-org": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/xai-org/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790838083690,
+   "ok": 1790839878716,
    "count": 5,
-   "ms": 345
+   "ms": 268
   },
   "gh-XiaomiMiMo": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/XiaomiMiMo/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790838083759,
+   "ok": 1790839878874,
    "count": 2,
-   "ms": 315
+   "ms": 307
   },
   "gh-OpenGVLab": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/OpenGVLab/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790838083772,
+   "ok": 1790839878789,
    "count": 4,
-   "ms": 340
+   "ms": 253
   },
   "gh-SakanaAI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/SakanaAI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193357,
-   "ok": 1790838084026,
+   "ok": 1790839878987,
    "count": 4,
-   "ms": 344
+   "ms": 271
   },
   "github-rising": {
-   "ok": 1790838084120,
+   "ok": 1790839879157,
    "fails": 0,
    "count": 4,
-   "ms": 430
+   "ms": 392
   },
   "gh-google-research": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/google-research/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193969,
-   "ok": 1790838083065,
+   "ok": 1790839878254,
    "count": 5,
-   "ms": 443
+   "ms": 399
   },
   "gh-NVIDIA": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/NVIDIA/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193985,
-   "ok": 1790838083115,
+   "ok": 1790839878195,
    "count": 4,
-   "ms": 470
+   "ms": 327
   },
   "gh-inclusionAI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/inclusionAI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492194427,
-   "ok": 1790838083930,
+   "ok": 1790839878883,
    "count": 5,
-   "ms": 329
+   "ms": 272
   },
   "gh-meta-llama": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/meta-llama/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492194993,
-   "ok": 1790838083052,
+   "ok": 1790839878194,
    "count": 5,
-   "ms": 419
+   "ms": 333
   },
   "gemini-sweep": {
    "ok": 1790836845133,
@@ -2717,13 +2519,31 @@
    "ms": 18431
   },
   "reddit": {
-   "ok": 1790838241765,
+   "ok": 1790840042030,
    "fails": 0,
    "count": 180,
-   "ms": 160091
+   "ms": 164665
   }
  },
  "runs": [
+  {
+   "at": "2026-10-01T07:31:14.817Z",
+   "published": [
+    "openai-synopsys-gpt-synopsys-ai-chip-design",
+    "tencent-oracle-7-billion-ai-chip-deal",
+    "openai-synopsys-partner-gpt-synopsys-chip-design"
+   ],
+   "skipped": [],
+   "collected": 23,
+   "minutes": 11,
+   "gemini": {
+    "calls": 34,
+    "inputTokens": 70128,
+    "outputTokens": 154611,
+    "images": 11,
+    "searches": 0
+   }
+  },
   {
    "at": "2026-10-01T07:01:18.248Z",
    "published": [
@@ -4860,20 +4680,6 @@
     "calls": 2,
     "inputTokens": 3579,
     "outputTokens": 4344,
-    "images": 0,
-    "searches": 0
-   }
-  },
-  {
-   "at": "2026-09-27T16:30:44.864Z",
-   "published": [],
-   "skipped": [],
-   "collected": 18,
-   "minutes": 2.3,
-   "gemini": {
-    "calls": 1,
-    "inputTokens": 3612,
-    "outputTokens": 9,
     "images": 0,
     "searches": 0
    }
