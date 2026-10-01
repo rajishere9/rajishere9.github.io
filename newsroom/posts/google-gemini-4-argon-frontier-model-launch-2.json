@@ -1,0 +1,122 @@
+{
+ "slug": "google-gemini-4-argon-frontier-model-launch-2",
+ "title": "Google DeepMind Unveils Gemini 4 Argon With 1M Output Token Window",
+ "seoTitle": "Google Launches Gemini 4 Argon With 1M Output Window",
+ "description": "Google DeepMind has introduced Gemini 4 Argon, featuring a 1-million-token output limit, top software engineering scores, and a phased defensive rollout.",
+ "dek": "Google's newest frontier AI model expands output capacity to 1 million tokens and targets complex coding, cybersecurity, and enterprise workflows.",
+ "category": "AI Models",
+ "tags": [
+  "Google DeepMind",
+  "Gemini 4 Argon",
+  "Frontier Models",
+  "Cybersecurity",
+  "Software Engineering"
+ ],
+ "keyTakeaways": [
+  "Gemini 4 Argon expands the maximum output capacity to 1 million tokens, a major leap from the previous 64K limit.",
+  "Google reports new state-of-the-art benchmark results, including 77.9% on DeepSWE v1.1 and 51.3% on AutomationBench.",
+  "Initial access is restricted to cybersecurity defenders via the Fairwind Program and U.S. government evaluators before broader developer rollout.",
+  "Introductory API pricing is set at $2 per million input tokens and $10 per million output tokens, with standard rates at $4 and $20."
+ ],
+ "body": "Google DeepMind has introduced Gemini 4 Argon, its newest flagship frontier model engineered for multi-step reasoning across software engineering, enterprise analysis, and cybersecurity defense. Google announced the release on September 30, 2026, pairing the model with an industry-first 1-million-token output limit and a restricted initial deployment model.\n\nAccording to [Google's official announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/), Argon is built to sustain deep reasoning across complex, long-horizon workflows. Google is participating in the U.S. government's voluntary pre-release evaluation process and is limiting initial deployment to select cybersecurity professionals through its Fairwind Program before expanding access to developers, enterprises, and Google AI Ultra subscribers.\n\n[[FIG1]]\n\n## Extended Reasoning and 1 Million Output Tokens\n\nThe central architectural highlight of Gemini 4 Argon is its dramatic expansion in output capacity. Google increased the model's generation headroom from 64,000 tokens to 1 million tokens. According to Google, when the model has the headroom to think deeply and generate hundreds of thousands of tokens in a single trajectory, it adds a new level of depth in reasoning to solve tough problems in one go.\n\nAnalysis reported by [Latent Space](https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer) notes that independent evaluators like Artificial Analysis reached the 1-million-token output threshold using an experimental API mechanism known as Long Decode Continuation, which pauses and resumes generation across calls.\n\n## Benchmark Performance Across Coding and Knowledge Work\n\nGoogle claims Gemini 4 Argon sets several new performance records. On the DeepSWE v1.1 benchmark, which evaluates real-world, long-horizon software engineering tasks, Argon achieved a top score of 77.9%, outperforming competing evaluations for Claude Opus 5.5 (74.2%) and GPT-6 Astra (74.1%).\n\nBeyond software development, Google highlighted Argon's broad enterprise reasoning. The model ranked first on the Vals Index—which measures economic task impact across finance, legal, coding, and tax sectors—with an overall score of 68.9%. On Zapier's AutomationBench for end-to-end business workflows, Argon achieved 51.3% (and 77.5% on AutomationBench-AA). For multimodal tasks, it recorded a 91.7% score on the LVBench benchmark for long video understanding.\n\nThird-party testing from Artificial Analysis gave Argon an Intelligence Index rating of 53, matching GPT-6 Astra and placing slightly ahead of GPT-6.1 Sol (52). Independent evaluations noted tradeoffs: on AA-Omniscience, Argon demonstrated a 15% hallucination rate compared to 51% for Astra, though Astra achieved higher raw accuracy (63% versus 50%).\n\n[[FIG2]]\n\n## Internal Google Deployments and Systems Impact\n\nGoogle stated that thousands of Googlers use Argon in internal workflows, but large-scale rewrites and optimizations are undergoing review and auditing before rolling out to production. These internal deployments include:\n\n* **Infrastructure and Memory Efficiency:** Autonomous Argon agents analyzed fleet-wide telemetry across Google data centers to identify optimizations, freeing over 300 TiB of RAM, with projected total savings between 500 TiB and 1 PiB.\n* **Memory-Safe Codebase Migration:** Argon is driving migrations from C and C++ to Rust, spanning libraries like re2 and libgav1 up to the 800,000-line Fuchsia Zircon kernel. In libgav1, Argon replaced 32,000 lines of SIMD code with auto-vectorizing safe Rust, producing a memory-safe video decoder that runs 2.7 times faster than the previous Rust port.\n* **Quantum Algorithmic Optimization:** Researchers used Argon to optimize spacetime resources (qubits multiplied by gates) for quantum computing subroutines, beating published baselines by 40% in minutes.\n\n## Defensive Cybersecurity and Phased Safeguards\n\nTo address safety concerns surrounding capable agentic models, Google positioned Argon as a defensive security tool. According to Google, on the CWE-bench v1 vulnerability remediation benchmark, Argon tied for first place with a 68% score.\n\nCloud security provider Wiz has deployed Argon through its Scan for Good initiative to protect public infrastructure. In early testing, Wiz reported that Argon discovered a critical vulnerability in global hospital software that exposed personal data—a flaw overlooked by prior models.\n\nGoogle indicated that trusted defenders in the Fairwind Program receive access without cyber guardrails so they can leverage its full cybersecurity defense capabilities. To protect broader deployments, Google implemented safeguards including internal activation monitoring for chemical, biological, radiological, and nuclear (CBRN) risks, chain-of-thought monitoring for misalignment detection, and adversarial defenses against indirect prompt injection attacks evaluated on the Gray Swan benchmark.\n\n## Pricing and Availability\n\nGemini 4 Argon is currently available only to vetted security researchers and government testers. Standard pricing is listed at $4 per million input tokens and $20 per million output tokens, but Google launched an introductory 50% discount setting rates at $2 per million input tokens and $10 per million output tokens. Cached inputs receive a 95% discount.\n\nGoogle stated that broader access for paid API customers, enterprise clients, and Google AI Ultra subscribers will roll out as soon as testing and guardrail validations are complete.",
+ "faq": [
+  {
+   "q": "What is the output token limit for Gemini 4 Argon?",
+   "a": "Gemini 4 Argon supports an output token window of up to 1 million tokens, expanded from the previous 64K limit."
+  },
+  {
+   "q": "Who currently has access to Gemini 4 Argon?",
+   "a": "Access is currently restricted to government evaluators and trusted cybersecurity defenders via Google's Fairwind Program, with broader developer and enterprise access planned soon."
+  },
+  {
+   "q": "What is the API pricing for Gemini 4 Argon?",
+   "a": "Google set introductory pricing at $2 per million input tokens and $10 per million output tokens (with 95% off cached input), compared to a standard price of $4/$20."
+  },
+  {
+   "q": "How does Gemini 4 Argon perform on software engineering benchmarks?",
+   "a": "According to Google's reported benchmark claims, Gemini 4 Argon scored 77.9% on DeepSWE v1.1, surpassing published results for Claude Opus 5.5 (74.2%) and GPT-6 Astra (74.1%)."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data center control room where software engineers and cybersecurity specialists monitor complex data streams and structural network diagrams displayed on massive glass panels, cinematic lighting, realistic professional atmosphere.",
+  "alt": "Engineers working in a modern computing facility monitoring complex systems data.",
+  "caption": "Illustration: Technical teams overseeing complex computational systems and code infrastructure.",
+  "src": "img/google-gemini-4-argon-frontier-model-launch-2/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 68598,
+  "small": "img/google-gemini-4-argon-frontier-model-launch-2/hero-640.webp",
+  "og": "img/google-gemini-4-argon-frontier-model-launch-2/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/google-gemini-4-argon-frontier-model-launch-2/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A digital visualization of deep multi-layered reasoning networks processing extensive code streams and complex algorithmic logic flows across an abstract technical workspace.",
+   "alt": "Abstract representation of large-scale computational code processing and reasoning.",
+   "caption": "Illustration: Conceptual representation of large-scale sequence generation and extended reasoning capabilities.",
+   "slot": "FIG1",
+   "src": "img/google-gemini-4-argon-frontier-model-launch-2/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 51892,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Cybersecurity analysts examining glowing digital infrastructure nodes and identifying vulnerabilities across a protective software perimeter in a modern command center.",
+   "alt": "Cybersecurity specialists analyzing system vulnerabilities on digital monitoring tools.",
+   "caption": "Illustration: Autonomous agents and analysts inspecting critical infrastructure software for defensive security.",
+   "slot": "FIG2",
+   "src": "img/google-gemini-4-argon-frontier-model-launch-2/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 50236,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "site": "Google",
+   "published": 1790726400000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+   "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+   "site": "Latent.Space",
+   "published": 1790837105000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790838564147,
+ "updatedAt": 1790838564147,
+ "foundVia": "Google News, latent.space and Reddit",
+ "check": {
+  "claims": 24,
+  "score": 10
+ },
+ "story": {
+  "id": "Pe1422286",
+  "score": 98,
+  "items": [
+   "https://news.google.com/rss/articles/CBMid0FVX3lxTE14RjNjM2xzNDd0dzJNbk8wLVhXblBBZFlYVFZTR0x5dTB4eG5FYXJ5aHE2cno5eXc0TVRsd1BRZ2Q4Vk9jaUQyZlBRdGpyVkViOFJOSWZhSy1PN0E2VmhPRXFBdzUyOXd4S0l5YlQwbUdGM0V5ckZB?oc=5",
+   "https://news.google.com/rss/articles/CBMid0FVX3lxTFBnRjF6UUJEeVpXMTR2aE80ZXRBeXNHeWVSSnp0QzFUTmF0dmp3YU9nSE4zY2dSVFlRbnpEUlVyNE5UQkRQMDVPRVRPU3V3SnJlTmxDeUV4MXdGd0RyVWZGUW1kNXpvakJ0VDY5QVdvS1dDbFNsQnRz?oc=5",
+   "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+   "https://www.reddit.com/r/accelerate/comments/1wui5xl/new_sota_from_gemini_4_argon_on_blueprint_bench/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
