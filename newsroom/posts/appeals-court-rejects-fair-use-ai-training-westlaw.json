@@ -1,0 +1,138 @@
+{
+ "slug": "appeals-court-rejects-fair-use-ai-training-westlaw",
+ "title": "US Appeals Court Rejects Fair Use Defense in Landmark AI Training Case",
+ "seoTitle": "Third Circuit Rejects Fair Use in AI Training Case",
+ "description": "The Third Circuit has ruled that training AI on Thomson Reuters' copyrighted Westlaw headnotes is not fair use, setting a major legal precedent.",
+ "dek": "In the first US appeals court decision on AI training, the Third Circuit ruled that copying proprietary headnotes to build a competing search tool infringes copyright.",
+ "category": "Policy",
+ "tags": [
+  "AI Copyright",
+  "Fair Use",
+  "Legal Tech",
+  "Thomson Reuters",
+  "Artificial Intelligence"
+ ],
+ "keyTakeaways": [
+  "The 3rd US Circuit Court of Appeals upheld a summary judgment ruling for Thomson Reuters against defunct startup ROSS Intelligence.",
+  "The court ruled that training an AI legal search engine on copyrighted Westlaw headnotes was minimally transformative and did not constitute fair use.",
+  "This decision marks the first time a US federal appeals court has ruled on fair use defenses concerning AI training datasets.",
+  "The panel found Westlaw's headnotes met the legal threshold for originality and that ROSS's platform acted as a direct commercial market competitor."
+ ],
+ "body": "In a milestone decision for artificial intelligence and copyright law, a federal appeals court has rejected an AI developer's fair use defense for training models on copyrighted content. The Philadelphia-based 3rd US Circuit Court of Appeals affirmed a lower court ruling in favor of information services company Thomson Reuters against former legal-research rival ROSS Intelligence, as reported by [CNA](https://www.channelnewsasia.com/business/us-appeals-court-upholds-thomson-reuters-landmark-win-in-ai-training-lawsuit-6419436).\n\nThe ruling marks the first time a US circuit court has directly addressed whether training artificial intelligence systems on copyrighted material qualifies as fair use. The panel concluded that extracting proprietary legal summaries to train a commercial AI-powered search tool was not transformative and infringed on Thomson Reuters' intellectual property.\n\n[[FIG1]]\n\n## The Roots of the Legal Dispute\n\nThomson Reuters first filed its lawsuit against ROSS Intelligence in 2020. The complaint accused ROSS of copying more than 2,000 copyrighted \"headnotes\"—concise editorial summaries of legal points appearing before judicial opinions—from Thomson Reuters' Westlaw platform, according to [IPWatchdog](https://ipwatchdog.com/2026/09/30/third-circuit-affirms-revised-fair-use-ruling-against-ross-ai-legal-research-platform-in-sealed-opinion/).\n\nAfter Westlaw refused ROSS direct access, the startup obtained the data through a third party, LegalEase Solutions. ROSS used the headnotes to train an AI-based search engine designed to return relevant judicial opinions to user queries. Facing mounting legal expenses from the litigation, ROSS shut down its platform in 2021.\n\nIn Delaware federal court, US Circuit Judge Stephanos Bibas, sitting by designation, issued a revised summary judgment ruling in 2025 finding that Westlaw's headnotes and Key Number System taxonomy possessed the necessary originality for copyright protection. Judge Bibas rejected ROSS's fair use defense, prompting ROSS to appeal to the Third Circuit in June 2026.\n\n[[FIG2]]\n\n## Why the Third Circuit Rejected Fair Use\n\nWriting for the appellate panel, US Circuit Judge Tamika Montgomery-Reeves—joined by Judges L. Felipe Restrepo and Emil J. Bove III—clarified that despite the technological framing, the dispute rested on core copyright principles, as detailed by [Courthouse News Service](https://www.courthousenews.com/ai-training-of-copyrighted-material-not-fair-use-third-circuit/).\n\n\"Under ROSS' framing, this case appears to concern the future of AI legal technology,\" Judge Montgomery-Reeves wrote. \"But appearances can be deceiving. In truth, this is no more than an ordinary copyright case.\"\n\nThe panel evaluated the originality of Westlaw's headnotes, determining that editors exercised a creative spark in drafting summaries that stood independently while accurately reflecting judicial rulings. Addressing the fair use defense, the court described ROSS's use as \"minimally transformative at best.\"\n\n\"ROSS took an intermediate step of using the headnotes to train an AI program, which arguably presents a slight degree of difference in use,\" Montgomery-Reeves stated in the opinion. \"But the undisputed evidence demonstrates that ROSS used the headnotes to train an AI program for the benefit of its legal-research platform.\"\n\nThe judges also determined that ROSS's system would harm Westlaw's commercial value in the legal research market as well as its potential licensing market for AI training data.\n\n[[FIG3]]\n\n## Broader Implications for AI Training Lawsuits\n\nA spokesperson for Thomson Reuters stated the company was pleased with the decision, emphasizing that \"respecting copyright is essential for fostering innovation while protecting the intellectual property that fuels fiduciary-grade AI solutions,\" according to [CNA](https://www.channelnewsasia.com/business/us-appeals-court-upholds-thomson-reuters-landmark-win-in-ai-training-lawsuit-6419436).\n\nWhile the Thomson Reuters case focused on a non-generative search engine rather than generative models that synthesize new text or imagery, the appellate precedent arrives amid dozens of active lawsuits brought by authors, news organizations, and music publishers against major AI developers.\n\nThe Third Circuit issued its initial order under seal and instructed the parties to submit proposed redactions within 10 days before the public release of the complete opinion, according to [IPWatchdog](https://ipwatchdog.com/2026/09/30/third-circuit-affirms-revised-fair-use-ruling-against-ross-ai-legal-research-platform-in-sealed-opinion/).",
+ "faq": [
+  {
+   "q": "What did the Third Circuit rule regarding AI training and fair use?",
+   "a": "The Third Circuit held that ROSS Intelligence's unauthorized use of Thomson Reuters' Westlaw headnotes to train an AI legal search platform was minimally transformative, competed directly with Westlaw, and did not qualify for fair use protection."
+  },
+  {
+   "q": "Did this lawsuit involve generative AI?",
+   "a": "No. Unlike lawsuits involving large language models that generate text or art, this case involved a non-generative legal search engine that used headnotes to identify relevant judicial opinions."
+  },
+  {
+   "q": "Why were Westlaw's legal headnotes deemed copyrightable?",
+   "a": "The court found that Thomson Reuters' editors exercised a sufficient 'creative spark' and original judgment in summarizing complex judicial opinions into self-contained legal headnotes."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An imposing federal courtroom interior viewed from the center aisle, featuring dark wood benches, high neoclassical ceilings, and a judge's bench flanked by stacks of open legal casebooks and glowing abstract data streams.",
+  "alt": "A formal federal appellate courtroom interior with legal volumes and digital data visual motifs.",
+  "caption": "Illustration: A federal appellate court setting representing the legal intersection of copyright law and artificial intelligence.",
+  "src": "img/appeals-court-rejects-fair-use-ai-training-westlaw/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 70636,
+  "small": "img/appeals-court-rejects-fair-use-ai-training-westlaw/hero-640.webp",
+  "og": "img/appeals-court-rejects-fair-use-ai-training-westlaw/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/appeals-court-rejects-fair-use-ai-training-westlaw/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An editorial law office desk in evening light, covered with bound legal reporters, annotated case headnotes, a microscope-style magnifying glass, and holographic index numbers floating above documents.",
+   "alt": "Legal texts and annotated law summaries displayed on a researcher's desk.",
+   "caption": "Illustration: Proprietary legal taxonomy and editorial headnotes at the center of copyright disputes.",
+   "slot": "FIG1",
+   "src": "img/appeals-court-rejects-fair-use-ai-training-westlaw/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39240,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A three-judge appellate panel seated at an elevated mahogany bench, listening intently with legal briefs and binders open in front of them under warm courtroom lighting.",
+   "alt": "A three-judge appellate panel presiding over a hearing at a wooden bench.",
+   "caption": "Illustration: Federal judges deliberating over intellectual property and fair use arguments.",
+   "slot": "FIG2",
+   "src": "img/appeals-court-rejects-fair-use-ai-training-westlaw/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 31534,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A modern server room corridor lined with server racks, showing streams of indexed document files and abstract binary code flowing across glass partitions.",
+   "alt": "Data server racks with digital streams representing artificial intelligence training systems.",
+   "caption": "Illustration: Data ingestion and model training infrastructure used in commercial AI applications.",
+   "slot": "FIG3",
+   "src": "img/appeals-court-rejects-fair-use-ai-training-westlaw/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41960,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.channelnewsasia.com/business/us-appeals-court-upholds-thomson-reuters-landmark-win-in-ai-training-lawsuit-6419436",
+   "title": "US appeals court upholds Thomson Reuters' landmark win in AI training lawsuit",
+   "site": "CNA",
+   "published": 1790703182000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.courthousenews.com/ai-training-of-copyrighted-material-not-fair-use-third-circuit/",
+   "title": "AI training of copyrighted material not fair use: Third Circuit",
+   "site": "Courthouse News Service",
+   "published": 1790773835000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://ipwatchdog.com/2026/09/30/third-circuit-affirms-revised-fair-use-ruling-against-ross-ai-legal-research-platform-in-sealed-opinion/",
+   "title": "Third Circuit Affirms Revised Fair Use Ruling Against ROSS’ AI Legal Research Platform in Sealed Opinion",
+   "site": "IPWatchdog.com | Patents & Intellectual Property Law",
+   "published": 1790777744000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790841916062,
+ "updatedAt": 1790841916062,
+ "foundVia": "Techmeme, Reddit and Google News",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "P8ae9e795",
+  "score": 84,
+  "items": [
+   "https://www.techmeme.com/260929/p53#a260929p53",
+   "https://www.courthousenews.com/ai-training-of-copyrighted-material-not-fair-use-third-circuit/",
+   "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMW4wT3pmbjFGaUdaYmJWRl9RX1dLQ2JpWXc1MnB3UHNMY3FyamstX1pCdmxyNlVHdkl2dF9JWDUtV1hLc2dDZ1BlUnpzTUkxSGhTZ1drZUREUDBaNHNxaFV3RXJrZ2RKRUxfZVVkek16RW9PU0NfQTEwUkd5MGRHTF9ZQU1tU0ZFeE9JYXVaVUxMNDYwRjh2QVhsel9OcGJwc1AtN0VQQllWcDNrNS02MTBnOUcxN00?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
