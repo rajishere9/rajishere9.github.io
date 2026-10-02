@@ -1,0 +1,175 @@
+{
+ "slug": "openai-synopsys-gpt-synopsys-chip-design",
+ "title": "OpenAI and Synopsys Partner to Build GPT-Synopsys for Chip Design",
+ "seoTitle": "OpenAI and Synopsys Launch GPT-Synopsys for EDA",
+ "description": "OpenAI and Synopsys have formed a multi-year partnership to develop GPT-Synopsys, an AI model built to operate EDA tools for semiconductor design.",
+ "dek": "A multi-year agreement pairs OpenAI's frontier models with Synopsys electronic design automation tools to create an AI model that reasons through chip workflows.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "OpenAI",
+  "Synopsys",
+  "GPT-Synopsys",
+  "Semiconductors",
+  "Chip Design",
+  "EDA"
+ ],
+ "keyTakeaways": [
+  "OpenAI and Synopsys entered a multi-year agreement on September 30, 2026, to jointly develop GPT-Synopsys, a specialized model for semiconductor design.",
+  "OpenAI is licensing Synopsys electronic design automation (EDA) software to train the model to directly execute tools, interpret results, and optimize designs.",
+  "The bundled commercial service will run on OpenAI infrastructure, interoperate with customer agent harness systems, and keep customer design data encrypted and private without using it for model training.",
+  "Early engagements with semiconductor customers are currently underway under a shared revenue commercial model."
+ ],
+ "body": "OpenAI and semiconductor engineering software maker Synopsys announced a multi-year strategic partnership on September 30, 2026, to build GPT-Synopsys, a specialized artificial intelligence model trained to design and verify computer chips. Under the agreement, detailed in a [Synopsys press release](https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip Design), the companies will act as preferred partners to combine OpenAI's frontier AI capabilities with Synopsys' electronic design automation (EDA) software.\n\nUnder the arrangement, OpenAI will license Synopsys' EDA software to train the specialized model. The companies plan to jointly commercialize the resulting system under a shared revenue framework, marketing it to semiconductor engineering teams worldwide.\n\n[[FIG1]]\n\n## How GPT-Synopsys Automates Semiconductor Engineering Workflows\n\nIn current chip-design workflows, agentic AI technologies connect general-purpose models to EDA tools. In contrast, GPT-Synopsys is intended to function as a native expert user of Synopsys tools, as reported by [Unite.AI](https://www.unite.ai/synopsys-openai-sign-multi-year-deal-to-develop-gpt-synopsys-model/). The model is being developed to reason about chip design and verification, directly operate Synopsys tools, interpret outputs, and iteratively optimize designs.\n\nIn practice, human engineers will assign high-level engineering targets, such as optimizing power, performance, and area (PPA), or achieving timing and verification closure. AI agents powered by GPT-Synopsys will then execute the software, analyze the data, apply engineering modifications, and produce verified results for human engineers to review and approve.\n\nAccording to the joint press release, Synopsys President and CEO Sassine Ghazi stated that AI could accelerate the design cycle while preserving design rigor and first-time-right silicon manufacturing standards. OpenAI President and co-founder Greg Brockman noted that the collaboration aims to help engineers reach working silicon faster, adding that improved chip development helps support OpenAI's future model development.\n\n[[FIG2]]\n\n## Infrastructure, Security, and Commercial Model\n\nGPT-Synopsys will run on OpenAI-hosted cloud infrastructure and will integrate with Synopsys.ai and Synopsys Autopilot, an agentic AI platform introduced on September 28, 2026. The companies announced in their press release that the software is designed to interoperate with customer agent harness systems.\n\nThe commercial product will be sold as a bundled service that combines compute capacity, model access, and the required EDA software licenses. At an Investor Day presentation in New York on September 30, 2026, Synopsys outlined a two-pronged monetization model involving tool subscriptions for frontier model training alongside subscription or consumption charges paired with revenue sharing on model usage, according to [Research & Development World](https://www.rdworldonline.com/openai-and-synopsys-plan-a-specialized-model-for-chip-design/).\n\nTo address proprietary intellectual property concerns in hardware manufacturing, both companies stated that customer design files will not be used to train OpenAI models. Data will be encrypted in transit and at rest, supported by configurable retention rules, permission controls, and audit logs.\n\n[[FIG3]]\n\n## Broader Hardware and AI Alliances\n\nThe deal with OpenAI builds on a series of hardware and infrastructure agreements across the semiconductor sector. On the same day the OpenAI agreement was announced, Synopsys revealed a separate multi-year agreement valued at over $1 billion with Amazon, covering silicon intellectual property and engineering software deployments on AWS, as noted by [Research & Development World](https://www.rdworldonline.com/openai-and-synopsys-plan-a-specialized-model-for-chip-design/). Synopsys also maintains a close alliance with Nvidia, which invested $2 billion in Synopsys equity in December 2025.\n\nOpenAI has separately worked with Broadcom on chips built specifically for running AI models, according to [The Decoder](https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/).\n\nWhile early technical engagements with major semiconductor customers are currently active, OpenAI and Synopsys have not yet announced official general availability dates or specific pricing tiers for GPT-Synopsys.",
+ "faq": [
+  {
+   "q": "What is GPT-Synopsys?",
+   "a": "GPT-Synopsys is a specialized AI model developed jointly by OpenAI and Synopsys that directly operates electronic design automation (EDA) software to assist engineers with chip design, optimization, and verification."
+  },
+  {
+   "q": "Will customer semiconductor designs be used to train OpenAI models?",
+   "a": "No. Synopsys and OpenAI stated that customer design data will not be used for model training and will remain encrypted both at rest and in transit with configurable access controls."
+  },
+  {
+   "q": "Where does GPT-Synopsys run?",
+   "a": "The model runs on OpenAI-hosted cloud infrastructure and is designed to integrate directly with Synopsys.ai, the Synopsys Autopilot platform, and customer agent harness systems."
+  },
+  {
+   "q": "When will GPT-Synopsys be generally available?",
+   "a": "The companies have not disclosed a general availability date or pricing details, though early customer engagements with semiconductor firms are already underway."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "Semiconductor hardware engineers in modern technical attire collaborating around a glowing holographic schematic of a complex microchip inside a high-tech engineering research lab.",
+  "alt": "Engineers examining a digital microchip design schematic in a research lab",
+  "caption": "Illustration: Engineers reviewing automated semiconductor schematics in an advanced hardware design environment.",
+  "src": "img/openai-synopsys-gpt-synopsys-chip-design/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 68622,
+  "small": "img/openai-synopsys-gpt-synopsys-chip-design/hero-640.webp",
+  "og": "img/openai-synopsys-gpt-synopsys-chip-design/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-synopsys-gpt-synopsys-chip-design/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A close-up view of an intricate silicon wafer illuminated by soft blue and amber light, showcasing microscopic circuit pathways and multi-die processor structures.",
+   "alt": "Close-up of silicon wafer surface and complex circuitry",
+   "caption": "Illustration: Microscopic silicon circuitry and semiconductor architecture.",
+   "slot": "FIG1",
+   "src": "img/openai-synopsys-gpt-synopsys-chip-design/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36916,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An executive presenting structural digital architectural diagrams to an audience in a corporate auditorium with clean architectural lighting.",
+   "alt": "A corporate executive presenting technical data on a presentation screen",
+   "caption": "Illustration: A corporate presentation detailing AI-driven engineering integration.",
+   "slot": "FIG2",
+   "src": "img/openai-synopsys-gpt-synopsys-chip-design/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34606,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A secure modern data center corridor with rows of illuminated server racks and fiber-optic networking lines.",
+   "alt": "Data center server racks with blue status lights",
+   "caption": "Illustration: Cloud server infrastructure powering large-scale computational workloads.",
+   "slot": "FIG3",
+   "src": "img/openai-synopsys-gpt-synopsys-chip-design/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 43260,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/",
+   "title": "OpenAI and Synopsys team up to build an AI model that designs chips like a seasoned engineer",
+   "site": "The Decoder",
+   "published": 1790795550000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.prnewswire.com/news-releases/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design-302894874.html",
+   "title": "OpenAI and Synopsys Announce GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+   "site": "Cision PR Newswire",
+   "published": 1790792940000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.rdworldonline.com/openai-and-synopsys-plan-a-specialized-model-for-chip-design/",
+   "title": "OpenAI and Synopsys plan a specialized model for chip design",
+   "site": "Research & Development World",
+   "published": 1790877992000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.unite.ai/synopsys-openai-sign-multi-year-deal-to-develop-gpt-synopsys-model/",
+   "title": "Synopsys, OpenAI Sign Multi-Year Deal to Develop GPT-Synopsys Model",
+   "site": "Unite.AI",
+   "published": 1790794562000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.semiconductor-digest.com/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design/",
+   "title": "OpenAI and Synopsys Announce GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+   "site": "Semiconductor Digest",
+   "published": 1790798686000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.business-standard.com/technology/artificial-intelligence/gpt-synopsys-openai-synopsys-team-up-to-build-gpt-model-for-ai-powered-chip-design-126100100428_1.html",
+   "title": "OpenAI, Synopsys team up to build GPT model for AI-powered chip design",
+   "site": "Business Standard",
+   "published": 1790837764000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+   "title": "OpenAI and Synopsys Announce GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+   "site": "Synopsys News Releases",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790901686864,
+ "updatedAt": 1790901686864,
+ "foundVia": "Google Search, Hacker News and Google News",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "P17c74b56",
+  "score": 91,
+  "items": [
+   "https://www.business-standard.com/technology/artificial-intelligence/gpt-synopsys-openai-synopsys-team-up-to-build-gpt-model-for-ai-powered-chip-design-126100100428_1.html",
+   "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+   "https://news.google.com/rss/articles/CBMilgFBVV95cUxORGw4VkV1WFY4MTFBc2xzV1o4R1lJR3VDZE5XRWNIOGJadEZjTmdLXzNNbkxLOUZGWElhRUx0dTJFbGJicFZwRU9ZOXZKaFhObmw1NEJCZ3B6NVJ0aXlGdkFfM3p3OWZCU0NUUm9OVWt1RVBDclpTN0Zab1paT3E0b3BXZEk1bkg4cTZvUnNBamlTeE9xZ3c?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

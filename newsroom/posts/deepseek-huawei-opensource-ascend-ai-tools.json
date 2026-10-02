@@ -1,0 +1,135 @@
+{
+ "slug": "deepseek-huawei-opensource-ascend-ai-tools",
+ "title": "DeepSeek and Huawei Release Open-Source Ascend AI Tools",
+ "seoTitle": "DeepSeek, Huawei Open-Source Ascend AI Tools",
+ "description": "DeepSeek and Huawei have open-sourced programming tools and TileLang support for Ascend 950 AI chips, targeting reduced reliance on Nvidia's CUDA ecosystem.",
+ "dek": "The release brings TileLang compiler support and the TileKernels library to Huawei Ascend 950 chips, targeting cross-hardware flexibility.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "DeepSeek",
+  "Huawei",
+  "Ascend 950",
+  "TileLang",
+  "AI Chips",
+  "Open Source"
+ ],
+ "keyTakeaways": [
+  "DeepSeek and Huawei open-sourced programming tools and libraries for Ascend 950 AI chips on September 30, 2026.",
+  "TileLang officially added native code generation, automatic scheduling, and synchronization for Huawei Ascend 950 NPUs.",
+  "DeepSeek updated its open-source TileKernels library with an Ascend backend, allowing the same Python APIs to run across Nvidia GPUs and Huawei NPUs.",
+  "The engineering effort included computation and communication optimization across a supernode system of 128 Ascend 950 accelerators."
+ ],
+ "body": "On September 30, 2026, Chinese artificial intelligence laboratory DeepSeek and hardware vendor Huawei released open-source programming tools and libraries designed for Huawei's Ascend AI accelerators. As reported by [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang) via Reuters, the toolchain aims to ease development on Huawei hardware and reduce software dependence on Nvidia's CUDA ecosystem.\n\nThe update integrates Ascend support into [TileLang](https://github.com/tile-ai/tilelang), a domain-specific programming language and compiler infrastructure, alongside a multi-backend update to DeepSeek's [TileKernels](https://github.com/deepseek-ai/TileKernels) operator library.\n\n[[FIG1]]\n\n## What the New Ascend Software Toolchain Includes\n\nThe software release introduces native compilation and pre-built kernels for neural processing units (NPUs). According to the [TileLang repository](https://github.com/tile-ai/tilelang), the project officially added an Ascend 950 backend on September 30, 2026. This backend provides native code generation, automatic scheduling and synchronization, and SIMD/SIMT vector programming for the accelerator, built atop Apache TVM compiler infrastructure.\n\nSimultaneously, DeepSeek updated its [TileKernels repository](https://github.com/deepseek-ai/TileKernels), an MIT-licensed library of optimized operations used in the company's internal model training and inference workloads. With the September 30 update, TileKernels introduced runtime hardware detection that allows identical Python APIs to run across both Nvidia GPUs and Huawei NPUs.\n\nAccording to the repository documentation, the library covers key large language model operations, including:\n\n- Mixture-of-Experts (MoE) routing with top-k expert selection\n- Quantization routines, including per-token, per-block, and per-channel FP8 and FP4 casting and dequantization\n- Engram gating kernels with fused RMSNorm and autograd wrappers\n- Manifold HyperConnection (mHC) kernels, including Sinkhorn normalization\n- Rotary position embedding (RoPE) transform kernels\n\n[[FIG2]]\n\n## Hardware Requirements and Cluster Optimization\n\nTo run the Ascend backend, the [TileKernels project specification](https://github.com/deepseek-ai/TileKernels) mandates Python 3.12 or higher, PyTorch 2.13 or higher, TileLang 0.1.15 or higher, Huawei Ascend 950 NPUs, and Huawei CANN 9.2.0 or higher. For its parallel CUDA path, the library requires NVIDIA SM90 or SM100 architecture GPUs and CUDA Toolkit 13.1 or higher.\n\nBeyond individual chip operations, the collaboration targeted multi-accelerator data transmission. As reported by [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang), DeepSeek and Huawei worked together to optimize computation and chip-to-chip communication on a supernode system built around 128 Ascend 950 chips. This system design focuses on accelerating local calculations while maintaining high data-transfer throughput across the interconnect to keep processors utilized during distributed training and inference.\n\n## Challenging the CUDA Ecosystem\n\nSoftware programmability has historically been a significant barrier to alternative AI hardware adoption. As highlighted by [The Daily Upside](https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/), competing toolchains such as AMD's ROCm, Intel's oneAPI, and the multi-vendor OpenCL framework have spent years attempting to replicate CUDA's deep developer adoption and extensive kernel support.\n\nAccording to [The Daily Upside](https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/), DeepSeek stated that TileLang is designed to be simpler to program than CUDA while continuing to drive hardware near its upper operational limits. Huawei also indicated plans to release next-generation Ascend chips in early 2027, with TileLang positioned to program the upcoming hardware.",
+ "faq": [
+  {
+   "q": "What chips are supported by the new TileKernels Ascend backend?",
+   "a": "The Ascend backend in TileKernels requires Huawei Ascend 950 NPUs and the CANN 9.2.0 or higher software stack."
+  },
+  {
+   "q": "Is TileKernels open source?",
+   "a": "Yes, DeepSeek has published TileKernels on GitHub under the open-source MIT License."
+  },
+  {
+   "q": "What operators are included in the open-source release?",
+   "a": "The library includes kernels for Mixture of Experts (MoE) routing, FP8/FP4 quantization, Engram gating, Manifold HyperConnections, and Rotary Position Embeddings (RoPE)."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An engineer sitting at a workstation in a modern datacenter monitoring compute clusters and code compilation on dual monitors with glowing server racks in the background",
+  "alt": "An engineer working in a modern server facility with compute clusters",
+  "caption": "Illustration: DeepSeek and Huawei released open-source programming tools for Huawei's Ascend AI chips.",
+  "src": "img/deepseek-huawei-opensource-ascend-ai-tools/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 54244,
+  "small": "img/deepseek-huawei-opensource-ascend-ai-tools/hero-640.webp",
+  "og": "img/deepseek-huawei-opensource-ascend-ai-tools/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/deepseek-huawei-opensource-ascend-ai-tools/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A close-up view of advanced semiconductor processor packaging on an illuminated circuit board inside an accelerator module",
+   "alt": "An AI accelerator processor integrated onto a circuit board",
+   "caption": "Illustration: TileLang's Ascend 950 backend provides native code generation for Huawei NPUs.",
+   "slot": "FIG1",
+   "src": "img/deepseek-huawei-opensource-ascend-ai-tools/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 58848,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two software engineers collaborating in a research lab setting looking at high-performance computing diagrams",
+   "alt": "Software researchers collaborating in a development laboratory",
+   "caption": "Illustration: Joint hardware and software optimization helps drive multi-accelerator compute clusters.",
+   "slot": "FIG2",
+   "src": "img/deepseek-huawei-opensource-ascend-ai-tools/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41668,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://github.com/deepseek-ai/TileKernels",
+   "title": "deepseek-ai/TileKernels",
+   "site": "GitHub",
+   "published": 1776836311000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://github.com/tile-ai/tilelang",
+   "title": "tile-ai/tilelang",
+   "site": "GitHub",
+   "published": 1727947545000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang",
+   "title": "DeepSeek and Huawei release open-source Ascend AI programming tools to reduce reliance on Nvidia CUDA ecosystem &mdash; tools include compute and communication libraries, as well as Ascend support fo…",
+   "site": "Tom's Hardware",
+   "published": 1790863200000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/",
+   "title": "DeepSeek, Huawei Challenge the Software Powering Nvidia’s AI Dominance",
+   "site": "The Daily Upside",
+   "published": 1790827260000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790901823449,
+ "updatedAt": 1790901823449,
+ "foundVia": "Google Search, Google News and tomshardware.com",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "P51630299",
+  "score": 86,
+  "items": [
+   "https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/",
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxPeTV4ODAyQ2wwMHJPMWFmdEdvMm5JcW9GZzE0REFNczVZTjZBaXRBQ29fRndWNVBxZ19SRGtBdnM4dW9iTFFpeW42TmlmWklyOTlEek5tMF9oQVR3b08tZDFTU1h2aXZwUl85ODN3aXVNcTJCMHlXdTdYODdROHVQa0dB?oc=5",
+   "https://news.google.com/rss/articles/CBMi-gJBVV95cUxQdDJFV0hheDJFSlF1ZzF3X0R6WUlCTlE1bEVweU5iYmoxejNtMTRSVzJpekVZTTRMV2ZxamI3b05IMU55Tm9aMlRWMGRvWEJQS3RqMFpQM09qaVZRbFFyS1hSN0Y0SnpKRmF2VTl2U3R3c1RmWk1yRFJfVU5VcmUzZjhYVlhITUg1X1JOanFaSVlXVnRaQ2l4d3dURDdlekt3OF9MQS1UUXE4dzU5amtMMzQwdTAzdklUNWxnV3lSRmRLQndEYTBBU0lwWmNpdGtXUjdQTHBWTDF2RkljNXd6UjVhVXdhZTB1aWI5MDdjTmVxVFVjSzYwdE15MmNaelpDLUltVG5VSHFwaGl2d1luMjVrRkIzNzB0emJQZDFBZ21FUXpJOC1ieUpxNHp3a2VvNkw5aWROWkZBMTlOMmU0NHRyNkZyMmpBZjRMSmM3c19pQVlHVnJaZGFqTDhnMEZBVWJ5OElLUnIyUS15aGJqemgxa2FIUHlnVkE?oc=5",
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
