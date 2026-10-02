@@ -1,0 +1,143 @@
+{
+ "slug": "cloudflare-releases-clef-decision-models",
+ "title": "Cloudflare Releases Open-Weight Clef Decision Models",
+ "seoTitle": "Cloudflare Releases Clef Decision Models",
+ "description": "Cloudflare has launched Clef and Clef-flash, open-weight decision models under Apache 2.0 designed to return structured probabilities instead of text.",
+ "dek": "Post-trained from Qwen backbones, Clef and Clef-flash bring multimodal, non-autoregressive decision scoring to edge infrastructure.",
+ "category": "AI Models",
+ "tags": [
+  "Cloudflare",
+  "Open Source",
+  "Decision Models",
+  "Workers AI",
+  "Machine Learning"
+ ],
+ "keyTakeaways": [
+  "Cloudflare released Clef (27B) and Clef-flash (9B) under the Apache 2.0 license on Hugging Face and Workers AI.",
+  "Unlike standard text-generating LLMs, the models run a non-autoregressive prefill pass and a joint schema head to output typed probabilities.",
+  "Both models accept text, JSON, images, and video across a 64,000-token context window.",
+  "Clef-flash clocked a median latency of 38.8 ms compared to 524.1 ms for TypeSafe AI's Jev in internal benchmark runs."
+ ],
+ "body": "Cloudflare has launched Clef and Clef-flash, two open-weight decision models designed to deliver structured, typed probabilities rather than free-form conversational text. Announced on October 1, 2026, the releases represent the first machine learning models post-trained by the company's Workers AI team. Both architectures are available under an open-source Apache 2.0 license for self-hosting and are deployed across Cloudflare's edge infrastructure.\n\nAccording to the [Cloudflare announcement](https://blog.cloudflare.com/clef-decision-models), the models target automated agent workflows that require deterministic, bounded outputs to make programmatic choices. Instead of using traditional autoregressive token generation that demands subsequent parsing, the Clef models calculate decision probabilities across structured question schemas in a single forward pass.\n\n[[FIG1]]\n\n## Architecture and Supported Schema Types\n\nThe Clef model family includes two sizes: the 27-billion-parameter Clef, post-trained from [Qwen/Qwen3.8-27B](https://huggingface.co/Cloudflare/clef), and the smaller 9-billion-parameter Clef-flash, derived from [Qwen/Qwen3.5-9B](https://huggingface.co/Cloudflare/clef-flash). Both models retain their base architecture's vision encoder, allowing them to evaluate multimodal states including images, video frame arrays, JSON payloads, and text across a 64,000-token context window.\n\nInference operates in two distinct stages. The frozen base backbone first processes a single prefill-only pass over the input state and question schema. A specialized transformer module called the joint schema head then inspects the backbone's final hidden states, cross-attends between fields and original input context, and jointly scores all allowed choices before a per-question softmax converts logits into calibrated probabilities.\n\nAs detailed in the [Clef-flash repository](https://huggingface.co/Cloudflare/clef-flash), the models support three distinct question types:\n\n* **noul:** True/false evaluations returning the exact probability of true.\n* **choice:** Mutually exclusive options from a named set, providing per-option probabilities and confidence ratings.\n* **score:** Ordered rubrics evaluated along an indexed scale to return probability-weighted scores.\n\nCloudflare trained the joint schema head alongside rank-256 low-rank adapters using synthetic permutations, label-smoothed cross-entropy, Brier calibration losses, and a Reinforcement Learning for Calibrated Decisions (RLCD) objective to penalize distribution shift while rewarding ordinal precision.\n\n[[FIG2]]\n\n## Performance and Benchmark Results\n\nCloudflare evaluated the models on its internal run of the Decision Index 0.2.1 suite and workflow benchmarks. On speed, internal benchmark data shows Clef-flash achieving a median latency of 38.8 milliseconds (p95 latency of 122.4 ms), while the larger Clef recorded a median latency of 209.3 milliseconds (p95 latency of 238.6 ms). By comparison, TypeSafe AI's Jev registered a median latency of 524.1 milliseconds (p95 latency of 536.0 ms).\n\nAcross classification and reasoning evaluations, Clef scored 98.5% on BFCL case-exact accuracy, 94.2 macro-F1 on BANKING77, and 97.4 macro-F1 on CLINC150+OOS. Clef-flash delivered 98.8% on BFCL, 97.7% on the Home appliance simulator, and a 10.6 Brier score on ForecastBench (where lower numbers represent better calibration).\n\nHowever, Jev retained significant leads in knowledge-intensive and symbolic reasoning benchmarks, scoring 78.3% on GPQA Diamond (compared to 48.0% for Clef and 51.0% for Clef-flash), 82.7% on MMLU-Pro, and 92.9% on Big-Bench Hard (BBH).\n\nOn TypeSafe's four end-to-end workflow evaluations, Clef outperformed Jev on invoice processing (64.7% versus 61.8% exact actions), customer service (76.3% versus 76.0%), and security incident response (62.9% versus 61.7%), while Jev led agent trace observability (71.6% versus 68.5% primary action accuracy).\n\n## Edge Deployment and Fine-Tuning Service\n\nClef and Clef-flash are compatible with the Jev and SystemOne API specifications, meaning existing applications can switch models by adjusting request endpoints. The models are available on Cloudflare Workers AI priced at $0.24 per million input tokens for Clef and $0.09 per million input tokens for Clef-flash, as reported by [MarkTechPost](https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/).\n\nFor on-premises and private infrastructure, the safetensor weights, processor configurations, and schema modules are downloadable on Hugging Face, having been tested with PyTorch 2.11 and Hugging Face Transformers 5.10.2 on a single H200 accelerator.\n\nAlongside the open-weight release, Cloudflare unveiled a reinforcement learning fine-tuning platform. The workflow combines Cloudflare AI Gateway for logging requests, Workers AI for generating rollouts, Cloudflare Containers as an execution sandbox, and a new Trainer component to update model weights. Cloudflare is rolling out the service first through its forward-deployed engineering team before launching a self-serve platform.",
+ "faq": [
+  {
+   "q": "What is the difference between an LLM and a decision model?",
+   "a": "A decision model does not generate conversational text token by token. Instead, it processes an input state alongside a schema of questions to calculate mathematical probabilities for predefined options in a single prefill pass."
+  },
+  {
+   "q": "What licenses govern Clef and Clef-flash?",
+   "a": "Both Clef and Clef-flash are released under the open-source Apache-2.0 license and are available on Hugging Face for self-hosting."
+  },
+  {
+   "q": "Can Clef process images and video?",
+   "a": "Yes. Both Clef models inherit the vision encoder from their underlying Qwen base architectures, allowing them to accept text, JSON, images, and video frames within a 64,000-token context window."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data center server room illuminated by subtle cyan and orange optical server lights, with abstract network routing vectors flowing cleanly into structured data matrices.",
+  "alt": "Server room hardware processing structured data streams",
+  "caption": "Illustration: High-speed edge computing infrastructure scoring structured data schemas.",
+  "src": "img/cloudflare-releases-clef-decision-models/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 91380,
+  "small": "img/cloudflare-releases-clef-decision-models/hero-640.webp",
+  "og": "img/cloudflare-releases-clef-decision-models/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/cloudflare-releases-clef-decision-models/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Software engineers and machine learning researchers collaborating in a modern computing lab, examining multi-layered schematic diagrams of neural network heads on translucent glass boards.",
+   "alt": "Engineers collaborating on neural network architecture schematics",
+   "caption": "Illustration: Machine learning researchers designing specialized routing heads for decision models.",
+   "slot": "FIG1",
+   "src": "img/cloudflare-releases-clef-decision-models/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 56200,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A digital visual representation of structured decision trees branching with exact statistical probabilities, surrounded by abstract representations of multimodal image and code data.",
+   "alt": "Abstract visualization of typed probability branching and multimodal inputs",
+   "caption": "Illustration: Schema-bound evaluation scoring multiple typed questions across multimodal inputs.",
+   "slot": "FIG2",
+   "src": "img/cloudflare-releases-clef-decision-models/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 54116,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/Cloudflare/clef-flash",
+   "title": "Cloudflare/clef-flash",
+   "site": "Hugging Face",
+   "published": 1790802936000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://huggingface.co/Cloudflare/clef",
+   "title": "Cloudflare/clef",
+   "site": "Hugging Face",
+   "published": 1790802935000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/",
+   "title": "Cloudflare Releases Clef and Clef-flash: Open-Weight Decision Models That Return Typed Probabilities Instead of Text",
+   "site": "MarkTechPost",
+   "published": 1790902841000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://blog.cloudflare.com/clef-decision-models/",
+   "title": "Introducing Clef: our open-source decision models, and new RL fine-tuning platform",
+   "site": "Cloudflare Blog",
+   "published": 1790868842111,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://aiweekly.co/alerts/cloudflare-open-sources-clef-beats-jev-latency-on-edge-gpus",
+   "title": "Cloudflare Open-Sources Clef, Beats Jev Latency on Edge GPUs",
+   "site": "AI Weekly",
+   "published": 1790879231000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790904971077,
+ "updatedAt": 1790904971077,
+ "foundVia": "blog.cloudflare.com, Google News and Hugging Face",
+ "check": {
+  "claims": 25,
+  "score": 10
+ },
+ "story": {
+  "id": "P3e66ea88",
+  "score": 84,
+  "items": [
+   "https://blog.cloudflare.com/clef-decision-models/",
+   "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9RM1Ita1B0RS1icVRmLXktdXNCZlNsRk55ZlU1UE40NXBwV0RzMEh4OUJwU2VmZ1ZwdWl3ZGZmX0tZWUZfVTNES0xoblBZRGNvVWhfYU41RWl4bFVBaVE?oc=5",
+   "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdU00d2xrVW0wbEFFWnV6eFpyZkZQcVZJVVdPOVBQRFBrbFFKOEtQdldSVktHZWVjbDMycXBqS1JvUkVhTm4wWm9XSjdsYUJacjdYNnhRakhXLUpzaGNZOTlOV3Q0SndWZ3RNVEsycElRNDAzLTJjR3JnS3VKRjJIbVA3NEFCaVhEWWZsYkVPNUNiamVscVB3Mi14VXBDcFpqU0hqNTNjdG5QcTJFNEMtUzZRTUU4V1VP?oc=5",
+   "https://huggingface.co/Cloudflare/clef-flash",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUlhYbW8xUHJtYjJ6dWhBVmJLa3IyZ3hadjU3cGh4bm1nSlJMbU13Ui1wX1ZBZFZGc1BiSW5wamNlU2w2dTNGNXphNEd3aW9fdmJxYV8xaXlSZWtXanoyTlVZNnBNaUR6bHZMUE1ydEVfdXJiRjd4RXpGdEN2d2VPSG0tbUZSaFU?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

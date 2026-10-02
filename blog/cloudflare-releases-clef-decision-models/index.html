@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloudflare Releases Clef Decision Models | rkj dev</title>
+<meta name="description" content="Cloudflare has launched Clef and Clef-flash, open-weight decision models under Apache 2.0 designed to return structured probabilities instead of text.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/cloudflare-releases-clef-decision-models/">
+<meta name="theme-color" content="#16101a">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloudflare Releases Clef Decision Models | rkj dev">
+<meta property="og:description" content="Cloudflare has launched Clef and Clef-flash, open-weight decision models under Apache 2.0 designed to return structured probabilities instead of text.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/cloudflare-releases-clef-decision-models/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/cloudflare-releases-clef-decision-models/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/cloudflare-releases-clef-decision-models/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloudflare Releases Clef Decision Models | rkj dev">
+<meta name="twitter:description" content="Cloudflare has launched Clef and Clef-flash, open-weight decision models under Apache 2.0 designed to return structured probabilities instead of text.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<meta property="article:published_time" content="2026-10-02T01:36:11.077Z">
+<meta property="article:modified_time" content="2026-10-02T01:36:11.077Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="Cloudflare">
+<meta property="article:tag" content="Open Source">
+<meta property="article:tag" content="Decision Models">
+<meta property="article:tag" content="Workers AI">
+<meta property="article:tag" content="Machine Learning">
+<link rel="preload" as="image" href="/blog/img/cloudflare-releases-clef-decision-models/hero.webp" imagesrcset="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp 640w, /blog/img/cloudflare-releases-clef-decision-models/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cloudflare Releases Open-Weight Clef Decision Models","description":"Cloudflare has launched Clef and Clef-flash, open-weight decision models under Apache 2.0 designed to return structured probabilities instead of text.","url":"https://www.rkjdev.com/blog/cloudflare-releases-clef-decision-models/","mainEntityOfPage":"https://www.rkjdev.com/blog/cloudflare-releases-clef-decision-models/","image":["https://www.rkjdev.com/blog/img/cloudflare-releases-clef-decision-models/og.jpg","https://www.rkjdev.com/blog/img/cloudflare-releases-clef-decision-models/hero.webp"],"datePublished":"2026-10-02T01:36:11.077Z","dateModified":"2026-10-02T01:36:11.077Z","articleSection":"AI Models","keywords":"Cloudflare, Open Source, Decision Models, Workers AI, Machine Learning","wordCount":652,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://huggingface.co/Cloudflare/clef-flash","https://huggingface.co/Cloudflare/clef","https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/","https://blog.cloudflare.com/clef-decision-models/","https://aiweekly.co/alerts/cloudflare-open-sources-clef-beats-jev-latency-on-edge-gpus"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Cloudflare Releases Open-Weight Clef Decision Models","item":"https://www.rkjdev.com/blog/cloudflare-releases-clef-decision-models/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an LLM and a decision model?","acceptedAnswer":{"@type":"Answer","text":"A decision model does not generate conversational text token by token. Instead, it processes an input state alongside a schema of questions to calculate mathematical probabilities for predefined options in a single prefill pass."}},{"@type":"Question","name":"What licenses govern Clef and Clef-flash?","acceptedAnswer":{"@type":"Answer","text":"Both Clef and Clef-flash are released under the open-source Apache-2.0 license and are available on Hugging Face for self-hosting."}},{"@type":"Question","name":"Can Clef process images and video?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both Clef models inherit the vision encoder from their underlying Qwen base architectures, allowing them to accept text, JSON, images, and video frames within a 64,000-token context window."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>Cloudflare Releases Open-Weight Clef Decision Models</h1>
+      <p class="standfirst">Post-trained from Qwen backbones, Clef and Clef-flash bring multimodal, non-autoregressive decision scoring to edge infrastructure.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-02T01:36:11.077Z" class="abs" data-rel>Oct 2, 2026</time></span>
+        <span>3 min read</span>
+        <a href="#sources">5 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/cloudflare-releases-clef-decision-models/hero.webp" srcset="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp 640w, /blog/img/cloudflare-releases-clef-decision-models/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Server room hardware processing structured data streams" fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: High-speed edge computing infrastructure scoring structured data schemas.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>On this page</p><ol><li><a href="#architecture-and-supported-schema-types">Architecture and Supported Schema Types</a></li><li><a href="#performance-and-benchmark-results">Performance and Benchmark Results</a></li><li><a href="#edge-deployment-and-fine-tuning-service">Edge Deployment and Fine-Tuning Service</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fcloudflare-releases-clef-decision-models%2F&text=Cloudflare%20Releases%20Open-Weight%20Clef%20Decision%20Models" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fcloudflare-releases-clef-decision-models%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Cloudflare%20Releases%20Open-Weight%20Clef%20Decision%20Models%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fcloudflare-releases-clef-decision-models%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/cloudflare-releases-clef-decision-models/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="takeaways" aria-labelledby="tk">
+          <h2 id="tk">Key takeaways</h2>
+          <ul><li>Cloudflare released Clef (27B) and Clef-flash (9B) under the Apache 2.0 license on Hugging Face and Workers AI.</li><li>Unlike standard text-generating LLMs, the models run a non-autoregressive prefill pass and a joint schema head to output typed probabilities.</li><li>Both models accept text, JSON, images, and video across a 64,000-token context window.</li><li>Clef-flash clocked a median latency of 38.8 ms compared to 524.1 ms for TypeSafe AI's Jev in internal benchmark runs.</li></ul>
+        </section>
+        <p>Cloudflare has launched Clef and Clef-flash, two open-weight decision models designed to deliver structured, typed probabilities rather than free-form conversational text. Announced on October 1, 2026, the releases represent the first machine learning models post-trained by the company&#39;s Workers AI team. Both architectures are available under an open-source Apache 2.0 license for self-hosting and are deployed across Cloudflare&#39;s edge infrastructure.</p>
+<p>According to the <a href="https://blog.cloudflare.com/clef-decision-models" target="_blank" rel="noopener">Cloudflare announcement</a>, the models target automated agent workflows that require deterministic, bounded outputs to make programmatic choices. Instead of using traditional autoregressive token generation that demands subsequent parsing, the Clef models calculate decision probabilities across structured question schemas in a single forward pass.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/cloudflare-releases-clef-decision-models/figure-1.webp" width="1200" height="670" alt="Engineers collaborating on neural network architecture schematics" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Machine learning researchers designing specialized routing heads for decision models.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="architecture-and-supported-schema-types">Architecture and Supported Schema Types</h2>
+<p>The Clef model family includes two sizes: the 27-billion-parameter Clef, post-trained from <a href="https://huggingface.co/Cloudflare/clef" target="_blank" rel="noopener">Qwen/Qwen3.8-27B</a>, and the smaller 9-billion-parameter Clef-flash, derived from <a href="https://huggingface.co/Cloudflare/clef-flash" target="_blank" rel="noopener">Qwen/Qwen3.5-9B</a>. Both models retain their base architecture&#39;s vision encoder, allowing them to evaluate multimodal states including images, video frame arrays, JSON payloads, and text across a 64,000-token context window.</p>
+<p>Inference operates in two distinct stages. The frozen base backbone first processes a single prefill-only pass over the input state and question schema. A specialized transformer module called the joint schema head then inspects the backbone&#39;s final hidden states, cross-attends between fields and original input context, and jointly scores all allowed choices before a per-question softmax converts logits into calibrated probabilities.</p>
+<p>As detailed in the <a href="https://huggingface.co/Cloudflare/clef-flash" target="_blank" rel="noopener">Clef-flash repository</a>, the models support three distinct question types:</p>
+<ul>
+<li><strong>noul:</strong> True/false evaluations returning the exact probability of true.</li>
+<li><strong>choice:</strong> Mutually exclusive options from a named set, providing per-option probabilities and confidence ratings.</li>
+<li><strong>score:</strong> Ordered rubrics evaluated along an indexed scale to return probability-weighted scores.</li>
+</ul>
+<p>Cloudflare trained the joint schema head alongside rank-256 low-rank adapters using synthetic permutations, label-smoothed cross-entropy, Brier calibration losses, and a Reinforcement Learning for Calibrated Decisions (RLCD) objective to penalize distribution shift while rewarding ordinal precision.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/cloudflare-releases-clef-decision-models/figure-2.webp" width="1200" height="670" alt="Abstract visualization of typed probability branching and multimodal inputs" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Schema-bound evaluation scoring multiple typed questions across multimodal inputs.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="performance-and-benchmark-results">Performance and Benchmark Results</h2>
+<p>Cloudflare evaluated the models on its internal run of the Decision Index 0.2.1 suite and workflow benchmarks. On speed, internal benchmark data shows Clef-flash achieving a median latency of 38.8 milliseconds (p95 latency of 122.4 ms), while the larger Clef recorded a median latency of 209.3 milliseconds (p95 latency of 238.6 ms). By comparison, TypeSafe AI&#39;s Jev registered a median latency of 524.1 milliseconds (p95 latency of 536.0 ms).</p>
+<p>Across classification and reasoning evaluations, Clef scored 98.5% on BFCL case-exact accuracy, 94.2 macro-F1 on BANKING77, and 97.4 macro-F1 on CLINC150+OOS. Clef-flash delivered 98.8% on BFCL, 97.7% on the Home appliance simulator, and a 10.6 Brier score on ForecastBench (where lower numbers represent better calibration).</p>
+<p>However, Jev retained significant leads in knowledge-intensive and symbolic reasoning benchmarks, scoring 78.3% on GPQA Diamond (compared to 48.0% for Clef and 51.0% for Clef-flash), 82.7% on MMLU-Pro, and 92.9% on Big-Bench Hard (BBH).</p>
+<p>On TypeSafe&#39;s four end-to-end workflow evaluations, Clef outperformed Jev on invoice processing (64.7% versus 61.8% exact actions), customer service (76.3% versus 76.0%), and security incident response (62.9% versus 61.7%), while Jev led agent trace observability (71.6% versus 68.5% primary action accuracy).</p>
+<h2 id="edge-deployment-and-fine-tuning-service">Edge Deployment and Fine-Tuning Service</h2>
+<p>Clef and Clef-flash are compatible with the Jev and SystemOne API specifications, meaning existing applications can switch models by adjusting request endpoints. The models are available on Cloudflare Workers AI priced at $0.24 per million input tokens for Clef and $0.09 per million input tokens for Clef-flash, as reported by <a href="https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/" target="_blank" rel="noopener">MarkTechPost</a>.</p>
+<p>For on-premises and private infrastructure, the safetensor weights, processor configurations, and schema modules are downloadable on Hugging Face, having been tested with PyTorch 2.11 and Hugging Face Transformers 5.10.2 on a single H200 accelerator.</p>
+<p>Alongside the open-weight release, Cloudflare unveiled a reinforcement learning fine-tuning platform. The workflow combines Cloudflare AI Gateway for logging requests, Workers AI for generating rollouts, Cloudflare Containers as an execution sandbox, and a new Trainer component to update model weights. Cloudflare is rolling out the service first through its forward-deployed engineering team before launching a self-serve platform.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <details open><summary>What is the difference between an LLM and a decision model?</summary><p>A decision model does not generate conversational text token by token. Instead, it processes an input state alongside a schema of questions to calculate mathematical probabilities for predefined options in a single prefill pass.</p></details>
+<details><summary>What licenses govern Clef and Clef-flash?</summary><p>Both Clef and Clef-flash are released under the open-source Apache-2.0 license and are available on Hugging Face for self-hosting.</p></details>
+<details><summary>Can Clef process images and video?</summary><p>Yes. Both Clef models inherit the vision encoder from their underlying Qwen base architectures, allowing them to accept text, JSON, images, and video frames within a 64,000-token context window.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://huggingface.co/Cloudflare/clef-flash" target="_blank" rel="noopener">Cloudflare/clef-flash</a><span>Hugging Face · Sep 30, 2026 · <b class="official">Official</b></span></li><li><a href="https://huggingface.co/Cloudflare/clef" target="_blank" rel="noopener">Cloudflare/clef</a><span>Hugging Face · Sep 30, 2026 · <b class="official">Official</b></span></li><li><a href="https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/" target="_blank" rel="noopener">Cloudflare Releases Clef and Clef-flash: Open-Weight Decision Models That Return Typed Probabilities Instead of Text</a><span>MarkTechPost · Oct 2, 2026</span></li><li><a href="https://blog.cloudflare.com/clef-decision-models/" target="_blank" rel="noopener">Introducing Clef: our open-source decision models, and new RL fine-tuning platform</a><span>Cloudflare Blog · Oct 1, 2026</span></li><li><a href="https://aiweekly.co/alerts/cloudflare-open-sources-clef-beats-jev-latency-on-edge-gpus" target="_blank" rel="noopener">Cloudflare Open-Sources Clef, Beats Jev Latency on Edge GPUs</a><span>AI Weekly · Oct 1, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from blog.cloudflare.com, Google News and Hugging Face, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (25 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Cloudflare%20Releases%20Open-Weight%20Clef%20Decision%20Models">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Cloudflare</span> <span>#Open Source</span> <span>#Decision Models</span> <span>#Workers AI</span> <span>#Machine Learning</span></p>
+        <p class="stamp">Published October 2, 2026 at 01:36 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="grid"><article class="card ">
+  <a class="card-link" href="/blog/aws-strands-decider-2b-open-source-decision-model/">
+    <div class="thumb is-ai"><img src="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp" srcset="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp 640w, /blog/img/aws-strands-decider-2b-open-source-decision-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Glowing server hardware in a modern data center symbolizing high-speed computation" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:08:57.378Z" data-rel>Oct 2, 2026</time></p>
+      <h3>AWS Releases Strands Decider 2B Open-Source Decision Model</h3>
+      <p class="dek">Fine-tuned from a Qwen3.5-2B base with a custom pointer head, the lightweight model makes sub-second agent decisions and releases under Apache 2.0.</p>
+      <p class="foot-meta">4 min read · 7 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/google-gemini-4-argon-frontier-model-launch-3/">
+    <div class="thumb is-ai"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch-3/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch-3/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch-3/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="A modern data center interior with glowing server racks representing AI compute infrastructure." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T00:14:53.631Z" data-rel>Oct 2, 2026</time></p>
+      <h3>Google Releases Gemini 4 Argon With 1M Output Limit and Cyber Focus</h3>
+      <p class="dek">Google claims the flagship model introduces an expanded output window, autonomous security auditing, and deep reasoning across enterprise and coding workflows.</p>
+      <p class="foot-meta">4 min read · 4 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/google-gemini-4-argon-frontier-model-launch/">
+    <div class="thumb is-ai"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Conceptual illustration of an advanced artificial intelligence network with complex data flows." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-01T06:53:01.166Z" data-rel>Oct 1, 2026</time></p>
+      <h3>Google Unveils Gemini 4 Argon Frontier AI Model With 1M Output Window</h3>
+      <p class="dek">Google's new flagship AI model expands output capacity to 1 million tokens while targeting enterprise engineering, finance, and defensive cybersecurity.</p>
+      <p class="foot-meta">4 min read · 7 sources</p>
+    </div>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/bank-of-england-warns-ai-debt-surge/"><span>Older</span>Bank of England Warns $450B AI Debt Pile Threatens Market Stability</a>
+  </nav>
+</main>
+<footer class="foot wrap">
+  <div>
+    <p class="foot-mark">rkj dev <span>Blog</span></p>
+    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+  </div>
+  <nav aria-label="Blog">
+    <a href="/blog/">Latest</a>
+    <a href="/blog/category/ai-models/">AI Models</a>
+    <a href="/blog/category/open-source/">Open Source</a>
+    <a href="/blog/category/research/">Research</a>
+    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
+    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
+    <a href="/blog/category/industry/">Industry</a>
+    <a href="/blog/feed.xml">RSS</a>
+    <a href="/">About rkj dev</a>
+  </nav>
+  <p class="fine">© 2026 Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+</footer>
+<script src="/blog/blog.js?v=210b69de" defer></script>
+</body>
+</html>
