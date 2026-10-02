@@ -1,0 +1,161 @@
+{
+ "slug": "aws-strands-decider-2b-open-source-decision-model",
+ "title": "AWS Releases Strands Decider 2B Open-Source Decision Model",
+ "seoTitle": "AWS Releases Open-Source Strands Decider 2B Model",
+ "description": "AWS has launched Strands Decider 2B, an open-source 1.9B decision model built to speed up AI agent routing and tool gating without generating text.",
+ "dek": "Fine-tuned from a Qwen3.5-2B base with a custom pointer head, the lightweight model makes sub-second agent decisions and releases under Apache 2.0.",
+ "category": "AI Models",
+ "tags": [
+  "AWS",
+  "Open Source",
+  "AI Agents",
+  "Qwen",
+  "Machine Learning"
+ ],
+ "keyTakeaways": [
+  "AWS released Strands Decider 2B under an Apache 2.0 license with full weights, training datasets, and reproduction scripts.",
+  "The 1.9B parameter model swaps standard language-model generation for a 1M parameter pointer head, returning scores and probabilities in a single pass.",
+  "Benchmarked on JevBench, the reference v19 checkpoint achieved 72.3% accuracy and a 0.342 Brier score, with a 115 ms median latency on an Nvidia RTX 3090.",
+  "Designed for agentic workflows, the model handles tool verification, query triage, guardrails, and model routing without text-generation overhead."
+ ],
+ "body": "Amazon Web Services has introduced Strands Decider 2B, a dedicated open-source decision model designed to make AI agent workflows faster and more deterministic. Incubated inside Strands Labs, AWS's experimental agent-development initiative, the model bypasses the computational overhead of text generation to provide direct choices and calibrated confidence scores.\n\nReleased under the permissive Apache 2.0 license, the model weights are available on Hugging Face alongside the full codebase, training datasets, and reproduction scripts on [the strands-decider GitHub repository](https://github.com/strands-labs/strands-decider). Unlike conversational large language models that write explanations before arriving at a choice, Strands Decider 2B processes state and question schemas in a single forward pass, providing a lightweight classification engine for autonomous software agents.\n\n[[FIG1]]\n\n## The Shift to System One Decision Models\n\nThe release comes amid rapid industry interest in so-called \"System One\" decision models, an architecture popularized when TypeSafe AI launched its proprietary Jev model in September 2026, as reported by [VentureBeat](https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second). While traditional large language models generate arbitrary natural language token by token, decision models are restricted to selecting from structured options or rating inputs on defined numerical scales.\n\nAccording to an announcement on the [Strands Agents blog](https://strandsagents.com/blog/introducing-strands-decider/), trading away free-form generation eliminates token-by-token decoding latency and prevents hallucinations of unlisted choices. In exchange, the model delivers fast, bounded judgments alongside probability distributions for tasks that do not require prose synthesis.\n\nStrands Decider 2B answers three distinct schema types through a unified scoring mechanism:\n\n* **Choice questions:** Selecting one outcome from a list of supplied options, such as routing a customer inquiry to billing, technical support, or sales.\n* **Noul questions:** Evaluating binary yes-or-no propositions, such as determining if a user's prompt conveys urgency.\n* **Score questions:** Placing an input along an ordered rubric or sentiment scale from 0 to 1.\n\n## Hobson Architecture and Technical Specifications\n\nStrands Decider 2B contains 1.9 billion parameters and is built using Alibaba's pretrained Qwen3.5-2B base torso. AWS engineers discarded the standard language-modelling head that predicts the next text token and replaced it with a custom \"pointer head\" containing just over 1 million parameters, a setup described in the project's architecture documentation as \"Hobson.\"\n\n[[FIG2]]\n\nAccording to the project's GitHub repository documentation, the Qwen torso is adapted with a rank-16 LoRA (low-rank adaptation) update while the pointer head executes in fp32. Instead of maintaining fixed per-option output weights, the pointer head calculates an attention score between the hidden state at the `<answer>` token position and the hidden state at each supplied option's final token.\n\nBecause options are scored dynamically through this masked softmax mechanism, the model places no architectural ceiling on the number of options provided in a prompt. The current release is designated v19, representing an architectural shift away from an earlier \"slot head\" design that AWS researchers found performed significantly worse.\n\n## Benchmark Performance and Latency\n\nAWS evaluated the reference v19 checkpoint on the public 231-task suite of JevBench v1. On this benchmark, Strands Decider 2B achieved an overall accuracy of 72.3% (167 of 231 tasks) and a Brier calibration score of 0.342, with an expected calibration error of 0.052.\n\nIn split evaluations published in the repository documentation, the model answered 100% of tasks in JevBench's easy tier correctly, alongside 87.5% on standard tasks and 50.5% on hard tasks. On short classification tasks, predictions output with a confidence score of 0.90 or higher were correct approximately 95% of the time.\n\nHardware benchmarks demonstrate low operational latency across both server and consumer silicon:\n\n* **Nvidia RTX 3090:** Measured across 230 requests, the model posted a median decision latency of 106 ms to 115 ms and a 95th-percentile (p95) latency of 296 ms to 299 ms.\n* **Apple Silicon (M3 Pro):** Under warm serving conditions for small tasks under 300 tokens, the model registered a median latency of 153 ms.\n* **Training Speed:** The full training recipe runs in approximately 11 hours on a single 24 GiB RTX 3090, or 1 hour and 10 minutes on an 8-GPU Nvidia H100 node.\n\nCompetitive tracking reported by [VentureBeat](https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second) indicates that while Strands Decider ranks near the top of its size class, it trails Mapika's decider-2b v11, which scored 76% accuracy and a 0.32 Brier score on the same public JevBench set. TypeSafe's proprietary Jev was not plotted directly on the same open weight trajectory.\n\n## Deployment in Agentic Interventions\n\nAWS designed Strands Decider 2B to integrate directly with agent development frameworks, including the Strands Agents SDK. Rather than querying costly frontier models to approve intermediate steps, developers can place the 2B model inside synchronous intervention hooks.\n\nIn a demonstration published by AWS, Strands Decider acts as an automated review gate before an agent executes a weather tool call. If a user asks for local weather without specifying a city, eager agents often guess a location. Decider inspects the conversation history and answers two binary questions: whether the tool arguments are grounded in the user's actual text, and whether calling the tool is premature. Based on the model's confidence scores, the application denies the immediate tool execution and instructs the agent to ask the user for clarification.\n\nBeyond tool gating, AWS identified model routing, policy enforcement, argument checking, output evaluations, and triage queues as primary deployment scenarios. Pairing lightweight decision models with generative engines enables hybrid agent architectures where small models handle rote execution checks and frontier models perform unstructured reasoning.\n\n## Availability and Commercial Context\n\nStrands Decider 2B is completely free to download and self-host, but AWS has not launched a managed cloud API endpoint or published general per-request hosted pricing. In contrast, TypeSafe AI offers Jev as a managed API priced at $0.042 per million input tokens with zero output token fees.\n\nThe launch also coincides with releases from other infrastructure providers, including Cloudflare's open-source 27-billion-parameter [Clef model on Hugging Face](https://huggingface.co/Cloudflare/clef). While self-hosting requires teams to manage local GPUs or cloud compute infrastructure, the complete release of training data and scripts allows organizations to inspect, fine-tune, and adapt the decision architecture to proprietary data entirely on premise.",
+ "faq": [
+  {
+   "q": "What is Strands Decider 2B?",
+   "a": "Strands Decider 2B is an open-source, 1.9-billion-parameter decision model released by AWS Strands Labs that selects options and scores inputs without generating free-form text."
+  },
+  {
+   "q": "How does Strands Decider 2B differ from traditional LLMs?",
+   "a": "Instead of predicting sequential text tokens, it replaces the language model head with a 1-million-parameter pointer head that scores predefined choices in a single forward pass, providing calibrated confidence probabilities."
+  },
+  {
+   "q": "What hardware is required to run the model?",
+   "a": "Strands Decider 2B can be served locally on consumer GPUs such as an Nvidia RTX 3090 with roughly 115 ms median latency, as well as on Apple Silicon Macs (M3 Pro) and standard CPUs."
+  },
+  {
+   "q": "Under what license is Strands Decider 2B available?",
+   "a": "The model weights, code, and full training recipes are published under the open-source Apache 2.0 license."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, softly lit server room filled with sleek server racks, with subtle glowing blue and amber light paths flowing along the floor into a central glowing processor module.",
+  "alt": "Glowing server hardware in a modern data center symbolizing high-speed computation",
+  "caption": "Illustration: Low-latency AI decision architectures processing automated workflow tasks.",
+  "src": "img/aws-strands-decider-2b-open-source-decision-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 48276,
+  "small": "img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp",
+  "og": "img/aws-strands-decider-2b-open-source-decision-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/aws-strands-decider-2b-open-source-decision-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An abstract conceptual visualization of digital pathways splitting into multiple clear geometric branches and evaluation checkpoints against a dark technical background.",
+   "alt": "Abstract digital branches demonstrating categorical choice routing and deterministic evaluation",
+   "caption": "Illustration: Decision models evaluate structured multi-choice options in a single computational pass.",
+   "slot": "FIG1",
+   "src": "img/aws-strands-decider-2b-open-source-decision-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 45900,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A software engineer working at a desk with dual monitors displaying technical workflow diagrams and neural network configurations in a clean office setting.",
+   "alt": "A software engineer analyzing neural network configurations at an office workstation",
+   "caption": "Illustration: Developers integrating lightweight pointer-head architectures into local agent pipelines.",
+   "slot": "FIG2",
+   "src": "img/aws-strands-decider-2b-open-source-decision-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40904,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/Cloudflare/clef",
+   "title": "Cloudflare/clef",
+   "site": "Hugging Face",
+   "published": 1790802935000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://github.com/strands-labs/strands-decider",
+   "title": "strands-labs/strands-decider",
+   "site": "GitHub",
+   "published": 1790699798000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second",
+   "title": "Amazon unveils a free, fast, open source Jev killer: Strands Decider 2B makes decisions in fractions of a second",
+   "site": "venturebeat.com",
+   "published": 1790872980000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://siliconangle.com/2026/10/01/aws-debuts-strands-decider-2b-a-first-lightweight-decision-model-for-accelerate-agentic-workflows/",
+   "title": "AWS debuts Strands Decider 2B, a first lightweight decision model for accelerate agentic workflows",
+   "site": "SiliconANGLE",
+   "published": 1790870434000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://strandsagents.com/blog/introducing-strands-decider/",
+   "title": "Introducing Strands Decider 2B: a small, open source, decision model",
+   "site": "Strands Agents",
+   "published": 1790812800000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://thenewstack.io/aws-strands-decider-model/",
+   "title": "AWS launches a local answer to TypeSafe’s Jev decision model",
+   "site": "The New Stack",
+   "published": 1790870400000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://aiweekly.co/alerts/amazon-ships-strands-decider-2b-an-open-source-jev-rival",
+   "title": "Amazon Ships Strands Decider 2B, an Open-Source Jev Rival",
+   "site": "AI Weekly",
+   "published": 1790879231000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790903337378,
+ "updatedAt": 1790903337378,
+ "foundVia": "siliconangle.com, Reddit and Techmeme",
+ "check": {
+  "claims": 38,
+  "score": 10
+ },
+ "story": {
+  "id": "Pc6016b79",
+  "score": 84,
+  "items": [
+   "https://siliconangle.com/2026/10/01/aws-debuts-strands-decider-2b-a-first-lightweight-decision-model-for-accelerate-agentic-workflows/",
+   "https://huggingface.co/Cloudflare/clef",
+   "https://www.techmeme.com/261001/p32#a261001p32"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
