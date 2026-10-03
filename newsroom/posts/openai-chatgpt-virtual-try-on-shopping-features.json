@@ -1,0 +1,164 @@
+{
+ "slug": "openai-chatgpt-virtual-try-on-shopping-features",
+ "title": "OpenAI Adds Virtual Try-On and Product Saving to ChatGPT Shopping",
+ "seoTitle": "OpenAI Launches Virtual Try-On in ChatGPT Shopping",
+ "description": "OpenAI rolled out virtual try-on and library bookmarking in ChatGPT, letting shoppers preview clothing on uploaded photos with ChatGPT Images 2.5.",
+ "dek": "Users can now preview clothing and accessories on their own uploaded photos and save curated finds to organized folders inside ChatGPT.",
+ "category": "Agents & Tools",
+ "tags": [
+  "OpenAI",
+  "ChatGPT",
+  "AI Shopping",
+  "Computer Vision",
+  "E-Commerce"
+ ],
+ "keyTakeaways": [
+  "ChatGPT now includes a 'Try on' tool that renders apparel and accessories onto user-uploaded selfies or full-body photos.",
+  "The visualization feature runs on the ChatGPT Images 2.5 model, which OpenAI introduced in September 2026.",
+  "Shoppers can also organize discovered items into folders and favorites within their ChatGPT Library across web and mobile.",
+  "OpenAI clarifies that try-on images are visual approximations and do not guarantee physical garment fit or sizing."
+ ],
+ "body": "OpenAI has expanded the retail capabilities of its conversational assistant by introducing virtual try-on features and product organization tools globally across mobile and web interfaces. Announced on October 1, 2026, the update allows users to generate visual previews of clothing and accessories directly on their own photos, as outlined in the [OpenAI Help Center](https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search).\n\nThe interactive try-on tool builds on OpenAI's wider efforts to turn ChatGPT into a shopping assistant capable of interpreting user preferences, comparing product specifications, and managing visual discovery in a single conversational thread.\n\n## How Virtual Try-On Works in ChatGPT\n\nWhen shopping queries surface product listings in a chat, eligible clothing and accessory cards now display a dedicated \"Try on\" button. According to OpenAI's documentation, selecting the button prompts the user to take or upload a selfie, though reports from TechCrunch and Tom's Guide note that full-body photos can also be used. ChatGPT then generates an image showing how the garment or accessory could look on that individual.\n\n[[FIG1]]\n\nShoppers are not restricted to items generated through ChatGPT search carousels. As reported by [TechCrunch](https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/), users can also upload screenshots or photos of clothing found on external retail websites and instruct the assistant to render the items onto their uploaded portraits.\n\nUnder the hood, the feature uses OpenAI's ChatGPT Images 2.5 model, which debuted in September 2026. The company states that the model improves rendering quality with more natural lighting, richer fabric textures, better adherence to image editing instructions, and lower generation latency.\n\n## Saving Finds and Managing User Reference Photos\n\nTo streamline repeat use, ChatGPT allows users to store reference photos in their account. Stored photos can be managed, replaced, or deleted at any time through the application's personalization settings, eliminating the need to upload a new portrait for each product inquiry.\n\nAlongside try-ons, OpenAI added a bookmarking feature that lets users save product cards to a \"Favorites\" list or sort them into dedicated folders inside the ChatGPT Library. Saved products appear alongside generated try-on imagery, allowing shoppers to revisit curated collections on both desktop and mobile apps, as detailed by [TechCrunch](https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/).\n\n[[FIG2]]\n\nData privacy considerations remain relevant for users uploading personal portraits. As noted by [Engadget](https://www.engadget.com/2275295/chatgpt-can-now-help-you-virtually-try-on-clothes/), images uploaded from standard personal accounts may be used to train OpenAI models unless the user explicitly opts out in account settings.\n\n## Product Selection and Practical Limitations\n\nOpenAI emphasizes that virtual try-on is an exploratory visualization tool rather than a precise fitting room. The company explicitly warns that generated images are approximations that do not guarantee physical sizing, tailoring, or fabric drape. Consumers are advised to check individual merchant measurements, product details, and return policies before making a purchase.\n\nIn its official documentation, OpenAI explains that product results in ChatGPT carousels are determined organically based on user intent, query context, and structured metadata from first- and third-party data providers. The company states that these product selections are not paid ads and are not influenced by commercial partnerships, though separate advertising placements exist within conversational flows.\n\nOpenAI previously experimented with native e-commerce transactions, but [TechCrunch](https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/) and [Engadget](https://www.engadget.com/2275295/chatgpt-can-now-help-you-virtually-try-on-clothes/) noted that the earlier \"Instant Checkout\" option has been discontinued. Instead, users are directed to merchant sites, with Shopify catalog data pre-integrated to surface product availability across supported sellers.\n\n## Competitive Pressure in AI-Assisted Commerce\n\nThe launch places ChatGPT in closer competition with established visual discovery engines. Google introduced virtual try-on for apparel in 2025 and expanded the feature to shoes in October 2025, while Pinterest has long served as a primary destination for digital fashion discovery.\n\nConsumer adoption data highlights why platform operators are targeting this category. According to research from [PYMNTS.com](https://www.pymnts.com/news/artificial-intelligence/2026/openai-adds-virtual-try-on-feature-chatgpt/), nearly 23% of U.S. consumers—approximately 61 million individuals—start online retail searches with AI assistants. The same study found that clothing, footwear, and accessories represented roughly 28% of consumers' most recent AI-assisted purchases, underscoring fashion as a central driver of generative commerce adoption.",
+ "faq": [
+  {
+   "q": "How do you use the virtual try-on feature in ChatGPT?",
+   "a": "Users can tap the 'Try on' button on eligible clothing product listings in ChatGPT and upload a selfie or full-body photo. Alternatively, users can upload an image of an apparel item directly into a prompt and ask ChatGPT to visualize it on their photo."
+  },
+  {
+   "q": "Which AI model generates the try-on images?",
+   "a": "The feature is powered by ChatGPT Images 2.5, a model released by OpenAI in September 2026 designed with improved textures, lighting, and instruction-following."
+  },
+  {
+   "q": "Does virtual try-on guarantee garment sizing and fit?",
+   "a": "No. OpenAI states that generated images are visual estimations and do not guarantee accurate fit or sizing. Shoppers should verify merchant measurements before purchasing."
+  },
+  {
+   "q": "Where can users manage their uploaded reference photos?",
+   "a": "Reference photos can be updated, replaced, or deleted by navigating to Settings, then Personalization, and selecting Reference photos."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An artistic studio view showing digital fashion concepts seamlessly mapped onto a full-length mannequin silhouette, surrounded by fabric swatches and soft studio lighting",
+  "alt": "Digital visualization of fashion styling and garment fitting in a studio setting",
+  "caption": "Illustration: Generative visual tools allow shoppers to test clothing and accessory combinations digitally.",
+  "src": "img/openai-chatgpt-virtual-try-on-shopping-features/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 63986,
+  "small": "img/openai-chatgpt-virtual-try-on-shopping-features/hero-640.webp",
+  "og": "img/openai-chatgpt-virtual-try-on-shopping-features/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-chatgpt-virtual-try-on-shopping-features/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern workspace setting with a digital display presenting side-by-side outfit options, jacket textures, and color variations under natural daylight",
+   "alt": "Concept rendering of apparel options and wardrobe organization",
+   "caption": "Illustration: Computer vision models synthesize texture and lighting to preview garments on personal photos.",
+   "slot": "FIG1",
+   "src": "img/openai-chatgpt-virtual-try-on-shopping-features/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 30106,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A clean, modern moodboard with organized digital cards of fashion accessories, shoes, and outerwear arranged into curated folders",
+   "alt": "Organized collection of digital fashion bookmarks and product cards",
+   "caption": "Illustration: Users can organize saved products and generated try-on imagery into custom folders for later reference.",
+   "slot": "FIG2",
+   "src": "img/openai-chatgpt-virtual-try-on-shopping-features/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 30104,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+   "title": "ChatGPT — Release Notes | OpenAI Help Center",
+   "site": "OpenAI Help Center",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+   "title": "Shopping with ChatGPT Search | OpenAI Help Center",
+   "site": "OpenAI Help Center",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.engadget.com/2275295/chatgpt-can-now-help-you-virtually-try-on-clothes/",
+   "title": "ChatGPT Can Now Help You Virtually Try On Clothes",
+   "site": "Engadget",
+   "published": 1790893659000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+   "title": "ChatGPT can now virtually try on clothes for you",
+   "site": "TechCrunch",
+   "published": 1790882513000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://searchengineland.com/chatgpt-adds-virtual-try-on-for-clothes-and-accessories-493215",
+   "title": "ChatGPT adds virtual try-on for clothes and accessories",
+   "site": "searchengineland.com",
+   "published": 1790940720000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.tomsguide.com/ai/chatgpt/you-can-now-virtually-try-on-clothes-with-chatgpt-before-you-buy-them-heres-how-it-works",
+   "title": "You can now virtually try on clothes with ChatGPT before you buy them &mdash; here&rsquo;s how it works",
+   "site": "Tom's Guide",
+   "published": 1790956166000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-adds-virtual-try-on-feature-chatgpt/",
+   "title": "OpenAI Adds Virtual Try-On Feature to ChatGPT",
+   "site": "PYMNTS.com",
+   "published": 1790953002000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790986524612,
+ "updatedAt": 1790986524612,
+ "foundVia": "techcrunch.com, Techmeme and engadget.com",
+ "check": {
+  "claims": 15,
+  "score": 10
+ },
+ "story": {
+  "id": "P5c51955c",
+  "score": 88,
+  "items": [
+   "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+   "https://www.techmeme.com/261001/p37#a261001p37",
+   "https://www.engadget.com/2275295/chatgpt-can-now-help-you-virtually-try-on-clothes/",
+   "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+   "https://news.google.com/rss/articles/CBMiigFBVV95cUxNb0p4MFIzQWhKRTBzb1g5WXEzNG5aMjVxMTVvbndPOGJqRndEVUJmMkxidEM5Z2oxbVNKWXpIQTJwY2FQNVFjbEFzWGQ4STUwQm5ZeU53NTc2ZElLejdmRkdJMDdJOWJ1RVJ5ZDgzd0JUTDBidmV6a0I0ZkM5N3JuOWdLSzZHUjdTLVE?oc=5",
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZDFzMFNuQVhFamU4aVV0YVdnRTJWUjBSN2dKVU9QU25PRjhsaXpjQjR1ZE9JNUxMTUR3dW50UW5fTUp5cWRNNzNFWTRpd1N4UmJwbmdQb2REamhQUTZtREdvR1BNaTdMWmdsbUhBZktleGk4M1VDSzlFUmlsaFpTZWpRZFdZS19VeDBFVg?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
