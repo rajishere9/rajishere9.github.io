@@ -365,7 +365,7 @@
    },
    {
     "id": "Pb9859eec",
-    "headline": "California Man Arrested for Smuggling Over $300 Million in Nvidia AI Servers to China",
+    "headline": "US Man Arrested and Charged Over Alleged $300 Million Nvidia GPU Smuggling Ring to China",
     "firstSeen": 1790935443312,
     "items": [
      {
@@ -395,16 +395,30 @@
       "engagement": "",
       "image": "https://cdn.mos.cms.futurecdn.net/ZAPHkGJKVZQSB6dodho4D7-1920-80.jpg",
       "weight": 1
+     },
+     {
+      "id": "4217df0756f97fbc",
+      "url": "https://interestingengineering.com/culture/california-300m-gpu-server-smuggling-china",
+      "title": "US tech executive charged over alleged $300M GPU smuggling to China",
+      "snippet": "submitted by /u/barweis to r/technology [link] [comments]",
+      "source": "reddit",
+      "kind": "community",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790965279000,
+      "engagement": "top of r/technology today",
+      "image": null,
+      "weight": 1
      }
     ],
     "attempts": 0,
     "importance": 78,
-    "summary": "U.S. authorities have arrested a California man accused of smuggling more than $300 million worth of export-controlled Nvidia-powered servers to China through intermediary countries. The operation allegedly used false paperwork to conceal the final destination of the high-performance AI hardware.",
-    "category": "Policy",
-    "lastSeen": 1790953443405,
+    "summary": "A US tech executive has been formally charged over an alleged smuggling scheme involving over $300 million in Nvidia AI servers sent to China. The arrest highlights ongoing enforcement challenges regarding high-end AI hardware export controls.",
+    "category": "Chips & Hardware",
+    "lastSeen": 1790993043728,
     "update": false,
     "updateOf": "",
-    "score": 81
+    "score": 84
    },
    {
     "id": "P54a73b9b",
@@ -1689,7 +1703,7 @@
    },
    {
     "id": "Pcc7a860a",
-    "headline": "Federal Judge Rules Flock's Nationwide Automated License Plate Reader Network Unconstitutional 'Mass Surveillance'",
+    "headline": "Federal Judge Rules Flock's Automated License Plate Reader Network Unconstitutional 'Mass Surveillance'",
     "firstSeen": 1790980444075,
     "items": [
      {
@@ -1705,16 +1719,30 @@
       "engagement": "top of r/technology today",
       "image": null,
       "weight": 1
+     },
+     {
+      "id": "0d0ab3a932057288",
+      "url": "https://www.techmeme.com/261002/p31#a261002p31",
+      "title": "A US judge rules an officer's use of Flock to search a car's license plate was a form of \"indiscriminate mass surveillance\", and violated the Fourth Amendment (Jason Koebler/404 Media)",
+      "snippet": "Jason Koebler / 404 Media : A US judge rules an officer's use of Flock to search a car's license plate was a form of &ldquo;indiscriminate mass surveillance&rdquo;, and violated the Fourth Amendment &mdash; Flock's nationwide network is quickly &ldquo;approaching dragnet-type law enforcement practice&rdquo; and the cop should have got a warrant, the judge wrote.",
+      "source": "techmeme",
+      "kind": "news",
+      "official": false,
+      "seedOnly": false,
+      "publishedAt": 1790991652000,
+      "engagement": "",
+      "image": null,
+      "weight": 1.3
      }
     ],
     "attempts": 0,
     "importance": 72,
-    "summary": "A federal judge has ruled that law enforcement use of Flock Safety's automated license plate reader network constitutes unconstitutional mass surveillance. The court found that the sweeping nationwide tracking practices require proper search warrants.",
+    "summary": "A US federal judge has ruled that an officer's use of Flock's nationwide automated license plate reader network constitutes indiscriminate mass surveillance and violates the Fourth Amendment. The decision marks a significant legal challenge against widespread automated surveillance tools.",
     "category": "Policy",
-    "lastSeen": 1790980444075,
+    "lastSeen": 1790993043728,
     "update": false,
     "updateOf": "",
-    "score": 72
+    "score": 75
    },
    {
     "id": "P1182fde8",
@@ -2250,1084 +2278,1084 @@
  },
  "sources": {
   "openai": {
-   "ok": 1790991059284,
+   "ok": 1790992863586,
    "fails": 0,
    "count": 60,
-   "ms": 312
+   "ms": 310
   },
   "deepseek": {
-   "ok": 1790991059390,
+   "ok": 1790992863877,
    "fails": 0,
    "count": 1,
-   "ms": 377,
+   "ms": 559,
    "baselined": true,
    "err": "fetch failed",
    "errAt": 1790890304152
   },
   "elevenlabs": {
-   "ok": 1790991059428,
+   "ok": 1790992863866,
    "fails": 0,
    "count": 40,
-   "ms": 286,
+   "ms": 399,
    "baselined": true
   },
   "google-research": {
-   "ok": 1790991059451,
+   "ok": 1790992863786,
    "fails": 0,
    "count": 60,
-   "ms": 442
+   "ms": 472
   },
   "anthropic": {
-   "ok": 1790991059337,
+   "ok": 1790992863770,
    "fails": 0,
    "count": 11,
-   "ms": 326,
+   "ms": 454,
    "baselined": true
   },
   "qwen": {
-   "ok": 1790991059319,
+   "ok": 1790992863656,
    "fails": 0,
    "count": 44,
-   "ms": 305
+   "ms": 337
   },
   "suno": {
-   "ok": 1790991059495,
+   "ok": 1790992864143,
    "fails": 0,
    "count": 40,
-   "ms": 176,
+   "ms": 391,
    "baselined": true
   },
   "midjourney": {
-   "ok": 1790991059417,
+   "ok": 1790992863897,
    "fails": 0,
    "count": 15,
-   "ms": 133
+   "ms": 311
   },
   "together": {
-   "ok": 1790991059684,
+   "ok": 1790992864306,
    "fails": 0,
    "count": 60,
-   "ms": 267
+   "ms": 440
   },
   "google-ai": {
-   "ok": 1790991059461,
+   "ok": 1790992863914,
    "fails": 0,
    "count": 20,
-   "ms": 453
+   "ms": 602
   },
   "minimax": {
-   "ok": 1790991059534,
+   "ok": 1790992863884,
    "fails": 0,
    "count": 1,
-   "ms": 519,
+   "ms": 564,
    "baselined": true
   },
   "google-devs": {
-   "ok": 1790991059499,
+   "ok": 1790992863923,
    "fails": 0,
    "count": 20,
-   "ms": 489
+   "ms": 608
   },
   "bfl": {
-   "ok": 1790991059555,
+   "ok": 1790992864067,
    "fails": 0,
    "count": 10,
-   "ms": 255,
+   "ms": 411,
    "baselined": true
   },
   "microsoft": {
-   "ok": 1790991059771,
+   "ok": 1790992864292,
    "fails": 0,
    "count": 5,
-   "ms": 310
+   "ms": 395
   },
   "mistral": {
-   "ok": 1790991059300,
+   "ok": 1790992863752,
    "fails": 0,
    "count": 60,
-   "ms": 288
+   "ms": 435
   },
   "runway": {
-   "ok": 1790991059558,
+   "ok": 1790992864191,
    "fails": 0,
    "count": 1,
-   "ms": 541,
+   "ms": 869,
    "baselined": true
   },
   "nvidia": {
-   "ok": 1790991059802,
+   "ok": 1790992864368,
    "fails": 0,
    "count": 18,
-   "ms": 307
+   "ms": 454
   },
   "cloudflare-blog": {
-   "ok": 1790991059963,
+   "ok": 1790992864504,
    "fails": 0,
    "count": 8,
-   "ms": 405
+   "ms": 313
   },
   "cohere": {
-   "ok": 1790991059520,
+   "ok": 1790992864299,
    "fails": 0,
    "count": 24,
-   "ms": 504,
+   "ms": 978,
    "baselined": true
   },
   "github-blog": {
-   "ok": 1790991059940,
+   "ok": 1790992864584,
    "fails": 0,
    "count": 8,
-   "ms": 385
+   "ms": 407
   },
   "nvidia-dev": {
-   "ok": 1790991060136,
+   "ok": 1790992864482,
    "fails": 0,
    "count": 60,
-   "ms": 637
+   "ms": 559
   },
   "verge-ai": {
-   "ok": 1790991060004,
+   "ok": 1790992864644,
    "fails": 0,
    "count": 10,
-   "ms": 320
+   "ms": 338
   },
   "ars-tech": {
-   "ok": 1790991060039,
+   "ok": 1790992864681,
    "fails": 0,
    "count": 20,
-   "ms": 268
+   "ms": 367
   },
   "huggingface-blog": {
-   "ok": 1790991059920,
+   "ok": 1790992864430,
    "fails": 0,
    "count": 60,
-   "ms": 386
+   "ms": 287
   },
   "techcrunch-ai": {
-   "ok": 1790991059980,
+   "ok": 1790992864581,
    "fails": 0,
    "count": 20,
-   "ms": 304
+   "ms": 282
   },
   "deepmind": {
-   "ok": 1790991059142,
+   "ok": 1790992863467,
    "fails": 0,
    "count": 60,
-   "ms": 135
+   "ms": 156
   },
   "luma": {
-   "ok": 1790991060467,
+   "ok": 1790992864735,
    "fails": 0,
    "count": 40,
-   "ms": 1130,
+   "ms": 965,
    "baselined": true
   },
   "apple-ml": {
-   "ok": 1790991059676,
+   "ok": 1790992864177,
    "fails": 0,
    "count": 10,
-   "ms": 225
+   "ms": 293
   },
   "wired-ai": {
-   "ok": 1790991060167,
+   "ok": 1790992864799,
    "fails": 0,
    "count": 10,
-   "ms": 247
+   "ms": 317
   },
   "engadget": {
-   "ok": 1790991060315,
+   "ok": 1790992865168,
    "fails": 0,
    "count": 5,
-   "ms": 311
+   "ms": 584
   },
   "mit-tr-ai": {
-   "ok": 1790991060044,
+   "ok": 1790992864740,
    "fails": 0,
    "count": 10,
-   "ms": 153
+   "ms": 310
   },
   "ollama": {
-   "ok": 1790991059673,
+   "ok": 1790992864314,
    "fails": 0,
    "count": 59,
-   "ms": 245
+   "ms": 437
   },
   "9to5google": {
-   "ok": 1790991060382,
+   "ok": 1790992865107,
    "fails": 0,
    "count": 12,
-   "ms": 343
+   "ms": 463
   },
   "9to5mac": {
-   "ok": 1790991060406,
+   "ok": 1790992865139,
    "fails": 0,
    "count": 11,
-   "ms": 362
+   "ms": 458
   },
   "restofworld": {
-   "ok": 1790991060636,
+   "ok": 1790992865457,
    "fails": 0,
    "count": 9,
-   "ms": 406
+   "ms": 658
   },
   "ieee-spectrum": {
-   "ok": 1790991060503,
+   "ok": 1790992866108,
    "fails": 0,
    "count": 30,
-   "ms": 336
+   "ms": 1368
   },
   "pandaily": {
-   "ok": 1790991060624,
+   "ok": 1790992865608,
    "fails": 0,
    "count": 20,
-   "ms": 309,
+   "ms": 773,
    "err": "The operation was aborted due to timeout",
    "errAt": 1790668945172
   },
   "aws-ml": {
-   "ok": 1790991059891,
+   "ok": 1790992864577,
    "fails": 0,
    "count": 20,
-   "ms": 371
+   "ms": 510
   },
   "simonwillison": {
-   "ok": 1790991060730,
+   "ok": 1790992865775,
    "fails": 0,
    "count": 30,
-   "ms": 324
+   "ms": 668
   },
   "interconnects": {
-   "ok": 1790991060926,
+   "ok": 1790992866080,
    "fails": 0,
    "count": 20,
-   "ms": 423
+   "ms": 941
   },
   "scmp-tech": {
-   "ok": 1790991061260,
+   "ok": 1790992866284,
    "fails": 0,
    "count": 50,
-   "ms": 957
+   "ms": 1464
   },
   "latent-space": {
-   "ok": 1790991060952,
+   "ok": 1790992866136,
    "fails": 0,
    "count": 20,
-   "ms": 350
+   "ms": 968
   },
   "ai2": {
-   "ok": 1790991060638,
+   "ok": 1790992864820,
    "fails": 0,
    "count": 9,
-   "ms": 1248,
+   "ms": 1034,
    "baselined": true
   },
   "bensbites": {
-   "ok": 1790991060943,
+   "ok": 1790992866091,
    "fails": 0,
    "count": 20,
-   "ms": 319
+   "ms": 634
   },
   "importai": {
    "ok": 1790492188749,
-   "fails": 256,
+   "fails": 257,
    "count": 20,
    "ms": 430,
    "err": "HTTP 403 for https://importai.substack.com/feed",
-   "errAt": 1790991060732
+   "errAt": 1790992865989
   },
   "techmeme": {
-   "ok": 1790991060303,
+   "ok": 1790992864869,
    "fails": 0,
    "count": 15,
-   "ms": 630
+   "ms": 577
   },
   "chinatalk": {
-   "ok": 1790991060957,
+   "ok": 1790992866382,
    "fails": 0,
    "count": 20,
-   "ms": 319
+   "ms": 607
   },
   "nature": {
-   "ok": 1790991061078,
+   "ok": 1790992866404,
    "fails": 0,
    "count": 30,
-   "ms": 198
+   "ms": 415
   },
   "science": {
-   "ok": 1790991061364,
+   "ok": 1790992866751,
    "fails": 0,
    "count": 10,
-   "ms": 460,
+   "ms": 685,
    "err": "HTTP 403 for https://www.science.org/rss/news_current.xml",
    "errAt": 1790922677744
   },
   "quanta": {
-   "ok": 1790991061509,
+   "ok": 1790992866955,
    "fails": 0,
    "count": 5,
-   "ms": 579
+   "ms": 847
   },
   "technode": {
-   "ok": 1790991060880,
+   "ok": 1790992865963,
    "fails": 0,
    "count": 40,
-   "ms": 498
+   "ms": 1094
   },
   "producthunt-ai": {
-   "ok": 1790991060930,
+   "ok": 1790992866193,
    "fails": 0,
    "count": 15,
-   "ms": 200
+   "ms": 230
   },
   "the-decoder": {
-   "ok": 1790991061171,
+   "ok": 1790992865984,
    "fails": 0,
    "count": 10,
-   "ms": 1231
+   "ms": 1480
   },
   "register-ai": {
-   "ok": 1790991060921,
+   "ok": 1790992866114,
    "fails": 0,
    "count": 50,
-   "ms": 941
+   "ms": 1533
   },
   "nasa": {
-   "ok": 1790991061361,
+   "ok": 1790992866974,
    "fails": 0,
    "count": 10,
-   "ms": 418,
+   "ms": 860,
    "err": "HTTP 429",
    "errAt": 1790980272088
   },
   "lobsters-ai": {
-   "ok": 1790991061028,
+   "ok": 1790992866430,
    "fails": 0,
    "count": 25,
-   "ms": 296,
+   "ms": 446,
    "err": "HTTP 500",
    "errAt": 1790600450209
   },
   "tomshardware": {
-   "ok": 1790991060904,
+   "ok": 1790992866066,
    "fails": 0,
    "count": 27,
-   "ms": 768
+   "ms": 1331
   },
   "semianalysis": {
-   "ok": 1790991061463,
+   "ok": 1790992867077,
    "fails": 0,
    "count": 10,
-   "ms": 827,
+   "ms": 1469,
    "err": "HTTP 403 for https://www.semianalysis.com/feed",
    "errAt": 1790859692730
   },
   "ars-science": {
-   "ok": 1790991060230,
+   "ok": 1790992864835,
    "fails": 0,
    "count": 20,
-   "ms": 428
+   "ms": 467
   },
   "phys-org": {
-   "ok": 1790991061380,
+   "ok": 1790992866813,
    "fails": 0,
    "count": 30,
-   "ms": 454
+   "ms": 722
   },
   "siliconangle-ai": {
-   "ok": 1790991060602,
+   "ok": 1790992865120,
    "fails": 0,
    "count": 30,
-   "ms": 639
+   "ms": 543
   },
   "gnews-0": {
-   "ok": 1790991061716,
+   "ok": 1790992867390,
    "fails": 0,
    "count": 25,
-   "ms": 764,
+   "ms": 1254,
    "err": "HTTP 503",
    "errAt": 1790600469686
   },
   "gnews-1": {
-   "ok": 1790991061743,
+   "ok": 1790992867239,
    "fails": 0,
    "count": 25,
-   "ms": 786,
+   "ms": 1046,
    "err": "HTTP 503",
    "errAt": 1790600464834
   },
   "gnews-3": {
-   "ok": 1790991061599,
+   "ok": 1790992867232,
    "fails": 0,
    "count": 3,
-   "ms": 521,
+   "ms": 850,
    "err": "HTTP 503",
    "errAt": 1790600463945
   },
   "gnews-7": {
-   "ok": 1790991061676,
+   "ok": 1790992867148,
    "fails": 0,
    "count": 2,
-   "ms": 315,
+   "ms": 397,
    "err": "HTTP 503",
    "errAt": 1790600465076
   },
   "gnews-5": {
-   "ok": 1790991061786,
+   "ok": 1790992867292,
    "fails": 0,
    "count": 25,
-   "ms": 526,
+   "ms": 862,
    "err": "HTTP 503",
    "errAt": 1790600466620
   },
   "gnews-4": {
-   "ok": 1790991061823,
+   "ok": 1790992867304,
    "fails": 0,
    "count": 25,
-   "ms": 652,
+   "ms": 900,
    "err": "HTTP 503",
    "errAt": 1790600465548
   },
   "gnews-2": {
-   "ok": 1790991061730,
+   "ok": 1790992867308,
    "fails": 0,
    "count": 25,
-   "ms": 702,
+   "ms": 1024,
    "err": "HTTP 503",
    "errAt": 1790600466086
   },
   "hackernews": {
-   "ok": 1790991061827,
+   "ok": 1790992867492,
    "fails": 0,
    "count": 24,
-   "ms": 463
+   "ms": 679
   },
   "gnews-6": {
-   "ok": 1790991061792,
+   "ok": 1790992867366,
    "fails": 0,
    "count": 25,
-   "ms": 518,
+   "ms": 867,
    "err": "HTTP 503",
    "errAt": 1790600464639
   },
   "sciencedaily-tech": {
-   "ok": 1790991061274,
+   "ok": 1790992866499,
    "fails": 0,
    "count": 30,
-   "ms": 353
+   "ms": 419
   },
   "hf-openai": {
-   "ok": 1790991061774,
+   "ok": 1790992867358,
    "fails": 0,
    "count": 6,
-   "ms": 19
+   "ms": 66
   },
   "bluesky-0": {
-   "ok": 1790991061658,
+   "ok": 1790992867152,
    "fails": 0,
    "count": 0,
-   "ms": 195,
+   "ms": 178,
    "err": "HTTP 504",
    "errAt": 1790634669504
   },
   "bluesky-1": {
-   "ok": 1790991061733,
+   "ok": 1790992867226,
    "fails": 0,
    "count": 0,
-   "ms": 224,
+   "ms": 149,
    "err": "HTTP 504",
    "errAt": 1790634669585
   },
   "hf-meta-llama": {
-   "ok": 1790991061816,
+   "ok": 1790992867407,
    "fails": 0,
    "count": 5,
-   "ms": 30
+   "ms": 103
   },
   "hf-google": {
-   "ok": 1790991061794,
+   "ok": 1790992867400,
    "fails": 0,
    "count": 6,
-   "ms": 20
+   "ms": 102
   },
   "hf-facebook": {
-   "ok": 1790991061830,
+   "ok": 1790992867414,
    "fails": 0,
    "count": 6,
-   "ms": 38
+   "ms": 106
   },
   "bluesky-2": {
-   "ok": 1790991061875,
+   "ok": 1790992867287,
    "fails": 0,
    "count": 0,
-   "ms": 276,
+   "ms": 139,
    "err": "HTTP 504",
    "errAt": 1790710324992
   },
   "bluesky-3": {
-   "ok": 1790991061755,
+   "ok": 1790992867227,
    "fails": 0,
    "count": 0,
-   "ms": 97,
+   "ms": 75,
    "err": "The operation was aborted due to timeout",
    "errAt": 1790634684631
   },
   "hf-mistralai": {
-   "ok": 1790991062194,
+   "ok": 1790992867458,
    "fails": 0,
    "count": 6,
-   "ms": 378
+   "ms": 99
   },
   "hf-microsoft": {
-   "ok": 1790991061810,
+   "ok": 1790992867470,
    "fails": 0,
    "count": 6,
-   "ms": 16
+   "ms": 114
   },
   "hf-nvidia": {
-   "ok": 1790991061831,
+   "ok": 1790992867427,
    "fails": 0,
    "count": 5,
-   "ms": 21
+   "ms": 69
   },
   "bluesky-5": {
-   "ok": 1790991061871,
+   "ok": 1790992867298,
    "fails": 0,
    "count": 0,
-   "ms": 154,
+   "ms": 71,
    "err": "HTTP 504",
    "errAt": 1790634669644
   },
   "hf-Qwen": {
-   "ok": 1790991061852,
+   "ok": 1790992867467,
    "fails": 0,
    "count": 5,
-   "ms": 29
+   "ms": 101
   },
   "bluesky-7": {
-   "ok": 1790991061829,
+   "ok": 1790992867382,
    "fails": 0,
    "count": 0,
-   "ms": 96,
+   "ms": 143,
    "err": "HTTP 504",
    "errAt": 1790634669691
   },
   "bluesky-8": {
-   "ok": 1790991061945,
+   "ok": 1790992867356,
    "fails": 0,
    "count": 0,
-   "ms": 202,
+   "ms": 69,
    "err": "HTTP 504",
    "errAt": 1790634669787
   },
   "bluesky-6": {
-   "ok": 1790991061915,
+   "ok": 1790992867397,
    "fails": 0,
    "count": 0,
-   "ms": 185,
+   "ms": 165,
    "err": "HTTP 504",
    "errAt": 1790634669678
   },
   "bluesky-4": {
-   "ok": 1790991061886,
+   "ok": 1790992867359,
    "fails": 0,
-   "count": 5,
-   "ms": 210,
+   "count": 3,
+   "ms": 133,
    "err": "HTTP 504",
    "errAt": 1790710325093
   },
   "hf-deepseek-ai": {
-   "ok": 1790991061854,
+   "ok": 1790992867485,
    "fails": 0,
    "count": 6,
-   "ms": 27
+   "ms": 103
   },
   "hf-zai-org": {
-   "ok": 1790991061854,
+   "ok": 1790992867504,
    "fails": 0,
    "count": 5,
-   "ms": 24
+   "ms": 107
   },
   "hf-MiniMaxAI": {
-   "ok": 1790991061871,
+   "ok": 1790992867478,
    "fails": 0,
    "count": 6,
-   "ms": 22
+   "ms": 71
   },
   "hf-THUDM": {
-   "ok": 1790991061856,
+   "ok": 1790992867458,
    "fails": 0,
    "count": 0,
-   "ms": 25
+   "ms": 58
   },
   "hf-ByteDance-Seed": {
-   "ok": 1790991061873,
+   "ok": 1790992867490,
    "fails": 0,
    "count": 6,
-   "ms": 19
+   "ms": 63
   },
   "hf-tencent": {
-   "ok": 1790991061874,
+   "ok": 1790992867481,
    "fails": 0,
    "count": 5,
-   "ms": 22
+   "ms": 67
   },
   "hf-OpenGVLab": {
-   "ok": 1790991061922,
+   "ok": 1790992867539,
    "fails": 0,
    "count": 6,
-   "ms": 49
+   "ms": 61
   },
   "hf-moonshotai": {
-   "ok": 1790991061849,
+   "ok": 1790992867495,
    "fails": 0,
    "count": 6,
-   "ms": 20
+   "ms": 105
   },
   "hf-baidu": {
-   "ok": 1790991061888,
+   "ok": 1790992867544,
    "fails": 0,
    "count": 6,
-   "ms": 17
+   "ms": 77
   },
   "hf-stepfun-ai": {
-   "ok": 1790991061878,
+   "ok": 1790992867561,
    "fails": 0,
    "count": 3,
-   "ms": 22
+   "ms": 103
   },
   "hf-allenai": {
-   "ok": 1790991061899,
+   "ok": 1790992867555,
    "fails": 0,
    "count": 6,
-   "ms": 21
+   "ms": 63
   },
   "hf-apple": {
-   "ok": 1790991061896,
+   "ok": 1790992867547,
    "fails": 0,
    "count": 6,
-   "ms": 22
+   "ms": 62
   },
   "hf-xai-org": {
-   "ok": 1790991061893,
+   "ok": 1790992867545,
    "fails": 0,
    "count": 2,
-   "ms": 19
+   "ms": 64
   },
   "hf-ibm-granite": {
-   "ok": 1790991061899,
+   "ok": 1790992867552,
    "fails": 0,
    "count": 1,
-   "ms": 24
+   "ms": 62
   },
   "hf-CohereLabs": {
-   "ok": 1790991061911,
+   "ok": 1790992867557,
    "fails": 0,
    "count": 4,
-   "ms": 25
+   "ms": 62
   },
   "hf-black-forest-labs": {
-   "ok": 1790991061915,
+   "ok": 1790992867565,
    "fails": 0,
    "count": 5,
-   "ms": 27
+   "ms": 61
   },
   "hf-bytedance-research": {
-   "ok": 1790991061874,
+   "ok": 1790992867519,
    "fails": 0,
    "count": 6,
-   "ms": 20
+   "ms": 61
   },
   "hf-stabilityai": {
-   "ok": 1790991061911,
+   "ok": 1790992867581,
    "fails": 0,
    "count": 6,
-   "ms": 19
+   "ms": 62
   },
   "hf-internlm": {
-   "ok": 1790991061892,
+   "ok": 1790992867550,
    "fails": 0,
    "count": 6,
-   "ms": 21
+   "ms": 80
   },
   "hf-Wan-AI": {
-   "ok": 1790991061916,
+   "ok": 1790992867607,
    "fails": 0,
    "count": 6,
-   "ms": 20
+   "ms": 63
   },
   "hf-Lightricks": {
-   "ok": 1790991061912,
+   "ok": 1790992867612,
    "fails": 0,
    "count": 6,
-   "ms": 19
+   "ms": 73
   },
   "hf-tencent-hunyuan": {
-   "ok": 1790991061913,
+   "ok": 1790992867605,
    "fails": 0,
    "count": 0,
-   "ms": 14
+   "ms": 60
   },
   "hf-XiaomiMiMo": {
-   "ok": 1790991061929,
+   "ok": 1790992867616,
    "fails": 0,
    "count": 6,
-   "ms": 18
+   "ms": 66
   },
   "hf-inclusionAI": {
-   "ok": 1790991061918,
+   "ok": 1790992867612,
    "fails": 0,
    "count": 6,
-   "ms": 19
+   "ms": 65
   },
   "hf-meituan-longcat": {
-   "ok": 1790991061934,
+   "ok": 1790992867627,
    "fails": 0,
    "count": 4,
-   "ms": 23
+   "ms": 75
   },
   "hf-rednote-hilab": {
-   "ok": 1790991061929,
+   "ok": 1790992867616,
    "fails": 0,
    "count": 0,
-   "ms": 17
+   "ms": 61
   },
   "hf-Kwai-Kolors": {
-   "ok": 1790991061931,
+   "ok": 1790992867621,
    "fails": 0,
    "count": 6,
-   "ms": 16
+   "ms": 60
   },
   "hf-openbmb": {
-   "ok": 1790991061937,
+   "ok": 1790992867620,
    "fails": 0,
    "count": 4,
-   "ms": 24
+   "ms": 63
   },
   "hf-KwaiVGI": {
-   "ok": 1790991061931,
+   "ok": 1790992867625,
    "fails": 0,
    "count": 0,
-   "ms": 16
+   "ms": 60
   },
   "hf-ai21labs": {
-   "ok": 1790991061939,
+   "ok": 1790992867703,
    "fails": 0,
    "count": 3,
-   "ms": 21
+   "ms": 98
   },
   "hf-LiquidAI": {
-   "ok": 1790991061934,
+   "ok": 1790992867644,
    "fails": 0,
    "count": 1,
-   "ms": 18
+   "ms": 63
   },
   "hf-NousResearch": {
-   "ok": 1790991061942,
+   "ok": 1790992867670,
    "fails": 0,
    "count": 5,
-   "ms": 20
+   "ms": 63
   },
   "hf-HuggingFaceTB": {
-   "ok": 1790991061953,
+   "ok": 1790992867689,
    "fails": 0,
    "count": 5,
-   "ms": 24
+   "ms": 77
   },
   "hf-amazon": {
-   "ok": 1790991061951,
+   "ok": 1790992867679,
    "fails": 0,
    "count": 6,
-   "ms": 20
+   "ms": 63
   },
   "hf-Salesforce": {
-   "ok": 1790991061957,
+   "ok": 1790992867685,
    "fails": 0,
    "count": 6,
-   "ms": 28
+   "ms": 73
   },
   "hf-sesame": {
-   "ok": 1790991061954,
+   "ok": 1790992867676,
    "fails": 0,
    "count": 1,
-   "ms": 23
+   "ms": 60
   },
   "hf-kyutai": {
-   "ok": 1790991062028,
+   "ok": 1790992867712,
    "fails": 0,
    "count": 6,
-   "ms": 94
+   "ms": 92
   },
   "hf-nari-labs": {
-   "ok": 1790991061950,
+   "ok": 1790992867683,
    "fails": 0,
    "count": 4,
-   "ms": 16
+   "ms": 62
   },
   "hf-ResembleAI": {
-   "ok": 1790991061955,
+   "ok": 1790992867687,
    "fails": 0,
    "count": 6,
-   "ms": 18
+   "ms": 62
   },
   "hf-hexgrad": {
-   "ok": 1790991061957,
+   "ok": 1790992867690,
    "fails": 0,
    "count": 4,
-   "ms": 18
+   "ms": 63
   },
   "hf-fishaudio": {
-   "ok": 1790991061960,
+   "ok": 1790992867733,
    "fails": 0,
    "count": 6,
-   "ms": 15
+   "ms": 63
   },
   "hf-SWivid": {
-   "ok": 1790991061958,
+   "ok": 1790992867708,
    "fails": 0,
    "count": 4,
-   "ms": 16
+   "ms": 64
   },
   "hf-microsoft-research": {
-   "ok": 1790991061965,
+   "ok": 1790992867737,
    "fails": 0,
    "count": 0,
-   "ms": 15
+   "ms": 61
   },
   "hf-ServiceNow-AI": {
-   "ok": 1790991062184,
+   "ok": 1790992867758,
    "fails": 0,
    "count": 5,
-   "ms": 230
+   "ms": 73
   },
   "hf-PrimeIntellect": {
-   "ok": 1790991061969,
+   "ok": 1790992867758,
    "fails": 0,
    "count": 6,
-   "ms": 18
+   "ms": 79
   },
   "hf-arcee-ai": {
-   "ok": 1790991061977,
+   "ok": 1790992867761,
    "fails": 0,
    "count": 1,
-   "ms": 24
+   "ms": 78
   },
   "gh-openai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/openai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192791,
-   "ok": 1790991062283,
+   "ok": 1790992868223,
    "count": 5,
-   "ms": 307
+   "ms": 465
   },
   "hf-01-ai": {
-   "ok": 1790991061973,
+   "ok": 1790992867758,
    "fails": 0,
    "count": 6,
-   "ms": 18
+   "ms": 71
   },
   "hf-SakanaAI": {
-   "ok": 1790991061975,
+   "ok": 1790992867767,
    "fails": 0,
    "count": 6,
-   "ms": 17
+   "ms": 64
   },
   "hf-baichuan-inc": {
-   "ok": 1790991061976,
+   "ok": 1790992867760,
    "fails": 0,
    "count": 1,
-   "ms": 19
+   "ms": 70
   },
   "hf-lmms-lab": {
-   "ok": 1790991061992,
+   "ok": 1790992867794,
    "fails": 0,
    "count": 6,
-   "ms": 23
+   "ms": 61
   },
   "hf-genmo": {
-   "ok": 1790991061978,
+   "ok": 1790992867772,
    "fails": 0,
    "count": 1,
-   "ms": 18
+   "ms": 64
   },
   "hf-rhymes-ai": {
-   "ok": 1790991061994,
+   "ok": 1790992867774,
    "fails": 0,
    "count": 6,
-   "ms": 29
+   "ms": 62
   },
   "hf-Alibaba-NLP": {
-   "ok": 1790991061993,
+   "ok": 1790992867800,
    "fails": 0,
    "count": 6,
-   "ms": 20
+   "ms": 63
   },
   "gh-google-deepmind": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/google-deepmind/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192860,
-   "ok": 1790991062587,
+   "ok": 1790992868223,
    "count": 5,
-   "ms": 609
+   "ms": 463
   },
   "hf-trending": {
-   "ok": 1790991061995,
+   "ok": 1790992867828,
    "fails": 0,
    "count": 5,
-   "ms": 20
+   "ms": 70
   },
   "gh-QwenLM": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/QwenLM/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192932,
-   "ok": 1790991062629,
+   "ok": 1790992868282,
    "count": 5,
-   "ms": 435
+   "ms": 401
   },
   "gh-anthropics": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/anthropics/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192948,
-   "ok": 1790991062245,
+   "ok": 1790992868220,
    "count": 3,
-   "ms": 268
+   "ms": 461
   },
   "gh-google-gemini": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/google-gemini/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192977,
-   "ok": 1790991062376,
+   "ok": 1790992868180,
    "count": 5,
-   "ms": 384
+   "ms": 419
   },
   "gh-facebookresearch": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/facebookresearch/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192978,
-   "ok": 1790991062354,
+   "ok": 1790992868198,
    "count": 5,
-   "ms": 360
+   "ms": 426
   },
   "gh-microsoft": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/microsoft/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192990,
-   "ok": 1790991062388,
+   "ok": 1790992868267,
    "count": 5,
-   "ms": 361
+   "ms": 473
   },
   "hf-Skywork": {
-   "ok": 1790991061975,
+   "ok": 1790992867759,
    "fails": 0,
    "count": 6,
-   "ms": 18
+   "ms": 70
   },
   "hf-papers": {
-   "ok": 1790991062027,
+   "ok": 1790992867881,
    "fails": 0,
    "count": 8,
-   "ms": 52
+   "ms": 123
   },
   "gh-zai-org": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/zai-org/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492192998,
-   "ok": 1790991062711,
+   "ok": 1790992868487,
    "count": 5,
-   "ms": 428
+   "ms": 307
   },
   "gh-deepseek-ai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/deepseek-ai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193039,
-   "ok": 1790991062646,
+   "ok": 1790992868215,
    "count": 5,
-   "ms": 462
+   "ms": 387
   },
   "gh-THUDM": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/THUDM/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193040,
-   "ok": 1790991062704,
+   "ok": 1790992868511,
    "count": 5,
-   "ms": 350
+   "ms": 313
   },
   "gh-ByteDance-Seed": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/ByteDance-Seed/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193051,
-   "ok": 1790991062664,
+   "ok": 1790992868518,
    "count": 5,
-   "ms": 276
+   "ms": 295
   },
   "gh-Tencent-Hunyuan": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/Tencent-Hunyuan/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193051,
-   "ok": 1790991062746,
+   "ok": 1790992868539,
    "count": 5,
-   "ms": 359
+   "ms": 319
   },
   "gh-bytedance": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/bytedance/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193052,
-   "ok": 1790991062756,
+   "ok": 1790992868530,
    "count": 5,
-   "ms": 237
+   "ms": 307
   },
   "gh-huggingface": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/huggingface/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193099,
-   "ok": 1790991062955,
+   "ok": 1790992868592,
    "count": 5,
-   "ms": 326
+   "ms": 310
   },
   "gh-mistralai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/mistralai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193099,
-   "ok": 1790991063415,
+   "ok": 1790992868662,
    "count": 4,
-   "ms": 828
+   "ms": 395
   },
   "gh-apple": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/apple/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193103,
-   "ok": 1790991063221,
+   "ok": 1790992868601,
    "count": 5,
-   "ms": 575
+   "ms": 299
   },
   "gh-MoonshotAI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/MoonshotAI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193106,
-   "ok": 1790991062519,
+   "ok": 1790992868457,
    "count": 5,
-   "ms": 274
+   "ms": 280
   },
   "gh-stepfun-ai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/stepfun-ai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193181,
-   "ok": 1790991062893,
+   "ok": 1790992868533,
    "count": 4,
-   "ms": 362
+   "ms": 294
   },
   "gh-black-forest-labs": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/black-forest-labs/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790991062965,
+   "ok": 1790992868898,
    "count": 5,
-   "ms": 254
+   "ms": 387
   },
   "gh-MiniMax-AI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/MiniMax-AI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790991062711,
+   "ok": 1790992868550,
    "count": 5,
    "ms": 335
   },
@@ -3335,119 +3363,119 @@
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/OpenBMB/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790991062986,
+   "ok": 1790992868916,
    "count": 5,
-   "ms": 240
+   "ms": 383
   },
   "gh-Wan-Video": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/Wan-Video/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193185,
-   "ok": 1790991062941,
+   "ok": 1790992868811,
    "count": 4,
-   "ms": 221
+   "ms": 281
   },
   "gh-Stability-AI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/Stability-AI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193186,
-   "ok": 1790991063099,
+   "ok": 1790992868867,
    "count": 4,
-   "ms": 388
+   "ms": 349
   },
   "gh-InternLM": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/InternLM/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193245,
-   "ok": 1790991063080,
+   "ok": 1790992868813,
    "count": 5,
-   "ms": 324
+   "ms": 274
   },
   "gh-allenai": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/allenai/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193246,
-   "ok": 1790991063025,
+   "ok": 1790992868858,
    "count": 5,
-   "ms": 321
+   "ms": 371
   },
   "gh-meituan-longcat": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/meituan-longcat/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790991063246,
+   "ok": 1790992868891,
    "count": 5,
-   "ms": 291
+   "ms": 290
   },
   "gh-xai-org": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/xai-org/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790991063972,
+   "ok": 1790992868861,
    "count": 5,
-   "ms": 1308
+   "ms": 404
   },
   "gh-XiaomiMiMo": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/XiaomiMiMo/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790991063259,
+   "ok": 1790992868874,
    "count": 2,
-   "ms": 318
+   "ms": 282
   },
   "gh-OpenGVLab": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/OpenGVLab/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193256,
-   "ok": 1790991063316,
+   "ok": 1790992868862,
    "count": 4,
-   "ms": 423
+   "ms": 312
   },
   "gh-SakanaAI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/SakanaAI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193357,
-   "ok": 1790991063252,
+   "ok": 1790992870138,
    "count": 4,
-   "ms": 266
+   "ms": 1327
   },
   "github-rising": {
-   "ok": 1790991063191,
+   "ok": 1790992869004,
    "fails": 0,
    "count": 0,
-   "ms": 166
+   "ms": 191
   },
   "gh-google-research": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/google-research/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193969,
-   "ok": 1790991062720,
+   "ok": 1790992868239,
    "count": 5,
-   "ms": 727
+   "ms": 472
   },
   "gh-NVIDIA": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/NVIDIA/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492193985,
-   "ok": 1790991062531,
+   "ok": 1790992868302,
    "count": 5,
-   "ms": 503
+   "ms": 502
   },
   "gh-inclusionAI": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/inclusionAI/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492194427,
-   "ok": 1790991063239,
+   "ok": 1790992868944,
    "count": 5,
-   "ms": 274
+   "ms": 282
   },
   "gh-meta-llama": {
    "fails": 0,
    "err": "HTTP 403 for https://api.github.com/orgs/meta-llama/repos?sort=created&direction=desc&per_page=5",
    "errAt": 1790492194993,
-   "ok": 1790991062387,
+   "ok": 1790992868177,
    "count": 5,
-   "ms": 392
+   "ms": 403
   },
   "gemini-sweep": {
    "ok": 1790989287760,
@@ -3456,13 +3484,27 @@
    "ms": 10859
   },
   "reddit": {
-   "ok": 1790991242171,
+   "ok": 1790993042214,
    "fails": 0,
    "count": 180,
-   "ms": 180791
+   "ms": 175259
   }
  },
  "runs": [
+  {
+   "at": "2026-10-03T02:01:03.275Z",
+   "published": [],
+   "skipped": [],
+   "collected": 8,
+   "minutes": 3,
+   "gemini": {
+    "calls": 1,
+    "inputTokens": 4922,
+    "outputTokens": 294,
+    "images": 0,
+    "searches": 0
+   }
+  },
   {
    "at": "2026-10-03T01:30:58.971Z",
    "published": [
@@ -5601,20 +5643,6 @@
     "calls": 2,
     "inputTokens": 4323,
     "outputTokens": 770,
-    "images": 0,
-    "searches": 0
-   }
-  },
-  {
-   "at": "2026-09-29T10:31:13.117Z",
-   "published": [],
-   "skipped": [],
-   "collected": 24,
-   "minutes": 2.9,
-   "gemini": {
-    "calls": 1,
-    "inputTokens": 4686,
-    "outputTokens": 612,
     "images": 0,
     "searches": 0
    }
