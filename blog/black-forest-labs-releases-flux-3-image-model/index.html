@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Forest Labs Releases FLUX 3 Image Model | rkj dev</title>
+<meta name="description" content="Black Forest Labs releases FLUX 3 Image, introducing bounding-box layout control, native 4K output, and multi-reference editing through a single API.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/black-forest-labs-releases-flux-3-image-model/">
+<meta name="theme-color" content="#16101a">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Black Forest Labs Releases FLUX 3 Image Model | rkj dev">
+<meta property="og:description" content="Black Forest Labs releases FLUX 3 Image, introducing bounding-box layout control, native 4K output, and multi-reference editing through a single API.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/black-forest-labs-releases-flux-3-image-model/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/black-forest-labs-releases-flux-3-image-model/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/black-forest-labs-releases-flux-3-image-model/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Black Forest Labs Releases FLUX 3 Image Model | rkj dev">
+<meta name="twitter:description" content="Black Forest Labs releases FLUX 3 Image, introducing bounding-box layout control, native 4K output, and multi-reference editing through a single API.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<meta property="article:published_time" content="2026-10-03T00:40:37.063Z">
+<meta property="article:modified_time" content="2026-10-03T00:40:37.063Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="Black Forest Labs">
+<meta property="article:tag" content="FLUX 3">
+<meta property="article:tag" content="Image Generation">
+<meta property="article:tag" content="Multimodal AI">
+<meta property="article:tag" content="AI Art">
+<link rel="preload" as="image" href="/blog/img/black-forest-labs-releases-flux-3-image-model/hero.webp" imagesrcset="/blog/img/black-forest-labs-releases-flux-3-image-model/hero-640.webp 640w, /blog/img/black-forest-labs-releases-flux-3-image-model/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Black Forest Labs Launches FLUX 3 Image Generation Model","description":"Black Forest Labs releases FLUX 3 Image, introducing bounding-box layout control, native 4K output, and multi-reference editing through a single API.","url":"https://www.rkjdev.com/blog/black-forest-labs-releases-flux-3-image-model/","mainEntityOfPage":"https://www.rkjdev.com/blog/black-forest-labs-releases-flux-3-image-model/","image":["https://www.rkjdev.com/blog/img/black-forest-labs-releases-flux-3-image-model/og.jpg","https://www.rkjdev.com/blog/img/black-forest-labs-releases-flux-3-image-model/hero.webp"],"datePublished":"2026-10-03T00:40:37.063Z","dateModified":"2026-10-03T00:40:37.063Z","articleSection":"AI Models","keywords":"Black Forest Labs, FLUX 3, Image Generation, Multimodal AI, AI Art","wordCount":732,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://bfl.ai/models/flux-3-image","https://docs.bfl.ai/flux_3/flux3_image_overview","https://www.krea.ai/models/flux-3","https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/","https://docs.bfl.ml/release-notes","https://morphic.com/resources/models/flux-3-image","https://fal.ai/models/blackforestlabs/flux-3/text-to-image"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Black Forest Labs Launches FLUX 3 Image Generation Model","item":"https://www.rkjdev.com/blog/black-forest-labs-releases-flux-3-image-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is FLUX 3 Image?","acceptedAnswer":{"@type":"Answer","text":"FLUX 3 Image is the image generation and editing component of Black Forest Labs' multimodal FLUX 3 family. It allows users to compose and edit scenes using text prompts, bounding boxes, and reference images."}},{"@type":"Question","name":"How do bounding boxes work in FLUX 3 Image?","acceptedAnswer":{"@type":"Answer","text":"Users specify element coordinates formatted as [top, left, bottom, right] on a normalized 0 to 1000 grid. The coordinates are appended as a JSON table directly in the text prompt."}},{"@type":"Question","name":"How many reference images does FLUX 3 Image support?","acceptedAnswer":{"@type":"Answer","text":"The model accepts up to 10 reference images per request, each sized between 256 × 256 pixels and 16 megapixels."}},{"@type":"Question","name":"Is FLUX 3 Image open-source?","acceptedAnswer":{"@type":"Answer","text":"Not yet. Black Forest Labs currently provides a commercial weights license for self-hosted enterprise deployments, with an open-weights version expected in the coming weeks."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>Black Forest Labs Launches FLUX 3 Image Generation Model</h1>
+      <p class="standfirst">The new model introduces bounding-box composition, multi-reference editing for up to ten images, and native rendering up to 4K resolution.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-03T00:40:37.063Z" class="abs" data-rel>Oct 3, 2026</time></span>
+        <span>3 min read</span>
+        <a href="#sources">7 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/black-forest-labs-releases-flux-3-image-model/hero.webp" srcset="/blog/img/black-forest-labs-releases-flux-3-image-model/hero-640.webp 640w, /blog/img/black-forest-labs-releases-flux-3-image-model/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="An artist working on digital composition and spatial image layouts in a studio environment." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Compositional layout tools and spatial positioning in digital image synthesis.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>On this page</p><ol><li><a href="#bounding-box-layouts-and-spatial-control">Bounding-Box Layouts and Spatial Control</a></li><li><a href="#multi-reference-synthesis-and-pixel-exact-edits">Multi-Reference Synthesis and Pixel-Exact Edits</a></li><li><a href="#technical-specifications-and-output-capabilities">Technical Specifications and Output Capabilities</a></li><li><a href="#pricing-availability-and-licensing">Pricing, Availability, and Licensing</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fblack-forest-labs-releases-flux-3-image-model%2F&text=Black%20Forest%20Labs%20Launches%20FLUX%203%20Image%20Generation%20Model" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fblack-forest-labs-releases-flux-3-image-model%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Black%20Forest%20Labs%20Launches%20FLUX%203%20Image%20Generation%20Model%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fblack-forest-labs-releases-flux-3-image-model%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/black-forest-labs-releases-flux-3-image-model/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="takeaways" aria-labelledby="tk">
+          <h2 id="tk">Key takeaways</h2>
+          <ul><li>Black Forest Labs officially released FLUX 3 Image, featuring bounding-box layout control and native rendering up to 4K resolution.</li><li>The model operates via a single API endpoint supporting both image generation and multi-element localized editing without mask modes.</li><li>FLUX 3 Image accepts up to ten reference images and features native web search grounding to improve generation accuracy.</li><li>A commercial weights license is currently available for enterprise infrastructure, with an open-weights release expected in the coming weeks.</li></ul>
+        </section>
+        <p>Black Forest Labs has released FLUX 3 Image, expanding its multimodal FLUX 3 foundation model family into visual generation and precision editing. Announced on October 1, 2026, the model introduces native bounding-box layout composition, localized pixel editing without manual masks, and direct rendering up to 4K resolution across 15 aspect ratios, according to documentation on <a href="https://bfl.ai/models/flux-3-image" target="_blank" rel="noopener">Black Forest Labs</a>.</p>
+<p>The release represents the visual synthesis counterpart to Black Forest Labs&#39; multimodal architecture, which originally debuted its video capabilities on August 4, 2026, as noted by <a href="https://morphic.com/resources/models/flux-3-image" target="_blank" rel="noopener">Morphic</a>. FLUX 3 Image is designed to give creators, developers, and autonomous software agents granular control over spatial placement and graphic layouts directly through text and coordinate prompts.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/black-forest-labs-releases-flux-3-image-model/figure-1.webp" width="1200" height="670" alt="A visual depiction of coordinate grid frames used to compose image elements." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Bounding-box coordinate grids organizing scene composition.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="bounding-box-layouts-and-spatial-control">Bounding-Box Layouts and Spatial Control</h2>
+<p>A primary architectural addition in FLUX 3 Image is native coordinate awareness. Instead of relying solely on natural language interpretations to determine composition, the model accepts bounding-box coordinates at the end of a prompt. According to the <a href="https://docs.bfl.ai/flux_3/flux3_image_overview" target="_blank" rel="noopener">Black Forest Labs API Overview</a>, the system maps layout elements across a standardized 0 to 1000 coordinate grid formatted as <code>[top, left, bottom, right]</code>.</p>
+<p>Users can write a global caption alongside an element table in JSON format, assigning identifiers such as <code>dome_1</code> or <code>crowd_1</code> to specific regions. For autonomous systems, the model is designed to work directly with large language models that generate layout bounding boxes automatically from a single line of instructional text, as detailed by <a href="https://bfl.ai/models/flux-3-image" target="_blank" rel="noopener">Black Forest Labs</a>.</p>
+<p>This structured approach prevents common issues in generative media where subjects drift across frames or crowd scenes lose coherence. Graphic designers can place headlines, focal subjects, and secondary objects precisely where needed for posters, editorial spreads, and promotional assets.</p>
+<h2 id="multi-reference-synthesis-and-pixel-exact-edits">Multi-Reference Synthesis and Pixel-Exact Edits</h2>
+<p>FLUX 3 Image handles both new generations and surgical image modifications through a unified API endpoint without requiring a dedicated edit mode parameter, as stated in the <a href="https://docs.bfl.ml/release-notes" target="_blank" rel="noopener">Black Forest Labs Release Notes</a>. The prompt itself determines whether the model generates a scene from scratch or updates an existing image.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/black-forest-labs-releases-flux-3-image-model/figure-2.webp" width="1200" height="670" alt="Multiple reference photos combining into a finished composition." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Multi-reference editing allowing localized modifications while keeping surrounding scene details unchanged.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>When editing, the model supports localized changes while preserving untouched pixels, Black Forest Labs claims. Users can recolor objects, swap props, resize figures, or remove background items in a single pass. For multi-image workflows, FLUX 3 Image accepts between 1 and 10 reference images ranging from 256 × 256 pixels up to 16 megapixels each, according to the <a href="https://docs.bfl.ai/flux_3/flux3_image_overview" target="_blank" rel="noopener">Black Forest Labs Documentation</a>. Prompts can reference source assets by numerical position—for example, taking a specific garment from one reference image and placing it on a character defined in another.</p>
+<p>The model also incorporates built-in web and image search grounding by default. When enabled, this grounding feature searches the web before generation to accurately depict real-world entities, places, and objects, though developers can disable it via API flags to prioritize processing speed.</p>
+<h2 id="technical-specifications-and-output-capabilities">Technical Specifications and Output Capabilities</h2>
+<p>FLUX 3 Image supports multiple resolution tiers, ranging from lightweight 768-pixel square drafts up to 4K resolutions measuring approximately 5456 × 3072 pixels (16.8 megapixels), as documented by <a href="https://morphic.com/resources/models/flux-3-image" target="_blank" rel="noopener">Morphic</a>. Supported aspect ratios span 21:9, 16:9, 4:3, 1:1, 3:4, 9:16, 9:21, and an automatic mode that adapts to the dimensions of an input reference image.</p>
+<p>According to partner platform <a href="https://www.krea.ai/models/flux-3" target="_blank" rel="noopener">Krea</a>, the underlying foundation is built on Self-Flow architecture, where generation and world understanding are trained jointly. This foundation enables high-accuracy multilingual text rendering inside images, making the system capable of embedding legible signage, labels, and typography into complex compositions.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/black-forest-labs-releases-flux-3-image-model/figure-3.webp" width="1200" height="670" alt="Fine visual textures and crisp typography rendered in ultra-high resolution." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Native 4K rendering designed to maintain fine textures and micro details.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="pricing-availability-and-licensing">Pricing, Availability, and Licensing</h2>
+<p>FLUX 3 Image is accessible immediately through the official Black Forest Labs API and third-party developer platforms including <a href="https://fal.ai/models/blackforestlabs/flux-3/text-to-image" target="_blank" rel="noopener">fal.ai</a>. Under the standard API pricing listed in the <a href="https://docs.bfl.ml/release-notes" target="_blank" rel="noopener">Black Forest Labs Release Notes</a>, per-image rates are scaled by resolution:</p>
+<ul>
+<li><strong>768sq:</strong> $0.041 per image</li>
+<li><strong>1k:</strong> $0.048 per image</li>
+<li><strong>2k:</strong> $0.100 per image</li>
+<li><strong>4k:</strong> $0.607 per image</li>
+</ul>
+<p>As reported by <a href="https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/" target="_blank" rel="noopener">The Decoder</a>, an introductory 50 percent launch discount is available across API endpoints through October 8, 2026. On fal.ai, promotional pricing starts at $0.0205 per image, with 1K outputs temporarily priced at $0.024 before returning to standard rates.</p>
+<p>For enterprise infrastructure deployments, Black Forest Labs offers commercial weight licensing to allow self-hosted inference and custom fine-tuning. An open-weights release is expected to arrive in the coming weeks, as reported by <a href="https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/" target="_blank" rel="noopener">The Decoder</a>. Integration with consumer platforms is also underway, with FLUX 3 coming soon to Krea, where users currently generate with FLUX.2 while FLUX 3 rolls out in early access.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <details open><summary>What is FLUX 3 Image?</summary><p>FLUX 3 Image is the image generation and editing component of Black Forest Labs' multimodal FLUX 3 family. It allows users to compose and edit scenes using text prompts, bounding boxes, and reference images.</p></details>
+<details><summary>How do bounding boxes work in FLUX 3 Image?</summary><p>Users specify element coordinates formatted as [top, left, bottom, right] on a normalized 0 to 1000 grid. The coordinates are appended as a JSON table directly in the text prompt.</p></details>
+<details><summary>How many reference images does FLUX 3 Image support?</summary><p>The model accepts up to 10 reference images per request, each sized between 256 × 256 pixels and 16 megapixels.</p></details>
+<details><summary>Is FLUX 3 Image open-source?</summary><p>Not yet. Black Forest Labs currently provides a commercial weights license for self-hosted enterprise deployments, with an open-weights version expected in the coming weeks.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://bfl.ai/models/flux-3-image" target="_blank" rel="noopener">FLUX 3 Image: Maximum control over every pixel | Black Forest Labs</a><span>Black Forest Labs · <b class="official">Official</b></span></li><li><a href="https://docs.bfl.ai/flux_3/flux3_image_overview" target="_blank" rel="noopener">FLUX 3 Image - Black Forest Labs</a><span>Black Forest Labs · <b class="official">Official</b></span></li><li><a href="https://www.krea.ai/models/flux-3" target="_blank" rel="noopener">FLUX 3 by Black Forest Labs — AI Image Generator | Krea</a><span>Krea · Jul 23, 2026 · <b class="official">Official</b></span></li><li><a href="https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/" target="_blank" rel="noopener">Black Forest Labs launches Flux 3 Image with multi-step editing that leaves the rest of your picture alone</a><span>The Decoder · Oct 2, 2026</span></li><li><a href="https://docs.bfl.ml/release-notes" target="_blank" rel="noopener">Release Notes - Black Forest Labs</a><span>Black Forest Labs</span></li><li><a href="https://morphic.com/resources/models/flux-3-image" target="_blank" rel="noopener">Flux 3 Image: bounding-box layouts, precise edits, 4K output</a><span>Morphic</span></li><li><a href="https://fal.ai/models/blackforestlabs/flux-3/text-to-image" target="_blank" rel="noopener">Flux 3 Image (Text to Image) API on fal - Fal.ai</a><span>fal.ai</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Reddit, the-decoder.com and Google News, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (44 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Black%20Forest%20Labs%20Launches%20FLUX%203%20Image%20Generation%20Model">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Black Forest Labs</span> <span>#FLUX 3</span> <span>#Image Generation</span> <span>#Multimodal AI</span> <span>#AI Art</span></p>
+        <p class="stamp">Published October 3, 2026 at 00:40 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="grid"><article class="card ">
+  <a class="card-link" href="/blog/google-gemini-4-argon-frontier-model-launch-4/">
+    <div class="thumb is-ai"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch-4/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch-4/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch-4/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of high-performance data center infrastructure with glowing data streams." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-03T00:13:16.133Z" data-rel>Oct 3, 2026</time></p>
+      <h3>Google Launches Gemini 4 Argon Frontier AI Model</h3>
+      <p class="dek">The first release in the Gemini 4 series introduces a massive 1-million-token output limit, specialized cybersecurity features, and competitive benchmark performance.</p>
+      <p class="foot-meta">3 min read · 3 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/cloudflare-releases-clef-decision-models/">
+    <div class="thumb is-ai"><img src="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp" srcset="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp 640w, /blog/img/cloudflare-releases-clef-decision-models/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Server room hardware processing structured data streams" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:36:11.077Z" data-rel>Oct 2, 2026</time></p>
+      <h3>Cloudflare Releases Open-Weight Clef Decision Models</h3>
+      <p class="dek">Post-trained from Qwen backbones, Clef and Clef-flash bring multimodal, non-autoregressive decision scoring to edge infrastructure.</p>
+      <p class="foot-meta">3 min read · 5 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/aws-strands-decider-2b-open-source-decision-model/">
+    <div class="thumb is-ai"><img src="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp" srcset="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp 640w, /blog/img/aws-strands-decider-2b-open-source-decision-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Glowing server hardware in a modern data center symbolizing high-speed computation" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:08:57.378Z" data-rel>Oct 2, 2026</time></p>
+      <h3>AWS Releases Strands Decider 2B Open-Source Decision Model</h3>
+      <p class="dek">Fine-tuned from a Qwen3.5-2B base with a custom pointer head, the lightweight model makes sub-second agent decisions and releases under Apache 2.0.</p>
+      <p class="foot-meta">4 min read · 7 sources</p>
+    </div>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/apple-tightens-macos-full-disk-access-ai-agents/"><span>Older</span>Apple Tightens macOS Full Disk Access Over AI Agent Risks</a>
+  </nav>
+</main>
+<footer class="foot wrap">
+  <div>
+    <p class="foot-mark">rkj dev <span>Blog</span></p>
+    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+  </div>
+  <nav aria-label="Blog">
+    <a href="/blog/">Latest</a>
+    <a href="/blog/category/ai-models/">AI Models</a>
+    <a href="/blog/category/open-source/">Open Source</a>
+    <a href="/blog/category/research/">Research</a>
+    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
+    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
+    <a href="/blog/category/industry/">Industry</a>
+    <a href="/blog/feed.xml">RSS</a>
+    <a href="/">About rkj dev</a>
+  </nav>
+  <p class="fine">© 2026 Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+</footer>
+<script src="/blog/blog.js?v=210b69de" defer></script>
+</body>
+</html>

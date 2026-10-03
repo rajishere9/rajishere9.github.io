@@ -1,0 +1,175 @@
+{
+ "slug": "black-forest-labs-releases-flux-3-image-model",
+ "title": "Black Forest Labs Launches FLUX 3 Image Generation Model",
+ "seoTitle": "Black Forest Labs Releases FLUX 3 Image Model",
+ "description": "Black Forest Labs releases FLUX 3 Image, introducing bounding-box layout control, native 4K output, and multi-reference editing through a single API.",
+ "dek": "The new model introduces bounding-box composition, multi-reference editing for up to ten images, and native rendering up to 4K resolution.",
+ "category": "AI Models",
+ "tags": [
+  "Black Forest Labs",
+  "FLUX 3",
+  "Image Generation",
+  "Multimodal AI",
+  "AI Art"
+ ],
+ "keyTakeaways": [
+  "Black Forest Labs officially released FLUX 3 Image, featuring bounding-box layout control and native rendering up to 4K resolution.",
+  "The model operates via a single API endpoint supporting both image generation and multi-element localized editing without mask modes.",
+  "FLUX 3 Image accepts up to ten reference images and features native web search grounding to improve generation accuracy.",
+  "A commercial weights license is currently available for enterprise infrastructure, with an open-weights release expected in the coming weeks."
+ ],
+ "body": "Black Forest Labs has released FLUX 3 Image, expanding its multimodal FLUX 3 foundation model family into visual generation and precision editing. Announced on October 1, 2026, the model introduces native bounding-box layout composition, localized pixel editing without manual masks, and direct rendering up to 4K resolution across 15 aspect ratios, according to documentation on [Black Forest Labs](https://bfl.ai/models/flux-3-image).\n\nThe release represents the visual synthesis counterpart to Black Forest Labs' multimodal architecture, which originally debuted its video capabilities on August 4, 2026, as noted by [Morphic](https://morphic.com/resources/models/flux-3-image). FLUX 3 Image is designed to give creators, developers, and autonomous software agents granular control over spatial placement and graphic layouts directly through text and coordinate prompts.\n\n[[FIG1]]\n\n## Bounding-Box Layouts and Spatial Control\n\nA primary architectural addition in FLUX 3 Image is native coordinate awareness. Instead of relying solely on natural language interpretations to determine composition, the model accepts bounding-box coordinates at the end of a prompt. According to the [Black Forest Labs API Overview](https://docs.bfl.ai/flux_3/flux3_image_overview), the system maps layout elements across a standardized 0 to 1000 coordinate grid formatted as `[top, left, bottom, right]`.\n\nUsers can write a global caption alongside an element table in JSON format, assigning identifiers such as `dome_1` or `crowd_1` to specific regions. For autonomous systems, the model is designed to work directly with large language models that generate layout bounding boxes automatically from a single line of instructional text, as detailed by [Black Forest Labs](https://bfl.ai/models/flux-3-image).\n\nThis structured approach prevents common issues in generative media where subjects drift across frames or crowd scenes lose coherence. Graphic designers can place headlines, focal subjects, and secondary objects precisely where needed for posters, editorial spreads, and promotional assets.\n\n## Multi-Reference Synthesis and Pixel-Exact Edits\n\nFLUX 3 Image handles both new generations and surgical image modifications through a unified API endpoint without requiring a dedicated edit mode parameter, as stated in the [Black Forest Labs Release Notes](https://docs.bfl.ml/release-notes). The prompt itself determines whether the model generates a scene from scratch or updates an existing image.\n\n[[FIG2]]\n\nWhen editing, the model supports localized changes while preserving untouched pixels, Black Forest Labs claims. Users can recolor objects, swap props, resize figures, or remove background items in a single pass. For multi-image workflows, FLUX 3 Image accepts between 1 and 10 reference images ranging from 256 × 256 pixels up to 16 megapixels each, according to the [Black Forest Labs Documentation](https://docs.bfl.ai/flux_3/flux3_image_overview). Prompts can reference source assets by numerical position—for example, taking a specific garment from one reference image and placing it on a character defined in another.\n\nThe model also incorporates built-in web and image search grounding by default. When enabled, this grounding feature searches the web before generation to accurately depict real-world entities, places, and objects, though developers can disable it via API flags to prioritize processing speed.\n\n## Technical Specifications and Output Capabilities\n\nFLUX 3 Image supports multiple resolution tiers, ranging from lightweight 768-pixel square drafts up to 4K resolutions measuring approximately 5456 × 3072 pixels (16.8 megapixels), as documented by [Morphic](https://morphic.com/resources/models/flux-3-image). Supported aspect ratios span 21:9, 16:9, 4:3, 1:1, 3:4, 9:16, 9:21, and an automatic mode that adapts to the dimensions of an input reference image.\n\nAccording to partner platform [Krea](https://www.krea.ai/models/flux-3), the underlying foundation is built on Self-Flow architecture, where generation and world understanding are trained jointly. This foundation enables high-accuracy multilingual text rendering inside images, making the system capable of embedding legible signage, labels, and typography into complex compositions.\n\n[[FIG3]]\n\n## Pricing, Availability, and Licensing\n\nFLUX 3 Image is accessible immediately through the official Black Forest Labs API and third-party developer platforms including [fal.ai](https://fal.ai/models/blackforestlabs/flux-3/text-to-image). Under the standard API pricing listed in the [Black Forest Labs Release Notes](https://docs.bfl.ml/release-notes), per-image rates are scaled by resolution:\n\n- **768sq:** $0.041 per image\n- **1k:** $0.048 per image\n- **2k:** $0.100 per image\n- **4k:** $0.607 per image\n\nAs reported by [The Decoder](https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/), an introductory 50 percent launch discount is available across API endpoints through October 8, 2026. On fal.ai, promotional pricing starts at $0.0205 per image, with 1K outputs temporarily priced at $0.024 before returning to standard rates.\n\nFor enterprise infrastructure deployments, Black Forest Labs offers commercial weight licensing to allow self-hosted inference and custom fine-tuning. An open-weights release is expected to arrive in the coming weeks, as reported by [The Decoder](https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/). Integration with consumer platforms is also underway, with FLUX 3 coming soon to Krea, where users currently generate with FLUX.2 while FLUX 3 rolls out in early access.",
+ "faq": [
+  {
+   "q": "What is FLUX 3 Image?",
+   "a": "FLUX 3 Image is the image generation and editing component of Black Forest Labs' multimodal FLUX 3 family. It allows users to compose and edit scenes using text prompts, bounding boxes, and reference images."
+  },
+  {
+   "q": "How do bounding boxes work in FLUX 3 Image?",
+   "a": "Users specify element coordinates formatted as [top, left, bottom, right] on a normalized 0 to 1000 grid. The coordinates are appended as a JSON table directly in the text prompt."
+  },
+  {
+   "q": "How many reference images does FLUX 3 Image support?",
+   "a": "The model accepts up to 10 reference images per request, each sized between 256 × 256 pixels and 16 megapixels."
+  },
+  {
+   "q": "Is FLUX 3 Image open-source?",
+   "a": "Not yet. Black Forest Labs currently provides a commercial weights license for self-hosted enterprise deployments, with an open-weights version expected in the coming weeks."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A digital artist working in an illuminated design studio arranging geometric framing overlays on a wide monitor displaying a detailed landscape.",
+  "alt": "An artist working on digital composition and spatial image layouts in a studio environment.",
+  "caption": "Illustration: Compositional layout tools and spatial positioning in digital image synthesis.",
+  "src": "img/black-forest-labs-releases-flux-3-image-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 48018,
+  "small": "img/black-forest-labs-releases-flux-3-image-model/hero-640.webp",
+  "og": "img/black-forest-labs-releases-flux-3-image-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/black-forest-labs-releases-flux-3-image-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern graphic design workspace showing clean rectangular coordinate frames layered over an architectural scene.",
+   "alt": "A visual depiction of coordinate grid frames used to compose image elements.",
+   "caption": "Illustration: Bounding-box coordinate grids organizing scene composition.",
+   "slot": "FIG1",
+   "src": "img/black-forest-labs-releases-flux-3-image-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 46218,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A split-view workspace showing several photo references being assembled into a single unified artwork.",
+   "alt": "Multiple reference photos combining into a finished composition.",
+   "caption": "Illustration: Multi-reference editing allowing localized modifications while keeping surrounding scene details unchanged.",
+   "slot": "FIG2",
+   "src": "img/black-forest-labs-releases-flux-3-image-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41342,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "An extreme close-up view of a high-resolution render showing intricate physical surface textures, typography, and microscopic details.",
+   "alt": "Fine visual textures and crisp typography rendered in ultra-high resolution.",
+   "caption": "Illustration: Native 4K rendering designed to maintain fine textures and micro details.",
+   "slot": "FIG3",
+   "src": "img/black-forest-labs-releases-flux-3-image-model/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 48544,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://bfl.ai/models/flux-3-image",
+   "title": "FLUX 3 Image: Maximum control over every pixel | Black Forest Labs",
+   "site": "Black Forest Labs",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://docs.bfl.ai/flux_3/flux3_image_overview",
+   "title": "FLUX 3 Image - Black Forest Labs",
+   "site": "Black Forest Labs",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.krea.ai/models/flux-3",
+   "title": "FLUX 3 by Black Forest Labs — AI Image Generator | Krea",
+   "site": "Krea",
+   "published": 1784764800000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/",
+   "title": "Black Forest Labs launches Flux 3 Image with multi-step editing that leaves the rest of your picture alone",
+   "site": "The Decoder",
+   "published": 1790927084000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://docs.bfl.ml/release-notes",
+   "title": "Release Notes - Black Forest Labs",
+   "site": "Black Forest Labs",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://morphic.com/resources/models/flux-3-image",
+   "title": "Flux 3 Image: bounding-box layouts, precise edits, 4K output",
+   "site": "Morphic",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://fal.ai/models/blackforestlabs/flux-3/text-to-image",
+   "title": "Flux 3 Image (Text to Image) API on fal - Fal.ai",
+   "site": "fal.ai",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790988037063,
+ "updatedAt": 1790988037063,
+ "foundVia": "Reddit, the-decoder.com and Google News",
+ "check": {
+  "claims": 44,
+  "score": 10
+ },
+ "story": {
+  "id": "Pf0f15792",
+  "score": 87,
+  "items": [
+   "https://bfl.ai/models/flux-3-image",
+   "https://www.reddit.com/r/StableDiffusion/comments/1wvgsg7/introducing_flux_3_image/",
+   "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/",
+   "https://news.google.com/rss/articles/CBMicEFVX3lxTE02MXcxeG5RTjNkbnFNcDNBck1TeWMzNU1uT1RsREpfNW5BUXdZQnhIazVzVFh5UVRrdnNGbEVyVDZxVEZkcWlMMklPbDRLd1JDTlBtZmdWOTVZZUlhM25mU2xFeDdFeGVGQXJhRDlNTUI?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "slug": "nvidia-launches-64gb-dgx-spark-desktop-supercomputer",
+ "title": "Nvidia Debuts $4,999 DGX Spark 64GB Desktop AI Supercomputer",
+ "seoTitle": "Nvidia Launches 64GB DGX Spark Desktop Supercomputer",
+ "description": "Nvidia announced a 64GB DGX Spark desktop AI supercomputer starting at $4,999 to offer developers local model inference amid rising memory hardware costs.",
+ "dek": "The compact GB10 Grace Blackwell system brings local agentic AI development to desks, with clustering support to scale memory on demand.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Nvidia",
+  "DGX Spark",
+  "Hardware",
+  "AI Workstations",
+  "Grace Blackwell",
+  "Local AI"
+ ],
+ "keyTakeaways": [
+  "Nvidia introduced a 64GB unified memory configuration of the DGX Spark desktop supercomputer priced at $4,999.",
+  "The system is powered by the GB10 Grace Blackwell Superchip, delivering up to 1 petaflop of FP4 AI compute.",
+  "Hardware partners including Acer, ASUS, Dell, Gigabyte, HP, and MSI will begin shipping the system on October 23, 2026.",
+  "Two 64GB units can connect directly via built-in ConnectX-7 networking to pool memory to 128GB and support models up to 200 billion parameters."
+ ],
+ "body": "Nvidia has officially expanded its personal AI computing lineup with a new 64GB unified memory edition of the DGX Spark desktop supercomputer. Set to arrive on October 23, 2026, starting at $4,999, the new tier is engineered to run open-source language models and autonomous AI agents directly on developer desks without continuous cloud compute bills.\n\nThe launch arrives as persistent hardware supply constraints and memory price hikes push higher-tier workstations out of reach for independent developers. According to the [official announcement on the NVIDIA Blog](https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/), the 64GB DGX Spark retains the full Grace Blackwell architecture of the original 128GB unit, providing a dedicated platform for local inference, fine-tuning, and agent orchestration.\n\n## Grace Blackwell Architecture in a Compact Chassis\n\nAt the core of the new 64GB model sits the Nvidia GB10 Grace Blackwell Superchip. The multi-die processor integrates a 20-core Arm CPU—combining 10 Cortex-X925 performance cores and 10 Cortex-A725 efficiency cores—alongside a Blackwell architecture GPU equipped with fifth-generation Tensor Cores. According to the [NVIDIA DGX Spark specifications](https://www.nvidia.com/en-us/products/workstations/dgx-spark/), the system produces up to 1 petaflop of AI compute at FP4 precision.\n\n[[FIG1]]\n\nThe GPU and CPU communicate over Nvidia's high-bandwidth NVLink-C2C interconnect, sharing a coherent 64GB pool of LPDDR5X system memory across a 256-bit interface with 273 GB/s of bandwidth. The entire setup is housed in a compact mini-PC enclosure measuring 150 mm by 150 mm by 50.5 mm and weighing 1.2 kg. It operates with a 140W GB10 thermal design power (TDP) and a 240W power supply, making it quiet and energy-efficient for continuous workstation use.\n\nIn addition to the superchip, the hardware includes 10GbE networking, Wi-Fi 7, Bluetooth 5.4, four USB Type-C ports, HDMI 2.1a output, and up to 4TB of self-encrypting NVMe M.2 storage.\n\n## Scaling Local Workloads Over ConnectX-7 Networking\n\nNvidia designed the DGX Spark platform to support larger models by clustering multiple systems together. Every unit includes an integrated ConnectX-7 network interface card running at 200 Gbps, enabling two desktop units to be wired directly with a QSFP cable without needing an external network switch.\n\n[[FIG2]]\n\nWhen two 64GB DGX Spark machines are linked, the system pools memory into a 128GB unified space with 546 GB/s of total bandwidth. Nvidia states that this configuration expands capability from running 100-billion-parameter models on a single box to supporting models with up to 200 billion parameters. In testing with the Qwen 3.8 27B model, Nvidia reported that two clustered 64GB units delivered up to 1.7 times the performance of a single system.\n\nSoftware management is handled by the Nvidia Sync app, which automates network detection and configuration through its Cluster Assistant. Users can link up to four 64GB units with an optional 200GbE switch to assemble a 256GB memory pool supporting models up to 400 billion parameters, while four 128GB units provide a 512GB pool capable of handling models up to 700 billion parameters.\n\n## Software Stack and Developer Ecosystem\n\nThe 64GB configuration comes pre-installed with Nvidia DGX OS (an Ubuntu-based distribution) and standard developer runtimes, including CUDA-X AI libraries, TensorRT, PyTorch, Ollama, llama.cpp, LM Studio, and vLLM. As reported by [StorageReview](https://www.storagereview.com/news/nvidia-dgx-spark-64gb-october-23-4999-two-units-cluster-to-128gb), Nvidia will also release the Sync Model Launcher at the end of October 2026. The tool enables one-click deployment of models like Qwen 3.8 27B across standalone or clustered machines and automatically exposes endpoints to local browser-based IDEs like OpenCode.\n\nFor agent developers, the system includes the Nvidia Agent Toolkit and OpenShell, an open-source framework designed to enforce security and privacy policies on local agent interactions. Developers can also deploy reference stacks such as NemoClaw, OpenClaw, and Hermes Agent.\n\n## Pricing, OEM Partners, and Market Position\n\nThe 64GB DGX Spark will be available exclusively through Nvidia manufacturer partners, including Acer, ASUS, Dell, Gigabyte, HP, and MSI, starting October 23, 2026. Pricing starts at $4,999.\n\nAs reported by [Tom's Hardware](https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less) and [Wccftech](https://wccftech.com/nvidia-64-gb-dgx-spark-this-month-for-4999-usd-128-gb-spark-jumps-past-6000/), the new 64GB tier effectively replaces the original price tier of the 128GB edition. Due to widespread memory supply constraints, prices for the 128GB model have climbed past $6,000 after initially debuting at lower introductory price points.\n\nThe $4,999 price tag positions the DGX Spark as a dedicated hardware option against competing personal workstation systems from AMD and Apple, with Nvidia banking on its CUDA ecosystem, low-power desktop form factor, and multi-node ConnectX-7 interconnect to attract AI builders.",
+ "faq": [
+  {
+   "q": "When will the 64GB Nvidia DGX Spark be available?",
+   "a": "The 64GB DGX Spark will be available from partner manufacturers—including Acer, ASUS, Dell, Gigabyte, HP, and MSI—starting Friday, October 23, 2026."
+  },
+  {
+   "q": "What is the price of the 64GB DGX Spark?",
+   "a": "Pricing for the 64GB DGX Spark starts at $4,999 through authorized OEM hardware partners."
+  },
+  {
+   "q": "How large of an AI model can the 64GB DGX Spark run?",
+   "a": "A single 64GB DGX Spark can run models up to 100 billion parameters. Connecting two units via ConnectX-7 expands capacity to support models up to 200 billion parameters."
+  },
+  {
+   "q": "Can two 64GB DGX Spark systems be clustered together?",
+   "a": "Yes. Two units can connect directly using a QSFP cable over their built-in 200 Gbps ConnectX-7 ports without requiring an external switch, pooling memory to 128GB."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern compact desktop computer sitting on a clean wooden developer desk in an office studio, glowing faintly with subtle status indicator lights next to an open notebook and coffee mug, cinematic soft lighting.",
+  "alt": "Illustration of a compact desktop AI supercomputer workstation on an office desk.",
+  "caption": "Illustration: The compact desktop AI supercomputer form factor designed for local developer workstations.",
+  "src": "img/nvidia-launches-64gb-dgx-spark-desktop-supercomputer/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 49222,
+  "small": "img/nvidia-launches-64gb-dgx-spark-desktop-supercomputer/hero-640.webp",
+  "og": "img/nvidia-launches-64gb-dgx-spark-desktop-supercomputer/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/nvidia-launches-64gb-dgx-spark-desktop-supercomputer/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An artistic close-up rendering of a processor superchip mounted on a circuit board, with intricate micro-traces and subtle metallic cooling fins illuminated by soft studio lights.",
+   "alt": "Illustration representing a unified CPU and GPU superchip architecture.",
+   "caption": "Illustration: The unified superchip architecture combines high-performance Arm computing cores and neural tensor processors.",
+   "slot": "FIG1",
+   "src": "img/nvidia-launches-64gb-dgx-spark-desktop-supercomputer/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 54296,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two small form factor desktop workstation nodes connected side by side with a thick high-speed networking cable on a laboratory workbench, illuminated by cool ambient workshop lighting.",
+   "alt": "Illustration of two networked workstation computers linked together.",
+   "caption": "Illustration: Direct multi-node networking allows pairs of desktop units to pool system memory.",
+   "slot": "FIG2",
+   "src": "img/nvidia-launches-64gb-dgx-spark-desktop-supercomputer/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 28838,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+   "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+   "site": "NVIDIA Blog",
+   "published": 1790946039000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+   "title": "NVIDIA DGX Spark: AI Supercomputer on Your Desk",
+   "site": "NVIDIA DGX Spark",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less",
+   "title": "Nvidia introduces 64GB DGX Spark to throw local AI fans a lifeline amid the RAMpocalypse &mdash; new GB10 config starts at $4999 for those who can work with less",
+   "site": "Tom's Hardware",
+   "published": 1790946000000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.pcmag.com/articles/set-up-your-at-home-ai-lab-with-the-compact-nvidia-dgx-spark-64gb",
+   "title": "Set Up Your At-Home AI Lab With the Compact NVIDIA DGX Spark 64GB",
+   "site": "PCMag",
+   "published": 1790958929000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://wccftech.com/nvidia-64-gb-dgx-spark-this-month-for-4999-usd-128-gb-spark-jumps-past-6000/",
+   "title": "NVIDIA’s 64 GB DGX Spark “AI Supercomputer” Launches This Month For $4999, While The 128 GB Spark Jumps Past $6000",
+   "site": "Wccftech",
+   "published": 1790946007000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.storagereview.com/news/nvidia-dgx-spark-64gb-october-23-4999-two-units-cluster-to-128gb",
+   "title": "NVIDIA DGX Spark 64GB Lands October 23 at $4,999, and Two Units Cluster to 128GB Over ConnectX-7",
+   "site": "StorageReview.com",
+   "published": 1790954150000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1790987740501,
+ "updatedAt": 1790987740501,
+ "foundVia": "blogs.nvidia.com, tomshardware.com and Google News",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Pe2d40b9e",
+  "score": 88,
+  "items": [
+   "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+   "https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less",
+   "https://news.google.com/rss/articles/CBMia0FVX3lxTE4tQkRUazBSYXFrUFhDd3A1anlHUzdWQVg0dDJZRmVqSU44eU0wZm9BYURqRDNfQXg4N2JHa2xXZU5oRkEySDQyMDNzcGlSc3c5QnVHdzVfc29GUzN6ei0tMldwS0tqNEZHWXpv?oc=5",
+   "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUHVlYVM0ckI3dDJuSDdIN3hEWng3VkhsOTFNRmxJU3BZQ2FubDR2VXNiRXRjTEs1UG5XT3pMdHpzalZkT19WM0ttUXc5NmxWdG8wOHQteUdMeXl3by1udnlyNDh3QVF1Z0o2cXdUT1pkTEFpNkp1ZTBJbjNSTnVWejFQLURHNTNneFNXNkp0NXlrQlVo?oc=5",
+   "https://news.google.com/rss/articles/CBMiakFVX3lxTE8ySmVfc0xHY19Oby1ySTliaUtZMWpxVi1mX0l0NEFicVdCOVoxU2x6TG1NSVFWVFlJVTBIY1BSSjlhWGVaeDFsVDdnS1hUd184ZG9OS2M3ZUVpWWhxZmdwTkVzSFVVYWxkVmc?oc=5",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxPeDRDV2ZjaUlEczd2UllZN3JxeWJpSkZhRUV4VWI5RVUwUmFjSVNKZzc2SDl6VjJUeE1MeElDWlU3bHZ1V2J6bHZRRDBqdVBDN1N2V3hYN3lCcENSbXFZbmZiZERxTGVEeXhjTEFVTi0tVURWSVJxdktsajdNQ1EyMUtmYUVocEg4WHkwUHpJaHNmOEgwakllRlZSRlVEQdIBowFBVV95cUxPTWFLS0lobU5DNzB4NjhzSmVocTJLQmFtMVdmMGVVTG96VWk3M2s0b0hJeXNVUm5FZnJxNWpJbkhlT0JGazBjcjZqYWlDWDhnMGEzTEI3U1N5dWYwOWNSeU1PTmd0U01WdFBWbWFCenhhYlJyeDVZeUdpQTJuYXREUktzbmdwRnJTTzBoTGRLS3ZXZ3I0ckZIY2s2bi1qMXJ5cGFn?oc=5",
+   "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNNFhTNUhxdDVQdjd4T3kwZUZfUWQwWDZ6V0NOSXhySzN3bmdsOFo1QUpqNWV4R1Q3VzFCZXpLMVYxZk1wYXJwUFl3cmFlbzBOWGdfRmhaOUdVM3JSQ1hBcWQtY1hjbVhIWHdXUkxMU1NIWWNvMHo1aXdwUXVYRmt5YXhRcFJPNUQ2aW5nNjhoLWRPWS0yVmp2NV9YcExOTTJiMnZ2TWRNaW5PNjEtZVppdmRKYkoydDZqS1VxZTg0R09tSERDUW4zY3k3NWdMb0tNcTBBVFZmLW1nUHRWS212dHlZNlVGSHdQcHRYQWRnSmd6RjZXWEtqU1VERGM1Q1hpREZTN3pCRkVaRG5menN6ak8wdmhyYnlkZFFidTFOWmRDZUMtU1ZtbmY4TQ?oc=5",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxQM0Qtal9nUzFYY0Z1Mi1QQTMtWU1RdEFDM3BpY2pMTEM3MGpUSHpMNWR2eXdPbEJmclpJZFZKVExndm5PdEFHXzRSbGJ6elZHTEhsYW1yV3RXOW5LM3p6eEtxY2FwTzRVeE50UEpIeTJXa25Bc2h2ZlZ1cmFSRXVxT2lacFBlV01HVFF0S0J5SkV5M0I0S0x0VHlKZ2k2dw?oc=5",
+   "https://news.google.com/rss/articles/CBMiakFVX3lxTE04N3ZkT1NySHhzVm1CSmdNWjZVVGIza29tb3JBQjZBUWNqRmx5QUUtYnFNTHJ6d0hBTU1Sa3lWbnpKaFZxVXFmek1KM1lzNHMzdjMyRnE0ZEZkZ3dxSHpralRFTjV2WU50alE?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUGc0ZWh1clpuTkZlWTZubGU2bkxxQjFRdlFiLUpqSllaaldodzhmdm5yczViaXFEbWw2bWpWallDZGM1YmF1SG5GTjhxTXc3U1JDcU5LTDRfV1lFWk51YnJYZTBWaHNqWHRlZldKNmRkenpfQ1ZsMW15SmdjOFJEVHJ3ZUNFdEhBZWw1cVpQcEdubHRKQ21KejBB?oc=5",
+   "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNOTQ1c0x4WnpyQzBCRVBuZ1liOC1jMnZVdDBHVWRCa2tWdEw4Zk92QWlQX01DbmdrLWQ2TVlveXN1aHBDSTNzSWwwNmEwQndYejA1dVdQeWk5SnRQUTZuSV94Sm1KbEU1RG1FXzNKNmF6b3d6X3pfUTJwUmtocUVWVms0VUpULTRGZFFpUXcyZkJ3b2Y1VWxDSzFTVXlaNnAtTXpKc3daS0E3M3FYZmpWVzV5TWswcm4xLW1VS3NDNkdwTXJJS01BODNxbXpCQ3puY3JLZHJ6UVdQcHRzMXRwTFJEWWY2LVlFMUQw?oc=5",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wvyxzg/new_64gb_dgx_spark_significantly_higher_price_for/",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdmkyS2JQdnI3M0l5Ti1rZjVaOURoWkI4eEVnYUJvM3M5RWVWU3kyTURaQ3FlUTE3NEk2VUtRdFMweEhTcVh5YnRtLVc1eS1JamhkTW56Y3V5R0ZWazFGX2JTZXJkYzljWF9lcUI4X1dzTF9seXo5SzBTUjM1NFMwaVJlLU5XTms?oc=5",
+   "https://news.google.com/rss/articles/CBMieEFVX3lxTE9JSENyQ29FcXFNbURsWmliajBhTzlZREt4WjdQc1lMaGlUdTlDWmZPeGZOT3plZ2lOTldqU2Y0SDI2VTFLeXVyMnBQTkNId0hYS2hKeXZVTndRb3JIakRyTm1uTklub01xTzduN2NsNmFhWmN4ZVJmLQ?oc=5",
+   "https://www.techmeme.com/261002/p26#a261002p26"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
